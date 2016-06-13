@@ -1,0 +1,140 @@
+---
+layout: page
+global_menu: topics
+---
+        <!--▽コンテンツ▽-->
+        <article>
+            <section>
+                <div id="Topics" class="ttl">
+                    <p>トピックス<span>Topics</span></p>
+                </div>
+
+                <!--▼パンくずリスト▼-->
+                <ul id="tpcpth" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <li><a href="../" itemprop="url"><span itemprop="title">ホーム</span></a></li>
+                    <li>トピックス</li>
+                </ul><!-- /#tpcpth -->
+                <!--▲パンくずリスト▲-->
+
+                <div class="wrap">
+                    <div id="main">
+                        <section>
+                            <h1>トピックス一覧<a href="index.xml" class="rss"><img src="../image/common/icon_rss.png" alt="RSS" /></a></h1>
+                            <ul class="topicList">
+                                <li>
+                                    <a href="#">
+                                        <time>2016/02/24</time>
+                                        <div><span class="icon">サービス・製品</span></div>
+                                        <p>提案可能SEリストの最新版をアップしました。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2016/01/28</time>
+                                        <div><span class="icon">サービス・製品</span></div>
+                                        <p>提案可能SEリストの最新版をアップしました。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2016/01/15</time>
+                                        <div><span class="icon">サービス・製品</span></div>
+                                        <p>提案可能SEリストの最新版をアップしました。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2016/01/07</time>
+                                        <div><span class="icon">事例紹介</span></div>
+                                        <p>『仮想基盤上でのクラスタシステム構築』を追加しました。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2016/01/07</time>
+                                        <div><span class="icon">事例紹介</span></div>
+                                        <p>『Microsoft VDI導入』を追加しました。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2016/01/07</time>
+                                        <div><span class="icon">事例紹介</span></div>
+                                        <p>『保守切れに伴うネットワーク機器更改』を追加しました。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2016/01/07</time>
+                                        <div><span class="icon">事例紹介</span></div>
+                                        <p>『SQL Server リプレース + 冗長機能構築』を追加しました。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2015/12/25</time>
+                                        <div><span class="icon">サービス・製品</span></div>
+                                        <p>提案可能SEリストの最新版をアップしました。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2015/12/04</time>
+                                        <div><span class="icon">サービス・製品</span></div>
+                                        <p>提案可能SEリストの最新版をアップしました。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2015/11/27</time>
+                                        <div><span class="icon">事例紹介</span></div>
+                                        <p>『インフラ基盤の仮想化統合』を追加しました。</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!--▼ページネーション▼-->
+                            <ul class="pagenation">
+                                <li><a href="#"><img src="../image/common/icon_prav.png" alt="前へ" width="9" height="16" /></a></li>
+                                <li class="act"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li>…</li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#"><img src="../image/common/icon_next.png" alt="次へ" width="9" height="16" /></a></li>
+                            </ul>
+                            <!--▲ページネーション▲-->
+
+                        </section>
+                    </div><!--/.main-->
+
+                    <div id="sideMenu">
+                        <nav>
+                            <dl>
+                                <dt class="act"><a href="#">トピックス</a></dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="#">サービス・製品</a></li>
+                                        <li><a href="#">導入事例</a></li>
+                                        <li><a href="#">技術レポート</a></li>
+                                        <li><a href="#">セミナー</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </nav>
+
+                        <aside id="bnr">
+                            <ul>
+                                {% include side_cases.html %}
+                                {% include side_technical-report.html %}
+                                {% include side_contact.html %}
+                            </ul>
+                        </aside>
+                    </div><!--/#sideMenu-->
+                </div><!--/.wrap-->
+            </section>
+        </article>
+        <!--△コンテンツ△-->

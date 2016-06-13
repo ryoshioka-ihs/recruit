@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="description" content="" />
+        <meta name="keywords" content="ITソリューション,ITサービス,システム,導入,運用,保守,IHS" />
+        <!--title-->
+        <title>IIMヒューマン・ソリューション（IMS)</title>
+        <!--favicon-->
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../image/common/favicons.png" />
+        <!--共通css-->
+        <link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/bgImg.css" />
+        <link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="../../css/common_smt.css" />
+        <!--共通js-->
+        <script type="text/javascript" src="../../js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../js/html5.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--▽ヘッダー▽-->
+        <header>
+            <p class="notes">ITインフラを支えるスペシャリストIIMヒューマン・ソリューション</p>
+            <h1><a href="http://www.iimhs.co.jp/"><img src="../../image/common/logo.png" alt="IIMヒューマンソリューション" width="113" height="27" /></a></h1>
+            <nav id="gNav">
+                <p id="Menu"><img src="../../image/common/menu_smt.png" alt="メニュー" width="25" height="22" /></p>
+                <div class="navWrap">
+                    <p id="close"><img src="../../image/common/icon_close.png" alt="閉じる" width="20" height="19" /></p>
+                    <ul>
+                        <li>
+                            <a href="#">サービス・製品</a>
+                            <ul class="inNav">
+                                <li><a href="#">インフラ運用</a></li>
+                                <li><a href="#">インフラ導入</a></li>
+                                <li><a href="#">Webシステム最適化</a></li>
+                                <li><a href="#">セキュリティ</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">導入事例</a>
+                            <ul class="inNav">
+                                <li><a href="#">インフラ運用</a></li>
+                                <li><a href="#">インフラ導入</a></li>
+                                <li><a href="#">Webシステム最適化</a></li>
+                                <li><a href="#">セキュリティ</a></li>
+                            </ul>
+                        </li>
+                        <li class="act">
+                            <a href="#">トピックス</a>
+                            <ul class="inNav">
+                                <li><a href="#">サービス・製品</a></li>
+                                <li><a href="#">事例紹介</a></li>
+                                <li><a href="#">技術レポート</a></li>
+                                <li><a href="#">セミナー</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">会社情報</a>
+                            <ul class="inNav">
+                                <li><a href="#">社長メッセージ</a></li>
+                                <li><a href="#">会社概要・組織図</a></li>
+                                <li><a href="#">経営理念</a></li>
+                                <li><a href="#">沿革・主要取引先</a></li>
+                                <li><a href="#">アクセスマップ</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">お問い合わせ</a>
+                            <ul class="inNav">
+                                <li><a href="#">総合お問い合わせ</a></li>
+                                <li><a href="#">採用に関するお問い合わせ</a></li>
+                                <li><a href="#">メールマガジン登録</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav><!--/#gNav-->
+
+            <div id="scWrap">
+                <ul>
+                    <li>JA<span>PANESE</span></li>
+                    <li><a href="#">EN<span>GLISH</span></a></li>
+                </ul>
+
+                <div class="search">
+                    <p id="SCBtn">検索</p>
+                    <form name="seek" method="get" action="/cgi-bin/mvltp/mt-search.cgi">
+                        <input name="IncludeBlogs" value="1,1,4,2" type="hidden">
+                        <input name="limit" value="10" type="hidden">
+                        <input name="SearchElement" value="both" type="hidden">
+                        <input name="search" value="" type="text">
+                        <input class="button" value="" type="submit">
+                    </form>
+                </div>
+            </div><!--/#scWrap-->
+
+            <ul id="infoLink">
+                <li class="adop"><a href="#">採用情報</a></li>
+                <li class="mail"><a href="#">メルマガ登録</a></li>
+            </ul><!--/#infoLink-->
+        </header>
+        <!--△ヘッダー△-->
+
+        <!--▽コンテンツ▽-->
+        <article>
+            <section>
+                <div id="Topics" class="ttl">
+                    <p>トピックス<span>Topics</span></p>
+                </div>
+
+                <!--▼パンくずリスト▼-->
+                <ul id="tpcpth" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <li><a href="../" itemprop="url"><span itemprop="title">ホーム</span></a></li>
+                    <li><a href="../" itemprop="url"><span itemprop="title">トピックス</span></a></li>
+                    <li><a href="../" itemprop="url"><span itemprop="title">サービス・製品</span></a></li>
+                    <li>SEサービス</li>
+                </ul><!-- /#tpcpth -->
+                <!--▲パンくずリスト▲-->
+
+                <div class="wrap">
+                    <div id="main">
+                        <section>
+                            <h1>SEサービス<time>2016/02/24</time></h1>
+                            <p class="big">リピートオーダー率90%以上！<br />情報システム部門の様々な業務をお手伝いいたします。</p>
+
+                            <!--▼ページ内リンク▼-->
+                            <ul class="linkInPage">
+                                <li><a href="#sec1">提案可能SEリストのダウンロード</a></li>
+                                <li><a href="#sec2">サービス内容</a></li>
+                                <li><a href="#sec3">対応範囲</a></li>
+                                <li><a href="#sec4">お客様の声</a></li>
+                            </ul>
+                            <!--▲ページ内リンク▲-->
+
+                            <section id="sec1">
+                                <h2>提案可能SEリストのダウンロード</h2>
+                                <section>
+                                    <h3>提案可能SEリスト</h3>
+                                    <div class="smtSent">
+                                        <p>提案可能なSEリスト（2016年2月24日更新）はこちらからダウンロードできます。</p>
+                                        <p class="dlPdf"><a href="#"><span>提案可能なSEリスト</span></a></p>
+                                    </div>
+                                </section>
+                            </section>
+
+                            <section id="sec2">
+                                <h2>サービス内容</h2>
+                                <dl class="svDetail">
+                                    <dt class="staying">常駐 + α</dt>
+                                    <dd>
+                                        <p>ご依頼の業務内容に加え、ご要望に応じて業務改善に役立つレポートや資産状況レポートを無料でご提供。</p>
+                                        <ul class="grayDisc">
+                                            <li>長年の運用経験を活かした、お客様に最適なインフラ設計・構築</li>
+                                            <li>ソフトウェア・資産管理の基礎知識と資産管理ツール「LanScope」の操作トレーニングを受けたスタッフが、資産のデータ更新や棚卸しの対応可能。ご要望があれば資産状況レポートを作成</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+
+                                <dl class="svDetail">
+                                    <dt class="foreign">海外</dt>
+                                    <dd>
+                                        <p>立ち上げ時や定期作業など、短期間から1年間程度、突然の作業にも対応致します。</p>
+                                        <ul class="grayDisc">
+                                            <li>自社のスタッフではコストが見合わない作業も対応可能</li>
+                                            <li>ビザや海外保険の手続きを弊社にて代行</li>
+                                            <li>日本に留学していた外国人スタッフも在籍</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+
+                                <dl class="svDetail">
+                                    <dt class="spot">スポット</dt>
+                                    <dd>
+                                        <p>必要な時に、必要なスキルを、必要なだけ。繁忙期のみの要員追加など業務に合わせてアウトソースすることで、固定費を変動費にすることが可能です。</p>
+                                        <ul class="grayDisc">
+                                            <li>日本全国対応可能</li>
+                                            <li>1日1人から、24時間365日対応可能</li>
+                                            <li>1週間前までにご連絡頂ければ対応可能（前日のご依頼もご相談ください）</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </section>
+
+                            <section id="sec3">
+                                <h2>対応範囲</h2>
+                                <table class="rangeTb">
+                                    <tr>
+                                        <th colspan="2">サーバー</th>
+                                    </tr>
+                                    <tr>
+                                        <th>サーバー構築</th>
+                                        <td>
+                                            <ul class="grayDisc">
+                                                <li>ハードウェアキッティング、ラッキング、ケーブリング</li>
+                                                <li>Windows、Linux、Unixの各種サーバーの構築</li>
+                                                <li>ミドルウェアのインストール、設定</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>仮想化</th>
+                                        <td>VMware、Hyper-V、Citrix Xen Serverのホストサーバ構築、ゲストOS作成、リソース監視、P2V作業<br />（VMware環境の場合VCP取得者がご支援致します）</td>
+                                    </tr>
+                                    <tr>
+                                        <th>サーバー移設</th>
+                                        <td>移転元/移転先環境調査、移行計画作成、アンラッキング、梱包、搬出、搬入、ラッキング、ケーブリング、起動確認、ラック構成図作成</td>
+                                    </tr>
+                                    <tr>
+                                        <th>サーバー運用</th>
+                                        <td>
+                                            <ul class="grayDisc">
+                                                <li>バックアップ処理、サービス稼動確認、CPUなどのリソース負荷確認</li>
+                                                <li>ネットワーク疎通確認・障害切り分け、対応</li>
+                                                <li>不要ファイルの自動削除ツール作成</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Oracle patch適用</th>
+                                        <td>検証環境構築、patch適用作業検証、適用手順書作成、検証項目表作成、patch適用作業、動作確認</td>
+                                    </tr>
+                                    <tr>
+                                        <th>OSS導入</th>
+                                        <td>Zabbix、MRTG、Hinemos</td>
+                                    </tr>
+                                    <tr>
+                                        <th>パフォーマンスレポート 作成（ES/1）</th>
+                                        <td>ES/1で出力された履歴のレポート作成</td>
+                                    </tr>
+                                    <tr>
+                                        <th>LanScopeログ抽出</th>
+                                        <td>LanScopeで出力されたログのレポート作成</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Notes運用サポート</th>
+                                        <td>Domino Server障害切り分け・ログの管理、報告書提出</td>
+                                    </tr>
+                                </table>
+
+                                <table class="rangeTb">
+                                    <tr>
+                                        <th colspan="2">クライアント</th>
+                                    </tr>
+                                    <tr>
+                                        <th>マスターイメージ作成</th>
+                                        <td>OS、サービスパック、セキュリティ設定、各種アプリケーションのパラメータ策定をサポート、動作検証、マスタイメージ作成</td>
+                                    </tr>
+                                    <tr>
+                                        <th>PCキッティング</th>
+                                        <td>OS/Officeのバージョンアップ、環境設定、作業手順書作成、チェックシート作成</td>
+                                    </tr>
+                                    <tr>
+                                        <th>ヘルプデスク</th>
+                                        <td>メール、Office、業務アプリケーションのサポートなど</td>
+                                    </tr>
+                                    <tr>
+                                        <th>資産管理</th>
+                                        <td>ソフトウェア・ハードウェアの台帳管理（申請、変更、登録、削除）IT資産の棚卸しなど</td>
+                                    </tr>
+                                </table>
+
+                                <table class="rangeTb">
+                                    <tr>
+                                        <th colspan="2">その他</th>
+                                    </tr>
+                                    <tr>
+                                        <th>開発テスト</th>
+                                        <td>回帰テスト項目表修正、及び標準化、回帰テストの実施</td>
+                                    </tr>
+                                    <tr>
+                                        <th>負荷テスト</th>
+                                        <td>テスト環境構築、テストシナリオ作成、JMeter、ES/1、スクリプトを使用し必要項目のデータを収集、レポート作成を実施</td>
+                                    </tr>
+                                    <tr>
+                                        <th>マニュアル・ドキュメント作成</th>
+                                        <td>
+                                            <ul class="grayDisc">
+                                                <li>各種構成図、レポート、作業手順書、チェックシートの作成</li>
+                                                <li>仕様書をもとにしたユーザー向け操作手順書の作成など</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>SEアシスタント</th>
+                                        <td>データ入力や、PCセットアップなど、情報システム部門での事務的な作業を代行致します</td>
+                                    </tr>
+                                </table>
+                            </section>
+
+                            <div class="voiceWrap">
+                                <section id="sec4">
+                                    <h2>お客様の声</h2>
+                                    <div class="voice">
+                                        <section>
+                                            <h3>VMware（ESX Server4 Update2）新規構築作業</h3>
+                                            <p>お客様:SI</p>
+                                            <p>本来、作業のみの依頼でしたが、社員不在の中、臨機応変に対応して頂き、大変助かりました。<br />
+                                            の中でも、P2V移行時のエラー対応や移行後に発生した障害に対して素早く原因を解明し、
+                                            解決策を提示して頂いたおかげで、その後の作業もスムーズに行うことが出来ました。<br />
+                                            作業中、担当の方にVMwareの機能について質問をした際には即座にアドバイスをして頂き、理解を深めることが出来ました。<br />
+                                            また次回、ご協力いただけそうなプロジェクトがありましたら、お声掛けさせていただきます。</p>
+                                        </section>
+                                    </div>
+
+                                    <div class="voice">
+                                        <section>
+                                            <h3>繁忙期のお客様拠点ＰＣキッティング作業</h3>
+                                            <p>お客様:運輸業</p>
+                                            <p>御社社員の働き振りが大変素晴らしかったとのこと、ありがとうございました。
+                                            予定外の作業が多々あったにもかかわらず臨機応変に、迅速に対応いただいたようです。</p>
+                                        </section>
+                                    </div>
+
+                                    <div class="voice">
+                                        <section>
+                                            <h3>本番サーバーのOracleにPatchSetReleaseの検証、適用</h3>
+                                            <p>お客様:SI</p>
+                                            <p>本日、御社社員の作業により、テスト環境でのOracle PatchSetRelease導入検証作業が無事に完了した事をご連絡致します。<br />
+                                            作業を担当致しました、御社社員について、スキルレベル、対応が素晴らしく、良い技術員をご紹介して頂いた事を感謝致します。</p>
+                                        </section>
+                                    </div>
+
+                                    <div class="voice">
+                                        <section>
+                                            <h3>遠方の関連会社へのPC設定作業</h3>
+                                            <p>お客様:物流会社</p>
+                                            <p>協力会社を利用した結果としては 「成功」であった。<br />
+                                            作業内容に対して理解度が高く、戦力となり、</p>
+                                            <ul class="grayDisc">
+                                                <li>自家社員と比較しても作業スピード、作業内容 共に大差が無い</li>
+                                                <li>当日指示内容（手順書に記載が無い内容）についても、臨機応変に対応して頂いた</li>
+                                                <li>集合時間より20分前に来る（交通遮断に備えて集合している</li>
+                                                <li>やることが無くなると自発的に作業を求めてくる</li>
+                                            </ul>
+                                            <p>等、先方に入場している協力会社社員と比較してもレベルが高く、また機会があればお願いしたい。</p>
+                                        </section>
+                                    </div>
+
+                                    <div class="voice">
+                                        <section>
+                                            <h3>ネットワークの入替え</h3>
+                                            <p>お客様:広告会社</p>
+                                            <p>本日は、土曜日と言うのに早朝からありがとうございました。ISDNでの疎通はお客様の手違いで出来ませんでしたが、
+                                            無事にサービスは提供されているので安心しました。駐車場の事などで運送会社の方々にもご迷惑をおかけしてしまいましたが、
+                                            ご協力いただいたおかげで完了いたしました。</p>
+                                            <p>手違いややり直しが激しいのにも関わらず、こちらが恐縮してしまうほど、丁寧に作業していただいて、心よりお礼申し上げます。</p>
+                                        </section>
+                                    </div>
+                                </section>
+                            </div><!--/.voiceWrap-->
+
+                            <div class="contact noSmt">
+                                <section>
+                                    <h2>お問い合わせ</h2>
+                                    <p>相談ベース・お見積もりのみのご依頼も、お気軽にお問い合わせください。</p>
+                                    <p class="tel">0120-640-254<span>9:00～18:00（土日、祝日を除く）</span></p>
+                                    <p class="oraBtn"><a href="#">お問い合わせはこちら</a></p>
+                                </section>
+                            </div>
+                        </section>
+
+                    </div><!--/.main-->
+
+                    <div id="sideMenu">
+                        <nav>
+                            <dl>
+                                <dt><a href="#">トピックス</a></dt>
+                                <dd>
+                                    <ul>
+                                        <li class="act"><a href="#">サービス・製品</a></li>
+                                        <li><a href="#">導入事例</a></li>
+                                        <li><a href="#">技術レポート</a></li>
+                                        <li><a href="#">セミナー</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </nav>
+
+                        <aside id="bnr">
+                            <ul>
+                                <li class="case"><a href="#">導入事例</a></li>
+                                <li class="report"><a href="#">技術レポート</a></li>
+                                <li class="contact">
+                                    <p class="oraBtn"><a href="#">お問い合わせ<span>はこちら</span></a></p>
+                                    <p>製品・サービスのお問い合わせ<br />はお電話<span>でも承ります。</span></p>
+                                    <p class="tel">0120-640-254<span>9:00～18:00（土日、祝日を除く）</span></p>
+                                    <aside>弊社営業部が対応させていただきます</aside>
+                                </li>
+                                <li class="svList">
+                                    <dl>
+                                        <dt>関連サービス</dt>
+                                        <dd>
+                                            <ul>
+                                                <li><a href="#">サービス名</a></li>
+                                                <li><a href="#">サービス名</a></li>
+                                                <li><a href="#">サービス名</a></li>
+                                                <li><a href="#">サービス名</a></li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div><!--/#sideMenu-->
+                </div><!--/.wrap-->
+            </section>
+        </article>
+        <!--△コンテンツ△-->
+
+        <!--▽フッター▽-->
+        <footer>
+            <div id="pageTop">
+               <p>PAGE TOP</p>
+            </div>
+
+            <div class="footTop">
+                <p><a href="#">ホーム</a></p>
+                <div class="tbWrap">
+                    <dl>
+                        <dt><a href="#">サービス・製品</a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#">インフラ運用</a></li>
+                                <li><a href="#">インフラ導入</a></li>
+                                <li><a href="#">Webシステム最適化</a></li>
+                                <li><a href="#">セキュリティ</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+    
+                    <dl>
+                        <dt><a href="#">導入事例</a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#">インフラ運用</a></li>
+                                <li><a href="#">インフラ導入</a></li>
+                                <li><a href="#">Webシステム最適化</a></li>
+                                <li><a href="#">セキュリティ</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+    
+                    <dl>
+                        <dt><a href="#">会社情報</a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#">社長メッセージ</a></li>
+                                <li><a href="#">会社概要・組織図</a></li>
+                                <li><a href="#">経営理念</a></li>
+                                <li><a href="#">沿革・主要取引先</a></li>
+                                <li><a href="#">アクセスマップ</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+    
+                    <dl>
+                        <dt><a href="#">トピックス</a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#">サービス・製品</a></li>
+                                <li><a href="#">事例紹介</a></li>
+                                <li><a href="#">技術レポート</a></li>
+                                <li><a href="#">セミナー</a></li>
+                            </ul>
+                        </dd>
+                        <p><a href="#">お問い合わせ</a></p>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="#">採用情報</a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#">会社説明会（中途・新卒）</a></li>
+                                <li><a href="#">募集要項（中途・新卒）</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div><!--/.tbWrap-->
+            </div><!--/.footTop-->
+            
+            <div class="footBot">
+                <ul>
+                    <li><a href="#">個人情報保護方針</a></li>
+                    <li><a href="#">サイトポリシー</a></li>
+                    <li><a href="#">サイトマップ</a></li>
+                    <li class="outLink"><a href="http://www.iim.co.jp/" target="_blank">株式会社 アイ・アイ・エム</a></li>
+                </ul>
+
+                <!-- GlobalSign SSL Seal. Do not edit.  -->
+                <div id="sign">
+                    <span id="ss_gmo_img_wrapper_115-57_image_ja">
+                        <a href="https://jp.globalsign.com/" target="_blank" rel="nofollow">
+                            <img alt="SSL　GMOグローバルサインのサイトシール" border="0" id="ss_img" src="//seal.globalsign.com/SiteSeal/images/gs_noscript_115-57_ja.gif">
+                        </a>
+                    </span>
+                    <script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gmogs_image_115-57_ja.js" defer="defer"></script>
+                    <span class="pm"><a href="http://privacymark.jp/" target="_blank"><img src="../../image/common/privacy_mark.gif" width="55" height="55" /></a></span>
+                </div>
+                <!-- END of GlobalSign SSL Seal. -->
+
+                <p class="cp"><small><img src="../../image/common/copyRight.png" alt="©2016 IIM Human Solution Corp." width="212" height="12" /></small></p>
+            </div><!--/.footBot-->
+        </footer>
+        <!--△フッター△-->
+    </body>
+</html>

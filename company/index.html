@@ -1,0 +1,80 @@
+---
+layout: page
+global_menu: company
+---
+        <!--▽コンテンツ▽-->
+        <article>
+            <section>
+                <div id="Company" class="ttl">
+                    <p>会社情報<span>Company</span></p>
+                </div>
+
+                <!--▼パンくずリスト▼-->
+                <ul id="tpcpth" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <li><a href="../" itemprop="url"><span itemprop="title">ホーム</span></a></li>
+                    <li>会社情報</li>
+                </ul><!-- /#tpcpth -->
+                <!--▲パンくずリスト▲-->
+
+                <div class="wrap">
+                    <div id="main">
+                        <section>
+                            <h1>会社情報</h1>
+                            <ul class="corpMenu">
+                                <li class="msg">
+                                    <a href="#">
+                                        <p>社長メッセージ</p>
+                                    </a>
+                                </li>
+                                <li class="about">
+                                    <a href="#">
+                                        <p>会社概要・組織図</p>
+                                    </a>
+                                </li>
+                                <li class="vision">
+                                    <a href="#">
+                                        <p>経営理念</p>
+                                    </a>
+                                </li>
+                                <li class="history">
+                                    <a href="#">
+                                        <p>沿革・主要取引先</p>
+                                    </a>
+                                </li>
+                                <li class="acmap">
+                                    <a href="#">
+                                        <p>アクセスマップ</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div><!--/.main-->
+
+                    <div id="sideMenu">
+                        <nav>
+                            <dl>
+                                <dt class="act"><a href="#">会社情報</a></dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="#">社長メッセージ</a></li>
+                                        <li><a href="#">会社概要・組織図</a></li>
+                                        <li><a href="#">経営理念</a></li>
+                                        <li><a href="#">沿革・主要取引先</a></li>
+                                        <li><a href="#">アクセスマップ</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </nav>
+
+                        <aside id="bnr">
+                            <ul>
+                                {% include side_cases.html %}
+                                {% include side_technical-report.html %}
+                                {% include side_contact.html %}
+                            </ul>
+                        </aside>
+                    </div><!--/#sideMenu-->
+                </div><!--/.wrap-->
+            </section>
+        </article>
+        <!--△コンテンツ△-->
