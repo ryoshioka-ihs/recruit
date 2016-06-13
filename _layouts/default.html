@@ -35,7 +35,7 @@
                 <div class="navWrap">
                     <p id="close"><img src="/image/common/icon_close.png" alt="閉じる" width="20" height="19" /></p>
                     <ul>
-                        <li{{ if page.global_menu == "services" }} class="act"{{ endif }} {{ page.global_menu }}>
+                        <li{% if page.global_menu == "services" %} class="act"{% endif %}>
                             <a href="#">サービス・製品</a>
                             <ul class="inNav">
                                 <li><a href="#">インフラ運用</a></li>
@@ -44,7 +44,7 @@
                                 <li><a href="#">セキュリティ</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li{% if page.global_menu == "cases" %} class="act"{% endif %}>
                             <a href="#">導入事例</a>
                             <ul class="inNav">
                                 <li><a href="#">インフラ運用</a></li>
@@ -53,7 +53,7 @@
                                 <li><a href="#">セキュリティ</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li{% if page.global_menu == "topics" %} class="act"{% endif %}>
                             <a href="#">トピックス</a>
                             <ul class="inNav">
                                 <li><a href="#">サービス・製品</a></li>
@@ -62,7 +62,7 @@
                                 <li><a href="#">セミナー</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li{% if page.global_menu == "company" %} class="act"{% endif %}>
                             <a href="#">会社情報</a>
                             <ul class="inNav">
                                 <li><a href="#">社長メッセージ</a></li>
@@ -72,7 +72,7 @@
                                 <li><a href="#">アクセスマップ</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li{% if page.global_menu == "contact" %} class="act"{% endif %}>
                             <a href="#">お問い合わせ</a>
                             <ul class="inNav">
                                 <li><a href="#">総合お問い合わせ</a></li>
