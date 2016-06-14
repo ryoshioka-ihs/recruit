@@ -175,28 +175,9 @@ global_menu: services
                     </div><!--/.main-->
 
                     <div id="sideMenu">
-                        <nav>
-                            <dl>
-                                <dt class="act"><a href="#">サービス・製品</a></dt>
-                                <dd>
-                                    <ul>
-                                        <li><a href="#">インフラ運用</a></li>
-                                        <li><a href="#">インフラ導入</a></li>
-                                        <li><a href="#">Webシステム最適化</a></li>
-                                        <li><a href="#">セキュリティ</a></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </nav>
-
-                        <aside id="bnr">
-                            <ul>
-                                {% include side_cases.html %}
-                                {% include side_technical-report.html %}
-                                {% include side_contact.html %}
-                            </ul>
-                        </aside>
+                    {% include side_services.html %}
                     </div><!--/#sideMenu-->
+
                 </div><!--/.wrap-->
             </section>
         </article>

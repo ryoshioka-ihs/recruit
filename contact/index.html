@@ -53,26 +53,7 @@ global_menu: contact
                     </div><!--/.main-->
 
                     <div id="sideMenu">
-                        <nav>
-                            <dl>
-                                <dt class="act"><a href="#">お問い合わせ</a></dt>
-                                <dd>
-                                    <ul>
-                                        <li><a href="#">総合お問い合わせ</a></li>
-                                        <li><a href="#">採用に関するお問い合わせ</a></li>
-                                        <li><a href="#">メールマガジン登録</a></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </nav>
-
-                        <aside id="bnr">
-                            <ul>
-                                {% include side_cases.html %}
-                                {% include side_technical-report.html %}
-                                {% include side_contact.html %}
-                            </ul>
-                        </aside>
+                    {% include side_contact.html %}
                     </div><!--/#sideMenu-->
                 </div><!--/.wrap-->
             </section>

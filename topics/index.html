@@ -112,27 +112,7 @@ global_menu: topics
                     </div><!--/.main-->
 
                     <div id="sideMenu">
-                        <nav>
-                            <dl>
-                                <dt class="act"><a href="#">トピックス</a></dt>
-                                <dd>
-                                    <ul>
-                                        <li><a href="#">サービス・製品</a></li>
-                                        <li><a href="#">導入事例</a></li>
-                                        <li><a href="#">技術レポート</a></li>
-                                        <li><a href="#">セミナー</a></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </nav>
-
-                        <aside id="bnr">
-                            <ul>
-                                {% include side_cases.html %}
-                                {% include side_technical-report.html %}
-                                {% include side_contact.html %}
-                            </ul>
-                        </aside>
+                    {% include side_topics.html %}
                     </div><!--/#sideMenu-->
                 </div><!--/.wrap-->
             </section>

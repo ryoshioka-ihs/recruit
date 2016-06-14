@@ -1,6 +1,21 @@
-<li class="contact">
-<p class="oraBtn"><a href="#">お問い合わせ<span>はこちら</span></a></p>
-<p>製品・サービスのお問い合わせ<br />はお電話<span>でも承ります。</span></p>
-<p class="tel">0120-640-254<span>9:00～18:00（土日、祝日を除く）</span></p>
-<aside>弊社営業部が対応させていただきます</aside>
-</li>
+<nav>
+    <dl>
+        <dt class="act"><a href="#">サービス・製品</a></dt>
+        <dd>
+            <ul>
+                <li><a href="#">インフラ運用</a></li>
+                <li><a href="#">インフラ導入</a></li>
+                <li><a href="#">Webシステム最適化</a></li>
+                <li><a href="#">セキュリティ</a></li>
+            </ul>
+        </dd>
+    </dl>
+</nav>
+
+    <aside id="bnr">
+        <ul>
+            {% include side_sub_cases.html %}
+            {% include side_sub_technical-report.html %}
+            {% include side_sub_contact.html %}
+        </ul>
+    </aside>
