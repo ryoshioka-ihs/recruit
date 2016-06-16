@@ -1,23 +1,9 @@
 ---
-layout: page
+layout: topics
 global_menu: topics
 ---
         <!--▽コンテンツ▽-->
-        <article>
-            <section>
-                <div id="Topics" class="ttl">
-                    <p>トピックス<span>Topics</span></p>
-                </div>
 
-                <!--▼パンくずリスト▼-->
-                <ul id="tpcpth" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <li><a href="../" itemprop="url"><span itemprop="title">ホーム</span></a></li>
-                    <li>トピックス</li>
-                </ul><!-- /#tpcpth -->
-                <!--▲パンくずリスト▲-->
-
-                <div class="wrap">
-                    <div id="main">
                         <section>
                             <h1>トピックス一覧<a href="index.xml" class="rss"><img src="../image/common/icon_rss.png" alt="RSS" /></a></h1>
                             <ul class="topicList">
@@ -109,12 +95,4 @@ global_menu: topics
                             <!--▲ページネーション▲-->
 
                         </section>
-                    </div><!--/.main-->
-
-                    <div id="sideMenu">
-                    {% include side/side_topics.html %}
-                    </div><!--/#sideMenu-->
-                </div><!--/.wrap-->
-            </section>
-        </article>
         <!--△コンテンツ△-->
