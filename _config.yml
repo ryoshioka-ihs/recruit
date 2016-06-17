@@ -17,5 +17,23 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# デフォルト設定
+defaults:
+  -
+    scope:
+      path: "cases"
+      type: "posts"
+    values:
+      layout: "cases"
+      permalink: /cases/:year/:month/:title.html
+  -
+    scope:
+      path: "topics"
+      type: "posts"
+    values:
+      layout: "topics"
+      permalink: /topics/:year/:month/:title.html
+
 # Build settings
 markdown: kramdown
+
