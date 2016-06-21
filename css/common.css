@@ -1474,6 +1474,7 @@ img.req {
 .grayBox {
 	background-color: #EEE;
 	padding: 30px;
+	margin-top: 70px;
 }
 	.grayBox h2 {
 		min-height: 0;
