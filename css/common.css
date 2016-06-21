@@ -1284,7 +1284,15 @@ a.rss:hover {
 		border-left: 1px solid #DDD;
 		border-bottom: 1px solid #DDD;
 	}
-
+	/* 縦1列目の背景に色を付け、太字にする */
+	.rangeTb--style2 tr th {
+	  font-weight: bold;
+	  background-color: #F0F0F0;
+	  border-top: 1px solid #DDD;
+	}
+	.rangeTb--style2 tr td {
+	  border-top: 1px solid #DDD;
+	}
 /* --------------------------------------------------
     お客様の声
 -------------------------------------------------- */
