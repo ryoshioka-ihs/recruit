@@ -1,26 +1,77 @@
 ---
-layout:      cases
-title:       "グローバルでのPC運用一元化を目的としたSCCM構築"
-description: "国内外で3万台を超えるPCの運用一元化を目的とした一連のプロジェクトの中で、グローバルSCCMの中央管理サイトと国内のSCCM環境の構築をお手伝いさせて頂きました。"
-date:        2016-06-09 17:37:23 +0900
+layout:      case
+title:       "セキュアなVDI環境における仮想マシンマスタイメージ構築"
+description: "セキュリティ向上を目的にVDI（仮想デスクトップ環境）の導入が増加していますが、仮想デスクトップを自社に適した方法で展開することが重要です。本事例では、マスタイメージの構築、メンテナンス手順の策定をお手伝いさていただきました。"
+date:        2016-05-19 17:37:23 +0900
 categories:  jekyll update
 ---
 
-## 背景
+<h1>セキュアなVDI環境における仮想マシンマスタイメージ構築</h1>
 
-グローバルに多数の拠点を持つ企業では、情報システムの運用管理範囲も世界各地へと広がり、散在する情報システムに対するITガバナンスの構築は避けて通ることのできない課題です。
+<ul class="linkInPage">
+<li><a href="#sec1">背景</a></li>
+<li><a href="#sec2">概要</a></li>
+<li><a href="#sec3">システム構成図</a></li>
+<li><a href="#sec4">お客様の声</a></li>
+<li><a href="#sec5">PDFダウンロード</a></li>
+</ul>
 
-今回のお客様も、ガバナンス強化と運用コスト削減を目的に国内外の3万台を超えるPCの運用一元化を進められていました。国内ではSystem Center 2007 Configuration Manager(以下、SCCM)によってPCの一元的な管理体制を構築されていましたが、国外では導入 されておらず、特にウイルス対策ソフトの導入状況やセキュリティパッチの適用状況の管理が課題となっていました。
+<section id="sec1">
+<h2>背景</h2>
+<p>グローバルに多数の拠点を持つ企業では、情報システムの運用管理範囲も世界各地へと広がり、散在する情報システムに対するITガバナンスの構築は避けて通ることのできない課題です。</p>
+<p>今回のお客様も、ガバナンス強化と運用コスト削減を目的に国内外の3万台を超えるPCの運用一元化を進められていました。国内ではSystem Center 2007 Configuration Manager(以下、SCCM)によってPCの一元的な管理体制を構築されていましたが、国外では導入 されておらず、特にウイルス対策ソフトの導入状況やセキュリティパッチの適用状況の管理が課題となっていました。</p>
+<p>そうした課題を解決するため、お客様はSCCMによる国内外のすべてのPCの一元的な運用管理基盤の構築を計画されました。SCCMの管理対象を全拠点に拡大し、日本から管理可能にするという一連のプロジェクトの中で、IHSはグローバルSCCMの中核となる中央管理 サイトと、国内のSCCM環境の構築をお手伝いさせて頂きました。</p>
+</section>
 
-そうした課題を解決するため、お客様はSCCMによる国内外のすべてのPCの一元的な運用管理基盤の構築を計画されました。SCCMの管理対象を全拠点に拡大し、日本から管理可能にするという一連のプロジェクトの中で、IHSはグローバルSCCMの中核となる中央管理 サイトと、国内のSCCM環境の構築をお手伝いさせて頂きました。
+<section id="sec1">
+<h2>概要</h2>
 
-## 概要
-
-|業種|製造業|
-|目的|<ul><li>グローバルでの一元的なPC運用管理基盤の構築</li><li>System Center 2007 Configuration ManagerからSystem Center 2012 R2 Configuration Managerへの更改</li><li>System Center 2012 Endpoint Protection（ウイルス対策機能）の導入</li><li>PC運用効率の向上</li></ul>|
-|作業規模|利用ユーザー数: 約 15,000 名（※本プロジェクトの対象である国内のユーザー数）<br />[既存サーバ環境]<br />Active Directory ドメインコントローラ（1台）<br />System Center 2007 Configuration Manager プライマリサーバー（1台）<br />[新規サーバ環境]<br />System Center 2012 R2 Configuration Managerセントラルサーバー（1台）<br />System Center 2012 R2 Configuration Managerプライマリサーバー（2台）<br />System Center 2012 R2 Configuration Manager配布ポイントサーバ（5台）<br />SQL Server 2008 R2（3台）
-|作業ボリューム|3人月|
-|作業内容|System Center 2012 R2 Configuration Manager 要件定義/機能設計/構築/動作試験|
+<table>
+	<tr>
+		<td>
+		業種
+		</td>
+		<td>
+		製造業
+		</td>
+	</tr>
+	<tr>
+		<td>
+		目的
+		</td>
+		<td>
+		<ul><li>グローバルでの一元的なPC運用管理基盤の構築</li><li>System Center 2007 Configuration ManagerからSystem Center 2012 R2 Configuration Managerへの更改</li><li>System Center 2012 Endpoint Protection（ウイルス対策機能）の導入</li><li>PC運用効率の向上</li></ul>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		作業規模
+		</td>
+		<td>
+		利用ユーザー数: 約 15,000 名（※本プロジェクトの対象である国内のユーザー数）<br />[既存サーバ環境]<br />Active Directory ドメインコントローラ（1台）<br />System Center 2007 Configuration Manager プライマリサーバー（1台）<br />[新規サーバ環境]<br />System Center 2012 R2 Configuration Managerセントラルサーバー（1台）<br />System Center 2012 R2 Configuration Managerプライマリサーバー（2台）<br />System Center 2012 R2 Configuration Manager配布ポイントサーバ（5台）<br />SQL Server 2008 R2（3台）
+		</td>
+	</tr>
+<tr>
+<td>
+作業ボリューム
+</td>
+</tr>
+<tr>
+<td>
+3人月
+</td>
+</tr>
+<tr>
+<td>
+作業内容
+</td>
+</tr>
+<tr>
+<td>
+System Center 2012 R2 Configuration Manager 要件定義/機能設計/構築/動作試験
+</td>
+</tr>
+</table>
 
 ## 作業のポイント
 
