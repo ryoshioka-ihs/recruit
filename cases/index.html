@@ -77,8 +77,13 @@ global_menu: cases
 
     <ul class="lineList">
 
-      {% assign latest_cases = site.posts | where: "layout", "cases" %}
-      {% for case in latest_cases limit:6 %} 
+      {% comment %}
+        最新の導入事例をを表示
+        表示条件：
+          layoutにcaseが指定されている記事のうち、最新の4件を表示
+      {% endcomment %}
+      {% assign latest_cases = site.posts | where: "layout", "case" %}
+      {% for case in latest_cases limit:4 %}
         <li class="triBox">
           <a href="#">
             <section>
