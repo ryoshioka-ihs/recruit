@@ -85,7 +85,7 @@ global_menu: cases
       {% assign latest_cases = site.posts | where: "layout", "case" %}
       {% for case in latest_cases limit:4 %}
         <li class="triBox">
-          <a href="#">
+          <a href="{{ case.url }}">
             <section>
               <h3>{{ case.title }}</h3>
               <span class="icon">Webシステム最適化</span>
