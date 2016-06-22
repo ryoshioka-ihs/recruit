@@ -44,7 +44,51 @@ body {
     clear: both;
     visibility: hidden;
 }
-
+/* --------------------------------------------------------
+    Helper
+	よく使うがモジュールと呼ぶほどでもないスタイル
+-------------------------------------------------------- */
+/* ボーダー */
+.borderd {
+	border: 1px solid #ccc;
+	}
+/* 左寄せ */
+.textLeft {
+	text-align: left;
+	}
+/* 真ん中寄せ */
+.textCenter {
+	text-align: center;
+	}
+/* 右寄せ */
+.textRight {
+	text-align: right;
+	}
+/* インデント（※注意文などで２行目以降を字下げしたい時） */
+.textIndent--style1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.textIndent--style2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+/* 定義リスト */
+.definition--style1 dl {
+	padding-bottom: 0.5em;
+	width:100%;
+}
+.definition--style1 dt {
+	clear: both;
+	float: left;
+	}
+.definition--style1 dd {
+	margin:0 0 1em 200px;
+}
 /* --------------------------------------------------
     リンク
 -------------------------------------------------- */
@@ -71,6 +115,12 @@ h1, h2, h3 {
 	font-weight: bold;
 	position: relative;
 }
+/* h4見出しを追加 */
+h4 {
+	font-size: 15px;
+	font-weight: bold;
+	margin: 10px 0;
+	}
 article h2:before,
 article h3:before {
 	content: "";
@@ -141,7 +191,6 @@ article h3:before {
 	top: 9px;
 	left: 0;
 }
-
 /*//////////////////////////////////////////////////
     全ページ共通パーツ（テンプレート記載分）
 ///////////////////////////////////////////////////*/
