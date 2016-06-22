@@ -799,22 +799,22 @@ a.rss:hover {
     横並びリスト(導入事例にて使用)
 -------------------------------------------------- */
 .lineList {
-	margin: 0 -20px -20px 0;
-	clear: both;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
 }
-	.lineList li {
-		display: inline-block;
+	.lineList > li {
+    flex-basis: 360px;
 		background-color: #FFF;
-		margin: 0 20px 20px 0;
+    margin-bottom: 20px;
 	}
 
 /* --------------------------------------------------
     右下三角つきBOX　白ベース
 -------------------------------------------------- */
 .triBox {
-	width: 360px;
-	height: 150px;
-	display: inline-block;
 	background: #FFF url("../image/common/icon_tri.png") right bottom no-repeat;
 	background-size: 12px 12px;
 	border-left: 1px solid #EFEFEF;
