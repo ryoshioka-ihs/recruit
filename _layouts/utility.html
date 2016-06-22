@@ -13,7 +13,9 @@
         <article>
             <section>
                 <!--▼キービジュアル▼-->
-                {% include global/global_key_policy.html %}
+                {% if page.title == "個人情報保護ポリシー" %}{% include global/global_key_policy.html %}{% endif %}
+                {% if page.title == "サイトポリシー" %}{% include global/global_key_sitePolicy.html %}{% endif %}
+                {% if page.title == "サイトマップ" %}{% include global/global_key_siteMap.html %}{% endif %}
                 <!--▲キービジュアル▲-->
                 
                 <!--▼パンくずリスト▼-->
