@@ -88,8 +88,13 @@ global_menu: cases
           <a href="{{ case.url }}">
             <section>
               <h3>{{ case.title }}</h3>
-              <span class="icon">Webシステム最適化</span>
-              <span class="icon">インフラ運用</span>
+
+              {% for category in case.categories %}
+              {% if category != "cases" %}
+              <span class="icon">{{ category }}</span>
+              {% endif %}
+              {% endfor %}
+
               <p>{{ case.description | slice: 0, 43 }}...</p>
             </section>
           </a>
