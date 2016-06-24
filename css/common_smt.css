@@ -319,6 +319,7 @@ a.rss:hover {
 .lineList {
 	margin: 0;
 	padding: 0 10px;
+  display: block;
 }
 	.lineList li {
 		margin-right: 0;
