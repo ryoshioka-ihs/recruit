@@ -36,7 +36,7 @@ $(function () {
 		position: latlng,
 		map: map,
 		icon: icon,
-		title: 'IIMヒューマンソリューション'
+		title: 'IIMヒューマン・ソリューション'
 	};
 
 	var marker = new google.maps.Marker(markerOptions);
