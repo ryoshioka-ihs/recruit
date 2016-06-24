@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+        <!--▽ヘッド▽-->
+        {% include head.html %}
+        <!--△ヘッド△-->
+
+  <body>
+        <!--▽ヘッダー▽-->
+        {% include header-en.html %}
+        <!--△ヘッダー△-->
+
+         <!--▽コンテンツ▽-->
+        <article>
+            <section>
+                <!--▼キービジュアル▼-->
+                {% include global/global_key_english.html %}
+                <!--▲キービジュアル▲-->
+                
+                <!--▼パンくずリスト▼-->
+                {% include pan.html %}
+                <!--▲パンくずリスト▲-->
+
+                <div class="wrap">
+                    <div id="main">
+
+                    {{ content }}
+
+                    </div><!--/.main-->
+
+                    <div id="sideMenu">
+                    {% include side/side_english.html %}
+                    </div><!--/#sideMenu-->
+
+                </div><!--/.wrap-->
+            </section>
+        </article>
+        <!--△コンテンツ△-->
+
+        <!--▽フッター▽-->
+        {% include footer-en.html %}
+        <!--△フッター△-->
+
+  </body>
+
+</html>

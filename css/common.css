@@ -753,7 +753,25 @@ a.rss:hover {
 		padding-right: 10px;
 		background-color: #F0F0F0;
 	}
-
+/* --------------------------------------------------
+    ベーステーブルレイアウト(見出し太字＆背景色あり)
+    ※横幅指定なし
+-------------------------------------------------- */
+.baseTb--tight {
+	background-color: #FFF;
+	border-top: 1px solid #DDD;
+}
+	.baseTb--tight tr > * {
+		vertical-align: middle;
+		border-bottom: 1px solid #DDD;
+		padding: 10px 30px 10px 20px;
+	}
+	.baseTb--tight th {
+		height: 40px;
+		font-weight: bold;
+		padding-right: 10px;
+		background-color: #F0F0F0;
+	}
 /* --------------------------------------------------
     トピック一覧
 -------------------------------------------------- */
