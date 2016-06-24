@@ -36,7 +36,7 @@ $(function () {
 		position: latlng,
 		map: map,
 		icon: icon,
-		title: 'IIMヒューマンソリューション'
+		title: 'IIMヒューマン・ソリューション'
 	};
 
 	var marker = new google.maps.Marker(markerOptions);
@@ -58,7 +58,7 @@ $(function () {
 
     //クリックしたら指定したurlに遷移するイベント
 	google.maps.event.addListener(marker, 'click', function() {
-		window.open("https://goo.gl/maps/cozq3bBUvW42" );
+		window.open("https://goo.gl/Ma3Zs7" );
 	});
 
 });
