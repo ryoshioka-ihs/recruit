@@ -5,21 +5,6 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# プラグイン
-gems: 
-  - jekyll-archives
-
-# jekyll-archiveプラグインの設定
-jekyll-archives:
-  enabled: [all]
-  layout: 'archive'
-  permalinks:
-    year: '/archives/year/:year/'
-    month: '/archives/month/:year:month/'
-    day: '/archives/month/:year:month:day/'
-    tag: '/archives/tag/:name/'
-    category: '/archives/category/:name/'
-
 # Site settings
 title: Your awesome title
 email: your-email@domain.com
@@ -33,21 +18,21 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # デフォルト設定
-# defaults:
-#   -
-#     scope:
-#       path: "cases"
-#       type: "posts"
-#     values:
-#       layout: "cases"
-#       permalink: /cases/:year/:month/:title.html
-#   -
-#     scope:
-#       path: "topics"
-#       type: "posts"
-#     values:
-#       layout: "topics"
-#       permalink: /topics/:year/:month/:title.html
+defaults:
+  -
+    scope:
+      path: "cases"
+      type: "posts"
+    values:
+      layout: "cases"
+      permalink: /cases/:year/:month/:title.html
+  -
+    scope:
+      path: "topics"
+      type: "posts"
+    values:
+      layout: "topics"
+      permalink: /topics/:year/:month/:title.html
 
 # Build settings
 markdown: kramdown
