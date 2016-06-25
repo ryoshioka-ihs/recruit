@@ -34,6 +34,12 @@ defaults:
       layout: "topics"
       permalink: /topics/:year/:month/:title.html
 
+# Gemfileで追加した拡張機能
+gems:
+  - octopress-debugger
+  - octopress-hooks
+  - octopress-paginate
+
 # Build settings
 markdown: kramdown
 
