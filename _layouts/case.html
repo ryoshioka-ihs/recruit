@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+        <!--▽ヘッド▽-->
+        {% include head.html %}
+        <!--△ヘッド△-->
+
+  <body>
+        <!--▽ヘッダー▽-->
+        {% include header.html %}
+        <!--△ヘッダー△-->
+
+         <!--▽コンテンツ▽-->
+        <article>
+            <section>
+                <!--▼キービジュアル▼-->
+                {% include global/global_key_cases.html %}
+                <!--▲キービジュアル▲-->
+                
+                <!--▼パンくずリスト▼-->
+                {% include pan/pan_cases.html %}
+                <!--▲パンくずリスト▲-->
+
+                <div class="wrap">
+                    <div id="main">
+
+                    {{ content }}
+
+                      <div class="grayBox">
+                        <section id="sec6">
+                          <h2>この事例のPDFをダウンロード</h2>
+                          <p>システム運用を常駐者＋バックヤード支援でコスト最適化のPDFはこちらからダウンロードできます。</p>
+                          <p class="dlPdf">
+                            <a href="{{ post.pdf }}"><span>この事例をダウンロード</span></a>
+                          </p>
+                        </section>
+                      </div>
+
+                      <section>
+                        <h2>関連事例</h2>
+                        <p class="link"><a href="#">導入事例一覧へ</a></p>
+                      </section>
+
+                      <section>
+                        <h2>技術レポート</h2>
+                        <p class="link"><a href="#">技術レポート一覧へ</a></p>
+                      </section>
+
+                    </div><!--/.main-->
+
+                    <div id="sideMenu">
+                    {% include side/side_cases.html %}
+                    </div><!--/#sideMenu-->
+
+                </div><!--/.wrap-->
+            </section>
+        </article>
+        <!--△コンテンツ△-->
+
+        <!--▽フッター▽-->
+        {% include footer.html %}
+        <!--△フッター△-->
+
+  </body>
+
+</html>
