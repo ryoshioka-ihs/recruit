@@ -51,6 +51,7 @@ body {
 /* ボーダー */
 .borderd {
 	border: 1px solid #ccc;
+	padding: 0 0.5em;
 	}
 /* 左寄せ */
 .textLeft {
