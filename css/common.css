@@ -536,6 +536,13 @@ article #Utility.ttl {
 	padding-left: 30px;
 }
 
+/* 別ウィンドウリンク */
+a.outLink {
+	background: url("../image/common/icon_outlink_b.png") right 40% no-repeat;
+	background-size: 10px 10px;
+	padding-right: 15px;
+}
+
 /* --------------------------------------------------
     リストの左側に画像や数字を表示する
 -------------------------------------------------- */
