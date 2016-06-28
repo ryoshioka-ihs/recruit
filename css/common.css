@@ -822,6 +822,7 @@ a.rss:hover {
     右下三角つきBOX　白ベース
 -------------------------------------------------- */
 .triBox {
+	display: inline-block;
 	background: #FFF url("../image/common/icon_tri.png") right bottom no-repeat;
 	background-size: 12px 12px;
 	border-left: 1px solid #EFEFEF;
