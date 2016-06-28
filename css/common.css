@@ -1525,6 +1525,20 @@ img.req {
 	}
 
 /* --------------------------------------------------
+    サイトポリシー
+-------------------------------------------------- */
+/* 使用環境アイコン（Windows） */
+.sysWin {
+	background: transparent url("/image/common/icon_win.png") no-repeat scroll left 40% / 15px 15px;
+	padding-left: 1.5em;	
+}
+/* 使用環境アイコン（Mac） */
+.sysMac {
+	background: transparent url("/image/common/icon_mac.png") no-repeat scroll left 40% / 15px 15px;
+	padding-left: 1.5em;	
+}
+
+/* --------------------------------------------------
     担当エンジニアから一言
 -------------------------------------------------- */
 .word {
