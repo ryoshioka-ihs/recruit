@@ -91,7 +91,7 @@ global_menu: cases
 
               {% for category in case.categories %}
               {% if category != "cases" %}
-              <span class="icon">{{ category }}</span>
+              <span class="icon">{{ site.data.translation[category].label }}</span>
               {% endif %}
               {% endfor %}
 
