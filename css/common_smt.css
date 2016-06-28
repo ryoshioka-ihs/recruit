@@ -787,7 +787,7 @@ header {
 	max-width: 100%;
 	min-width: 0;
 	min-height: 0;
-	padding: 0;
+	padding: 0 0 10px 0;
 }
 	header .notes {
 		line-height: 18px;
