@@ -1,0 +1,143 @@
+---
+title:       "グローバルでのPC運用一元化を目的としたSCCM構築"
+description: "国内外で3万台を超えるPCの運用一元化を目的とした一連のプロジェクトの中で、グローバルSCCMの中央管理サイトと国内のSCCM環境の構築をお手伝いさせて頂きました。"
+date:        2016-06-09 17:37:23 +0900
+categories: 
+ - intoruction
+ - operation
+---
+
+<section>
+  <h1>グローバルでのPC運用一元化を目的としたSCCM構築</h1>
+
+  <ul class="linkInPage">
+    <li><a href="#sec1">背景</a></li>
+    <li><a href="#sec2">概要</a></li>
+    <li><a href="#sec3">作業のポイント</a></li>
+    <li><a href="#secPdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="sec1">
+    <h2>背景</h2>
+    <p>グローバルに多数の拠点を持つ企業では、情報システムの運用管理範囲も世界各地へと広がり、散在する情報システムに対するITガバナンスの構築は避けて通ることのできない課題です。</p>
+    <p>今回のお客様も、ガバナンス強化と運用コスト削減を目的に国内外の3万台を超えるPCの運用一元化を進められていました。国内ではSystem Center 2007 Configuration Manager(以下、SCCM)によってPCの一元的な管理体制を構築されていましたが、国外では導入 されておらず、特にウイルス対策ソフトの導入状況やセキュリティパッチの適用状況の管理が課題となっていました。</p>
+    <p>そうした課題を解決するため、お客様はSCCMによる国内外のすべてのPCの一元的な運用管理基盤の構築を計画されました。SCCMの管理対象を全拠点に拡大し、日本から管理可能にするという一連のプロジェクトの中で、IHSはグローバルSCCMの中核となる中央管理 サイトと、国内のSCCM環境の構築をお手伝いさせて頂きました。</p>
+  </section>
+
+  <section id="sec2">
+    <h2>概要</h2>
+
+    <table class="rangeTb">
+      <tr>
+        <th>業種</th>
+        <td>製造業</td>
+      </tr>
+      <tr>
+        <th>目的</th>
+        <td>
+        <ul class="grayDisc"><li>グローバルでの一元的なPC運用管理基盤の構築</li><li>System Center 2007 Configuration ManagerからSystem Center 2012 R2 Configuration Managerへの更改</li><li>System Center 2012 Endpoint Protection（ウイルス対策機能）の導入</li><li>PC運用効率の向上</li></ul>
+        </td>
+      </tr>
+      <tr>
+        <th>作業規模</th>
+        <td>利用ユーザー数: 約 15,000 名（※本プロジェクトの対象である国内のユーザー数）<br />[既存サーバ環境]<br />Active Directory ドメインコントローラ（1台）<br />System Center 2007 Configuration Manager プライマリサーバー（1台）<br />[新規サーバ環境]<br />System Center 2012 R2 Configuration Managerセントラルサーバー（1台）<br />System Center 2012 R2 Configuration Managerプライマリサーバー（2台）<br />System Center 2012 R2 Configuration Manager配布ポイントサーバ（5台）<br />SQL Server 2008 R2（3台）
+        </td>
+      </tr>
+      <tr>
+        <th>作業ボリューム</th>
+        <td>3人月</td>
+      </tr>
+      <tr>
+        <th>作業内容</th>
+        <td>System Center 2012 R2 Configuration Manager 要件定義/機能設計/構築/動作試験</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="sec3">
+    <h2>作業のポイント</h2>
+
+    <h3>グローバル展開へ向けたSCCM環境の構築・ガイドライン策定</h3>
+
+    <p>QoSによる帯域負荷の平準化今回のプロジェクトでは海外サイトの構築は範囲外でしたが、中央管理サイトは海外サイトの追加を考慮したサイジングを実施いたしました。また、海外サイト構築のガイドライン作成を行い、日本同様の基盤や運用手法の展開の準 備をお手伝いさせて頂きました。</p>
+
+    <h3>QoSによる帯域負荷の平準化</h3>
+
+    <p>SCCMの重要な機能として、アプリケーション配信、セキュリティパッチの管理、OS展開がありますが、これらの機能はサーバからPCへ多量のデータを送信するため、既存のネットワーク通信に影響を与えないようシステムを設計する必要があります。今回のプ ロジェクトでは、各拠点のサーバにQoSを設定し、SCCMと通信するすべてのサーバを対象に帯域制御を行いました。これにより、帯域の狭い国外の拠点でも既存のネットワーク通信に影響を与えず、SCCMの機能を利用することが可能となりました。</p>
+    <p>※QoS(Quality of Service)<br />
+    特定の通信に対して一定の帯域幅を確保し、パケットロスの発生を防ぐようにする技術の総称</p>
+
+    <h3>クライアントエージェントのアップグレードの自動化</h3>
+
+    <p>SCCM 2007からSCCM 2012へのアップグレードに伴い、PC側のエージェントもアップグレードが必要となります。今回はエージェントのアップグレード用にスクリプトを作成し、各拠点のPCを対象にパッケージ展開を行いました。</p>
+    <p>既存のPCは日本全国の拠点に分散していましたが、この手法によって拠点ごとにタイミングを合わせてアップグレードを行い、確実にSCCM 2012の管理下に追加することが可能となりました。</p>
+
+    <h3>SCCMによるOS展開</h3>
+
+    <p>OS展開の作業は、PC運用業務の中でも最も手間がかかるものの一つです。運用を効率化するため、これまで利用されていなかったSCCMのタスクシーケンス機能の活用をお手伝いさせていただきました。これにより、イメージ展開はもちろん、従来手動で実施し ていたドメイン参加、更新プログラムの適用、個別アプリケーションのインストールといった一連の処理が自動化することができ、人的ミスの防止、管理者の負荷軽減、キッティング作業の効率化を実現いたしました。</p>
+  </section>
+   
+  <section id="sec4">
+    <h2>IHS利用による効果</h2>
+
+    <h3>PowerShellスクリプトによる自動化</h3>
+
+    <p>SCCMは管理対象であるデバイスのグループを「コレクション」として管理しますが、コレクションの新規作成やダイレクト規則の追加にPowerShellを用いることで一連の動作を自動化し効率化を図りました。 また、既存コレクションにダイレクト規則の追加が可能な仕様としております。</p>
+    <p>このようなスクリプトを作成することにより、お客様の運用工数を削減することに貢献いたしました。</p>
+  </section>
+
+  <section id="sec5">
+    <h2>作業内容の詳細</h2>
+    
+    <h3>設計</h3>
+    <ol class="numList">
+      <li>基本設計
+        <ul class="grayDisc">
+          <li>システム設計方針</li>
+          <li>システム構成設計</li>
+          <li>構成管理基盤個別設計</li>
+          <li>クライアント管理方針</li>
+          <li>提供機能設計</li>
+          <li>セキュリティ構成設計</li>
+        </ul>
+      </li>
+    </ol>
+    
+    <h3>環境構築</h3>
+    <ol class="numList">
+      <li>資産管理機能
+        <ul class="grayDisc">
+          <li>System Center 2012 R2 Configuration Manager</li>
+        </ul>
+      </li>
+      <li>データベース機能
+        <ul class="grayDisc">
+          <li>Microsoft SQL Server 2012 SP2 Standard</li>
+        </ul>
+      </li>
+    
+      <li>セキュリティ管理
+        <ul class="grayDisc">
+          <li>System Center 2012 R2 Endpoint Protection</li>
+        </ul>
+      </li>
+    </ol>
+    
+    <h3>環境移行対象</h3>
+    <ol class="numList">
+      <li>資産管理機能</li>
+      <li>管理クライアント</li>
+      <li>セキュリティ管理</li>
+    </ol>
+    
+    <h3>納品ドキュメント</h3>
+    <ul class="grayDisc">
+      <li>基本設計書（全サーバー・機能）</li>
+      <li>詳細設計書（全サーバー・機能）</li>
+      <li>動作確認項目表兼結果報告書</li>
+      <li>作業報告書</li>
+      <li>運用手順書</li>
+    </ul>
+  </section>
+</section>
+
