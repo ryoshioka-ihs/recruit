@@ -75,37 +75,9 @@ title: 導入事例
     </section>
   </div>
 
-  <section>
-    <h2>最新の導入事例</h2>
-
-    <ul class="lineList">
-
-      {% comment %}
-        最新の導入事例を表示
-        表示条件：
-          layoutにcaseが指定されている記事のうち、最新の4件を表示
-      {% endcomment %}
-      {% assign latest_cases = site.posts | where: "layout", "case" %}
-      {% for case in latest_cases limit:4 %}
-        <li class="triBox">
-          <a href="{{ case.url }}">
-            <section>
-              <h3>{{ case.title }}</h3>
-
-              {% for category in case.categories %}
-              {% if category != "cases" %}
-              <span class="icon">{{ site.data.translation[category].label }}</span>
-              {% endif %}
-              {% endfor %}
-
-              <p>{{ case.description | slice: 0, 43 }}...</p>
-            </section>
-          </a>
-        </li>
-      {% endfor %} 
-
-    </ul>
-  </section>
+<!--▽最新の導入事例▽-->
+{% include content/content_newCase.html %}
+<!--△最新の導入事例△-->
 
 </section>
 <!--△コンテンツ△-->

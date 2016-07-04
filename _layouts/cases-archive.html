@@ -53,10 +53,8 @@ layout: cases
     {% capture paginator_url %}
       {{ paginator_url | replace: "//", "/" }}
     {% endcapture %}
-
-    <li class="act">
-      <a href="{{ paginator_url }}">{{ i }}</a>
-    </li>
+    
+    <li{% if paginator.page == i %} class="act"{% endif %}><a href="{{ paginator_url }}">{{ i }}</a></li>
 
   {% endfor %}
 
