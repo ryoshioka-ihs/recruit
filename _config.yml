@@ -2,8 +2,8 @@
 title: "IIMヒューマン・ソリューション株式会社"
 description: >
   IIMヒューマン・ソリューション株式会社は、ITインフラを支えるスペシャリストの集団です。
-baseurl: "/"
-url: "http://www.iimhs.co.jp/"
+baseurl: ""
+url: "http://www.iimhs.co.jp"
 
 # デフォルト設定
 defaults:
