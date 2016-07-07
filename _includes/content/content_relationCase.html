@@ -1,0 +1,34 @@
+<!--▽関連事例▽-->
+<section>
+  <h2>関連事例</h2>
+  <p class="link"><a href="/cases/operation/">関連事例一覧へ</a></p>
+  <ul class="lineList">
+
+    {% comment %}
+      最新の関連事例を表示
+      表示条件：
+        各記事に設定されているカテゴリーの中で最初の1個目のカテゴリーを表示させる。
+        また最新の4件を表示させる。
+    {% endcomment %}
+    {% assign category = page.categories[1] %}
+    {% for case in site.categories[category] limit:4 %}
+      <li class="triBox">
+        <a href="{{ case.url }}">
+          <section>
+            <h3>{{ case.title }}</h3>
+
+            {% for category in case.categories %}
+            {% if category != "cases" %}
+            <span class="icon">{{ category }}</span>
+            {% endif %}
+            {% endfor %}
+            <p>{{ case.description | slice: 0, 43 }}...</p>
+          </section>
+        </a>
+      </li>
+    {% endfor %} 
+  </ul>
+    {% assign category = page.categories[1] %}<a href="{{ case.url }}">関連事例一覧へ</a>
+
+</section>
+<!--△関連事例△-->

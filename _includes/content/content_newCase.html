@@ -5,7 +5,7 @@
   <ul class="lineList">
 
     {% comment %}
-      最新の導入事例を表示
+      全てのカテゴリの中から最新の導入事例を表示
       表示条件：
         layoutにcaseが指定されている記事のうち、最新の4件を表示
     {% endcomment %}
@@ -18,7 +18,7 @@
 
             {% for category in case.categories %}
             {% if category != "cases" %}
-            <span class="icon">{{ site.data.translation[category].label }}</span>
+            <span class="icon">{{ category }}</span>
             {% endif %}
             {% endfor %}
 
