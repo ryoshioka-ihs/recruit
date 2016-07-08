@@ -26,44 +26,5 @@ layout: cases
 
 </ul>
 
-<ul class="pagenation">
-  {% if paginator.previous_page_path %}
-  <li>
-    <a href="{{ paginator.previous_page_path }}">
-      <img src="/image/common/icon_prav.png" alt="前へ" width="9" height="16" />
-    </a>
-  </li>
-  {% endif %}
-
-  {% for i in (1..paginator.total_pages) %}
-
-    {% comment %}
-      * 各ページネーションのリンクURLを生成
-      * ページネーションの1ページ目は本ページのURLを設定
-      * urlに"//"が出力される場合があるため"/"に置換 
-    {% endcomment %}
-    {% capture paginator_url %}
-      /{{ page.dir }}{{ page.paginate.permalink | replace: ":num", i }}
-    {% endcapture %}
-    {% if i == 1 %}
-      {% capture paginator_url %}
-      /{{ page.dir }}/{% if page.name != "index.html" %}{{ page.name }}{% endif %}
-      {% endcapture %}
-    {% endif %}
-    {% capture paginator_url %}
-      {{ paginator_url | replace: "//", "/" }}
-    {% endcapture %}
-    
-    <li{% if paginator.page == i %} class="act"{% endif %}><a href="{{ paginator_url }}">{{ i }}</a></li>
-
-  {% endfor %}
-
-  {% if paginator.next_page_path %}
-  <li>
-    <a href="{{ paginator.next_page_path }}">
-      <img src="/image/common/icon_next.png" alt="次へ" width="9" height="16" />
-    </a>
-  </li>
-  {% endif %}
-</ul>
+{% include pagination.html %}
 

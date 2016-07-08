@@ -16,45 +16,22 @@
 					<!--▼キービジュアル▼-->
 					{% include global/global_key_topics.html %}
 					<!--▲キービジュアル▲-->
-
+					
 					<!--▼パンくずリスト▼-->
 					{% include pan.html %}
 					<!--▲パンくずリスト▲-->
 
 					<div class="wrap">
 							<div id="main">
-
-								<h1>{{ page.title }}</h1>
-
-								<ul class="topicList">
-
-									{% for post in paginator.posts %}
-										<li>
-											<a href="{{ post.url }}" target="_self">
-												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
-
-												{% if post.categories[0] == "cases" %}
-													<div><span class="icon">事例紹介</span></div>
-													<p>『{{ post.title }}』を追加しました。</p>
-												{% else %}
-													<div><span class="icon">{{ post.categories[1] }}</span></div>
-													<p>{{ post.title }}</p>
-												{% endif %}
-
-											</a>
-										</li>
-									{% endfor %}
-
-								</ul>
-
-								{% include pagination.html %}
-
+								<section>
+									<h1>{{ page.title }}<time>{{ page.date | date: "%Y/%m/%d" }}</time></h1>
+									{{ content }}
+								</section>
 							</div><!--/.main-->
 
 							<div id="sideMenu">
 							{% include side/side_topics.html %}
 							</div><!--/#sideMenu-->
-
 					</div><!--/.wrap-->
 			</section>
 	</article>
