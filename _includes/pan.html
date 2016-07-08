@@ -22,11 +22,11 @@
 		{% endif %}
 
 		{% comment %}
-			* 該当ページのカテゴリに'topics'が含まれていれば
+			* 該当ページのカテゴリに'topics'または'reports'が含まれていれば
 				パンクズリストに導入事例のリンクを追加
 			* topicsカテゴリは、記事を/topics/_posts/に格納することで自動的に付与されます。
 		{% endcomment %}
-		{% if page.categories contains 'topics' %}
+		{% if page.categories contains 'topics' or page.categories contains 'reports' %}
 		<li property="itemListElement" typeof="ListItem">
 			<a href="/topics/" itemprop="url">
 				<span itemprop="title">トピックス</span>
