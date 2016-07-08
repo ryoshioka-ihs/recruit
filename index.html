@@ -143,200 +143,129 @@ category:
 
             <ul id="tab">
                 <li class="act">最新</li>
-                <!-- <li>サービス・製品</li> -->
+                <li>サービス・製品</li>
                 <li>事例紹介</li>
                 <li>技術レポート</li>
-                <!-- <li>セミナー</li> -->
+                <li>セミナー</li>
             </ul>
 
             <div id="tabCont">
                 <!--▼最新▼-->
                 <ul class="topicList">
-                    <li>
-                        <a href="http://www.iimhs.co.jp/result/2016/03/121.html#000414" target="_self">
-                            <time>2016/03/15</time>
-                            <div><span class="icon">事例紹介</span></div>
-                            <p>『SCCM 更改』を追加しました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/02/24</time>
-                            <div><span class="icon">サービス・製品</span></div>
-                            <p>提案可能SEリストの最新版をアップしました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/01/28</time>
-                            <div><span class="icon">サービス・製品</span></div>
-                            <p>提案可能SEリストの最新版をアップしました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/01/15</time>
-                            <div><span class="icon">サービス・製品</span></div>
-                            <p>提案可能SEリストの最新版をアップしました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/01/07</time>
-                            <div><span class="icon">事例紹介</span></div>
-                            <p>『仮想基盤上でのクラスタシステム構築』を追加しました。</p>
-                        </a>
-                    </li>
+									{% for post in site.posts limit:5 %}
+										<li>
+											<a href="{{ post.url }}" target="_self">
+												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+
+												{% if post.categories[0] == "cases" %}
+													<div><span class="icon">事例紹介</span></div>
+													<p>『{{ post.title }}』を追加しました。</p>
+												{% else %}
+													<div><span class="icon">{{ post.categories[1] }}</span></div>
+													<p>{{ post.title }}</p>
+												{% endif %}
+
+											</a>
+										</li>
+									{% endfor %}
                 </ul>
                 <!--▲最新▲-->
 
                 <!--▼サービス・製品▼-->
-                <!-- <ul class="topicList">
-                    <li>
-                        <a href="#">
-                            <time>2016/02/24</time>
-                            <div><span class="icon">サービス・製品</span></div>
-                            <p>提案可能SEリストの最新版をアップしました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/01/28</time>
-                            <div><span class="icon">サービス・製品</span></div>
-                            <p>提案可能SEリストの最新版をアップしました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/01/15</time>
-                            <div><span class="icon">サービス・製品</span></div>
-                            <p>提案可能SEリストの最新版をアップしました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2015/12/25</time>
-                            <div><span class="icon">サービス・製品</span></div>
-                            <p>提案可能SEリストの最新版をアップしました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2015/12/04</time>
-                            <div><span class="icon">サービス・製品</span></div>
-                            <p>提案可能SEリストの最新版をアップしました。</p>
-                        </a>
-                    </li>
-                </ul> -->
+                <ul class="topicList">
+									{% comment %}
+										* topicsとサービス・製品カテゴリの両方に属する記事の配列service_postsを生成
+										* そのうち最新の5件を表示
+									{% endcomment %}
+									{% assign service_posts = "" | split: "" %}
+									{% for post in site.posts %}
+											{% if post.categories contains "topics" and post.categories contains "サービス・製品" %}
+												{% assign service_posts = service_posts | push: post %}
+											{% endif %}
+									{% endfor %}
+									{% for post in service_posts limit:5 %}
+										<li>
+											<a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
+												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+												<div><span class="icon">{{ post.categories[1] }}</span></div>
+												<p>{{ post.title }}</p>
+											</a>
+										</li>
+									{% endfor %}
+                </ul>
                 <!--▲サービス・製品▲-->
 
                 <!--▼事例紹介▼-->
                 <ul class="topicList">
-                    <li>
-                        <a href="#">
-                            <time>2016/03/15</time>
-                            <div><span class="icon">事例紹介</span></div>
-                            <p>『SCCM 更改』を追加しました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/01/07</time>
-                            <div><span class="icon">事例紹介</span></div>
-                            <p>『仮想基盤上でのクラスタシステム構築』を追加しました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/01/07</time>
-                            <div><span class="icon">事例紹介</span></div>
-                            <p>『Microsoft VDI導入』を追加しました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/01/07</time>
-                            <div><span class="icon">事例紹介</span></div>
-                            <p>『保守切れに伴うネットワーク機器更改』を追加しました。</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2016/01/07</time>
-                            <div><span class="icon">事例紹介</span></div>
-                            <p>『SQL Server リプレース + 冗長機能構築』を追加しました。</p>
-                        </a>
-                    </li>
+									{% comment %}
+										* casesとサービス・製品カテゴリの両方に属する記事の配列case_postsを生成
+										* そのうち最新の5件を表示
+									{% endcomment %}
+									{% for post in site.categories["cases"] limit:5 %}
+										<li>
+											<a href="{{ post.url }}" target="_self">
+												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+												<div><span class="icon">導入事例</span></div>
+												<p>『{{ post.title }}』を追加しました。</p>
+											</a>
+										</li>
+									{% endfor %}
                 </ul>
                 <!--▲事例紹介▲-->
 
                 <!--▼技術レポート▼-->
                 <ul class="topicList">
-                    <li>
-                        <a href="#">
-                            <time>2015/05/18</time>
-                            <div><span class="icon">技術レポート</span></div>
-                            <p>Hyper-VとVMWare ESXiの違い</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2011/05/12</time>
-                            <div><span class="icon">技術レポート</span></div>
-                            <p>ILM2007によるユーザーアカウント情報統合化</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2011/03/08</time>
-                            <div><span class="icon">技術レポート</span></div>
-                            <p>マイクロソフト仮想化(Hyper-V)について</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2011/02/17</time>
-                            <div><span class="icon">技術レポート</span></div>
-                            <p>Windows 7移行の注意点</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2011/01/07</time>
-                            <div><span class="icon">技術レポート</span></div>
-                            <p>マイクロソフト製品で実現するクライアント仮想化（第三回）</p>
-                        </a>
-                    </li>
+									{% comment %}
+										* topicsと技術レポートカテゴリの両方に属する記事の配列report_postsを生成
+										* そのうち最新の5件を表示
+									{% endcomment %}
+									{% assign report_posts = "" | split: "" %}
+									{% for post in site.posts %}
+											{% if post.categories contains "reports" %}
+												{% assign report_posts = report_posts | push: post %}
+											{% endif %}
+									{% endfor %}
+									{% for post in report_posts limit:5 %}
+										<li>
+											<a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
+												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+												<div><span class="icon">{{ post.categories[1] }}</span></div>
+												<p>{{ post.title }}</p>
+											</a>
+										</li>
+									{% endfor %}
                 </ul>
                 <!--▲技術レポート▲-->
 
                 <!--▼セミナー▼-->
-                <!-- <ul class="topicList">
-                    <li>
-                        <a href="#">
-                            <time>2014/12/04</time>
-                            <div><span class="icon">セミナー</span></div>
-                            <p>[2015/2/5(木)開催] 「クラウド時代のシステムデザインと性能管理」セミナーのご案内</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2013/05/21</time>
-                            <div><span class="icon">セミナー</span></div>
-                            <p>[6/27(木)開催] 「SCCMセミナー」のご案内</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <time>2013/04/23</time>
-                            <div><span class="icon">セミナー</span></div>
-                            <p>[6/5(水)開催]「Zabbixセミナー」のご案内</p>
-                        </a>
-                    </li>
-                </ul> -->
+                <ul class="topicList">
+									{% comment %}
+										* 「topics」と「セミナー」カテゴリの両方に属する記事の配列「seminar_posts」を生成
+										* そのうち最新の5件を表示
+									{% endcomment %}
+									{% assign seminar_posts = "" | split: "" %}
+									{% for post in site.posts %}
+											{% if post.categories contains "topics" and post.categories contains "セミナー" %}
+												{% assign seminar_posts = seminar_posts | push: post %}
+											{% endif %}
+									{% endfor %}
+									{% for post in seminar_posts limit:5 %}
+										<li>
+										{% if post.link %}
+											<a href="{{ post.link }}" target="_self">
+										{% else %}
+											<a href="{{ post.url }}" target="_self">
+										{% endif %}
+												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+												<div><span class="icon">{{ post.categories[1] }}</span></div>
+												<p>{{ post.title }}</p>
+											</a>
+										</li>
+									{% endfor %}
+                </ul>
                 <!--▲セミナー▲-->
             </div><!--/#tabCont-->
-            <p class="link"><a href="#">トピックス一覧へ</a></p>
+            <p class="link"><a href="/topics/">トピックス一覧へ</a></p>
         </div>
     </section><!--/#topic-->
 

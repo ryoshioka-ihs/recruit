@@ -19,7 +19,23 @@ defaults:
       path: "topics"
       type: "posts"
     values:
+      layout: "topic"
+      global_menu: "topics"
+      permalink: /topics/:year/:month/:title.html
+  -
+    scope:
+      path: "topics"
+      type: "pages"
+    values:
       layout: "topics"
+      global_menu: "topics"
+  -
+    scope:
+      path: "reports"
+      type: "posts"
+    values:
+      layout: "topic"
+      global_menu: "topics"
       permalink: /topics/:year/:month/:title.html
 
 # Gemfileで追加した拡張機能
