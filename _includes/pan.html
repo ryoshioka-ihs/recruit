@@ -47,7 +47,7 @@
       {% assign position = position  | plus: 1 %}
 
       <li property="itemListElement" typeof="ListItem">
-        {% if crumb.url != page.url %}<a property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+        {% if crumb.url != page.url %}<a property="item" typeof="WebPage" href="{{ crumb.url }}">{% endif %}
         <span property="name">{{ crumb.title }}</span>
         {% if crumb.url != page.url %}</a>{% endif %}
         <meta property="position" content="{{ position }}" />
