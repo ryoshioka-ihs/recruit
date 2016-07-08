@@ -1,26 +1,30 @@
 ---
-layout:      case
-global_menu: cases
-title:       "事例のタイトルを入力"
-description: "[description]の内容を43文字まで表示（それ以上になると「・・・」で省略）⇒_layouts /cases-archive.htmlで定義しています"
-date:        2016-07-07 11:16:23 +0900
+layout:       case
+global_menu:  cases
+title:        "事例のタイトルを入力"
+description:  "[description]の内容を43文字まで表示（それ以上になると「・・・」で省略）⇒_layouts /cases-archive.htmlで定義しています"
+keywords:     "ITソリューション,ITサービス,システム,導入,運用,保守,IHS"
+date:         2016-07-08 00:00:00 +0900
 categories: 
- - "インフラ導入"
- - "Server"
+ - "インフラ運用"
+ - "SCCM"
 ---
 
 <section>
   <h1>{{ page.title }}</h1>
-
   <ul class="linkInPage">
-    <li><a href="#sec1">背景</a></li>
-    <li><a href="#sec2">概要</a></li>
-    <li><a href="#sec3">システム構成図</a></li>
-    <li><a href="#sec4">作業のポイント</a></li>
-    <li><a href="#secPdfDownload">PDFダウンロード</a></li>
+    <li><a href="#background">背景</a></li>
+    <li><a href="#overview">概要</a></li>
+    <li><a href="#sysCon">システム構成図</a></li>
+    <li><a href="#point">作業のポイント</a></li>
+    <li><a href="#effect">IHS利用による効果</a></li>
+    <li><a href="#detail">作業内容の詳細</a></li>
+    <li><a href="#voice">お客様の声</a></li>
+    <li><a href="#engineer">担当エンジニアからの一言</a></li>    
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
   </ul>
 
-  <section id="sec1">
+  <section id="background">
     <h2>背景</h2>
     <p>グローバルに多数の拠点を持つ企業では、情報システムの運用管理範囲も世界各地へと広がり、散在する情報システムに対するITガバナンスの構築は避けて通ることのできない課題です。</p>
     <br>
@@ -29,7 +33,7 @@ categories:
     <p>そうした課題を解決するため、お客様はSCCMによる国内外のすべてのPCの一元的な運用管理基盤の構築を計画されました。SCCMの管理対象を全拠点に拡大し、日本から管理可能にするという一連のプロジェクトの中で、IHSはグローバルSCCMの中核となる中央管理 サイトと、国内のSCCM環境の構築をお手伝いさせて頂きました。</p>
   </section>
 
-  <section id="sec2">
+  <section id="overview">
     <h2>概要</h2>
 
     <table class="baseTb">
@@ -59,16 +63,24 @@ categories:
     </table>
   </section>
 
-  <section id="sec3">
+  <section id="sysCon">
     <h2>システム構成図</h2>
+    <figure>
+      <img src="/image/cases/result120_img001.png" alt="本プロジェクトの範囲">
+      <figcaption>Lightboxを使わない例</figcaption>
+    </figure>
+
     <div class="lightBox">
-    <figure><img src="/image/cases/result120_img001.png" alt="本プロジェクトの範囲"></figure>
+    <figure>
+      <img src="/image/cases/lightBox_img.png" alt="本プロジェクトの範囲">
+      <figcaption>Lightboxを使った例</figcaption>
+    </figure>
     <p>拡大する</p>
     </div>
 
   </section>
 
-  <section id="sec4">
+  <section id="point">
     <h2>作業のポイント</h2>
 
     <h3>グローバル展開へ向けたSCCM環境の構築・ガイドライン策定</h3>
@@ -91,7 +103,7 @@ categories:
     <p>OS展開の作業は、PC運用業務の中でも最も手間がかかるものの一つです。運用を効率化するため、これまで利用されていなかったSCCMのタスクシーケンス機能の活用をお手伝いさせていただきました。これにより、イメージ展開はもちろん、従来手動で実施し ていたドメイン参加、更新プログラムの適用、個別アプリケーションのインストールといった一連の処理が自動化することができ、人的ミスの防止、管理者の負荷軽減、キッティング作業の効率化を実現いたしました。</p>
   </section>
    
-  <section id="sec5">
+  <section id="effect">
     <h2>IHS利用による効果</h2>
 
     <h3>PowerShellスクリプトによる自動化</h3>
@@ -101,7 +113,7 @@ categories:
     <p>このようなスクリプトを作成することにより、お客様の運用工数を削減することに貢献いたしました。</p>
   </section>
 
-  <section id="sec6">
+  <section id="detail">
     <h2>作業内容の詳細</h2>
     
     <h3>設計</h3>
