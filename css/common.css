@@ -1994,7 +1994,6 @@ header {
 		width: calc(100% - 30px);
 		margin-left: 30px;
 		height: 30px;
-		background-color: #F2F2F0;
 	}
 	#scWrap .search input.button {
 		width: 20px;
