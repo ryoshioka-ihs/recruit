@@ -1978,14 +1978,23 @@ header {
 	margin-top: 5px;
 	position: relative;
 }
-	#SCBtn {
+	#scBtn {
 		display: none;
 	}
+	#scWrap .search form {
+		background-color: #fff;
+		position: relative;
+	}
+	/*
+	 * CSS calc()
+	 * MDN: https://developer.mozilla.org/ja/docs/Web/CSS/calc
+	 * Can I Use: http://caniuse.com/#search=calc()
+	 */
 	#scWrap .search input[type="text"] {
-		width: 100%;
+		width: calc(100% - 30px);
+		margin-left: 30px;
 		height: 30px;
 		background-color: #F2F2F0;
-		padding-left: 30px;
 	}
 	#scWrap .search input.button {
 		width: 20px;

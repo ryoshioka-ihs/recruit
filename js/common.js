@@ -139,7 +139,7 @@ function setGnavi() {
 //======================================================================================================
 function smtSearch() {
 
-	$('#scWrap #SCBtn').click( function(){
+	$('#scWrap #scBtn').click( function(){
 		// open クラスを付与する
 		$(this).toggleClass('open');
 		if($(this).hasClass('open')){

@@ -63,15 +63,13 @@
 		</ul>
 
 		<div class="search">
-			<p id="SCBtn">検索</p>
-			<form name="seek" method="get" action="/cgi-bin/mvltp/mt-search.cgi">
-				<input name="IncludeBlogs" value="1,1,4,2" type="hidden">
-				<input name="limit" value="10" type="hidden">
-				<input name="SearchElement" value="both" type="hidden">
-				<input name="search" value="" type="text">
+			<p id="scBtn">検索</p>
+			<form id="cse-search-box" name="seek" method="get" action="/search/searchResult.html">
+				<input name="q" value="" type="text">
 				<input class="button" value="" type="submit">
 			</form>
 		</div>
+		<script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
 	</div><!--/#scWrap-->
 
 	<ul id="infoLink">
