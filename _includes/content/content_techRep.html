@@ -1,29 +1,36 @@
+{% comment %}
+	* 「topics」と「技術レポート」カテゴリの両方に属する記事の配列「report_posts」を生成
+	* そのうち最新の4件を表示
+{% endcomment %}
+{% assign report_posts = "" | split: "" %}
+{% for post in site.posts %}
+	{% if post.categories contains "reports" and post.categories contains page.categories.last %}
+		{% assign report_posts = report_posts | push: post %}
+	{% endif %}
+{% endfor %}
+{% if report_posts.size > 0 %}
 <!--▽技術レポート▽-->
 <section>
-    <h2>技術レポート</h2>
-    <p class="link"><a href="/topics/reports/index.html">技術レポート一覧へ</a></p>
-    <ul class="repoList">
-        {% comment %}
-            * topicsと技術レポートカテゴリの両方に属する記事の配列report_postsを生成
-            * そのうち最新の4件を表示
-        {% endcomment %}
-        {% assign report_posts = "" | split: "" %}
-        {% for post in site.posts %}
-                {% if post.categories contains "reports" %}
-                    {% assign report_posts = report_posts | push: post %}
-                {% endif %}
-        {% endfor %}
-        {% for post in report_posts limit:4 %}
-        <li>
-            <a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
-                <section>
-                    <h3>{{ post.title }}</h3>
-                    <span class="icon">{{ post.categories[1] }}</span>
-                    <p>{{ post.description | slice: 0, 58 }}...</p>
-                </section>
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+		<h2>技術レポート</h2>
+		<p class="link"><a href="/topics/reports/">技術レポート一覧へ</a></p>
+		<ul class="repoList">
+				{% for post in report_posts limit:4 %}
+					<li>
+						<a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
+							<section>
+								<h3>{{ post.title }}</h3>
+								{% for category in post.categories %}
+									{% if category != "topics" %}
+										<span class="icon">{{ category }}</span>
+									{% endif %}
+								{% endfor %}
+								<p>{{ post.description | slice: 0, 43 }}...</p>
+							</section>
+						</a>
+					</li>
+				{% endfor %}
+		</ul>
 </section>
 <!--△技術レポート△-->
+{% endif %}
+
