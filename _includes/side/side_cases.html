@@ -17,6 +17,6 @@
             {% include side/side_bn_cases.html %}
             {% include side/side_bn_tech-rep.html %}
             {% include side/side_bn_contact.html %}
-            {% if page.layout != "cases" %}{% include side/side_related-services.html %}{% endif %}
+            {% if page.layout == "case" %}{% include side/side_related-services.html %}{% endif %}
         </ul>
     </aside>
