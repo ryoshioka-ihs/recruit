@@ -3,10 +3,10 @@ layout: services
 global_menu: services
 description: IIMヒューマン・ソリューション（IHS）のサービス・製品情報「インフラ運用」をご紹介します。
 keywords: ITソリューション,ITサービス,システム,導入,運用,保守,IHS
-category: インフラ運用
+categories: 
+- インフラ運用
 title: インフラ運用
 ---
-<section>
     <div class="imgBase bg1">
         <h1>インフラ運用</h1>
         <p>リピートオーダー率90%以上！<br />情報システム部門の様々な業務をお手伝いいたします。</p>
@@ -121,48 +121,3 @@ title: インフラ運用
             </li>
         </ul>
     </section>
-
-<!--▽関連事例▽-->
-  {% include content/content_relationCase.html %}
-<!--△関連事例△-->
-
-<!--▽技術レポート▽-->
-  {% include content/content_techRep.html %}
-<!--△技術レポート△-->
-
-		{% comment %}
-			* 「topics」と「技術レポート」カテゴリの両方に属する記事の配列「report_posts」を生成
-			* そのうち最新の5件を表示
-		{% endcomment %}
-		{% assign report_posts = "" | split: "" %}
-		{% for post in site.posts %}
-			{% if post.categories contains "reports" and post.main-category == page.category %}
-				{% assign report_posts = report_posts | push: post %}
-			{% endif %}
-		{% endfor %}
-		{% if report_posts.size > 0 %}
-    <section>
-        <h2>技術レポート</h2>
-        <p class="link"><a href="/topics/reports/">技術レポート一覧へ</a></p>
-        <ul class="repoList">
-						{% for post in report_posts limit:5 %}
-							<li>
-								<a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
-									<section>
-										<h3>{{ post.title }}</h3>
-										{% for category in post.categories %}
-											{% if category != "topics" %}
-												<span class="icon">{{ category }}</span>
-											{% endif %}
-										{% endfor %}
-										<p>{{ post.description | slice: 0, 43 }}...</p>
-									</section>
-								</a>
-							</li>
-						{% endfor %}
-        </ul>
-    </section>
-		{% endif %}
-
-</section>
-
