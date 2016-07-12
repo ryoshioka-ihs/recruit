@@ -1,11 +1,11 @@
 <!--▽技術レポート▽-->
 <section>
     <h2>技術レポート</h2>
-    <p class="link"><a href="/topics/index.html">技術レポート一覧へ</a></p>
+    <p class="link"><a href="/topics/reports/index.html">技術レポート一覧へ</a></p>
     <ul class="repoList">
         {% comment %}
             * topicsと技術レポートカテゴリの両方に属する記事の配列report_postsを生成
-            * そのうち最新の5件を表示
+            * そのうち最新の4件を表示
         {% endcomment %}
         {% assign report_posts = "" | split: "" %}
         {% for post in site.posts %}
@@ -13,7 +13,7 @@
                     {% assign report_posts = report_posts | push: post %}
                 {% endif %}
         {% endfor %}
-        {% for post in report_posts limit:5 %}
+        {% for post in report_posts limit:4 %}
         <li>
             <a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
                 <section>
