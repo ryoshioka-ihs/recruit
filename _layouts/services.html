@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<!--▽ヘッド▽-->
-{% include head.html %}
-<!--△ヘッド△-->
-</head>
-<body>
-        <!--▽ヘッダー▽-->
-        {% include header.html %}
-        <!--△ヘッダー△-->
-        
-        <!--▽コンテンツ▽-->
-        <article>
-            <section>
-                <!--▼キービジュアル▼-->
-                {% include global/global_key_services.html %}
-                <!--▲キービジュアル▲-->
-                
-                <!--▼パンくずリスト▼-->
-                {% include pan.html %}
-                <!--▲パンくずリスト▲-->
+	<head>
+		<!--▽ヘッド▽-->
+		{% include head.html %}
+		<!--△ヘッド△-->
+	</head>
+	<body>
+		<!--▽ヘッダー▽-->
+		{% include header.html %}
+		<!--△ヘッダー△-->
 
-                <div class="wrap">
-                    <div id="main">
+		<!--▽コンテンツ▽-->
+		<article>
+			<section>
+				<!--▼キービジュアル▼-->
+				{% include global/global_key_services.html %}
+				<!--▲キービジュアル▲-->
 
-                     {{ content }}
+				<!--▼パンくずリスト▼-->
+				{% include pan.html %}
+				<!--▲パンくずリスト▲-->
 
-                    </div><!--/.main-->
+				<div class="wrap">
+					<div id="main">
 
-                    <div id="sideMenu">
-                    {% include side/side_services.html %}
-                    </div><!--/#sideMenu-->
+						{{ content }}
 
-                </div><!--/.wrap-->
-            </section>
-        </article>
-        <!--△コンテンツ△-->
+					</div><!--/.main-->
+
+					<div id="sideMenu">
+						{% include side/side_services.html %}
+					</div><!--/#sideMenu-->
+
+				</div><!--/.wrap-->
+			</section>
+		</article>
+		<!--△コンテンツ△-->
 
 
-        <!--▽フッター▽-->
-        {% include footer.html %}
-        <!--△フッター△-->
-</body>
+		<!--▽フッター▽-->
+		{% include footer.html %}
+		<!--△フッター△-->
+	</body>
 
 </html>
