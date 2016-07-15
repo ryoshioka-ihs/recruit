@@ -284,6 +284,7 @@ function lightBox() {
 function scrollTopAfterSendMail() {
 	$("#js-googleForm").load(function(){
 		$('html,body').animate({ scrollTop: 0 }, 'fast');
+		$('.loading').fadeOut();
 	});
 }
 
