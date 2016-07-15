@@ -95,6 +95,12 @@ body {
 	font-size: 90%;
 	color: rgb(151, 151, 151);
 }
+/* 図のタイトル */
+figcaption.title {
+	font-size: 90%;
+	color: #333;
+	padding-top: 0.5em;
+}
 /* --------------------------------------------------
     リンク
 -------------------------------------------------- */
@@ -768,7 +774,7 @@ a.rss:hover {
 	}
 /* --------------------------------------------------
     ベーステーブルレイアウト(見出し太字＆背景色あり)
-    ※横幅指定なし
+    ※パディング間隔少なめ
 -------------------------------------------------- */
 .baseTb--tight {
 	background-color: #FFF;
@@ -777,12 +783,12 @@ a.rss:hover {
 	.baseTb--tight tr > * {
 		vertical-align: middle;
 		border-bottom: 1px solid #DDD;
-		padding: 10px 30px 10px 20px;
+		padding: 0.5em;
 	}
 	.baseTb--tight th {
 		height: 40px;
 		font-weight: bold;
-		padding-right: 10px;
+		padding-right: 5px;
 		background-color: #F0F0F0;
 	}
 /* --------------------------------------------------
@@ -1369,6 +1375,33 @@ a.rss:hover {
 	.rangeTb td {
 		vertical-align: middle;
 		padding: 10px 10px 10px 18px;
+		border-left: 1px solid #DDD;
+		border-bottom: 1px solid #DDD;
+	}
+/* --------------------------------------------------
+    対応範囲の表
+    ※パディング間隔少なめ
+-------------------------------------------------- */
+.rangeTb--tight {
+	background-color: #FFF;
+}
+	.rangeTb--tight th {
+		vertical-align: middle;
+		padding: 0.5em;
+		border-bottom: 1px solid #DDD;
+	}
+	.rangeTb--tight tr:first-child th {
+		font-weight: bold;
+		background-color: #F0F0F0;
+		border-top: 1px solid #DDD;
+	}
+	.rangeTb--tight + .rangeTb--tight tr:first-child th {
+		border-top: none;
+	}
+
+	.rangeTb--tight td {
+		vertical-align: middle;
+		padding: 0.5em;
 		border-left: 1px solid #DDD;
 		border-bottom: 1px solid #DDD;
 	}
