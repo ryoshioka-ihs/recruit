@@ -1,0 +1,29 @@
+<!--▽技術レポート(※topicsと技術レポートカテゴリの両方に属する記事から最新4件を表示)▽-->
+<section>
+    <h2>技術レポート</h2>
+    <p class="link"><a href="/topics/reports/index.html">技術レポート一覧へ</a></p>
+    <ul class="repoList">
+        {% comment %}
+            * topicsと技術レポートカテゴリの両方に属する記事の配列report_postsを生成
+            * そのうち最新の4件を表示
+        {% endcomment %}
+        {% assign report_posts = "" | split: "" %}
+        {% for post in site.posts %}
+                {% if post.categories contains "reports" %}
+                    {% assign report_posts = report_posts | push: post %}
+                {% endif %}
+        {% endfor %}
+        {% for post in report_posts limit:4 %}
+        <li>
+            <a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
+                <section>
+                    <h3>{{ post.title }}</h3>
+                    <span class="icon">{{ post.categories[1] }}</span>
+                    <p>{{ post.description | slice: 0, 58 }}...</p>
+                </section>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+<!--△技術レポート△-->

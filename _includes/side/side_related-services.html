@@ -1,3 +1,5 @@
+{% comment %} categoriesに指定している数が2個かそれ以上の数の場合、サイドバーに関連サービスを表示しない {% endcomment %}
+{% if page.categories.size >= 2 %}
 <li class="svList">
     <dl>
         <dt>関連サービス</dt>
@@ -12,7 +14,7 @@
                 <!-- ▼子カテゴリ▼ -->
                 <!--{% if page.categories contains "ServiceNow" %}<li><a href="">{{ "ServiceNow" }}</a></li>{% endif %}-->
                 {% if page.categories contains "運用サービス" %}<li><a href="">{{ "運用サービス" }}</a>{% endif %}</li>
-                {% if page.categories contains "DRaaS with Azureサービス" %}<li><a href="">{{ "DRaaS with Azureサービス" }}</a></li>{% endif %}
+                {% if page.categories contains "Azureサービス" %}<li><a href="">{{ "Azureサービス" }}</a></li>{% endif %}
                 {% if page.categories contains "WebシステムAzure移行サービス" %}<li><a href="">{{ "WebシステムAzure移行サービス" }}</a></li>{% endif %}
                 {% if page.categories contains "Webシステム脆弱性診断サービス" %}<li><a href="">{{ "Webシステム脆弱性診断サービス" }}</a></li>{% endif %}
                 <!--{% if page.categories contains "Sitecore導入サービス" %}<li><a href="">{{ "Sitecore導入サービス" }}</a></li>{% endif %}-->
@@ -23,3 +25,4 @@
         </dd>
     </dl>
 </li>
+{% endif %}
