@@ -48,6 +48,11 @@ body {
     Helper
 	よく使うがモジュールと呼ぶほどでもないスタイル
 -------------------------------------------------------- */
+/* 強調 */
+em {
+	font-style: normal;
+	font-weight: bold;
+	}
 /* ボーダー */
 .borderd {
 	border: 1px solid #ccc;
