@@ -142,15 +142,22 @@ function setGnavi() {
 //======================================================================================================
 function smtSearch() {
 
-	$('#scWrap #scBtn').click( function(){
-		// open クラスを付与する
+	var $header = $('.headerMainNav');
+	var $form = $('#scWrap .search form');
+
+	// 読み込み時のHeaderの高さを保存
+	var closeHeight = $header.outerHeight();
+	var openHeight = closeHeight + 72;
+
+	$('#scBtn').click( function(){
 		$(this).toggleClass('open');
+
 		if($(this).hasClass('open')){
-			$('#infoLink').animate({'marginTop': '72px' }, 400);
-			$('#scWrap .search form').fadeIn(800);
+			$header.animate({'height': openHeight + 'px'}, 400);
+			$form.fadeIn(800);
 		} else {
-			$('#infoLink').animate({'marginTop': '10px' }, 400);
-			$('#scWrap .search form').fadeOut(200);
+			$header.animate({'height': closeHeight + 'px'}, 400);
+			$form.fadeOut(200);
 		}
 	});
 }

@@ -1958,9 +1958,7 @@ position: relative;
 	/* スマホ表示での2段目 */
 	.headerMainNav {
 		display: block;
-	}
-	.headerMainNav--en {
-		padding-top: 15px;
+		padding-top: 10px;
 	}
 
 	/* キャッチコピー */

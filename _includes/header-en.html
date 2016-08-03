@@ -1,6 +1,6 @@
 <!--▽ヘッダー▽-->
 <header class="siteHeader">
-	<div class="headerMainNav headerMainNav--en">
+	<div class="headerMainNav clearfix">
 		<h1 class="siteLogo"><a href="/"><img src="/image/common/logo.png" alt="IIMヒューマン・ソリューション" width="113" height="27" /></a></h1>
 		<nav id="gNav">
 			<p id="Menu"><img src="/image/common/menu_smt.png" alt="Menu" width="25" height="22" /></p>
@@ -24,15 +24,13 @@
 			</ul>
 
 			<div class="search">
-				<p id="SCBtn">検索</p>
-				<form name="seek" method="get" action="/cgi-bin/mvltp/mt-search.cgi">
-					<input name="IncludeBlogs" value="1,1,4,2" type="hidden">
-					<input name="limit" value="10" type="hidden">
-					<input name="SearchElement" value="both" type="hidden">
-					<input name="search" value="" type="text">
+				<p id="scBtn">検索</p>
+				<form id="cse-search-box" name="seek" method="get" action="/search/searchResult.html">
+					<input name="q" value="" type="text">
 					<input class="button" value="" type="submit">
 				</form>
 			</div>
+			<script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
 		</div><!--/#scWrap-->
 	</div><!--/.headerMainNav-->
 

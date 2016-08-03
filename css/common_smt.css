@@ -802,15 +802,15 @@ height: 1700px;
 	min-height: 0;
 	padding: 0;
 }
-	.headerMainNav--en {
-		padding: 8px 0 8px 0;
+	.headerMainNav {
+		margin-bottom: 10px;
+		position: relative;
 	}
 	.slogan {
 		line-height: 18px;
 		font-size: 10px;
 		background-color: #F3F3F3;
 		padding-left: 9px;
-		margin-bottom: 9px;
 	}
 
 	/* ロゴ */
@@ -954,7 +954,7 @@ height: 1700px;
 			display: block;
 			position: absolute;
 			left: 0px;
-			top: 78px;
+			top: 60px;
 			width: calc(100% - 40px);
 			margin: 0 20px;
 			display: none;
@@ -972,7 +972,6 @@ height: 1700px;
 #infoLink {
 	width: 100%;
 	position: static;
-	margin-top: 10px;
 }
 	#infoLink li {
 		width: 50%;
