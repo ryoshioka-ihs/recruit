@@ -1941,7 +1941,7 @@ position: relative;
 /* --------------------------------------------------
     header
 -------------------------------------------------- */
-header {
+.siteHeader {
 	max-width: 1440px;
 	min-width: 1000px;
 	min-height: 90px;
@@ -1950,30 +1950,38 @@ header {
 	margin: auto;
 }
 @media (max-width: 1052px) {
-	header {
+	.siteHeader {
 		padding: 5px 130px 0 5px;
 	}
 }
-	header > *,
-	header li {
-		display: inline-block;
-		vertical-align: top;
+
+	/* スマホ表示での2段目 */
+	.headerMainNav {
+		display: block;
 	}
-	header .notes {
+	.headerMainNav--en {
+		padding-top: 15px;
+	}
+
+	/* キャッチコピー */
+	.slogan {
 		display: block;
 		font-weight: bold;
 		font-size: 9px;
 		color: #282828;
 	}
-	header h1 {
+
+	/* ロゴ */
+	.siteLogo {
+		display: inline-block;
 		margin-top: 13px;
-		transition: 0.3s;
 	}
-	header h1:hover {
+	.siteLogo:hover {
 		opacity: 0.7;
 		-ms-filter: "alpha(opacity=70)";
+		transition: 0.3s;
 	}
-	header a:hover {
+	.siteLogo a {
 		text-decoration: none;
 	}
 
@@ -1987,6 +1995,12 @@ header {
 }
 	#gNav p {
 		display: none;
+	}
+	#gNav li {
+		display: inline-block;
+	}
+	#gNav a:hover {
+		text-decoration: none;
 	}
 	#gNav .navWrap > ul > li {
 		position: relative;
@@ -2039,6 +2053,7 @@ header {
 	float: right;
 }
 	#scWrap li {
+		display: inline-block;
 		color: #174682;
 		letter-spacing: 1px;
 		font-weight: bold;
@@ -2099,6 +2114,8 @@ header {
 	clear: both;
 }
 	#infoLink li {
+		display: inline-block;
+		vertical-align: top;
 		width: 120px;
 		height: 45px;
 	}

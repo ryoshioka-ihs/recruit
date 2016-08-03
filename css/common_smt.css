@@ -796,13 +796,16 @@ height: 1700px;
 /* --------------------------------------------------
     header
 -------------------------------------------------- */
-header {
+.siteHeader {
 	max-width: 100%;
 	min-width: 0;
 	min-height: 0;
 	padding: 0 0 10px 0;
 }
-	header .notes {
+	.headerMainNav--en {
+		padding-top: 8px;
+	}
+	.slogan {
 		line-height: 18px;
 		font-size: 10px;
 		background-color: #F3F3F3;
@@ -810,11 +813,12 @@ header {
 		margin-bottom: 9px;
 	}
 
-	header h1 {
-		margin: 0 0 0 9px;
+	/* ロゴ */
+	.siteLogo {
+		margin: 2px 0 0 9px;
 		transition: 0s;
 	}
-	header h1:hover {
+	.siteLogo a:hover {
 		opacity: 1;
 	}
 

@@ -1,39 +1,40 @@
 <!--▽ヘッダー▽-->
-<header>
-	<p class="notes">IIM Human Solution is a specialist company for supporting IT Infrastructure.</p>
-	<h1><a href="/"><img src="/image/common/logo.png" alt="IIMヒューマン・ソリューション" width="113" height="27" /></a></h1>
-	<nav id="gNav">
-		<p id="Menu"><img src="/image/common/menu_smt.png" alt="メニュー" width="25" height="22" /></p>
-		<div class="navWrap">
-			<p id="close"><img src="/image/common/icon_close.png" alt="閉じる" width="20" height="19" /></p>
+<header class="siteHeader">
+	<div class="headerMainNav headerMainNav--en">
+		<h1 class="siteLogo"><a href="/"><img src="/image/common/logo.png" alt="IIMヒューマン・ソリューション" width="113" height="27" /></a></h1>
+		<nav id="gNav">
+			<p id="Menu"><img src="/image/common/menu_smt.png" alt="メニュー" width="25" height="22" /></p>
+			<div class="navWrap">
+				<p id="close"><img src="/image/common/icon_close.png" alt="閉じる" width="20" height="19" /></p>
+				<ul>
+					<li class="act">
+						<a href="/english/index.html">Corporate Profile</a>
+					</li>
+					<li>
+						<a href="mailto:web@iimhs.co.jp?subject=問い合わせ&amp;body=ご記入ください">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</nav><!--/#gNav-->
+
+		<div id="scWrap">
 			<ul>
-				<li class="act">
-					<a href="/english/index.html">Corporate Profile</a>
-				</li>
-				<li>
-					<a href="mailto:web@iimhs.co.jp?subject=問い合わせ&amp;body=ご記入ください">Contact Us</a>
-				</li>
+				<li><a href="/">J<span>A</span>P<span>ANESE</span></a></li>
+				<li>EN<span>GLISH</span></li>
 			</ul>
-		</div>
-	</nav><!--/#gNav-->
 
-	<div id="scWrap">
-		<ul>
-			<li><a href="/">J<span>A</span>P<span>ANESE</span></a></li>
-			<li>EN<span>GLISH</span></li>
-		</ul>
-
-		<div class="search">
-			<p id="SCBtn">検索</p>
-			<form name="seek" method="get" action="/cgi-bin/mvltp/mt-search.cgi">
-				<input name="IncludeBlogs" value="1,1,4,2" type="hidden">
-				<input name="limit" value="10" type="hidden">
-				<input name="SearchElement" value="both" type="hidden">
-				<input name="search" value="" type="text">
-				<input class="button" value="" type="submit">
-			</form>
-		</div>
-	</div><!--/#scWrap-->
+			<div class="search">
+				<p id="SCBtn">検索</p>
+				<form name="seek" method="get" action="/cgi-bin/mvltp/mt-search.cgi">
+					<input name="IncludeBlogs" value="1,1,4,2" type="hidden">
+					<input name="limit" value="10" type="hidden">
+					<input name="SearchElement" value="both" type="hidden">
+					<input name="search" value="" type="text">
+					<input class="button" value="" type="submit">
+				</form>
+			</div>
+		</div><!--/#scWrap-->
+	</div><!--/.headerMainNav-->
 
 </header>
 <!--△ヘッダー△-->
