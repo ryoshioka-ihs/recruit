@@ -374,6 +374,9 @@ body {
 #topic .link {
 	margin: 25px 13px 0 0;
 }
+	#topic .link a:hover {
+		text-decoration: none;
+	}
 
 /*  会社情報
 -------------------------------------------------- */
