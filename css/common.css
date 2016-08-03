@@ -2233,7 +2233,7 @@ article .wrap:after {
 				line-height: 58px;
 				font-size: 15px;
 				padding-left: 75px;
-				background: url("../image/common/icon_tri.png") 99% 96% no-repeat;
+				background: url("../image/common/icon_tri.png") right 3px bottom 3px no-repeat;
 				background-size: 12px 12px;
 			}
 
