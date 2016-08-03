@@ -1958,7 +1958,10 @@ position: relative;
 	/* スマホ表示での2段目 */
 	.headerMainNav {
 		display: block;
-		padding-top: 10px;
+	}
+	.headerMainNav--en {
+		/* 英語ページでキャッチを表示しないため、他の要素の高さを調整 */
+		padding-top: 15px;
 	}
 
 	/* キャッチコピー */

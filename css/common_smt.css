@@ -804,6 +804,7 @@ height: 1700px;
 }
 	.headerMainNav {
 		margin-bottom: 10px;
+		padding-top: 10px;
 		position: relative;
 	}
 	.slogan {
