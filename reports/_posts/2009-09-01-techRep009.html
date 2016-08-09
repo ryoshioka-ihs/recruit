@@ -1,0 +1,182 @@
+---
+title:         "仮想環境への移行を支援する「仮想マシン移行ツール」"
+description:   "物理サーバ上のOSやアプリケーションを仮想環境へと移行する方法についてご紹介します。仮想環境への移行方法は、大きくわけて２つあります。通常の物理サーバへの移行と同様に仮想環境上でOSのインストールから行う方法と、移行ツールを利用する方法です。"
+keywords:      ""
+date:          2010-01-20 00:00:00 +0900
+link:		       ""
+categories:
+- "インフラ構築"
+- "運用サービス"
+- "技術レポート"
+tags:
+- "仮想化"
+- "VMware"
+---
+
+<p>物理サーバ上のOSやアプリケーションを仮想環境へと移行する方法についてご紹介します。仮想環境への移行方法は、大きくわけて２つあります。通常の物理サーバへの移行と同様に仮想環境上でOSのインストールから行う方法と、移行ツールを利用する方法です。</p>
+<p>仮想マシン移行方法の説明の前に、VMwareを例にあげて仮想マシンを構成する最低限のファイルを紹介します。</p>
+
+<h2>仮想マシン作成（移行）時に生成されるファイル</h2>
+<table class="rangeTb--tight" style="width: 100%;">
+	<tbody>
+		<tr valign="top">
+			<td bgcolor="#B6DDE8" style="width: 20%;" class="textCenter">ファイル拡張子</td>
+			<td bgcolor="#B6DDE8" style="width: 80%;" class="textCenter">解説</td>
+		</tr>
+		<tr valign="top">
+			<td class="textCenter">vmx</td>
+			<td>仮想マシンの構成情報ファイル
+				<p>（ゲストOSのMACアドレス・仮想ハードディスクの格納場所などの情報。）</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td class="textCenter">vmdk</td>
+			<td>仮想ハードディスク
+				<p>（ハードディスクはファイルとして管理される）</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<p>vmxファイルとvmdkファイルは仮想マシンの作成（移行）の工程で生成されます。</p>
+<p>仮想マシン作成の手順は下記の通りです。</p>
+<br>
+<table class="baseTb--tight" style="width: 100%">
+	<tbody>
+		<tr valign="top">
+			<td bgcolor="#DAEEF3">(1)</td>
+			<td bgcolor="#DAEEF3">仮想マシン名・仮想マシン保存場所・リソースプールの選択</td>
+			<td rowspan="4" bgcolor="#D2EAF1">vmx</td>
+		</tr>
+		<tr valign="top">
+			<td bgcolor="#DAEEF3">(2)</td>
+			<td bgcolor="#DAEEF3">インストール予定のOS選択</td>
+		</tr>
+		<tr valign="top">
+			<td bgcolor="#DAEEF3">(3)</td>
+			<td bgcolor="#DAEEF3">リソースの割り当て（CPU・メモリ・ネットワークアダプタ・SCSIコントローラ）</td>
+		</tr>
+		<tr valign="top">
+			<td rowspan="2" height="17" bgcolor="#B6DDE8">(4)</td>
+			<td rowspan="2" bgcolor="#B6DDE8">仮想ディスクの作成（物理ハードディスクの割り当て）</td>
+		</tr>
+		<tr valign="top">
+			<td rowspan="5" height="17" bgcolor="#D2EAF1">vmdk</td>
+		</tr>
+		<tr valign="top">
+			<td bgcolor="#92CDDC">(5)</td>
+			<td bgcolor="#92CDDC">仮想マシンへOSインストール</td>
+		</tr>
+		<tr valign="top">
+			<td bgcolor="#92CDDC">(6)</td>
+			<td bgcolor="#92CDDC">OSへの修正パッチの適用／再設定</td>
+		</tr>
+		<tr valign="top">
+			<td bgcolor="#92CDDC">(7)</td>
+			<td bgcolor="#92CDDC">アプリケーションインストール</td>
+		</tr>
+		<tr valign="top">
+			<td bgcolor="#92CDDC">(8)</td>
+			<td bgcolor="#92CDDC">データの移行</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<p>(2)(3)の工程でvmxファイルが生成され、(4)(5)(6)(7)(8)の工程でvmdkファイルが生成されます。『仮想マシンの移行』とは『vmdk』ファイルの生成という事になります。</p>
+<h2>仮想マシン移行方法</h2>
+<h3>【移行ツールを利用しない】</h3>
+<p>移行ツールを利用しない場合の移行方法としては大きく以下のような流れになります。</p>
+<ul class="grayDisc">
+	<li>OS再インストール・アプリケーション再インストール（再構築）</li>
+	<li>OS再インストール・アプリケーション・データ移行（OS　のみ再構築）</li>
+	<li>バックアップデータやテンプレートファイルをリストア</li>
+</ul>
+<div class="heed" style="margin-top: 1em;">
+	<section>
+		<h2>移行ツールを利用しない場合の注意点</h2>
+			<ul class="ckImgRed">
+				<li>OS再インストールをしているため、セキュリティID（SID）が移行前のものとは異なるため、全く同じ名前のユーザを作成しても従来のアクセス権と同じものになりません。よってアプリケーションの動作検証等が必要になります。</li>
+				<li>環境にもよりますが、バックアップデータのリストアを実施した場合、物理マシンと仮想マシンのハードウェア構成が異なり、デバイス・ドライバの不適合が生じる可能性もあります。</li>
+			</ul>
+	</section>
+</div>
+<br>
+<h3>【移行ツールを利用する】</h3>
+<p>移行ツールを利用する場合の移行方法としては大きく以下のような方法があります。それぞれの方法は移行元サーバのデータをどの様に取得するかに違いがあります。</p>
+<br>
+<table class="baseTb">
+	<colgroup>
+		<col width="35%"></col>
+		<col width="65%"></col>
+	</colgroup>
+	<tbody>
+		<tr>
+			<td bgcolor="#B6DDE8">P2V（Physical to Virtual）</td>
+			<td>既存の物理サーバのディスクイメージを吸い出し、vmdkファイルを生成します。</td>
+		</tr>
+		<tr>
+			<td bgcolor="#B6DDE8">I2V（Image to Virtual）</td>
+			<td>バックアップソフトで取得した物理マシンのハードディスクのイメージからvmdkファイルを作成します。</td>
+		</tr>
+		<tr>
+			<td bgcolor="#B6DDE8">V2V（Virtual to Virtual）</td>
+			<td>異なるベンダー製品の仮想マシン間でOSとそのデータを移動し、ホストレベルの違いを管理して、OSとデータを異なる仮想ハードウェア上で利用できるようにvmdkファイルを作成します。</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<p>移行ツールを利用すると自動的にvmdkファイルを作成できます。比較的短時間で処理が行われる為、サーバ移行だけではなく検証用に本番環境に近いサーバを用意する場合や、仮想マシンのバックアップとしても利用する事も出来ます。</p>
+<h4>移行ツールを利用した場合のメリット</h4>
+<ul class="grayDisc">
+	<li>OSバージョンアップ不要</li>
+	<li>ミドルウェアバージョンアップ不要</li>
+	<li>ユーザアプリケーション検証・修正不要</li>
+	<li>移行計画の検討/実施および設定項目の確認作業等の削減</li>
+	<li>アプリケーションの再インストール作業時間の短縮</li>
+	<li>移行作業時の設定ミス等の人為的なミスの削減</li>
+</ul>
+
+<h2>仮想マシン移行ツール</h2>
+<p>仮想マシン移行ツールは様々なベンダーが提供を行っております。（有償・無償両方あり）代表的なベンダーは<a href="http://www.vmware.com/jp/" target="_blank">ヴイエムウェア</a>や<a href="http://www.platespin.com/" target="_blank">プレートスピン</a>、<a href="http://www.leostream.com/" target="_blank">レオストリーム</a>、<a href="http://www.helperapps.com/" target="_blank">ヘルパーアップス</a>などがあります。各ベンダーによってインポート対象のサポートや、利用できる技術（P2V/I2V/V2V/V2P）が異なります。今回は無償で提供されているVMware vCenter Converterを例にあげて、サポート情報など記載しました。</p>
+	<div class="lightBox">
+		<figure>
+			<img src="/image/reports/techRep009_01.jpg" alt="VMware vCenter Converter">
+			<figcaption>（図：<a href="http://www.vmware.com/jp/" target="_blank">ヴイエムウェア</a>WEBページ引用）</figcaption>
+		</figure>
+	</div>
+	<br>
+<p>VMware vCenter Converterを入手するには《<a href="http://www.vmware.com/jp/products/converter/" target="_blank" class="outLink">http://www.vmware.com/jp/products/converter/</a>（<a href="http://www.vmware.com/jp/" target="_blank">ヴイエムウェア</a>株式会社）》WEBページからインストーラをダウンロードします。</p>
+<br>
+<p>（VMware vCenter Converter Standalone 4.0.1を例にあげて紹介します。）</p>
+<h3>【インストール可能なプラットフォーム】</h3>
+<p>VMware vCenter Converter  Standalone 4.0.1がインストール可能なOSは下記の通りです。</p>
+<ul class="grayDisc">
+	<li>Windows 2000 SP4 </li>
+	<li>Windows XP Professional (32 bit and 64 bit) </li>
+	<li>Windows Server 2003 (32 bit and 64 bit) </li>
+	<li>Windows Vista (32 and 64 bit)</li>
+	<li>Windows Server 2008 (32 bit and 64 bit)<sup>*</sup></li>
+	<li>Red Hat Enterprise Linux 4.0 (32 bit and 64 bit) </li>
+	<li>Red Hat Enterprise Linux 5.0 (32 bit and 64 bit) </li>
+	<li>SUSE Linux Enterprise Server 10 (32 bit and 64 bit) </li>
+	<li>Ubuntu 6.x </li>
+	<li>Ubuntu 7.x (32 bit and 64 bit) </li>
+	<li>Ubuntu 8.x (32 bit and 64 bit) </li>
+</ul>
+<h3>【移行対象サポート】</h3>
+<p>下記の表にVMware vCenter Converter Standalone 4.0.1がサポートする製品やOSを紹介します。</p>
+<div class="lightBox">
+	<figure>
+		<img src="/image/reports/techRep009_02.jpg" alt="移行対象サポート一覧">
+	</figure>
+	<p>拡大する</p>
+</div>
+<h2>移行ツールを使用した仮想マシン移行の注意点</h2>
+<p>複数のベンダーが移行ツールを提供していますが、適切な移行ツールを選定するために様々な要件を事前に確認・整理を行ってください。</p>
+<p>（仮想対象物理サーバのOS、ディスクサイズ、CPU、メモリ利用率、仮想ソフトウェア、ハードウェアの要件　等々・・・）</p>
+<br>
+<p>また、移行ツール製品の多くは、移行中（vmdkファイル作成中）は対象の物理サーバのOSをシャットダウンしなければ、正常に作成されない事もあります。出来れば、移行期間中利用者はシステム利用を制限することをお勧めします。</p>
+<br>
+<p>ライブマイグレーションの可能な無償ツールとして、「Disk2VHD」が発売されましたがMicrosoft製品の仮想化に特化した商品です。</p>
+<br>
+<p>対象サーバの状況に合わせて環境にあったツールを選択し、適切な移行方針を立てる事が重要です。</p>
