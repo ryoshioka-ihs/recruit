@@ -36,7 +36,7 @@ article h1 {
 	}
 
 /* h1を支える文章 */
-article h1 + p {
+article h1 ~ p {
 	font-size: 14px;
 	margin: 15px 10px 30px;
 }
@@ -46,6 +46,13 @@ article h2 {
 	margin-top: 60px;
 	background-position: 10px center;
 }
+
+/* h2を支える文章 */
+article h2 ~ p {
+	font-size: 14px;
+	margin: 15px 10px;
+}
+
 /* 一覧へのリンク */
 article h2 + .link {
 	margin: -15px 10px 30px 0;
@@ -936,7 +943,7 @@ height: 1700px;
 		vertical-align: top;
 		border-right: 1px solid #CCD8E8;
 	}
-	
+
 	/* 言語切り替え */
 	#scWrap ul {
 		padding: 5px 9px 0 0;
