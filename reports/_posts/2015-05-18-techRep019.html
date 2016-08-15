@@ -1,0 +1,231 @@
+---
+title:         "Hyper-VとVMWare ESXiの違い"
+description:   "VMWareの一強時代から、今ではお互い抜きつ抜かれつの状況となり、「仮想化」においてHyper-Vを選択するケースも増えました。そこでHyper-VとVMWare ESXiについて、両者の違いをご紹介していきたいと思います。"
+keywords:      ""
+date:          2015-05-18 00:00:00 +0900
+link:		       ""
+categories:
+- "インフラ構築"
+- "運用サービス"
+- "技術レポート"
+tags:
+- "仮想化"
+- "Hyper-V"
+- "VMWare ESXi"
+---
+
+<p>今日「仮想化」の分野における両雄ですが、どちらもこの数年の間に新しい製品が次々とリリースされ、様々な機能強化が図られてきました。</p>
+<p>VMWareの一強時代から、今ではお互い抜きつ抜かれつの状況となり、「仮想化」においてHyper-Vを選択するケースも増えました。そこでHyper-VとVMWare ESXiについて、両者の違いをご紹介していきたいと思います。</p>
+<br>
+<p>それでは実際の比較に入る前に、まずそれぞれの製品について簡単に説明します。</p>
+
+<h2>Hyper-V</h2>
+<p>マイクロソフトが提供するハイパーバイザー型の仮想化ソリューションです。<br />Windows Server 2008からWindows Serverに標準で組み込まれており、同社のSystem Center製品群と連携することで仮想環境の統合管理を実現します。</p>
+<h2>VMWare ESXi</h2>
+<p>ヴィエムウェアが提供するハイパーバイザー型の仮想化ソリューションです。<br />VMWare vSphereのコンポーネントの1つで、他のvSphereコンポーネントと連携することで仮想環境の統合管理を実現します。</p>
+<br>
+<p>なお、今回の記事では、特に断らない限り、次のバージョンを前提として記述します。</p>
+<ul class="grayDisc">
+	<li>Windows Server2012 R2 Hyper-V</li>
+	<li>VMWare ESXi 6.0</li>
+</ul>
+
+<h2>アーキテクチャの違い</h2>
+<p>Hyper-VとVMWare ESXiは、ともにハイパーバイザー型（ホストOSを必要としない）の仮想化ソリューションです。ただし、Hyper-Vは「ペアレントOS」と呼ばれる管 理用のOSを必要とし、ゲストOSはVMBusを経由してペアレントOSのデバイスドライバに接続します。</p>
+<br>
+<p>一方、VMWare ESXiでは、デバイスドライバはハイパーバイザー層に包含されています。</p>
+<div class="lightBox">
+	<figure>
+		<img src="/image/reports/techRep019_01.jpg" alt="アーキテクチャの違い">
+	</figure>
+</div>
+<br>
+<p>このため、パフォーマンス面ではペアレントOSを介さないVMWare ESXiが優れ、ハードウェア互換性の面ではハイパーバイザー層の外にデバイスドライバを持つHyper-Vに分があると言えます。</p>
+
+
+<h2>機能の違い</h2>
+<p>Hyper-VとVMWare ESXiは、主としてハイパーバイザー機能を提供する製品です。どちらも単独で使用できますが、連携する他の製品と組み合わせることにより、より高度な機能を利用できるようになります。</p>
+<br>
+<p>現在では様々な機能追加・強化を受け、単純な機能の有無という点では、ほぼ両者に差は見られなくなりました。両製品が提供する主な機能と、その機能を利用するために必要な連携製品を、次にまとめます。</p>
+<br>
+<table class="rangeTb">
+<caption>Hyper-VとVMWare ESXiの機能と製品の比較表</caption>
+	<tbody>
+		<tr>
+			<th>機能</th> <th>VMWare ESXi</th> <th>Hyper-V</th>
+		</tr>
+		<tr>
+			<td>ハイパーバイザー</td>
+			<td>VMWare ESXi</td>
+			<td>Hyper-V</td>
+		</tr>
+		<tr>
+			<td>統合管理ツール</td>
+			<td>VMWare vCenter Server</td>
+			<td>System Center Virtual Machine Manager</td>
+		</tr>
+		<tr>
+			<td>Web管理ツール</td>
+			<td>VMWare vSphere Web Access</td>
+			<td>System Center Virtual Machine Manager</td>
+		</tr>
+		<tr>
+			<td>計画外停止対応<br />（仮想サーバの移動）</td>
+			<td>VMWare HA</td>
+			<td>ホスト・クラスタリング</td>
+		</tr>
+		<tr>
+			<td>計画停止対応<br />（仮想サーバの無停止移動）</td>
+			<td>VMWare vMotion</td>
+			<td>ライブ・マイグレーション</td>
+		</tr>
+		<tr>
+			<td>バックアップ<br />（仮想サーバのオンラインバックアップ）</td>
+			<td>vSphere Data Protection</td>
+			<td>System Center Data Protection Manager</td>
+		</tr>
+		<tr>
+			<td>BCP</td>
+			<td>VMware vCenter Site Recovery Manager</td>
+			<td>
+				<ul class="grayDisc">
+					<li>Hyper-V レプリカ</li>
+					<li>Azure Site Recovery</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>クラスターファイルシステム</td>
+			<td>VMWare VMFS</td>
+			<td>Cluster Shared Volume</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<p>ご覧の通り、上記のような主だった機能では、どちらか一方でしか提供されないというものはありません。</p>
+<br>
+<p>製品選定の際に機能面を重視したいという場合には、両製品で提供されている評価版で、細かな機能の有無や制限事項、使い勝手といったものを確認することをお勧めします。</p>
+
+<h2>サポートするOSの違い</h2>
+<p>続いて、ゲストOSとして使用可能なOSをまとめてみます。</p>
+<br>
+<table class="rangeTb">
+<caption>Hyper-VとVMWare ESXiの機能と製品の比較表</caption>
+	<tbody>
+		<tr>
+			<th style="width: 50%;">VMWare ESXi</th> <th style="width: 50%;">Hyper-V</th>
+		</tr>
+		<tr>
+			<td valign="top">
+				<ul class="grayDisc">
+					<li>Mac OS X 10.7x, 10.8x, 10.9.x, 10.10.x (x64)</li>
+					<li>Mac OS X 10.6.x, 10.7x (x86)</li>
+					<li>Asianux 4.0 SP1, SP2, SP3, SP4 (x86/x64)</li>
+					<li>Asianux 3.0 SP1, SP2, SP3, SP4, SP5 (x86/x64)</li>
+					<li>Ubuntu 10.04, 11.04, 11.10, 12.04, 12.10, 13.04, 13.10, 14.04, 14.10 (x86/x64)</li>
+					<li>CentOS 7.x (x64)</li>
+					<li>CentOS 4.9, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6 (x86/x64)</li>
+					<li>CentOS 557, 607, 633 (x64)</li>
+					<li>Debian 6.0, 7.X (x86/x64)</li>
+					<li>FreeBSD 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 9.0, 9.1, 9.2, 9.3, 10.0, 10.1 (x86/x64)</li>
+					<li>Windows Server 2012 R2 (x64)</li>
+					<li>Windows Server 2012 (x64)</li>
+					<li>Windows Server 2008 R2 SP1 (x64)</li>
+					<li>Windows Server 2008 SP2 (x86/x64)</li>
+					<li>Windows Server 2003 R2 SP2 (x86/x64)</li>
+					<li>Windows Server 2003 SP2 (x86/x64)</li>
+					<li>Windows 10 (x86/x64)</li>
+					<li>Windows 8.1 (x86/x64)</li>
+					<li>Windows 8 (x86/x64)</li>
+					<li>Windows 7 SP1 (x86/x64)</li>
+					<li>Windows 7 (x86/x64)</li>
+					<li>Windows Vista SP2 (x86/x64)</li>
+					<li>Windows XP SP3 (x86)</li>
+					<li>Windows 2000 SP4 UR1 (x86)</li>
+					<li>Windows 2000 SP4 (x86)</li>
+					<li>Oracle Unbreakable Enterprise Kernel 3 (x64)</li>
+					<li>Oracle Unbreakable Enterprise Kernel 2 (x86/x64)</li>
+					<li>Oracle Linux 7.x (x64)</li>
+					<li>Oracle Linux 4.9, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6 (x86/x64)</li>
+					<li>Red Hat Enterprise Linux 7.x (x64)</li>
+					<li>Red Hat Enterprise Linux 3.0U9, 4.9, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6 (x86/x64)</li>
+					<li>UnixWare 7.1.1 MP5, 7.1.4 MP4 (x86)</li>
+					<li>OpenServer 5.0.6/5.0.7 MP5 (x86)</li>
+					<li>eComStation 1.2R, 2.0, 2.1 (x86)</li>
+					<li>Solaris 11, 11.1, 11.2 (x64)</li>
+					<li>Solaris 10, 10 1/06U1, 10 1/13U11, 10 5/08U5, 10 5/09U7, 10 6/06U2, 10 8/07U4, 10 8/11U10, 10 9/10U9, 10 10/08U6, 10 10/09U8, 10 11/06U3 (x86/x64)</li>
+					<li>SUSE Linux Enterprise Server 12 (x64)</li>
+					<li>SUSE Linux Enterprise Server 9 SP4, 10 SP3, 10 SP4, 11 SP1, 11 SP2, 11 SP3 (x86/x64)</li>
+					<li>SUSE Linux Enterprise Desktop 12 (x64)</li>
+					<li>SUSE Linux Enterprise Desktop 10 SP3, 10 SP4, 11 SP1, 11 SP2, 11 SP3,  (x86/x64)</li>
+					<li>Project Photon 1.0 (x64)</li>
+				</ul>
+			</td>
+			<td valign="top" style="vertical-align: top;">
+				<ul class="grayDisc">
+					<li>Ubuntu 12.04, 12.10, 13.04, 13.10, 14.04, 14.10 (x86/x64)</li>
+					<li>CentOS 7.x (x64)</li>
+					<li>CentOS 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6  (x86/x64)</li>
+					<li>Debian 7.X (x86/x64)</li>
+					<li>FreeBSD 8.4, 9.1, 9.2, 9.3, 10.0, 10.1 (x86/x64)</li>
+					<li>Windows Server 2012 R2 (x64)</li>
+					<li>Windows Server 2012 (x64)</li>
+					<li>Windows Server 2008 R2 SP1 (x64)</li>
+					<li>Windows Server 2008 SP2 (x86, x64)</li>
+					<li>Windows Home Server 2011</li>
+					<li>Windows Small Business Server 2011</li>
+					<li>Windows Server 2003 R2 SP2 (x86, x64)</li>
+					<li>Windows Server 2003 SP2 (x86, x64)</li>
+					<li>Windows 8.1</li>
+					<li>Windows 8 (x86, x64)</li>
+					<li>Windows 7 SP1 (x86, x64)</li>
+					<li>Windows Vista SP2 (x86, x64)</li>
+					<li>Windows XP SP2 (x64)</li>
+					<li>Windows XP SP3 (x86)</li>
+					<li>openSUSE 12.3 (x86/x64)</li>
+					<li>Oracle Linux 7.0 (x64)</li>
+					<li>Oracle Linux 6.5, 6.6 (x86/x64)</li>
+					<li>Red Hat Enterprise Linux 7.X (x64)</li>
+					<li>Red Hat Enterprise Linux 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6  (x86/x64)</li>
+					<li>SUSE Linux Enterprise Server 12 (x64)</li>
+					<li>SUSE Linux Enterprise Server 11 SP2, 11 SP3 (x86/x64)</li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<p>Hyper-VはWindows Server 2008 Hyper-Vの頃に比べてLinuxに広く対応するようになりました。しかしながら、VMwareの方が対応OS、バージョンともにHyper-Vよりも対応範囲が広く、未だ優位性を保っています。</p>
+
+<h2>導入コスト</h2>
+<p>最後に、導入コストについて考えてみましょう。一般的にゲストOSがWindows Serverの場合にはHyper-Vのほうがコストを低く抑えることができます。</p>
+<br>
+<p>Hyper-Vの場合、Windows Server 2012 R2の Essentials、Standard、Datacenterの各エディションには、それぞれに応じた仮想インスタンスライセンスが付属しています。たとえば、Standard の場合、1ライセンスで稼働させることができるゲストは2台、Datacenterの場合は無制限で稼働させることができます。このため、ゲストOSとしてWindows Server 2012 R2を使用するゲストの数によっては、新規で購入が必要なゲスト用ライセンスの費用が大きく削減される可能性があります。</p>
+<br>
+<p>例えば、仮想基盤の導入にあたり、2CPUのホスト1台にWindows Serverゲストを5台稼働させる場合、VMware ESXiではホストにインストールするハイパーバイザー用ライセンスが1つ、ゲストOS用にWindows Serverのライセンスが3つ必要です。Hyper-Vでは、物理インスタンスを含めてWindows Serverのライセンスが3つのみとなり、ライセンスの費用を抑えることができます。</p>
+<br>
+<table class="rangeTb">
+<caption>Hyper-VとVMWare ESXiのライセンス比較表</caption>
+	<tr>
+		<th></th>
+		<th>VMWare ESXi</th>
+		<th>Hyper-V</th>
+	</tr>
+	<tr>
+		<td>ホスト（ハイパーバイザー）</td>
+		<td>vSphere 6.0 × 1</td>
+		<td>Windows Server 2012 R2 × 1</td>
+	</tr>
+	<tr>
+		<td>ゲストOS</td>
+		<td>Windows Server 2012 R2 × 3</td>
+		<td>Windows Server 2012 R2 × 2</td>
+	</tr>
+</table>
+
+<h2>まとめ</h2>
+	<p>利用するゲストOSや規模だけでなく、現行の環境や運用要件、連携するシステムなども考慮が必要ですが、両製品に機能的な差がほぼ無くなり、コストパフォーマンスと慣れ親しんだ環境による優位性から、IDCの市場調査<small class="notes">（※1）</small>では2012年以降Hyper-VがシェアNo.1となっています。今後は徐々に移行が進むとされるクラウドサービスとの連携についても注目していくべきでしょう。</p>
+<br>
+<small class="notes">（※1：「IDC Worldwide Quarterly Server Virtualization Tracker CY2014 Q1」）</small><br>
+<br>
+<p>上記内容に関して、ご不明な点またはご質問などがございましたら、お気軽にお問い合わせ下さい。また、インフラ構築作業に関しましてご興味がございましたら、IIMヒューマン・ソリューション営業担当までお問い合わせ下さい。</p>

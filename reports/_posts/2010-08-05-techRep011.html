@@ -1,0 +1,111 @@
+---
+title:         "Windows Server 2008 導入のメリット/新機能"
+description:   "今回の記事では、Windows Server 2008で新しく追加された機能から、主だったものを取り上げて、Windows Server 2008 の導入メリットを3点ご紹介します。"
+keywords:      ""
+date:          2010-08-05 00:00:00 +0900
+link:		       ""
+categories:
+- "インフラ構築"
+- "運用サービス"
+- "技術レポート"
+tags:
+- "サーバー構築"
+- ""
+---
+
+<p>マイクロソフト社の最新サーバ向けオペレーティングシステムであるWindows Server 2008がリリースされてから2年、その機能追加版であるWindows Server 2008 R2のリリースからも半年以上が経過しました。ある程度実績が出てから自社でも導入を検討しようと様子を見られている企業様も、そろそろ実導入を検討する段階に入ってきているのではないでしょうか。</p>
+<p>そこで、今回の記事では、Windows Server 2008で新しく追加された機能から、主だったものを取り上げて、Windows Server 2008 の導入メリットを3点ご紹介します。</p>
+
+<h2>Server Core - 新機能1</h2>
+<h3>特定の枠割・機能のための最少環境を構成</h3>
+<p>Server Coreは、Windows Server 2008 で追加された新しいインストールオプションです。DNSやDHCPなど、特定の役割・機能を利用するために必要となる最小の環境を構成します。</p>
+<br>
+<p>このオプションを選択してOSをインストールすると、サーバには必要最低限のコンポーネントのみが導入されます。エクスプローラをはじめとするGUIもインストールされないため、コマンドでの管理が基本になります。</p>
+
+<h3>リモートからGUI管理も可能</h3>
+<p>しかしこのように記載すると、これまでのWindowsに慣れた管理者の方は思わず身構えてしまうかもしれません。しかしServer Coreオプションでインストールされたサーバも、リモートのGUIから接続して操作することができます。</p>
+<br>
+<p>Windows Vista、Windows 7用には、RSAT（Remote Server Administration Tools）というリモート管理ツールが無償で提供されているため、たとえば管理者のPCにRSATをインストールし、RSATのイベントビューアから、Server Coreオプションでインストールしたサーバのイベントを参照することも可能です。</p>
+<div class="lightBox">
+	<figure>
+		<img src="/image/reports/techRep011_01.gif" alt="Server CoreをリモートからGUIで管理">
+	</figure>
+</div>
+
+<h3>Server Core オプションを利用する利点</h3>
+<ul class="grayDisc">
+	<li>必要最低限のサービスしか実行されないため、悪意あるユーザーからの攻撃対象となり得る部分が狭く、セキュリティ性が高い</li>
+	<li>インストールに必要となるハードウェアスペックが、フルインストールよりも低い</li>
+</ul>
+<br>
+<table class="rangeTb">
+<caption>※ 要件はすべて推奨要件です</caption>
+<tbody>
+<tr>
+<th>インストール オプション</th> <th>メモリ要件</th> <th>ハードディスク要件</th>
+</tr>
+<tr>
+<td>フルインストール</td>
+<td>4GB以上</td>
+<td>40GB以上の空き領域</td>
+</tr>
+<tr>
+<td>Server Core インストール</td>
+<td>2GB以上</td>
+<td>10GB以上の空き領域</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>なお、Server Core は、アプリケーションプラットフォームではないため、基本的に、Exchange Server や SQL Server などのアプリケーションをインストールすることはできません。Server Core は、あくまでもWindowsの役割と機能をシンプルな構成で利用するためのオプションです。</p>
+
+<h3>Server Core で利用できる役割・機能</h3>
+<p class="textIndent--style2">[役割]<br>
+AD DS, AD LDS, DHCP, DNS, ファイルサービス, プリントサーバ, ストリーミングメディアサービス, Webサーバ(IIS), Hyper-Vなど</p>
+<br>
+<p class="textIndent--style2">[機能]<br>
+MSFC, NLB, Windowsバックアップ, BitLocker, SNMP, WINSなど</p>
+
+<h2>Hyper-V - 新機能2</h2>
+<h3>仮想化で複数のサーバーを集約</h3>
+<p>Hyper-Vは、ハイパーバイザー型の仮想化アプリケーションで、この機能を利用すれば、1台の物理サーバ上で複数のOSを起動することが可能です。サーバ仮想化は、サーバ統合の観点からも注目を浴びている機能の1つで、異なるサービスを提供する複数のサーバを、1台の物理サーバに集約することで、運用管理コストを抑える効果が期待できます。</p>
+<h3>仮想インスタンスのライセンス</h3>
+<p>また、Windows Server 2008 Enterprise Edition では、1ライセンスにつき4台まで、Windows Server 2008 Datacenter Edition では、1ライセンスにつき無制限の仮想インスタンスを実行することができるため、ライセンスコスト面でもメリットがあります。</p>
+<div class="lightBox">
+	<figure>
+		<img src="/image/reports/techRep011_02.gif" alt="1ライセンスにつき、仮想インスタンスを4つ実行できる。Windows Server 2008 Enterprise Editionの場合">
+		<figcaption class="notes">※ Windows Server 2008 Enterprise Editionの場合</figcaption>
+	</figure>
+</div>
+<br>
+<p>既存の物理サーバを仮想化したいといった場合には、System Center Virtual Machine Manager 2007の物理サーバ変換ウィザードを利用したP2Vも可能です。</p>
+<h3>Hyper-VでサポートされるOS</h3>
+<ul class="grayDisc">
+<li>Windows Server 2008</li>
+<li>Windows Server 2003</li>
+<li>Windows 2000 Server SP4以上</li>
+<li>Windows 7</li>
+<li>Windows Vista SP1以上</li>
+<li>Windows XP SP2以上</li>
+<li>SUSE Linux Enterprise Server 10 SP1以上</li>
+</ul>
+
+<h2>ネットワークアクセス保護（NAP） - 新機能3</h2>
+<h3>NAPはポリシーベースのセキュリティプラットフォーム</h3>
+<p>NAP（Network Access Protection）は社内リソースの保護を強化するためのポリシーベースのセキュリティプラットフォームです。ネットワークに接続したクライアントの状態を自動的にチェックし、そのクライアントがあらかじめ定められたセキュリティ基準を満たしていない場合には、社内リソースへの接続を制限することで、社内ネットワークを保護する仕組みです。</p>
+
+<h3>NAPの仕組み</h3>
+<p>NAPが保護するネットワークに接続したクライアントは、「検疫ゾーン」と呼ばれる制限されたネットワークに所属し、セキュリティパッチやウィルス対策ソフトなどのセキュリティ状態のチェックを受けます。その結果、ポリシーを満たしている場合は、「セキュアゾーン」に移動して社内リソースにアクセスすることができます。</p>
+<br>
+<p>ポリシーを満たしていないクライアントに対しては、WSUSサーバからセキュリティパッチを提供するなどして足りない要件を満たしてから、社内リソースへのアクセスを許可します。</p>
+<br>
+<p>この機能を利用することで、「コンピュータ導入時に設定したはずのセキュアな状態が維持できない」というシステム担当者様の問題点をクライアント端末のセキュリティ管理を自動化することにより解決します。</p>
+<div class="lightBox">
+	<figure>
+		<img src="/image/reports/techRep011_03.gif" alt="NAPの検疫ゾーンに置かれたクライアントは、ポリシーを満たすことでセキュアゾーンにアクセスすることができる">
+	</figure>
+</div>
+<br>
+<p>なお、NAPは、社内のポリシーに準拠しない（セキュリティ性の低い）PCの接続を制限する機能であって、悪意あるユーザーのアクセスを制限するための機能ではありません。不正アクセスの防止には、別のシナリオを検討してください。</p>
+<br>
+<p>上記内容に関して、ご不明な点またはご質問などがございましたら、お気軽にお問い合わせ下さい。また、インフラ構築作業に関しましてご興味がございましたら、IIMヒューマン・ソリューション営業担当までお問い合わせ下さい。</p>
