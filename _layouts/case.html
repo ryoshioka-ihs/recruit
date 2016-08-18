@@ -6,58 +6,58 @@
 <!--△ヘッド△-->
 </head>
 <body>
-        <!--▽ヘッダー▽-->
-        {% include header.html %}
-        <!--△ヘッダー△-->
+				<!--▽ヘッダー▽-->
+				{% include header.html %}
+				<!--△ヘッダー△-->
 
-         <!--▽コンテンツ▽-->
-        <article>
-            <section>
-                <!--▼キービジュアル▼-->
-                {% include global/global_key_cases.html %}
-                <!--▲キービジュアル▲-->
-                
-                <!--▼パンくずリスト▼-->
-                {% include pan.html %}
-                <!--▲パンくずリスト▲-->
+				 <!--▽コンテンツ▽-->
+				<article>
+						<section>
+								<!--▼キービジュアル▼-->
+								{% include global/global_key_cases.html %}
+								<!--▲キービジュアル▲-->
 
-                <div class="wrap">
-                    <div id="main">
+								<!--▼パンくずリスト▼-->
+								{% include pan.html %}
+								<!--▲パンくずリスト▲-->
 
-                    {{ content }}
+								<div class="wrap">
+										<div id="main">
 
-                      <div class="grayBox">
-                        <section id="PdfDownload">
-                          <h2>この事例のPDFをダウンロード</h2>
-                          <p>システム運用を常駐者＋バックヤード支援でコスト最適化のPDFはこちらからダウンロードできます。</p>
-                          <p class="dlPdf">
-                            <a href="{{ post.pdf }}"><span>この事例をダウンロード</span></a>
-                          </p>
-                        </section>
-                      </div>
+										{{ content }}
 
-                      <!--▽関連事例▽-->
-                        {% include content/content_relationCase.html %}
-                      <!--△関連事例△-->
+											<div class="grayBox">
+												<section id="PdfDownload">
+													<h2>この事例のPDFをダウンロード</h2>
+													<p>システム運用を常駐者＋バックヤード支援でコスト最適化のPDFはこちらからダウンロードできます。</p>
+													<p class="dlPdf">
+														<a href="/image/cases/{{ page.PDF }}.pdf" target="_blank"><span>この事例をダウンロード</span></a>
+													</p>
+												</section>
+											</div>
 
-                      <!--▽技術レポート▽-->
-                        {% include content/content_techRep.html %}
-                      <!--△技術レポート△-->
+											<!--▽関連事例▽-->
+												{% include content/content_relationCase.html %}
+											<!--△関連事例△-->
 
-                    </div><!--/.main-->
+											<!--▽技術レポート▽-->
+												{% include content/content_techRep.html %}
+											<!--△技術レポート△-->
 
-                    <div id="sideMenu">
-                    {% include side/side_cases.html %}
-                    </div><!--/#sideMenu-->
+										</div><!--/.main-->
 
-                </div><!--/.wrap-->
-            </section>
-        </article>
-        <!--△コンテンツ△-->
+										<div id="sideMenu">
+										{% include side/side_cases.html %}
+										</div><!--/#sideMenu-->
 
-        <!--▽フッター▽-->
-        {% include footer.html %}
-        <!--△フッター△-->
+								</div><!--/.wrap-->
+						</section>
+				</article>
+				<!--△コンテンツ△-->
+
+				<!--▽フッター▽-->
+				{% include footer.html %}
+				<!--△フッター△-->
 
 </body>
 </html>

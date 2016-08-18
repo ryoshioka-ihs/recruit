@@ -1,0 +1,88 @@
+---
+layout:       case
+global_menu:  cases
+title:        "MRTGを使用したリソース監視システムの構築作業"
+description:  "[description]の内容を43文字まで表示（それ以上になると「・・・」で省略）⇒_layouts /cases-archive.htmlで定義しています"
+keywords:     "ITソリューション,ITサービス,システム,導入,運用,保守,IHS"
+date:         2009-09-01 16:25:00 +0900
+PDF:          "case034"
+categories: 
+ - "インフラ構築"
+tags:
+ - "MRTG"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-work">作業内容</a></li>
+    <li><a href="#toc-notices">特記事項</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+    <p>常時稼働している15台の各サーバ（WEB、MAIL、AP、DB、全文検索）に対して、リソースの調査、監視を行うため、SNMPとMRTGを使用したシステムを構築</p>
+    <br>
+      <table class="baseTb">
+        <tbody>
+        <tr>
+          <th>作業期間</th>
+          <td>約1ヶ月間</td>
+        </tr>
+        <tr>
+          <th>対応人数</th>
+          <td>2名</td>
+        </tr>
+        </tbody>
+      </table>
+  </section>
+
+  <section id="toc-work">
+    <h2>作業内容</h2>
+    <div class="smtsent">
+      <h3>事前準備</h3>
+        <ol class="snumList">
+          <li>事前ミーティング</li>
+          <li>MRTGの稼働に必要なアプリケーションについて、導入済みと導入予定のものをサーバ毎に整理</li>
+          <li>弊社内での擬似環境の構築</li>
+          <li>導入予定パッケージの影響範囲の検証</li>
+          <li>リカバリーの検証</li>
+          <li>擬似環境での動作検証</li>
+          <li>全サーバのリソースの調査</li>
+          <li>設定項目の提案(9)パッケージのインストール、設定ファイルの抽出</li>
+          <li>パッケージのインストール、設定ファイルの抽出</li>
+          <li>設定ファイルの編集および検証</li>
+          <li>htmlファイルの作成</li>
+          <li>作業員への作業手順および各コマンドの危険性のレクチャー</li>
+        </ol>
+
+        <h3>現地作業</h3>
+          <ol class="snumList">
+            <li>WEBサーバの構築</li>
+            <li>設定ファイルの導入</li>
+            <li>サービスの起動</li>
+            <li>動作確認</li>
+          </ol>
+    </div>
+  </section>
+
+  <section id="toc-notices">
+    <h2>特記事項</h2>
+    <div class="smtSent">
+      <h3>お客様の環境を弊社内にて再現</h3>
+      <p>常時稼働しているサーバへの導入になるため、弊社内において、お客様の稼働環境を再現し、要件が実現可能かどうかを検証。</p>
+      <h3>常時稼働しているサーバへの影響範囲を検証</h3>
+      <p>導入済みパッケージの調査および導入予定パッケージの影響範囲を検証。</p>
+
+      <h3>WEBサーバの構築、閲覧画面のカスタマイズ</h3>
+      <p>稼働中のサーバ内に2つ目のWEBサーバを構築。検証結果から決定したリソース監視項目をお客様の使い勝手のよい閲覧画面にカスタマイズ。</p>
+
+      <h3>作業ミスの回避</h3>
+      <p>リブートができない、常時稼働しているサーバへの導入になるため、設定ファイルに対しては、弊社内にて動作検証も含めた二重チェックを行い、現場作業においてもサービス起動前に二重チェックを実施。</p>
+    </div>
+  </section>
+</section>
+

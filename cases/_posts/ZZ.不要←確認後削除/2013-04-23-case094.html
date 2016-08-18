@@ -1,0 +1,120 @@
+---
+layout:       case
+global_menu:  cases
+title:        "Zabbix検証環境構築"
+description:  "コスト削減を目的とした無償OSS(Zabbix)への移行に伴う検証環境の構築支援の事例をご紹介いたします。"
+keywords:     "OSS移行,Zabbix,事例"
+date:         2013-04-23 09:19:00 +0900
+categories: 
+ - "インフラ運用"
+ - "SCCM"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-work">作業内容</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+      <h3>OSS導入に伴うサポートの課題</h3>
+      <p>コスト削減の目的で、OSSがエンタープライズ環境に導入されるケースは年々増加しています。その一方で、OSSには商用サポートが無いことが課題となり導入に踏み切れない企業様も多いのではないでしょうか。</p>
+      <p>今回ご紹介する事例では、お客様はコスト削減を目的にシステム監視環境をOSSへ移行することを計画されていました。既存の専用アプライアンス製品のランニングコストが高価であったため、契約更新のタイミングで無償のOSSへの移行を行うというものです。</p>
+      <p>お客様は導入するOSSの候補として統合監視ソフトウェアZabbixを挙げられていましたが、適切に検証を行うための環境構築や操作方法に関する情報収集に課題を持たれていました。そこで、Zabbixの開発元とパートナーシップ契約を結んでいる弊社にお声掛けを頂き、全社展開を見据えた検証環境の構築、各種サポートを担当させて頂きました。</p>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <table border="1" cellspacing="0" cellpadding="0">
+      <tbody>
+      <tr>
+      <th width="181" valign="top">
+      <p>業種</p>
+      </th>
+      <td width="452" valign="top">
+      <p>非鉄金属</p>
+      </td>
+      </tr>
+      <tr>
+      <th width="181" valign="top">
+      <p>目的</p>
+      </th>
+      <td width="452" valign="top">
+      <p>1．運用コスト削減のため、システム監視ツールのリプレイス</p>
+      <p>2．現状の監視項目を維持</p>
+      <p>（死活、CPU使用率、メモリ使用率、ディスク使用率の監視及び通知）</p>
+      </td>
+      </tr>
+      <tr>
+      <th width="181" valign="top">
+      <p>作業内容</p>
+      </th>
+      <td width="452" valign="top">
+      <p>監視対象環境</p>
+      <p>・サーバ：20台（Windows及びLinux）</p>
+      <p>管理サーバ(新規構築)</p>
+      <p>・サーバ：1台（Linux）</p>
+      </td>
+      </tr>
+      <tr>
+      <th width="181" valign="top">
+      <p>作業期間</p>
+      </th>
+      <td width="452" valign="top">
+      <p>7日間</p>
+      </td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="toc-work">
+    <h2>作業内容</h2>
+      <h3>1.Zabbix環境の設計</h3>
+      <ol> </ol>
+      <p>・監視項目</p>
+      <p>・監視方法</p>
+      <p>・その他お客様ご要望ヒアリング</p>
+      <h3>2.構築</h3>
+      <ol> </ol>
+      <p>・Apache/PHP</p>
+      <p>・MySQL</p>
+      <p>・Zabbixサーバ</p>
+      <p>・Zabbixエージェント（監視対象サーバへインストール）</p>
+      <p>・SNMP監視設定</p>
+      <h3>3.監視項目（テンプレート）作成</h3>
+      <ol> </ol>
+      <p>・Zabbixエージェント監視（Windows用）</p>
+      <p>・SNMP監視</p>
+      <h3>4.動作確認</h3>
+      <p>・監視項目</p>
+      <p>・閾値</p>
+      <h3>5.運用サポート</h3>
+      <p>・設定手順書作成</p>
+      <p>・構築手順書作成</p>
+      <p>・障害時サポート</p>
+  </section>
+
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+      <h3>1.レクチャーを行いながら環境構築を実施</h3>
+      <p>事前に各種手順書をご提供させて頂き、環境構築や各種操作をレクチャーを交えながら実施。<br /> これにより、ご担当者様にもノウハウが蓄積され、スムーズに検証に進まれました。</p>
+      <h3>2.環境構築後はメールサポートを実施</h3>
+      <p>「OSS製品は問い合せができない」という不安感無く検証を行って頂きました。</p>
+  </section>
+   
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+      <h3>Zabbix開発元とパートナー契約を結び商用サポートを実施</h3>
+      <p>弊社は、統合監視ソフトウェア「Zabbix」を開発する Zabbix社 （本社：ラトビア共和国）とパートナー契約を締結しております。これにより、構築・導入にとどまらず、運用・保守やレポート作成までワンストップでご支援させて頂きます。</p>
+    <p><img src="/image/cases/case094-01.png" alt=""/></p>
+    <p><a href="http://www.iimhs.co.jp/business/server/zabbix.html">IHSの「Zabbix構築＆運用サービス」はこちら</a></p>
+  </section> 
+</section>
+
