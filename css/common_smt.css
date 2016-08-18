@@ -482,6 +482,78 @@ a.rss:hover {
 	}
 
 /* --------------------------------------------------
+   取り扱い製品一覧
+-------------------------------------------------- */
+.productPickUp {
+	border-collapse:separate;
+	border-spacing:10px;
+	background:#fff;
+	margin-top: 20px;
+	padding: 20px 10px;
+	overflow: hidden;
+	border: 9px solid #EEE;
+	box-sizing: border-box;
+}
+.productPickUp div {
+	vertical-align:top;
+	border-spacing: 0;
+}
+.productPickUp div.left {
+	width:100%;
+	float: none;
+}
+.productPickUp div.left .tag {
+	width: 100%;
+}
+.productPickUp div.left .tag ul {
+margin: 0;
+padding-top: 10px;
+list-style: none;
+}
+.productPickUp div.left .tag li {
+display: inline-block;
+border: 1px solid #ccc;
+background-color: #DBEEF3;
+text-decoration: none;
+color: #3084AB;
+width: 64px;
+height: 40px;
+margin: 1px;
+text-align: center;
+font-size: 0.6rem;
+vertical-align:top;
+padding: 5px;
+}
+.productPickUp div.left .tag li.blank {
+background-color: #F0F0F0;
+color: #ccc;
+border: 1px solid #ccc;
+}
+
+.productPickUp div.right {
+	width:100%;
+	vertical-align:top;
+	float: none;
+}
+.productPickUp div.right h2 {
+	font-size: 20px;
+	margin: 0 0 25px;
+	border-bottom: 2px solid #000;
+	background-color: #fff;
+	padding: 0.5em 0.5em 0;
+}
+.productPickUp div.right h2:before {
+	display: none;
+}
+
+.productPickUp div.right ul {
+	padding-bottom: 1em;
+}
+.productPickUp div.right li a {
+	padding-left: 15px;
+}
+
+/* --------------------------------------------------
    社長メッセージ
 -------------------------------------------------- */
 .msgWrap {
