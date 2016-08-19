@@ -83,6 +83,10 @@ em {
 	padding-left: 1.5em;
 	text-indent: -1.5em;
 }
+/* インデント（文章が連続しない時） */
+.textIndent--style3 {
+	padding-left: 1em;
+}
 /* 定義リスト */
 .definition--style1 dl {
 	padding-bottom: 0.5em;
@@ -100,12 +104,19 @@ em {
 	font-size: 90%;
 	color: rgb(151, 151, 151);
 }
+
 /* 図のタイトル */
 figcaption.title {
 	font-size: 90%;
 	color: #333;
 	padding-top: 0.5em;
 }
+
+/* フリースペース */
+.free {
+	margin-top:20px;
+}
+
 /* --------------------------------------------------
 	リンク
 -------------------------------------------------- */
@@ -570,6 +581,15 @@ a.outLink {
 	margin-top: 5px;
 }
 
+/* 灰色の●（太字） */
+.bgrayDisc > li {
+	background: url("../image/common/grayDisc_bg.png") left 5px no-repeat;
+	background-size: 6px 6px;
+	padding-left: 15px;
+	margin-top: 5px;
+	font-weight: bold;
+}
+
 /* チェックボックスイメージ共通設定 */
 .ckImgBlue > li,
 .ckImgRed > li {
@@ -651,6 +671,12 @@ a.outLink {
 	.numList > li p:first-child {
 		font-weight: bold;
 		font-size: 15px;
+	}
+	.snumList > li {
+		list-style-type: decimal;
+		margin-top: 15px;
+		margin-left: 2em;
+		line-height: 18px;
 	}
 
 /* --------------------------------------------------
