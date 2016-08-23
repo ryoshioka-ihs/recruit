@@ -218,7 +218,12 @@ function setPageTop() {
 // 戻り値：なし
 //======================================================================================================
 function setLinkInPage() {
-	$(".linkInPage li a").click(function(){
+	var $targetLink = $(".linkInPage li a, .jsSmoothLink a");
+	if ( $targetLink.size() <= 0 ) {
+		return;
+	}
+
+	$targetLink.click(function(){
 		var speed = 1000;
 		var href= $(this).attr("href");
 		var target = $(href == "#" || href == "" ? 'html' : href);
