@@ -1700,14 +1700,24 @@ img.req {
 -------------------------------------------------- */
 .googleForm {
 width: 760px;
-height: 1550px;
+height: 1300px;
 overflow: hidden;
 position: relative;
 }
-.googleForm iframe {
+/*.googleForm iframe {
 	width: 760px;
 	height: 9999px;
 	margin-top: -200px;
+}*/
+
+/* --------------------------------------------------
+	メルマガ登録
+-------------------------------------------------- */
+.googleForm-MG {
+width: 760px;
+height: 900px;
+overflow: hidden;
+position: relative;
 }
 
 /* --------------------------------------------------
