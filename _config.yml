@@ -5,6 +5,14 @@ description: >
 baseurl: ""
 url: "http://www.iimhs.co.jp"
 
+# 除外するファイル
+# adminフォルダには管理用のファイルが出力されます。
+# 必要な時にはadminフォルダを一時的に以下のリストから削除します。
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - admin
+
 # デフォルト設定
 defaults:
   -
