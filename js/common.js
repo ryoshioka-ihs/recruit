@@ -218,7 +218,7 @@ function setPageTop() {
 // 戻り値：なし
 //======================================================================================================
 function setLinkInPage() {
-	var $targetLink = $(".linkInPage li a, .jsSmoothLink a");
+	var $targetLink = $(".linkInPage li a:not([href^='mailto']), .jsSmoothLink a:not([href^='mailto'])");
 	if ( $targetLink.size() <= 0 ) {
 		return;
 	}
