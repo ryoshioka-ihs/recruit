@@ -154,7 +154,11 @@ category:
                 <ul class="topicList">
 									{% for post in site.posts limit:5 %}
 										<li>
-											<a href="{{ post.url }}" target="_self">
+											{% if post.link %}
+												<a href="{{ post.link }}" target="_self">
+											{% else %}
+												<a href="{{ post.url }}" target="_self">
+											{% endif %}
 												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 
 												{% if post.categories[0] == "cases" %}
@@ -185,7 +189,11 @@ category:
 									{% endfor %}
 									{% for post in service_posts limit:5 %}
 										<li>
-											<a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
+											{% if post.link %}
+												<a href="{{ post.link }}" target="_self">
+											{% else %}
+												<a href="{{ post.url }}" target="_self">
+											{% endif %}
 												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 												<div><span class="icon">{{ post.categories[1] }}</span></div>
 												<p>{{ post.title }}</p>
@@ -203,7 +211,11 @@ category:
 									{% endcomment %}
 									{% for post in site.categories["cases"] limit:5 %}
 										<li>
-											<a href="{{ post.url }}" target="_self">
+											{% if post.link %}
+												<a href="{{ post.link }}" target="_self">
+											{% else %}
+												<a href="{{ post.url }}" target="_self">
+											{% endif %}
 												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 												<div><span class="icon">導入事例</span></div>
 												<p>『{{ post.title }}』を追加しました。</p>
@@ -227,7 +239,11 @@ category:
 									{% endfor %}
 									{% for post in report_posts limit:5 %}
 										<li>
-											<a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
+											{% if post.link %}
+												<a href="{{ post.link }}" target="_self">
+											{% else %}
+												<a href="{{ post.url }}" target="_self">
+											{% endif %}
 												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 												<div><span class="icon">{{ post.categories[1] }}</span></div>
 												<p>{{ post.title }}</p>
@@ -251,11 +267,11 @@ category:
 									{% endfor %}
 									{% for post in seminar_posts limit:5 %}
 										<li>
-										{% if post.link %}
-											<a href="{{ post.link }}" target="_self">
-										{% else %}
-											<a href="{{ post.url }}" target="_self">
-										{% endif %}
+											{% if post.link %}
+												<a href="{{ post.link }}" target="_self">
+											{% else %}
+												<a href="{{ post.url }}" target="_self">
+											{% endif %}
 												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 												<div><span class="icon">{{ post.categories[1] }}</span></div>
 												<p>{{ post.title }}</p>

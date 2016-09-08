@@ -30,7 +30,11 @@
 
 									{% for post in paginator.posts %}
 										<li>
-											<a href="{{ post.url }}" target="_self">
+											{% if post.link %}
+												<a href="{{ post.link }}" target="_self">
+											{% else %}
+												<a href="{{ post.url }}" target="_self">
+											{% endif %}
 												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 
 												{% if post.categories[0] == "cases" %}
