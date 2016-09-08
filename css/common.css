@@ -679,6 +679,20 @@ a.outLink {
 		line-height: 18px;
 	}
 
+/* リストスタイルが数字ではなく、見出しが太字のリスト（坂本追加） */
+	/*.pointList2 > li:before {
+		content: "●";
+	}*/
+	.pointList2 > li {
+		font-weight: bold;
+		font-size: 16px;
+		margin-top: 20px;
+	}
+	.pointList2 > p {
+		margin-top: 5px;
+		padding-left: 1em;
+	}
+
 /* --------------------------------------------------
 	青色アイコン
 -------------------------------------------------- */
