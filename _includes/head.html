@@ -5,6 +5,15 @@
 <meta name="description" content="{{ page.description }}" />
 <meta name="keywords" content="{{ page.keywords }}" />
 
+{% comment %}
+	Google検索にインデックスさせないページにnoindex,followを設定
+	アーカイブページの2ページ目以降、noindex:trueを設定したページを対象とする
+	http://bazubu.com/seo101/how-to-use-noindex-tag
+{% endcomment %}
+{% if paginator.page > 1 or page.noindex %}
+	<meta name="robots" content="noindex,follow" />
+{% endif %}
+
 <!--title-->
 <title>{{ page.title }}</title>
 
