@@ -27,22 +27,21 @@ category:
                     <p>IIMヒューマン・ソリューション株式会社がご提供するサービスの最新導入事例をご紹介します。</p>
 
                     <ul>
-                        <li>
-                            <a href="#">
-                                <p class="case">CASE<span>1</span></p>
-                                <p>Microsoft VDI導入</p>
-                                <p class="text">IIMヒューマン・ソリューション株式会社がご提供するサービスの最新導入事例をご紹介します。</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p class="case">CASE<span>2</span></p>
-                                <p>ネットワークセキュリティシステム構築</p>
-                                <p class="text">IIMヒューマン・ソリューション株式会社がご提供するサービスの最新導入事例をご紹介します。</p>
-                            </a>
-                        </li>
+										{% for post in site.categories["cases"] limit:2 %}
+											<li>
+												{% if post.link %}
+													<a href="{{ post.link }}" target="_self">
+												{% else %}
+													<a href="{{ post.url }}" target="_self">
+												{% endif %}
+													<p class="case">CASE<span>1</span></p>
+													<p>{{ post.title }}</p>
+													<p class="text">{{ post.description | slice: 0, 43 }}...</p>
+												</a>
+											</li>
+										{% endfor %}
                     </ul>
-                    <p class="blueBtn"><a href="#">導入事例一覧をみる</a></p>
+                    <p class="blueBtn"><a href="/cases/index.html">導入事例一覧をみる</a></p>
                 </div>
             </div>
         </div>
