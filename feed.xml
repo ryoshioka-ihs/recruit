@@ -1,4 +1,5 @@
 ---
+title:  RSS Feed
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -15,7 +16,7 @@ layout: null
         <description>{{ post.content | strip_html | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 				{% if post.link %}
-        <link>{{ post.link | prepend: site.baseurl | prepend: site.url }}</link>
+        <link>{{ post.link }}</link>
         <guid isPermaLink="true">{{ post.link | prepend: site.baseurl | prepend: site.url }}</guid>
 				{% else %}
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
