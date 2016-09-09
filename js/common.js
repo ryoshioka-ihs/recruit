@@ -4,7 +4,7 @@ var replaceWidth = 768;
 
 $(document).ready(function(){
 	//ソースコード内改行による空白を削除
-	clearNLSP();
+	// clearNLSP();
 
 	//ナビゲーションホバー
 	setGnavi();

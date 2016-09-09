@@ -65,8 +65,6 @@ function feedparserReadItem() {
     var item, slug;
     
     while (item = stream.read()) {
-        // slug = item.link.substring(item.link.lastIndexOf('/') + 1);
-        // slug = item.link.toString('base64');
         slug = item.link.replace(/\./g, "_").replace(/\//g, "_").replace(/\:/g, "_");
         if (!item.description) {
 					continue;

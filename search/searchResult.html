@@ -7,22 +7,51 @@ layout:      utility
 global_menu: utility
 ---
 
-<script>
-	(function() {
-		var cx = '004872231475093188309:hqzca6akpz4';
-		var gcse = document.createElement('script');
-		gcse.type = 'text/javascript';
-		gcse.async = true;
-		gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(gcse, s);
-	})();
-</script>
-
 <section>
-	<h1>サイト内検索結果</h1>
-	<gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+<div class="search-results" data-bind="if: searchQuery">
+	<h1>&quot;<span data-bind="text: searchQuery"></span>&quot;の検索結果</h1>
+
+	<form class="search-form" method="get">
+		<div class="input-group col-sm-6">
+			<input type="search" name="q" class="form-control" data-bind="value: searchQuery" placeholder="Search anthonychu.ca..." />
+			<span class="input-group-btn">
+				<button class="btn btn-primary" type="submit"><i class="mdi-action-search"></i> Search</button>
+			</span>
+		</div>
+	</form>
+
+	<ul class="repoList" data-bind="foreach: results">
+		<li>
+			<a target="_blank" data-bind="attr: { href: link }">
+				<section>
+					<h3 data-bind="text: title"></h3>
+					<p data-bind="text: content"></p>
+					<p>http://sample/test/...</p>
+				</section>
+			</a>
+		</li>
+	</ul>
+	<div data-bind="if: !results().length && !isSearching()">
+		No results found
+	</div>
+	<div class="search-loading" data-bind="if: isSearching">
+		Searching ...
+	</div>
+</div>
 </section>
+
+<div class="search-results" data-bind="if: !searchQuery">
+	<form class="search-form" method="get">
+		<div class="input-group col-sm-6">
+			<input type="search" name="q" class="form-control" data-bind="value: searchQuery" placeholder="Search anthonychu.ca..." />
+			<span class="input-group-btn">
+				<button class="btn btn-primary" type="submit"><i class="mdi-action-search"></i> Search</button>
+			</span>
+		</div>
+	</form>
+
+	<p>キーワードを入力して、検索ボタンを押してください。</p>
+</div>
 
 {% comment %}
 <section>
@@ -62,4 +91,10 @@ global_menu: utility
 </ul>
 <!--▲ページネーション▲-->
 {% endcomment %}
+
+<script type="text/javascript" src="/js/moment.min.js"></script>
+<script type="text/javascript" src="/js/knockout-3.4.0.js"></script>
+<script type="text/javascript" src="/js/query-string.js"></script>
+<script type="text/javascript" src="/js/azure-search.min.js"></script>
+<script type="text/javascript" src="/js/search-results.js"></script>
 
