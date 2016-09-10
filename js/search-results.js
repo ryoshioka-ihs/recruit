@@ -43,7 +43,7 @@
 		svc.search = search;
 
 		function search(query, callback) {
-			var searchOptions = { search: query, '$select': 'id, title, link, pubdate, content' };
+			var searchOptions = { search: query, '$select': 'id, title, link, pubdate, content, description' };
 			client.search(indexName, searchOptions, callback);
 		}
 	}

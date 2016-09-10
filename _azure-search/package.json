@@ -1,8 +1,8 @@
 {
-  "name": "anthonychu-ca-search",
+  "name": "ihs-websites-search",
   "version": "1.0.0",
   "description": "",
-  "main": "azure-sync.js",
+  "main": "update-search-index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,11 @@
     "type": "git",
     "url": ""
   },
-  "author": "Anthony Chu",
+  "author": "IHS WebTeam",
   "license": "",
   "devDependencies": {},
   "dependencies": {
     "async-each-series": "^0.1.1",
-    "azure-search": "0.0.6",
-    "feedparser": "^1.0.0",
-    "minimist": "^1.1.0",
-    "string": "^3.0.0"
+    "azure-search": "0.0.6"
   }
 }

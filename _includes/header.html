@@ -65,12 +65,11 @@
 
 			<div class="search">
 				<p id="scBtn">検索</p>
-				<form id="cse-search-box" name="seek" method="get" action="/search/searchResult.html">
-					<input name="q" value="" type="text">
+				<form name="seek" method="get" action="/search/searchResult.html">
+					<input name="q" data-bind="value: searchQuery" type="text">
 					<input class="button" value="" type="submit">
 				</form>
 			</div>
-			<script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
 		</div><!--/#scWrap-->
 	</div><!--/.headerMainNav-->
 
