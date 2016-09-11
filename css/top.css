@@ -204,12 +204,16 @@ footer {
 #sv h2 {
 	margin-bottom: 85px;
 }
+#sv .sentBox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 #sv .triBox {
 	width: 320px;
 	height: 300px;
 	text-align: center;
 	vertical-align: top;
-	margin-left: 20px;
 	position: relative;
 	transition: transform 0.2s linear;
 }
