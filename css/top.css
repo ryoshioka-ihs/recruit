@@ -140,21 +140,21 @@ footer {
 		letter-spacing: 2.5px;
 	}
 
+	#index #keyv .kvList .key3 .textBox ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 	#index #keyv .kvList .key3 .textBox li {
 		width: 480px;
 		min-width: 0;
-		height: 180px;
-		display: inline-block;
 		text-align: left;
 		border: 10px solid #83D0D5;
-	}
-	#index #keyv .kvList .key3 .textBox li:first-child {
-		margin-right: 40px;
 	}
 		#index #keyv .kvList .key3 .textBox li a {
 			height: 100%;
 			display: block;
-			padding: 5px 25px 0 19px;
+			padding: 5px 25px 15px 19px;
 			background-color: rgba(255,255,255,0.1);
 			font-size: 13px;
 			letter-spacing: 1.5px;

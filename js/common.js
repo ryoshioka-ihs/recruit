@@ -4,7 +4,7 @@ var replaceWidth = 768;
 
 $(document).ready(function(){
 	//ソースコード内改行による空白を削除
-	clearNLSP();
+	// clearNLSP();
 
 	//ナビゲーションホバー
 	setGnavi();
@@ -143,7 +143,7 @@ function setGnavi() {
 function smtSearch() {
 
 	var $header = $('.headerMainNav');
-	var $form = $('#scWrap .search form');
+	var $form = $('.siteSearch--header .siteSearchForm');
 
 	// 読み込み時のHeaderの高さを保存
 	var closeHeight = $header.outerHeight();
@@ -159,6 +159,11 @@ function smtSearch() {
 			$header.animate({'height': closeHeight + 'px'}, 400);
 			$form.fadeOut(200);
 		}
+	});
+
+	$(window).resize(function() {
+		closeHeight = $header.outerHeight();
+		openHeight = closeHeight + 72;
 	});
 }
 
