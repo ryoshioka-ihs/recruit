@@ -10,7 +10,7 @@ noindex: true
 		"title": "{{ post.title | xml_escape }}",
 		"content": "{{ post.content | strip_html | xml_escape | strip_newlines | normalize_whitespace | remove: '\' }}",
 		"description": "{{ post.description | xml_escape }}",
-		{% if post.link %}"link": "{{ post.link }}",{% else %}"link": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",{% endif %}
+		{% if post.link %}"link": "{{ post.link }}",{% else %}"link": "{{ post.url }}",{% endif %}
 		"categories": [
 			{% for category in post.categories %}"{% if category == "cases" %}導入事例{% elsif category == "topics" %}トピックス{% else %}{{ category }}{% endif %}"{% unless forloop.last == true %},
 			{% endunless %}{% endfor %}{% if post.categories.size > 0 and post.tags.size > 0 %},
@@ -24,7 +24,7 @@ noindex: true
 		"title": "{{ page.title | xml_escape }}",
 		"content": "{{ page.content | strip_html | xml_escape | strip_newlines | remove: '"' | remove: '	' | remove: '  ' | remove: '\' }}",
 		"description": "{{ page.description | xml_escape }}",
-		{% if page.link %}"link": "{{ page.link }}",{% else %}"link": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",{% endif %}
+		{% if page.link %}"link": "{{ page.link }}",{% else %}"link": "{{ page.url }}",{% endif %}
 		"categories": [
 			{% for category in page.categories %}"{{ category }}"{% unless forloop.last == true %},
 			{% endunless %}{% endfor %}{% if page.categories.size > 0 and page.tags.size > 0 %},
