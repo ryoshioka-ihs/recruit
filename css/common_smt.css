@@ -908,7 +908,7 @@ height: 1700px;
 	position: static;
 	margin: 0;
 	float: right;
-	padding: 5px 10px 0 0;
+	padding: 4px 10px 0 0;
 }
 	#gNav p {
 		display: block;
@@ -990,8 +990,10 @@ height: 1700px;
 /*  言語切り替え＆ページ内検索
 -------------------------------------------------- */
 #scWrap {
+	display: flex;
+	flex-direction: row;
 	width: auto;
-	padding-right: 15px;
+	padding-right: 12px;
 }
 	#scBtn {
 		width: 100%;
@@ -1004,12 +1006,10 @@ height: 1700px;
 		overflow: hidden;
 	}
 
-	#scWrap li span,
-	#scWrap .search form {
+	#scWrap li span {
 		display: none;
 	}
-	#scWrap ul,
-	#scWrap .search {
+	#scWrap ul {
 		height: 30px;
 		display: inline-block;
 		vertical-align: top;
@@ -1025,27 +1025,32 @@ height: 1700px;
 		}
 
 	/* 検索ボタン */
-	#scWrap .search {
+	.siteSearch--header {
+		border-right: 1px solid #CCD8E8;
 		width: 36px;
 		margin-top: 0;
 		position: static;
 	}
-		#scWrap .search form {
-			display: block;
-			position: absolute;
+		.siteSearch--header .siteSearchForm {
+			display: none;
 			left: 0px;
+			margin: 0 20px;
+			position: absolute;
 			top: 60px;
 			width: calc(100% - 40px);
-			margin: 0 20px;
-			display: none;
 		}
-			#scWrap .search input[type="text"] {
-			    height: 40px;
-			}
-			#scWrap .search input.button {
-				height: 40px;
-			  left: 7px;
-			}
+		.siteSearch--header .siteSearchBox {
+			height: 40px;
+		}
+		.siteSearch--header .siteSearchBtn {
+			height: 40px;
+			left: 7px;
+		}
+
+/* コンテンツエリアの検索フォーム */
+.siteSearch--inContent {
+	padding: 20px 20px;
+}
 
 /*  情報リンク
 -------------------------------------------------- */
