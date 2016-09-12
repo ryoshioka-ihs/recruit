@@ -12,6 +12,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - admin
+  - template.html
 
 # デフォルト設定
 defaults:
