@@ -16,8 +16,8 @@ var AzureSearch  = require('azure-search');
 var each         = require('async-each-series');
 
 var searchClient = AzureSearch({
-	url: "https://g5jstu64.search.windows.net",
-	key: "2B86A3D6393C3A1890FD82D38FC91AA4",
+	url: "https://ihs-websites.search.windows.net",
+	key: "69C5A1A53B19B756D4740023405178E1",
 	version: '2015-02-28-preview'
 });
 

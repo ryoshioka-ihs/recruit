@@ -35,8 +35,8 @@
 
 		var indexName = 'posts-and-pages';
 		var client = AzureSearch({
-			url: 'https://g5jstu64.search.windows.net',
-			key:'2B86A3D6393C3A1890FD82D38FC91AA4',
+			url: 'https://ihs-websites.search.windows.net',
+			key:'CCC03375AC4AAAA5D6FFB73029E4F51E',
 			version: '2015-02-28-preview'
 		});
 
