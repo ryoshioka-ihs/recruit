@@ -144,11 +144,11 @@ $(function () {
 		showGoogleMap();
 	}
 
-	/*
 	// 会社概要東京
 	var $gmapAccessTokyo = $('#gmapAccessTokyo');
 	if ($gmapAccessTokyo.size() > 0) {
 		var args = {
+			'element_id': 'gmapAccessTokyo'
 		}
 		showGoogleMap(args);
 	}
@@ -157,9 +157,11 @@ $(function () {
 	var $gmapAccessOsaka = $('#gmapAccessOsaka');
 	if ($gmapAccessOsaka.size() > 0) {
 		var args = {
+			'element_id': 'gmapAccessOsaka',
+			'longitude': 34.7105001,
+			'latitude': 135.4982108
 		}
 		showGoogleMap(args);
 	}
-	*/
 });
 
