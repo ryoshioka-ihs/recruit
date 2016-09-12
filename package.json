@@ -1,0 +1,20 @@
+{
+  "name": "ihs-corporate2016",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://wt-redmine.iimhs.co.jp/git/ihs-corporate2016.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-htmlhint": "^0.3.1",
+    "htmlhint-stylish": "^1.0.3"
+  }
+}
