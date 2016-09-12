@@ -1026,14 +1026,15 @@ a.rss:hover {
 	会社案内メニューリンク
 -------------------------------------------------- */
 .corpMenu {
-	margin: 40px -20px -18px 0;
-	clear: both;
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 	.corpMenu li {
 		width: 360px;
 		height: 160px;
-		display: inline-block;
-		margin: 0 20px 20px 0;
+		margin-bottom: 20px;
 		transition: 0.3s;
 		background: #FFF 20px 20px no-repeat;
 		background-size: 120px 120px;
@@ -2209,43 +2210,55 @@ position: relative;
 			text-decoration: underline;
 		}
 
-/* 検索ボタン */
-#scWrap .search {
-	width: 180px;
-	margin-top: 5px;
+/* スマホで表示する検索ボタン*/
+#scBtn {
+	display: none;
+}
+
+/* サイト内検索フォーム */
+.siteSearchForm {
+	background: #F2F2F0;
 	position: relative;
 }
-	#scBtn {
-		display: none;
-	}
-	#scWrap .search form {
-		background-color: #fff;
-		position: relative;
-	}
-	/*
-	 * CSS calc()
-	 * MDN: https://developer.mozilla.org/ja/docs/Web/CSS/calc
-	 * Can I Use: http://caniuse.com/#search=calc()
-	 */
-	#scWrap .search input[type="text"] {
+	.siteSearchBox {
+		background: #F2F2F0;
 		width: calc(100% - 30px);
 		margin-left: 30px;
 		height: 30px;
 	}
-	#scWrap .search input.button {
-		width: 20px;
-		height: 30px;
+	.siteSearchBtn {
 		background: url("../image/common/icon_search.png") center center no-repeat;
 		background-size: 14px 14px;
+		cursor: pointer;
+		height: 30px;
+		left: 5px;
 		position: absolute;
 		top: 0;
-		left: 5px;
-		cursor: pointer;
+		width: 20px;
 	}
+
+/* 大きめのサイト内検索フォーム */
+.siteSearchForm--lg .siteSearchBox {
+	font-size: 15px;
+	width: calc(100% - 40px);
+	margin-left: 40px;
+	height: 40px;
+}
+.siteSearchForm--lg .siteSearchBtn {
+	height: 40px;
+	width: 40px;
+}
+
+/* コンテンツエリアの検索フォーム */
+.siteSearch--inContent {
+	padding: 20px 40px;
+}
 
 /*  情報リンク
 -------------------------------------------------- */
 #infoLink {
+	display: flex;
+	flex-direction: column;
 	width: 120px;
 	position: absolute;
 	top: 0;
@@ -2253,7 +2266,6 @@ position: relative;
 	clear: both;
 }
 	#infoLink li {
-		display: inline-block;
 		vertical-align: top;
 		width: 120px;
 		height: 45px;
@@ -2267,6 +2279,7 @@ position: relative;
 			color: #FFF;
 			font-weight: bold;
 			transition: 0.5s;
+			text-decoration: none;
 		}
 		#infoLink li a:hover {
 			opacity: 0.7;
@@ -2276,6 +2289,7 @@ position: relative;
 			text-align: center;
 			background-color: #F3951B;
 			letter-spacing: 3px;
+			padding-left: 3px;
 		}
 		#infoLink li.mail a {
 			font-size: 12px;
