@@ -2520,7 +2520,7 @@ footer {
 			-ms-filter: "alpha(opacity=70)";
 		}
 
-	footer #mapCanvas {
+	footer #gmapTopFooter {
 		width: 100%;
 		height: 300px;
 	}
