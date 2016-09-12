@@ -1,9 +1,9 @@
 ---
 layout:  null
-noindex: true
+nosearch: true
 ---
 {% assign posts = site.posts %}
-{% assign pages = site.pages | where_exp: "item", "item.noindex == null" %}
+{% assign pages = site.pages | where_exp: "item", "item.nosearch == null" %}
 [
 	{% for post in posts %}{
 		"id": "{{ post.url | prepend: site.baseurl | prepend: site.url | remove: ':' | replace: '.', '-' | replace: '/', '-' }}",
