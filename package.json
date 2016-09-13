@@ -14,7 +14,10 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-command": "^0.1.2",
     "gulp-htmlhint": "^0.3.1",
-    "htmlhint-stylish": "^1.0.3"
+    "gulp-util": "^3.0.7",
+    "htmlhint-stylish": "^1.0.3",
+    "vinyl-ftp": "^0.5.0"
   }
 }

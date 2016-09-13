@@ -12,6 +12,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - admin
+  - node_modules
+  - package.json
+  - gulpfile.js
+  - htmlhintrc
 
 # デフォルト設定
 defaults:
