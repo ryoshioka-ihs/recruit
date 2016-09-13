@@ -12,6 +12,10 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "async-each-series": "^0.1.1",
+    "azure-search": "0.0.6"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-command": "^0.1.2",

@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--▽ヘッド▽-->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<meta name="description" content="既存データベースのバージョンアップとVMware Horizon Viewを使用したVDI環境の構築支援の事例をご紹介いたします。" />
+<meta name="keywords" content="VMware Horizon View,VDI,SQL,VMware,事例" />
+
+
+
+
+<!--title-->
+<title>検証用仮想デスクトップ環境の導入</title>
+
+<!--favicon-->
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/image/common/favicons.png" />
+
+<!--共通css-->
+<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/css/bgImg.css" />
+<link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="/css/common_smt.css" />
+
+<!--共通js-->
+<script type="text/javascript" src="/js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+
+<!--GoogleMap-->
+
+
+	<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
+
+<script type="text/javascript" src="/js/jmapstyle.js"></script>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.min.js"></script>
+<![endif]-->
+
+
+<!--△ヘッド△-->
+</head>
+<body>
+				<!--▽ヘッダー▽-->
+				<!--▽ヘッダー▽-->
+<header class="siteHeader">
+	<p class="slogan">ITインフラを支えるスペシャリストIIMヒューマン・ソリューション</p>
+	<div class="headerMainNav clearfix">
+		<h1 class="siteLogo"><a href="/"><img src="/image/common/logo.png" alt="IIMヒューマン・ソリューション" width="113" height="27" /></a></h1>
+		<nav id="gNav">
+			<p id="Menu"><img src="/image/common/menu_smt.png" alt="メニュー" width="25" height="22" /></p>
+			<div class="navWrap">
+				<p id="close"><img src="/image/common/icon_close.png" alt="閉じる" width="20" height="19" /></p>
+				<ul>
+					<li>
+						<a href="/services/index.html">サービス・製品</a>
+						<ul class="inNav">
+							<li><a href="/services/operation/index.html">インフラ運用</a></li>
+							<li><a href="/services/construction/index.html">インフラ構築</a></li>
+							<li><a href="/services/webSystemOpt/index.html">Webシステム最適化</a></li>
+							<li><a href="/services/security/index.html">セキュリティ</a></li>
+						</ul>
+					</li>
+					<li class="act">
+						<a href="/cases/index.html">導入事例</a>
+						<ul class="inNav">
+							<li><a href="/cases/operation/index.html">インフラ運用</a></li>
+							<li><a href="/cases/construction/index.html">インフラ構築</a></li>
+							<!--<li><a href="#">Webシステム最適化</a></li>--><!-- ※導入事例の「Webシステム最適化」は一旦非表示 -->
+							<li><a href="/cases/security/index.html">セキュリティ</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="/topics/index.html">トピックス</a>
+						<ul class="inNav">
+							<li><a href="/topics/services/index.html">サービス・製品</a></li>
+							<li><a href="/topics/cases/index.html">事例紹介</a></li>
+							<li><a href="/topics/reports/index.html">技術レポート</a></li>
+							<li><a href="/topics/seminar/index.html">セミナー</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="/company/index.html">会社情報</a>
+						<ul class="inNav">
+							<li><a href="/company/message/index.html">社長メッセージ</a></li>
+							<li><a href="/company/profile/index.html">会社概要・組織図</a></li>
+							<li><a href="/company/vision/index.html">経営理念</a></li>
+							<li><a href="/company/history/index.html">沿革・主要取引先</a></li>
+							<li><a href="/company/access/index.html">アクセスマップ</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="/contact/index.html">お問い合わせ</a>
+						<ul class="inNav">
+							<li><a href="/contact/all/index.html">総合お問い合わせ</a></li>
+							<li><a href="#">採用に関するお問い合わせ</a></li>
+							<li><a href="#">メールマガジン登録</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav><!--/#gNav-->
+
+		<div id="scWrap">
+			<ul>
+				<li>J<span>A</span>P<span>ANESE</span></li>
+				<li><a href="/english/index.html">EN<span>GLISH</span></a></li>
+			</ul>
+
+			<div class="siteSearch siteSearch--header">
+				<p id="scBtn">検索</p>
+				<form class="siteSearchForm" name="seek" method="get" action="/search/">
+					<input class="siteSearchBox" name="q" data-bind="value: searchQuery" type="text">
+					<input class="siteSearchBtn" value="" type="submit">
+				</form>
+			</div>
+		</div><!--/#scWrap-->
+	</div><!--/.headerMainNav-->
+
+	<ul id="infoLink">
+		<li class="adop"><a href="#">採用情報</a></li>
+		<li class="mail"><a href="#">メルマガ登録</a></li>
+	</ul><!--/#infoLink-->
+</header>
+<!--△ヘッダー△-->
+
+				<!--△ヘッダー△-->
+
+				 <!--▽コンテンツ▽-->
+				<article>
+						<section>
+								<!--▼キービジュアル▼-->
+								                <!--▼キービジュアル▼-->
+                <div id="CaseSt" class="ttl">
+                    <p>導入事例<span>Case Study</span></p>
+                </div>
+                <!--▲キービジュアル▲-->
+								<!--▲キービジュアル▲-->
+
+								<!--▼パンくずリスト▼-->
+								
+
+
+  <ul id="tpcpth" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <li>
+      <a href="/" itemprop="url"><span itemprop="title">ホーム</span></a>
+    </li>
+
+		
+		
+		<li property="itemListElement" typeof="ListItem">
+			<a href="/cases/" itemprop="url">
+				<span itemprop="title">導入事例</span>
+			</a>
+    </li>
+		
+
+		
+		
+
+    <!-- パンくずリストアイテムの繰り返し -->
+    
+    
+
+      <!-- トップページの場合処理を終了 -->
+      
+
+      <!-- SEO -->
+      
+
+      <li property="itemListElement" typeof="ListItem">
+        
+        <span property="name">検証用仮想デスクトップ環境の導入</span>
+        
+        <meta property="position" content="1" />
+      </li>
+
+    
+  </ul>
+
+
+
+								<!--▲パンくずリスト▲-->
+
+								<div class="wrap">
+										<div id="main">
+
+										<section>
+  <h1>検証用仮想デスクトップ環境の導入</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">構成図</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-work">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>セキュリティ強化、PC運用の効率化、柔軟なワークスタイルの実現などを目的に仮想デスクトップ環境の導入を進める企業は年々増加しています。仮想デスクトップ環境は多くのメリットをもたらしますが、仮想基盤が不安定な状態になればユーザの利便性に影響が生じ、場合によっては業務停止につながるリスクがあるため、事前の検証は非常に重要となります。</p>
+      <br>
+      <p>今回ご紹介するお客様は、グループ企業を含む約8000台のデスクトップの仮想化を進められており、実際の導入に先立って検証用環境の構築を計画されていました。既存の仮想基盤（VMware vSphere）を活用するため、仮想デスクトップシステムには、VMware Horizon 6 with Viewの導入を決定、25台の仮想デスクトップを実際に稼働させる環境を構築し、既存業務の継続可否やユーザの使用感、システム管理者の運用の評価・検証を行うことが目的です。</p>
+      <br>
+      <p>この検証用環境構築のパートナー選定の際に、IHSのVMware Horizonの導入実績をご評価いただき、環境構築をお手伝いさせていただきました。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+    <table class="baseTb">
+      <tbody>
+        <tr>
+          <th>業種</th>
+          <td>流通・小売業</td>
+        </tr>
+        <tr>
+          <th>目的</th>
+          <td>VMware Horizon Viewを使用したVDI環境の構築</td>
+        </tr>
+        <tr>
+          <th>作業規模</th>
+          <td>
+          <ul class="grayDisc">
+            <li>利用ユーザ数:25名</li>
+            <li>総サーバ台数:</li>
+          </ul>
+          <div class="textIndent--style3">
+          <p>物理サーバ 2 台（VMware vSphere ESXi 5.5）</p>
+          <p class="textindent--style1">仮想サーバ 2 台（VMware vCenter Server 5.5、 VMware Horizon 6.0 with View、Microsoft SQL Server 2008 R2 SP2 Standard）</p>
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <th>作業ボリューム</th>
+          <td>1.5人月</td>
+        </tr>
+        <tr>
+          <th>作業内容</th>
+          <td>
+            <ul class="grayDisc">
+              <li>機能設計</li>
+              <li>仮想デスクトップ基盤設計</li>
+              <li>仮想デスクトップマシンマスタ設計</li>
+              <li>データベースアップグレード設計</li>
+              <li>システム動作検証</li>
+              <li>ドキュメント作成</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+  <h2>構成図</h2>
+  <div class="smtSent">
+    <p>＜構成図の画像＞</p>
+    <div class="lightBox">
+    <figure><img src="/image/cases/case123_01.png" alt="図1"></figure>
+    </div>
+    </div>
+  </section>
+
+  <section id="toc-point">
+    <h2>作業のポイント</h2>
+    <div class="smtSent">
+      <h3>リンククローン・フルクローン双方の検証が可能な環境をご提供</h3>
+      <p>フルクローンがマスターイメージから複製した仮想デスクトップをユーザ毎に保持するのに対し、リンククローンは共通するOSやアプリケーションを単一のイメージとしてユーザ間で共有し、ユーザ固有のデータを差分ディスクで保持する方式です。フルクローンはユーザ毎にカスタマイズが必要な場合に使用され、リンククローンはユーザのカスタマイズを最小限にとどめ、ガバナンスを維持したい企業で採用されるケースが多い方式です。今回の事例では、将来的な導入範囲の拡大時に最適な方式を決定できるよう、運用効率やデスクトップのカスタマイズ性について両方の方式で検証できる環境を提供させていただきました。</p>
+
+      <h3>既存データベースのバージョンアップ</h3>
+      <p>VMwareの仮想環境では管理サーバであるvCenter ServerでMicrosoft SQL Serverが使われます。既存環境ではMicrosoft SQL Server 2008 R2 Expressが使われていましたが、将来的な仮想デスクトップの増加を見据え、Microsoft SQL Server 2008 R2 SP2 Standardへのバージョンアップを実施いたしました。</p>
+      <br>
+      <p>SQL Serverのバージョンアップは複数のサーバを稼働させている既存環境へ影響するため、確実に行うべき作業です。そのため、事前に入念な検証を行い、作業手順を完全にドキュメント化することで本番作業も問題なく完了することができました。</p>
+    </div>
+  </section>
+
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>蓄積されたノウハウによる高い作業品質</h3>
+      <p>IHSでは、システム構築で発生する作業をすべて手順書に残すことをルールとしています。作業を重ねるごとに手順書のブラッシュアップを行い、チームで情報共有を行うことで、作業品質の向上に努めております。今回の事例でも、製品の既知の問題への対処を含め、構築作業を滞りなく完了することができました。</p>
+    </div>
+  </section>
+
+  <section id="toc-work">
+    <h2>作業内容の詳細</h2>
+    <div class="smtSent">
+      <h3>設計</h3>
+      <ol class="numList">
+        <li><p>基本設計</p></li>
+      </ol>
+      <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>機能設計</li>
+          <li>仮想デスクトップ基盤設計</li>
+          <li>仮想デスクトップマシンマスタ設計</li>
+          <li>データベースアップグレード設計</li>
+        </ul>
+      </div>
+
+      <h3>環境構築</h3>
+      <ol class="numList">
+        <li><p>Active Directory機能</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>OU／グループ／ユーザ</li>
+          <li>Group Policy</li>
+        </ul>
+        </div>
+
+        <li><p>仮想デスクトップ環境提供機能</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>VMware Horizon View 6.0</li>
+          <li>VMware Horizon View Composer</li>
+          <li>仮想デスクトップマシンマスタ</li>
+          <li>KMSライセンス認証</li>
+        </ul>
+        </div>
+
+        <li><p>データベースアップグレード</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>Microsoft SQL Server 2008 R2 Standard</li>
+        </ul>
+        </div>
+      </ol>
+
+      <h3>納品ドキュメント</h3>
+      <ul class="grayDisc">
+        <li>サーバ詳細設計書</li>
+        <li>動作確認項目表件結果報告書</li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+
+
+											<div class="grayBox">
+												<section id="PdfDownload">
+													<h2>この事例のPDFをダウンロード</h2>
+													<p>システム運用を常駐者＋バックヤード支援でコスト最適化のPDFはこちらからダウンロードできます。</p>
+													<p class="dlPdf">
+														<a href="/image/cases/case123.pdf" target="_blank"><span>この事例をダウンロード</span></a>
+													</p>
+												</section>
+											</div>
+
+											<!--▽関連事例▽-->
+												
+
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+			
+			
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+
+
+<!--▽関連事例▽-->
+<section>
+	<h2>関連事例</h2>
+	<p class="link"><a href="/cases/casesAll.html">導入事例一覧へ</a></p>
+	<ul class="lineList">
+
+		
+			<li class="triBox">
+				<a href="/cases/2016/03/case121.html" target="_self">
+					<section>
+						<h3>SCCM 更改 </h3>
+						
+							
+						
+							
+								<span class="icon">インフラ構築</span>
+							
+						
+						<p>既存System Center 2007 Configuration Manager環...</p>
+					</section>
+				</a>
+			</li>
+		
+			<li class="triBox">
+				<a href="/cases/2016/01/case120.html" target="_self">
+					<section>
+						<h3>Global SCCM 構築</h3>
+						
+							
+						
+							
+								<span class="icon">インフラ構築</span>
+							
+						
+						<p>既存System Center 2007 Configuration Manager環...</p>
+					</section>
+				</a>
+			</li>
+		
+			<li class="triBox">
+				<a href="/cases/2016/01/case119.html" target="_self">
+					<section>
+						<h3>Microsoft VDI導入</h3>
+						
+							
+						
+							
+								<span class="icon">インフラ構築</span>
+							
+						
+						<p>Microsoft VDIを使用した共有アプリケーションサーバの更改と仮想デスクトップ...</p>
+					</section>
+				</a>
+			</li>
+		
+			<li class="triBox">
+				<a href="/cases/2015/11/case114.html" target="_self">
+					<section>
+						<h3>ネットワークセキュリティシステム構築</h3>
+						
+							
+						
+							
+								<span class="icon">インフラ構築</span>
+							
+						
+						<p>ネットワークシステムの刷新に伴う、Webフィルター、Webゲートウェイ、クライアント向...</p>
+					</section>
+				</a>
+			</li>
+		
+
+	</ul>
+</section>
+<!--△関連事例△-->
+
+
+
+											<!--△関連事例△-->
+
+											<!--▽技術レポート▽-->
+												
+
+
+
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+
+
+
+
+
+
+
+											<!--△技術レポート△-->
+
+										</div><!--/.main-->
+
+										<div id="sideMenu">
+										<nav>
+    <dl>
+        <dt class="act"><a href="#">導入事例</a></dt>
+        <dd>
+            <ul>
+                <li><a href="/cases/operation/">インフラ運用</a></li>
+                <li class="act"><a href="/cases/construction/">インフラ構築</a></li>
+                <!--<li><a href="#">Webシステム最適化</a></li>--><!-- ※導入事例の「Webシステム最適化」は一旦非表示 -->
+                <li><a href="/cases/security/">セキュリティ</a></li>
+            </ul>
+        </dd>
+    </dl>
+</nav>
+
+    <aside id="bnr">
+        <ul>
+            <li class="case"><a href="/cases/casesAll.html">導入事例</a></li>
+
+
+            <li class="report"><a href="/topics/reports/">技術レポート</a></li>
+
+
+            <li class="contact">
+<p class="oraBtn"><a href="/contact/index.html">お問い合わせ<span>はこちら</span></a></p>
+<p>製品・サービスのお問い合わせ<br />はお電話<span>でも承ります。</span></p>
+<p class="tel">0120-640-254<span>9:00～18:00（土日、祝日を除く）</span></p>
+<aside>弊社営業部が対応させていただきます</aside>
+</li>
+            
+
+<li class="svList">
+    <dl>
+        <dt>関連サービス</dt>
+        <dd>
+            <ul>
+                <!-- ▼親カテゴリ▼ -->
+                
+                <li><a href="/cases/construction/">インフラ構築</a></li>
+                <!---->
+                
+                <!-- ▲親カテゴリ▲ -->
+                <!-- ▼子カテゴリ▼ -->
+                <!---->
+                </li>
+                
+                
+                
+                <!---->
+                
+                
+                <!-- ▲子カテゴリ▲ -->
+            </ul>
+        </dd>
+    </dl>
+</li>
+
+        </ul>
+    </aside>
+
+										</div><!--/#sideMenu-->
+
+								</div><!--/.wrap-->
+						</section>
+				</article>
+				<!--△コンテンツ△-->
+
+				<!--▽フッター▽-->
+						<footer>
+			<div id="pageTop">
+				<p>PAGE TOP</p>
+			</div>
+			
+
+			<div class="footTop">
+				<p><a href="#">ホーム</a></p>
+				<div class="tbWrap">
+					<dl>
+						<dt><a href="/services/index.html">サービス・製品</a></dt>
+						<dd>
+							<ul>
+								<li><a href="/services/operation/index.html">インフラ運用</a></li>
+								<li><a href="/services/construction/index.html">インフラ構築</a></li>
+								<li><a href="/services/webSystemOpt/index.html">Webシステム最適化</a></li>
+								<li><a href="/services/security/index.html">セキュリティ</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><a href="/cases/index.html">導入事例</a></dt>
+						<dd>
+							<ul>
+								<li><a href="/cases/operation/index.html">インフラ運用</a></li>
+								<li><a href="/cases/construction/index.html">インフラ構築</a></li>
+								<!--<li><a href="#">Webシステム最適化</a></li>--><!-- ※導入事例の「Webシステム最適化」は一旦非表示 -->
+								<li><a href="/cases/security/index.html">セキュリティ</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><a href="/company/index.html">会社情報</a></dt>
+						<dd>
+							<ul>
+								<li><a href="/company/message/index.html">社長メッセージ</a></li>
+								<li><a href="/company/profile/index.html">会社概要・組織図</a></li>
+								<li><a href="/company/vision/index.html">経営理念</a></li>
+								<li><a href="/company/history/index.html">沿革・主要取引先</a></li>
+								<li><a href="/company/access/index.html">アクセスマップ</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><a href="/topics/index.html">トピックス</a></dt>
+						<dd>
+							<ul>
+								<li><a href="/topics/services/index.html">サービス・製品</a></li>
+								<li><a href="/topics/cases/index.html">事例紹介</a></li>
+								<li><a href="/topics/reports/index.html">技術レポート</a></li>
+								<li><a href="/topics/seminar/index.html">セミナー</a></li>
+							</ul>
+						</dd>
+						<p><a href="/contact/index.html">お問い合わせ</a></p>
+					</dl>
+
+					<dl>
+						<dt><a href="#">採用情報</a></dt>
+						<dd>
+							<ul>
+								<li><a href="#">会社説明会（中途・新卒）</a></li>
+								<li><a href="#">募集要項（中途・新卒）</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div><!--/.tbWrap-->
+			</div><!--/.footTop-->
+
+			<div class="footBot">
+				<ul>
+					<li><a href="/privacy/policy.html">個人情報保護方針</a></li>
+					<li><a href="/privacy/sitePolicy.html">サイトポリシー</a></li>
+					<li><a href="/siteMap.html">サイトマップ</a></li>
+					<li class="outLink"><a href="http://www.iim.co.jp/" target="_blank">株式会社 アイ・アイ・エム</a></li>
+				</ul>
+
+				<!-- GlobalSign SSL Seal. Do not edit.  -->
+								<!--
+				<div id="sign">
+					<span id="ss_gmo_img_wrapper_115-57_image_ja">
+						<a href="https://jp.globalsign.com/" target="_blank" rel="nofollow">
+							<img alt="SSL　GMOグローバルサインのサイトシール" border="0" id="ss_img" src="//seal.globalsign.com/SiteSeal/images/gs_noscript_115-57_ja.gif">
+						</a>
+					</span>
+					<script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gmogs_image_115-57_ja.js" defer="defer"></script>
+					<span class="pm"><a href="http://privacymark.jp/" target="_blank"><img src="/image/common/privacy_mark.gif" width="55" height="55" /></a></span>
+				</div>
+								-->
+				<!-- END of GlobalSign SSL Seal. -->
+
+				<p class="cp"><small><img src="/image/common/copyRight.png" alt="©2016 IIM Human Solution Corp." width="212" height="12" /></small></p>
+			</div><!--/.footBot-->
+		</footer>
+
+				<!--△フッター△-->
+
+</body>
+</html>
