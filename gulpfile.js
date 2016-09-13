@@ -113,7 +113,7 @@ gulp
 		}
 
 		return gulp.src( globs, { base: base, buffer: buffer } )
-			.pipe( conn.newer( '/site/wwwroot' ) )
+			.pipe( conn.differentSize( '/site/wwwroot' ) )
 			.pipe( conn.dest( '/site/wwwroot' ) );
 	});
 
