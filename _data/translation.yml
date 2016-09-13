@@ -1,8 +1,0 @@
-introduction:
-  label: "インフラ構築"
-
-sccm:
-  label: "SCCM"
-
-operation:
-  label: "インフラ運用"
