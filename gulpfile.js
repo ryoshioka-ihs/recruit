@@ -2,12 +2,19 @@ var gulp        = require('gulp');
 var gutil       = require('gulp-util');
 var gulpCommand = require('gulp-command')(gulp);
 var htmlhint    = require('gulp-htmlhint');
+var csslint     = require('gulp-csslint');
 var ftp         = require('vinyl-ftp');
 
 gulp.task('html', function(){
-	gulp.src("./_site/**/*.html")
+	gulp.src("./dest/**/*.html")
 		.pipe(htmlhint())
 		.pipe(htmlhint.reporter("htmlhint-stylish"))
+});
+
+gulp.task('css', function() {
+	gulp.src('./dest/css/**/*.css')
+		.pipe(csslint())
+		.pipe(csslint.formatter());
 });
 
 gulp
@@ -45,9 +52,9 @@ gulp
 					log:      gutil.log
 				} );
 				globs = [
-					'_site/**'
+					'dest/**'
 				];
-				base   = '_site';
+				base   = 'dest';
 				buffer = false;
 
 				console.log('');
@@ -86,9 +93,9 @@ gulp
 					log:      gutil.log
 				} );
 				globs = [
-					'_site/**'
+					'dest/**'
 				];
-				base   = '_site';
+				base   = 'dest';
 				buffer = false;
 
 				console.log('');
