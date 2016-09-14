@@ -7,13 +7,13 @@ var ftp         = require('vinyl-ftp');
 
 gulp.task('html', function(){
 	gulp.src("./dest/**/*.html")
-		.pipe(htmlhint())
+		.pipe(htmlhint('.htmlhintrc.json'))
 		.pipe(htmlhint.reporter("htmlhint-stylish"))
 });
 
 gulp.task('css', function() {
 	gulp.src('./dest/css/**/*.css')
-		.pipe(csslint())
+		.pipe(csslint('.csslintrc.json'))
 		.pipe(csslint.formatter());
 });
 
