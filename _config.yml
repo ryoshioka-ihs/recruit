@@ -14,10 +14,15 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - admin
+  - _includes
+  - _layout
+  - _plugin
   - node_modules
   - package.json
   - gulpfile.js
-  - htmlhintrc
+  - .csslintrc.json
+  - .htmlhintrc.json
+  - .jekyll-metadata
 
 # デフォルト設定
 defaults:
