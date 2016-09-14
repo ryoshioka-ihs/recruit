@@ -23,7 +23,7 @@ var searchClient = AzureSearch({
 
 var indexName = 'posts-and-pages';
 
-var items = require( "../_site/search/searchIndex.json" );
+var items = require( "./dest/search/searchIndex.json" );
 
 function rebuildSearchIndex(posts) {
 	var schema = {

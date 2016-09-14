@@ -5,6 +5,8 @@ description: >
 baseurl: ""
 url: "http://www.iimhs.co.jp"
 
+source: "src"
+destination: "dest"
 # 除外するファイル
 # adminフォルダには管理用のファイルが出力されます。
 # 必要な時にはadminフォルダを一時的に以下のリストから削除します。
@@ -13,6 +15,15 @@ exclude:
   - Gemfile.lock
   - admin
   - template.html
+  - _includes
+  - _layout
+  - _plugin
+  - node_modules
+  - package.json
+  - gulpfile.js
+  - .csslintrc.json
+  - .htmlhintrc.json
+  - .jekyll-metadata
 
 # デフォルト設定
 defaults:
