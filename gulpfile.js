@@ -17,6 +17,10 @@ gulp.task('css', function() {
 		.pipe(csslint.formatter());
 });
 
+gulp.task('azure-search', function() {
+	require('./azure-search.js');
+});
+
 gulp
 	.option('deploy', '-e, --env', 'Specify environment "staging" or "production". The default value is staging')
 	.option('deploy', '-u, --user', 'FTP User')
@@ -122,5 +126,5 @@ gulp
 		return gulp.src( globs, { base: base, buffer: buffer } )
 			.pipe( conn.differentSize( '/site/wwwroot' ) )
 			.pipe( conn.dest( '/site/wwwroot' ) );
-	});
+});
 
