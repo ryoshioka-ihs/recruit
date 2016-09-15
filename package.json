@@ -17,6 +17,7 @@
     "azure-search": "0.0.6"
   },
   "devDependencies": {
+    "csslint-stylish": "0.0.5",
     "gulp": "^3.9.1",
     "gulp-command": "^0.1.2",
     "gulp-csslint": "^1.0.0",

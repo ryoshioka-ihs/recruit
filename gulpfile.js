@@ -3,6 +3,7 @@ var gutil       = require('gulp-util');
 var gulpCommand = require('gulp-command')(gulp);
 var htmlhint    = require('gulp-htmlhint');
 var csslint     = require('gulp-csslint');
+		csslint.addFormatter('csslint-stylish');
 var ftp         = require('vinyl-ftp');
 
 gulp.task('html', function(){
@@ -14,7 +15,7 @@ gulp.task('html', function(){
 gulp.task('css', function() {
 	gulp.src('./dest/css/**/*.css')
 		.pipe(csslint('.csslintrc.json'))
-		.pipe(csslint.formatter());
+		.pipe(csslint.formatter("stylish"));
 });
 
 gulp.task('azure-search', function() {
