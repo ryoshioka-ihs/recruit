@@ -40,7 +40,32 @@
 {% endif %}
 <script type="text/javascript" src="/js/jmapstyle.js"></script>
 
+<!-- 以下は、TOPページ専用 -->
+{% if page.layout == "top" %}
+	<!--TOPページ専用css-->
+	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/top.css" />
+	<link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="css/top_smt.css" />
+
+	<!--TOPページ専用js-->
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+{% endif %}
+
 <!--[if lt IE 9]>
 <script type="text/javascript" src="/js/html5.min.js"></script>
 <![endif]-->
+
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4316056-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
