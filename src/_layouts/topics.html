@@ -30,7 +30,7 @@
 
 									{% for post in paginator.posts %}
 										<li>
-											{% if post.link %}
+											{% if post.link and post.link != "" %}
 												<a href="{{ post.link }}" target="_self">
 											{% else %}
 												<a href="{{ post.url }}" target="_self">
