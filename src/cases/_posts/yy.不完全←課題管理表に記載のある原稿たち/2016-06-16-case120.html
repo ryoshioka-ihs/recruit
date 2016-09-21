@@ -1,7 +1,7 @@
 ---
 layout:       case
 global_menu:  cases
-title:        "Global SCCM 構築"
+title:        "グローバルでのPC運用一元化を目的としたSCCM構築"
 description:  "既存System Center 2007 Configuration Manager環境から新規にSystem Center 2012 R2 Configuration Manager への更改および、グローバル運用管理実現のための、システム構成・構築支援の事例をご紹介いたします。"
 keywords:     "SCCM更改,SCCM,SCEP,リプレース,負荷軽減,効率化,事例"
 date:         2016-01-07 16:00:00 +0900
@@ -14,139 +14,124 @@ tags:
 ---
 
 <section>
-  <h1>{{ page.title }}</h1>
-  <ul class="linkInPage">
-    <li><a href="#toc-background">背景</a></li>
-    <li><a href="#toc-overview">概要</a></li>
-    <li><a href="#toc-sysCon">システム構成図</a></li>
-    <li><a href="#toc-effect">作業効果</a></li>
-    <li><a href="#toc-work">作業内容の詳細</a></li>
-    <li><a href="#PdfDownload">PDFダウンロード</a></li>
-  </ul>
-
-  <section id="toc-background">
-    <h2>背景</h2>
-    <div class="smtSent">
-    <p>今回のお客様は、既存System Center 2007 Configuration Manager環境から新規にSystem Center 2012 R2 Configuration Manager への更改および、グローバル運用管理実現のための、システム構成、構築を検討しておりました。</p>
-    <p>本件では、System Center 2012 R2 Configuration Manager の管理機能である中央管理サイト、およびプライマリサイトの構築。</p>
-    <p>また、各拠点ごとに、System Center Configuration Manager の役割である配布ポイントサーバの構築を対応をさせていただきました。</p>
-    <br>
-    <p>弊社にて、System Center 2012 R2 Configuration Managerの管理機能である中央管理サイト、およびプライマリサイト、役割である配布ポイントサーバの構築を対応させていただきました。</p>
-    </div>
-  </section>
-
-  <section id="toc-overview">
-    <h2>概要</h2>
-    <div class="smtSent">
-    <table class="baseTb">
-      <tbody>
-        <tr>
-          <th>業種</th>
-          <td>輸送用機器</td>
-        </tr>
-        <tr>
-          <th>目的</th>
-          <td>
-          <ul class="grayDisc">
-            <li>System Center 2007 Configuration ManagerからSystem Center 2012 R2 Configuration Managerへの更改</li>
-            <li>System Center 2012 R2 Endpoint Protection 導入による、一元管理</li>
-            <li>タスクシーケンスによるOS展開手法の簡素化</li>
-            <li>グローバル運用パフォーマンスの向上</li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-        <th>作業規模</th>
-        <td>
-        <p>利用ユーザー数: 約　　名</p>
-        <br>
-        <p>[既存サーバー環境]</p>
-          <ul class="grayDisc">
-            <li>Active Directory ドメインコントローラ</li>
-            <li>System Center 2007 Configuration Managerプライマリサーバー</li>
-          </ul>
-        <br>
-        <p>[新サーバー環境]</p>
-          <ul class="grayDisc">
-            <li>System Center 2012 R2 Configuration Managerセントラルサーバー</li>
-            <li>System Center 2012 R2 Configuration Managerプライマリサーバー×2</li>
-            <li>System Center 2012 R2 Configuration Manager配布ポイントサーバ×5</li>
-            <li>SQL Server 2008 R2 ×3</li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-          <th>作業ボリューム</th>
-          <td>3人月</td>
-        </tr>
-        <tr>
-          <th>作業内容</th>
-          <td>System Center 2012 R2 Configuration Manager 要件定義/機能設計/構築/動作試験</td>
-        </tr>
-      </tbody>
-    </table>
-
-  <section id="toc-sysCon">
-  <h2>システム構成図</h2>
-  <div class="smtSent">
-    <p>＜構成図の画像＞</p>
-    <div class="lightBox">
-    <figure><img src="/image/cases/case120_01.png" alt="図1"></figure>
-    </div>
-    </div>
-  </section>
-
-  <section id="toc-effect">
-    <h2>作業効果</h2>
-    <div class="smtSent">
-      <h3>1. QoSによる帯域負荷の平準化</h3>
-      <p>お客様環境では、各地の拠点に、WANを介してネットワークが構成されておりました。</p>
-      <p>しかし、拠点によりネットワーク帯域が異なっており、帯域が狭い拠点に関しては、SCCMの通信により既存のネットワーク通信に影響を与えないようシステムを構成する必要がありました。そのため、各拠点のサーバが行う通信すべてに対し、帯域使用率を考慮する必要がありました。</p>
-      <br>
-      <p>今回は、各拠点のサーバにQoS※を設定し、SCCMと通信するすべてのサーバを対象に帯域制御を行いました。</p>
-      <br>
-      <p>これにより、既存のネットワーク通信に影響を与えず、ネットワーク帯域を多く使用する機能を利用することが可能となっております。</p>
-      <br>
-      <small class="notes">※QoS(Quality of Service)<br>
+    <h1>{{ page.title }}</h1>
+    <ul class="linkInPage">
+        <li><a href="#toc-background">背景</a></li>
+        <li><a href="#toc-overview">概要</a></li>
+        <li><a href="#toc-sysCon">システム構成図</a></li>
+        <li><a href="#toc-point">作業のポイント</a></li>
+        <li><a href="#toc-effect">IHS利用による効果</a></li>
+        <li><a href="#toc-work">作業内容の詳細</a></li>
+        <li><a href="#PdfDownload">PDFダウンロード</a></li>
+    </ul>
+    <section id="toc-background">
+        <h2>背景</h2>
+        <div class="smtSent">
+            <p>グローバルに多数の拠点を持つ企業では、情報システムの運用管理範囲も世界各地へと広がり、散在する情報システムに対するITガバナンスの構築は避けて通ることのできない課題です。</p>
+            <br>
+            <p>今回のお客様も、ガバナンス強化と運用コスト削減を目的に国内外の3万台を超えるPCの運用一元化を進められていました。国内ではSystem Center 2007 Configuration Manager(以下、SCCM)によってPCの一元的な管理体制を構築されていましたが、国外では導入されておらず、特にウイルス対策ソフトの導入状況やセキュリティパッチの適用状況の管理が課題となっていました。</p>
+            <br>
+            <p>そうした課題を解決するため、お客様はSCCMによる国内外のすべてのPCの一元的な運用管理基盤の構築を計画されました。SCCMの管理対象を全拠点に拡大し、日本から管理可能にするという一連のプロジェクトの中で、IHSはグローバルSCCMの中核となる中央管理サイトと、国内のSCCM環境の構築をお手伝いさせて頂きました。</p>
+        </div>
+    </section>
+    <section id="toc-overview">
+        <h2>概要</h2>
+        <div class="smtSent">
+            <table class="baseTb">
+                <tbody>
+                    <tr>
+                        <th>業種</th>
+                        <td>製造業</td>
+                    </tr>
+                    <tr>
+                        <th>目的</th>
+                        <td>
+                            <ul class="grayDisc">
+                                <li>グローバルでの一元的なPC運用管理基盤の構築</li>
+                                <li>System Center 2007 Configuration ManagerからSystem Center 2012 R2 Configuration Managerへの更改</li>
+                                <li>System Center 2012 Endpoint Protection（ウイルス対策機能）の導入</li>
+                                <li>PC運用効率の向上</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>作業規模</th>
+                        <td>
+                            <p>利用ユーザー数: 約 15,000 名（※本プロジェクトの対象である国内のユーザー数）</p>
+                            <br>
+                            <p>[既存サーバー環境]</p>
+                            <ul class="grayDisc">
+                                <li>Active Directory ドメインコントローラ（1台）</li>
+                                <li>System Center 2007 Configuration Manager プライマリサーバー（1台）</li>
+                            </ul>
+                            <br>
+                            <p>[新サーバー環境]</p>
+                            <ul class="grayDisc">
+                                <li>System Center 2012 R2 Configuration Managerセントラルサーバー（1台）</li>
+                                <li>System Center 2012 R2 Configuration Managerプライマリサーバー（2台）</li>
+                                <li>System Center 2012 R2 Configuration Manager配布ポイントサーバ（5台）</li>
+                                <li>SQL Server 2008 R2（3台）</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>作業ボリューム</th>
+                        <td>3人月</td>
+                    </tr>
+                    <tr>
+                        <th>作業内容</th>
+                        <td>
+                            <ul class="grayDisc">
+                                <li>System Center 2012 R2 Configuration Manager 要件定義/機能設計/構築/動作試験</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <section id="toc-sysCon">
+                <h2>システム構成図</h2>
+                <div class="smtSent">
+                    <div class="lightBox">
+                        <figure><img src="/image/cases/case120_01.png" alt="図1"></figure>
+                    </div>
+                </div>
+            </section>
+            <section id="toc-point">
+                <h2>作業のポイント</h2>
+                <div class="smtSent">
+                    <h3>グローバル展開へ向けたSCCM環境の構築・ガイドライン策定</h3>
+                    <p>今回のプロジェクトでは海外サイトの構築は範囲外でしたが、中央管理サイトは海外サイトの追加を考慮したサイジングを実施いたしました。また、海外サイト構築のガイドライン作成を行い、日本同様の基盤や運用手法の展開の準備をお手伝いさせて頂きました。</p>
+                    <h3>QoSによる帯域負荷の平準化</h3>
+                    <p>SCCMの重要な機能として、アプリケーション配信、セキュリティパッチの管理、OS展開がありますが、これらの機能はサーバからPCへ多量のデータを送信するため、既存のネットワーク通信に影響を与えないようシステムを設計する必要があります。今回のプ ロジェクトでは、各拠点のサーバにQoSを設定し、SCCMと通信するすべてのサーバを対象に帯域制御を行いました。これにより、帯域の狭い国外の拠点でも既存のネットワーク通信に影響を与えず、SCCMの機能を利用することが可能となりました。</p>
+                    <br>
+                    <small class="notes">※QoS(Quality of Service)<br>
       特定の通信にｔ愛して一定の帯域幅を確保し、パケットロスの発生を防ぐようにする技術の総称</small>
-
-      <h3>2. SCCM2007 クライアントエージェントの切り換え</h3>
-      <p>お客様環境では、既存のSCCM2007 に管理されたクライアント端末が各拠点ごとに存在しておりました。</p>
-      <p>本件では、SCCM2007から新規SCCM2012の移行に伴い、SCCM2007配下で管理されているクライアントをSCCM2012に移行する必要がありました。</p>
-      <br>
-      <p>今回は、クライアントエージェントアップグレード用にスクリプトを作成し、各拠点ごとのクライアントを対象にパッケージ展開を行いました。</p>
-      <br>
-      <p>これにより、既存クライアント端末のエージェントアップグレードおよび、新規クライアント端末のトエージェントインストールを利用することが可能となっております。また、エージェントアップグレードにパッケージ展開を使用したことで、各拠点ごとにアップグレードのタイミングを合わせることが可能となっております。</p>
-
-      <h3>3. SCCMによるオペレーティングシステム展開</h3>
-      <p>お客様はSCCMのリプレースに伴い、新クライアント端末の導入を検討しておりました。</p>
-      <p>クライアント導入に当たり、SCCM2012の機能の一つであるオペレーティングシステム展開機能を使用し、展開の自動化を行いたいというご要望がありました。</p>
-      <br>
-      <p>今回は、タスクシーケンスを組み込むことにより、イメージの展開から、デバイスの適用、言語設定、アプリケーション展開、諸設定の実施、オペレーティングシステム展開機能のサポートを有効にする為、配布ポイントのカスタマイズを行いました。
-      </p>
-      <br>
-      <p>これにより、従来OSイメージ適用後に手動で実施していた、ドメイン参加、更新プログラムの適用、個別アプリケーションのインストールといった一連の処理の自動化を行い、人的ミスの防止、管理者の負荷軽減、キッティング作業の効率化を実現いたしました。</p>
-    </div>
-  </section>
-
-  <section id="toc-work">
-    <h2>作業内容の詳細</h2>
-    <div class="smtSent">
-      <h3>PowerShellスクリプトによる自動化</h3>
-      <p>SCCMは管理対象であるデバイスのグループを「コレクション」として管理しますが、コレクションの新規作成やダイレクト規則の追加にPowerShellを用いることで一連の動作を自動化し効率化を図りました。 また、既存コレクションにダイレクト規則の追加が可能な仕様としております。</p>
-      <br>
-      <p>このようなスクリプトを作成することにより、お客様の運用工数を削減することに貢献いたしました。</p>
-    </div>
-  </section>
-
-  <section id="toc-work">
-    <h2>作業内容の詳細</h2>
-    <div class="smtSent">
-      <h3>設計</h3>
-      <ol class="numList">
-        <li><p>基本設計</p></li>
-        <div class="textIndent--style3">
-          <ul class="grayDisc"">
+                    <h3>クライアントエージェントのアップグレードの自動化</h3>
+                    <p>SCCM 2007からSCCM 2012へのアップグレードに伴い、PC側のエージェントもアップグレードが必要となります。今回はエージェントのアップグレード用にスクリプトを作成し、各拠点のPCを対象にパッケージ展開を行いました。</p>
+                    <p>既存のPCは日本全国の拠点に分散していましたが、この手法によって拠点ごとにタイミングを合わせてアップグレードを行い、確実にSCCM 2012の管理下に追加することが可能となりました。</p>
+                    <h3>SCCMによるOS展開</h3>
+                    <p>OS展開の作業は、PC運用業務の中でも最も手間がかかるものの一つです。運用を効率化するため、これまで利用されていなかったSCCMのタスクシーケンス機能の活用をお手伝いさせていただきました。これにより、イメージ展開はもちろん、従来手動で実施し ていたドメイン参加、更新プログラムの適用、個別アプリケーションのインストールといった一連の処理が自動化することができ、人的ミスの防止、管理者の負荷軽減、キッティング作業の効率化を実現いたしました。</p>
+                </div>
+            </section>
+            <section id="toc-effect">
+                <h2>IHS利用による効果</h2>
+                <div class="smtSent">
+                    <h3>PowerShellスクリプトによる自動化</h3>
+                    <p>SCCMは管理対象であるデバイスのグループを「コレクション」として管理しますが、コレクションの新規作成やダイレクト規則の追加にPowerShellを用いることで一連の動作を自動化し効率化を図りました。 また、既存コレクションにダイレクト規則の追加が可能な仕様としております。</p>
+                    <br>
+                    <p>このようなスクリプトを作成することにより、お客様の運用工数を削減することに貢献いたしました。</p>
+                </div>
+            </section>
+            <section id="toc-work">
+                <h2>作業内容の詳細</h2>
+                <div class="smtSent">
+                    <h3>設計</h3>
+                    <ol class="numList">
+                        <li>
+                            <p>基本設計</p>
+                        </li>
+                        <div class="textIndent--style3">
+                            <ul class="grayDisc" ">
             <li>システム設計方針</li>
             <li>システム構成設計</li>
             <li>構成管理基盤個別設計</li>
@@ -158,29 +143,29 @@ tags:
       </ol>
 
       <h3>環境構築</h3>
-      <ol class="numList">
+      <ol class="numList ">
         <li><p>資産管理機能</p></li>
-          <div class="textIndent--style3">
-          <ul class="grayDisc">
+          <div class="textIndent--style3 ">
+          <ul class="grayDisc ">
             <li>System Center 2012 R2 Configuration Manager</li>
           </ul>
           </div>
         <li><p>データベース機能</p></li>
-          <div class="textIndent--style3">
-          <ul class="grayDisc">
+          <div class="textIndent--style3 ">
+          <ul class="grayDisc ">
             <li>Microsoft SQL Server 2012 SP2 Standard</li>
           </ul>
           </div>
         <li><p>セキュリティ管理</p></li>
-          <div class="textIndent--style3">
-          <ul class="grayDisc">
+          <div class="textIndent--style3 ">
+          <ul class="grayDisc ">
             <li>System Center 2012 R2 Endpoint Protection</li>
           </ul>
           </div>
       </ol>
 
       <h3>環境移行対象</h3>
-      <ol class="numList">
+      <ol class="numList ">
         <li><p>資産管理機能</p></li>
         <li><p>管理クライアント</p></li>
         <li><p>セキュリティ管理</p></li>
@@ -188,25 +173,15 @@ tags:
 
       <h3>納品ドキュメント</h3>
 
-      <ul class="grayDisc">
+      <ul class="grayDisc ">
         <li>基本設計書（全サーバー・機能）</li>
         <li>詳細設計書（全サーバー・機能）</li>
         <li>動作確認項目表兼結果報告書</li>
         <li>作業報告書</li>
         <li>運用手順書</li>
-        <li>運用定義書</li>
       </ul>
     </div>
+
   </section>
 
-  <section id="toc-IHS-result">
-    <h2>弊社利用による効果</h2>
-    <div class="smtSent">
-     <h3>Power Shellスクリプトによる自動化</h3>
-     <p>ご要望により、新規コレクション作製のため、コレクション作製から、ダイレクト規則の追加にPower Shellを用いることで一連の動作を自動化し効率化を図りました。</p>
-     <P>また、既存のコレクションにダイレクト規則の追加が可能な使用としております。</P>
-     <p>このような運用スクリプトを作成することにより、お客様の工数を削減することに貢献いたしました。</p>
-    </div>
-  </section>
 </section>
-
