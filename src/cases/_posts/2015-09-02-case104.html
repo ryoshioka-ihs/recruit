@@ -4,9 +4,9 @@ global_menu:  cases
 title:        "Microsoft Communicationシステム更改"
 description:  "Microsoft社製のコミュニケーション機能、Exchange Server及びSharePoint Server、またコミュニケーション機能の基盤であるActive Directoryの更改の事例をご紹介いたします。"
 keywords:     "システム更改,Microsoft Exchange,Microsoft SharePoint,Active Directory,リプレイス,事例"
-date:         2015-09-02 09:50:00 +0900
+date:         2015-09-02 09:53:00 +0900
 PDF:          "case104"
-categories: 
+categories:
  - "インフラ構築"
 tags:
  - "Exchange Server"
@@ -23,7 +23,7 @@ tags:
     <li><a href="#toc-work">作業内容</a></li>
     <li><a href="#toc-mail">メールシステム移行の流れ</a></li>
     <li><a href="#toc-effect">作業効果</a></li>
-    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>  
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
     <li><a href="#PdfDownload">PDFダウンロード</a></li>
   </ul>
 
@@ -174,10 +174,10 @@ tags:
         <br>
         <p class="textIndent--style3">ユーザーメールボックス移行の完了処理を実行し、移行作業終了。その後、Microsoft Exchange2013サーバーの保持するユーザーメールボックスデータを使用してメールシステムをユーザーが使用するよう、ネットワーク設定を変更する。Active Directory認証サービスについても同様にActive Directory2012サーバーのみにより提供されるようになる。</p>
         <br>
-      
+
         <ul class="bgrayDisc">
           <li>移行後の動作確認</li>
-        </ul>      
+        </ul>
 
       <h3>8.旧サーバー環境全台削除</h3>
         <ul class="bgrayDisc">
@@ -202,7 +202,7 @@ tags:
       <figure><img src="/image/cases/case104_02.png" alt="図2" /></figure>
       <p>拡大する</p>
       </div>
-      
+
       <h3>2.メールボックスフルコピー</h3>
       <p>事前にMicrosoftExchange2007環境に存在しているユーザーメールボックスデータを新規に構築したMicrosoft Exchange2013環境にフルコピーします。<br>
       フルコピー時に大量のI/Oが発生することが見込まれますが、メールシステムを停止する必要はありません。この間もエンドユーザー様にはMicrosoft Exchange2007環境を使用してメールシステムをご利用いただくことが可能です。</p>
@@ -273,7 +273,7 @@ tags:
         <p class="textIndent--style3">今回の事例では以上の理由から必然的に弊社社内での入念な検証作業が必要となりました。検証すべき項目は相当数になりましたが、その1つ1つを確実につぶしていく必要があります。<br>
         これに対し、弊社では検証すべき事象ごとに必要であれば複数の検証環境を作成することで効率的に検証作業を実施。<br>
         条件毎に1つ1つ検証を切り分け、最終的に最も安全かつ完全にメールシステムを移行する手順を準備した上で、本番環境の移行を実現することができました。
-      
+
       <h3>2.利用ユーザーへの影響最小化</h3>
         今回は移行要件にダウンタイムの最小化及び移行によるエンドユーザーの端末への影響最小化という課題がありました。想定される移行時間を事前に算出、ユーザー様環境の理解、ソフトウェアの深い知識、IHS過去ナレッジを駆使し、ご期待に添えた移行を行う事が出来ました。</p>
 

@@ -241,7 +241,7 @@ title:			"IIMヒューマン・ソリューション"
 									{% endfor %}
 									{% for post in report_posts limit:5 %}
 										<li>
-											{% if post.link %}
+											{% if post.link and post.link != "" %}
 												<a href="{{ post.link }}" target="_self">
 											{% else %}
 												<a href="{{ post.url }}" target="_self">

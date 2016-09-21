@@ -16,6 +16,23 @@ body.open {
 	overflow: hidden;
 }
 
+/* --------------------------------------------------------
+	Helper
+	よく使うがモジュールと呼ぶほどでもないスタイル
+-------------------------------------------------------- */
+/* 定義リスト */
+.definition--style1 dl {
+	padding-bottom: 0.5em;
+	width:100%;
+}
+.definition--style1 dt {
+	clear: none;
+	float: none;
+	}
+.definition--style1 dd {
+	margin:0 0 1em 1.5em;
+}
+
 /* --------------------------------------------------
     リンク
 -------------------------------------------------- */
@@ -518,7 +535,7 @@ text-decoration: none;
 color: #3084AB;
 width: 64px;
 height: 40px;
-margin: 1px;
+margin: 2px 1px 3px 1px;
 text-align: center;
 font-size: 0.6rem;
 vertical-align:top;
@@ -1115,6 +1132,20 @@ article .wrap {
 	#sideMenu #bnr li.case:hover,
 	#sideMenu #bnr li.report:hover {
 		background-color: #FFF;
+	}
+
+	.lightBox figure.imgTeam {
+		clear: both;
+	}
+
+	.lightBox .imgTeam .title {
+		width: 100%;
+	}
+
+	.lightBox .read	{
+		margin-left: 0;
+		margin-top: 240px;
+		width: 100%;
 	}
 
 	/* お問い合わせ */
