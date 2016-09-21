@@ -949,7 +949,7 @@ a.rss:hover {
 }
 	.lineList > li {
 	flex-basis: 360px;
-		background-color: #FFF;
+	background-color: #FFF;
 	margin-bottom: 20px;
 	}
 
@@ -2403,6 +2403,21 @@ article .wrap:after {
 				background: url("../image/common/icon_tri.png") right 3px bottom 3px no-repeat;
 				background-size: 12px 12px;
 			}
+	
+	.lightBox figure.imgTeam {
+		float:left;
+	}
+
+	.lightBox .imgTeam .title {
+		font-size: 75%;
+	}
+
+	.lightBox .read	{
+		background-color: #003e8d;
+		color: #FFF;
+		padding: 2em;
+		margin-left: 45.2%;
+	}	
 
 	/* お問い合わせ */
 	#sideMenu #bnr li.contact {

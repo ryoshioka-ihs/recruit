@@ -1134,6 +1134,20 @@ article .wrap {
 		background-color: #FFF;
 	}
 
+	.lightBox figure.imgTeam {
+		clear: both;
+	}
+
+	.lightBox .imgTeam .title {
+		width: 100%;
+	}
+
+	.lightBox .read	{
+		margin-left: 0;
+		margin-top: 240px;
+		width: 100%;
+	}
+
 	/* お問い合わせ */
 	#sideMenu #bnr li.contact .oraBtn {
 		width: 100%;
