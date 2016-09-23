@@ -539,7 +539,7 @@ margin: 2px 1px 3px 1px;
 text-align: center;
 font-size: 0.6rem;
 vertical-align:top;
-padding: 5px;
+padding: 5px 0;
 }
 .productPickUp div.left .tag li.blank {
 background-color: #F0F0F0;
