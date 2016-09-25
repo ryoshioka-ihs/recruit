@@ -48,10 +48,18 @@
 						<dt><a href="/topics/">トピックス</a></dt>
 						<dd>
 							<ul>
-								<li><a href="/topics/services/">サービス・製品</a></li>
-								<li><a href="/topics/cases/">事例紹介</a></li>
-								<li><a href="/topics/reports/">技術レポート</a></li>
-								<li><a href="/topics/seminar/">セミナー</a></li>
+								{% if site.categories["サービス・製品"].size > 0 %}
+									<li><a href="/topics/services/">サービス・製品</a></li>
+								{% endif %}
+								{% if site.categories["case"].size > 0 %}
+									<li><a href="/topics/cases/">事例紹介</a></li>
+								{% endif %}
+								{% if site.categories["技術レポート"].size > 0 %}
+									<li><a href="/topics/reports/">技術レポート</a></li>
+								{% endif %}
+								{% if site.categories["セミナー"].size > 0 %}
+									<li><a href="/topics/seminar/">セミナー</a></li>
+								{% endif %}
 							</ul>
 						</dd>
 						<p><a href="/contact/">お問い合わせ</a></p>
