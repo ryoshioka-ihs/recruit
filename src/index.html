@@ -140,148 +140,169 @@ title:			"IIMヒューマン・ソリューション"
 
 	<section id="topic">
 		<h2><span>トピックス</span>TOPICS</h2>
+
+		{% comment %} 記事の配列を作成 {% endcomment %}
+		{% assign max_posts = 5 %}
+
+		{% comment %} サービス・製品関連 {% endcomment %}
+		{% assign service_posts = "" | split: "" %}
+		{% for post in site.posts %}
+				{% if service_posts.size >= max_posts %}
+					{% break %}
+				{% endif %}
+				{% if post.categories contains "topics" and post.categories contains "サービス・製品" %}
+					{% assign service_posts = service_posts | push: post %}
+				{% endif %}
+		{% endfor %}
+
+		{% comment %} 導入事例 {% endcomment %}
+		{% assign case_posts = "" | split: "" %}
+		{% for post in site.posts %}
+				{% if case_posts.size >= max_posts %}
+					{% break %}
+				{% endif %}
+				{% if post.categories contains "cases"  %}
+					{% assign case_posts = case_posts | push: post %}
+				{% endif %}
+		{% endfor %}
+
+		{% comment %} 技術レポート {% endcomment %}
+		{% assign report_posts = "" | split: "" %}
+		{% for post in site.posts %}
+				{% if report_posts.size >= max_posts %}
+					{% break %}
+				{% endif %}
+				{% assign currentdate = post.date | date: "%Y" | plus: 0 %}
+				{% if post.categories contains "reports" and currentdate > 2014 %}
+					{% assign report_posts = report_posts | push: post %}
+				{% endif %}
+		{% endfor %}
+
+		{% comment %} セミナー {% endcomment %}
+		{% assign seminar_posts = "" | split: "" %} 
+		{% for post in site.posts %}
+				{% if post.categories contains "topics" and post.categories contains "セミナー" %}
+					{% assign seminar_posts = seminar_posts | push: post %}
+				{% endif %}
+		{% endfor %}
+
 		<div class="sentBox">
 			<p class="rss"><a href="feed.xml"><img src="image/common/icon_rss.png" alt="RSS" /></a></p>
 
 			<ul id="tab">
 				<li class="act">最新</li>
-				<li>サービス・製品</li>
-				<li>事例紹介</li>
-				<li>技術レポート</li>
-				<li>セミナー</li>
+				{% if service_posts.size > 0 %}<li>サービス・製品</li>{% endif %}
+				{% if case_posts.size    > 0 %}<li>導入事例</li>{% endif %}
+				{% if report_posts.size  > 0 %}<li>技術レポート</li>{% endif %}
+				{% if seminar_posts.size > 0 %}<li>セミナー</li>{% endif %}
 			</ul>
 
 			<div id="tabCont">
 				<!--▼最新▼-->
 				<ul class="topicList">
-									{% for post in site.posts limit:5 %}
-										<li>
-											{% if post.link %}
-												<a href="{{ post.link }}" target="_self">
-											{% else %}
-												<a href="{{ post.url }}" target="_self">
-											{% endif %}
-												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+					{% for post in site.posts limit:max_posts %}
+						<li>
+							{% if post.link %}
+								<a href="{{ post.link }}" target="_self">
+							{% else %}
+								<a href="{{ post.url }}" target="_self">
+							{% endif %}
+								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 
-												{% if post.categories[0] == "cases" %}
-													<div><span class="icon">事例紹介</span></div>
-													<p>『{{ post.title }}』を追加しました。</p>
-												{% else %}
-													<div><span class="icon">{{ post.categories[1] }}</span></div>
-													<p>{{ post.title }}</p>
-												{% endif %}
+								{% if post.categories[0] == "cases" %}
+									<div><span class="icon">事例紹介</span></div>
+									<p>『{{ post.title }}』を追加しました</p>
+								{% else %}
+									<div><span class="icon">{{ post.categories[1] }}</span></div>
+									<p>{{ post.title }}</p>
+								{% endif %}
 
-											</a>
-										</li>
-									{% endfor %}
+							</a>
+						</li>
+					{% endfor %}
 				</ul>
 				<!--▲最新▲-->
 
 				<!--▼サービス・製品▼-->
-				<ul class="topicList">
-									{% comment %}
-										* topicsとサービス・製品カテゴリの両方に属する記事の配列service_postsを生成
-										* そのうち最新の5件を表示
-									{% endcomment %}
-									{% assign service_posts = "" | split: "" %}
-									{% for post in site.posts %}
-											{% if post.categories contains "topics" and post.categories contains "サービス・製品" %}
-												{% assign service_posts = service_posts | push: post %}
-											{% endif %}
-									{% endfor %}
-									{% for post in service_posts limit:5 %}
-										<li>
-											{% if post.link %}
-												<a href="{{ post.link }}" target="_self">
-											{% else %}
-												<a href="{{ post.url }}" target="_self">
-											{% endif %}
-												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
-												<div><span class="icon">{{ post.categories[1] }}</span></div>
-												<p>{{ post.title }}</p>
-											</a>
-										</li>
-									{% endfor %}
-				</ul>
+				{% if service_posts.size > 0 %}
+					<ul class="topicList">
+					{% for post in service_posts limit:max_posts %}
+						<li>
+							{% if post.link %}
+								<a href="{{ post.link }}" target="_self">
+							{% else %}
+								<a href="{{ post.url }}" target="_self">
+							{% endif %}
+								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+								<div><span class="icon">{{ post.categories[1] }}</span></div>
+								<p>{{ post.title }}</p>
+							</a>
+						</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
 				<!--▲サービス・製品▲-->
 
 				<!--▼事例紹介▼-->
+				{% if case_posts.size > 0 %}
 				<ul class="topicList">
-									{% comment %}
-										* casesとサービス・製品カテゴリの両方に属する記事の配列case_postsを生成
-										* そのうち最新の5件を表示
-									{% endcomment %}
-									{% for post in site.categories["cases"] limit:5 %}
-										<li>
-											{% if post.link %}
-												<a href="{{ post.link }}" target="_self">
-											{% else %}
-												<a href="{{ post.url }}" target="_self">
-											{% endif %}
-												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
-												<div><span class="icon">導入事例</span></div>
-												<p>『{{ post.title }}』を追加しました。</p>
-											</a>
-										</li>
-									{% endfor %}
+					{% for post in case_posts limit:max_posts %}
+						<li>
+							{% if post.link %}
+								<a href="{{ post.link }}" target="_self">
+							{% else %}
+								<a href="{{ post.url }}" target="_self">
+							{% endif %}
+								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+								<div><span class="icon">導入事例</span></div>
+								<p>『{{ post.title }}』を追加しました。</p>
+							</a>
+						</li>
+					{% endfor %}
 				</ul>
+				{% endif %}
 				<!--▲事例紹介▲-->
 
 				<!--▼技術レポート▼-->
-				<ul class="topicList">
-									{% comment %}
-										* topicsと技術レポートカテゴリの両方に属する記事の配列report_postsを生成
-										* そのうち最新の5件を表示
-									{% endcomment %}
-									{% assign report_posts = "" | split: "" %}
-									{% for post in site.posts %}
-											{% if post.categories contains "reports" %}
-												{% assign report_posts = report_posts | push: post %}
-											{% endif %}
-									{% endfor %}
-									{% for post in report_posts limit:5 %}
-										<li>
-											{% if post.link and post.link != "" %}
-												<a href="{{ post.link }}" target="_self">
-											{% else %}
-												<a href="{{ post.url }}" target="_self">
-											{% endif %}
-												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
-												<div><span class="icon">{{ post.categories[1] }}</span></div>
-												<p>{{ post.title }}</p>
-											</a>
-										</li>
-									{% endfor %}
-				</ul>
+				{% if report_posts.size > 0 %}
+					<ul class="topicList">
+					{% for post in report_posts limit:max_posts %}
+						<li>
+							{% if post.link and post.link != "" %}
+								<a href="{{ post.link }}" target="_self">
+							{% else %}
+								<a href="{{ post.url }}" target="_self">
+							{% endif %}
+								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+								<div><span class="icon">{{ post.categories[1] }}</span></div>
+								<p>{{ post.title }}</p>
+							</a>
+						</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
 				<!--▲技術レポート▲-->
 
 				<!--▼セミナー▼-->
-				<ul class="topicList">
-									{% comment %}
-										* 「topics」と「セミナー」カテゴリの両方に属する記事の配列「seminar_posts」を生成
-										* そのうち最新の5件を表示
-									{% endcomment %}
-									{% assign seminar_posts = "" | split: "" %}
-									{% for post in site.posts %}
-											{% if post.categories contains "topics" and post.categories contains "セミナー" %}
-												{% assign seminar_posts = seminar_posts | push: post %}
-											{% endif %}
-									{% endfor %}
-									{% for post in seminar_posts limit:5 %}
-										<li>
-											{% if post.link %}
-												<a href="{{ post.link }}" target="_self">
-											{% else %}
-												<a href="{{ post.url }}" target="_self">
-											{% endif %}
-												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
-												<div><span class="icon">{{ post.categories[1] }}</span></div>
-												<p>{{ post.title }}</p>
-											</a>
-										</li>
-									{% endfor %}
-				</ul>
+				{% if seminar_posts.size > 0 %}
+					<ul class="topicList">
+					{% for post in seminar_posts limit:max_psots %}
+						<li>
+							{% if post.link %}
+								<a href="{{ post.link }}" target="_self">
+							{% else %}
+								<a href="{{ post.url }}" target="_self">
+							{% endif %}
+								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+								<div><span class="icon">{{ post.categories[1] }}</span></div>
+								<p>{{ post.title }}</p>
+							</a>
+						</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
 				<!--▲セミナー▲-->
+
 			</div><!--/#tabCont-->
 			<p class="link"><a href="/topics/">トピックス一覧へ</a></p>
 		</div>
