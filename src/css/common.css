@@ -919,11 +919,11 @@ a.rss:hover {
 	.contact .tel {
 		font-family: 'Montserrat';
 		display: inline-block;
-		background: url("../image/common/icon_freecall.png") left center no-repeat;
-		background-size: 27px 18px;
+		background: url("../image/common/icon_tel.png") left center no-repeat;
+		background-size: 22px 22px;
 		font-size: 24px;
 		color: #003E8D;
-		padding-left: 35px;
+		padding-left: 25px;
 		margin-bottom: 11px;
 	}
 
