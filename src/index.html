@@ -37,7 +37,7 @@ title:			"IIMヒューマン・ソリューション"
 												{% else %}
 													<a href="{{ post.url }}" target="_self">
 												{% endif %}
-													<p class="case">CASE<span>1</span></p>
+													<p class="case">CASE<span>{{ forloop.index }}</span></p>
 													<p>{{ post.title }}</p>
 													<p class="text">{{ post.description | slice: 0, 43 }}...</p>
 												</a>
