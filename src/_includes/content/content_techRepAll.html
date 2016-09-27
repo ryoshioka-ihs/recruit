@@ -4,16 +4,19 @@
     <p class="link"><a href="/topics/reports/">技術レポート一覧へ</a></p>
     <ul class="repoList">
         {% comment %}
-            * topicsと技術レポートカテゴリの両方に属する記事の配列report_postsを生成
-            * そのうち最新の4件を表示
+						* 2015年以降の技術レポートのうち、最新の4件を表示
         {% endcomment %}
         {% assign report_posts = "" | split: "" %}
-        {% for post in site.posts %}
-                {% if post.categories contains "reports" %}
-                    {% assign report_posts = report_posts | push: post %}
-                {% endif %}
-        {% endfor %}
-        {% for post in report_posts limit:4 %}
+				{% for post in site.posts %}
+						{% if report_posts.size >= 4 %}
+							{% break %}
+						{% endif %}
+						{% assign currentdate = post.date | date: "%Y" | plus: 0 %}
+						{% if post.categories contains "reports" and currentdate > 2014 %}
+							{% assign report_posts = report_posts | push: post %}
+						{% endif %}
+				{% endfor %}
+        {% for post in report_posts %}
         <li>
             <a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
                 <section>
