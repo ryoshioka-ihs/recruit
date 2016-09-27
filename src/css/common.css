@@ -2183,6 +2183,13 @@ position: relative;
 				background-color: #F0F0F0;
 			}
 
+@media (max-width: 1052px) {
+	#gNav .navWrap > ul > li a {
+		padding: 0 10px;
+		letter-spacing: 2px;
+	}
+}
+
 /*  言語切り替え＆ページ内検索
 -------------------------------------------------- */
 #scWrap {
