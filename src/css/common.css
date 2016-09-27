@@ -126,6 +126,16 @@ a:hover {
 	text-decoration: underline;
 }
 
+/* スマホ用電話発信リンク */
+a[href^="tel:"] {
+	color: #003E8D !important;
+	text-decoration: none !important;
+	cursor: default !important;
+}
+a[href^="tel:"]:hover {
+	text-decoration: none !important;
+}
+
 /* --------------------------------------------------
 	input＆textarea
 -------------------------------------------------- */
