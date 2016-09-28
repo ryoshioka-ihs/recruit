@@ -16,6 +16,23 @@ body.open {
 	overflow: hidden;
 }
 
+/* --------------------------------------------------------
+	Helper
+	よく使うがモジュールと呼ぶほどでもないスタイル
+-------------------------------------------------------- */
+/* 定義リスト */
+.definition--style1 dl {
+	padding-bottom: 0.5em;
+	width:100%;
+}
+.definition--style1 dt {
+	clear: none;
+	float: none;
+	}
+.definition--style1 dd {
+	margin:0 0 1em 1.5em;
+}
+
 /* --------------------------------------------------
     リンク
 -------------------------------------------------- */
@@ -307,11 +324,11 @@ a.rss:hover {
 	.contact .tel {
 		font-family: 'Montserrat';
 		display: inline-block;
-		background: url("../image/common/icon_freecall.png") left center no-repeat;
-		background-size: 27px 18px;
+		background: url("../image/common/icon_tel.png") left center no-repeat;
+		background-size: 18px 18px;
 		font-size: 24px;
 		color: #003E8D;
-		padding-left: 35px;
+		padding-left: 22px;
 		margin: 13px 0 11px;
 	}
 
@@ -518,11 +535,11 @@ text-decoration: none;
 color: #3084AB;
 width: 64px;
 height: 40px;
-margin: 1px;
+margin: 2px 1px 3px 1px;
 text-align: center;
 font-size: 0.6rem;
 vertical-align:top;
-padding: 5px;
+padding: 5px 0;
 }
 .productPickUp div.left .tag li.blank {
 background-color: #F0F0F0;
@@ -997,7 +1014,7 @@ height: 1700px;
 }
 	#scBtn {
 		width: 100%;
-		height: 100%;
+		height: 30px;
 		display: block;
 		background: url("../image/common/icon_search.png") center center no-repeat;
 		background-size: 14px 14px;
@@ -1115,6 +1132,20 @@ article .wrap {
 	#sideMenu #bnr li.case:hover,
 	#sideMenu #bnr li.report:hover {
 		background-color: #FFF;
+	}
+
+	.lightBox figure.imgTeam {
+		clear: both;
+	}
+
+	.lightBox .imgTeam .title {
+		width: 100%;
+	}
+
+	.lightBox .read	{
+		margin-left: 0;
+		margin-top: 240px;
+		width: 100%;
 	}
 
 	/* お問い合わせ */

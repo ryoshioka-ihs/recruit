@@ -126,6 +126,16 @@ a:hover {
 	text-decoration: underline;
 }
 
+/* スマホ用電話発信リンク */
+a[href^="tel:"] {
+	color: #003E8D !important;
+	text-decoration: none !important;
+	cursor: default !important;
+}
+a[href^="tel:"]:hover {
+	text-decoration: none !important;
+}
+
 /* --------------------------------------------------
 	input＆textarea
 -------------------------------------------------- */
@@ -919,11 +929,11 @@ a.rss:hover {
 	.contact .tel {
 		font-family: 'Montserrat';
 		display: inline-block;
-		background: url("../image/common/icon_freecall.png") left center no-repeat;
-		background-size: 27px 18px;
+		background: url("../image/common/icon_tel.png") left center no-repeat;
+		background-size: 22px 22px;
 		font-size: 24px;
 		color: #003E8D;
-		padding-left: 35px;
+		padding-left: 25px;
 		margin-bottom: 11px;
 	}
 
@@ -949,7 +959,7 @@ a.rss:hover {
 }
 	.lineList > li {
 	flex-basis: 360px;
-		background-color: #FFF;
+	background-color: #FFF;
 	margin-bottom: 20px;
 	}
 
@@ -1267,13 +1277,13 @@ border: 1px solid #ccc;
 background-color: #DBEEF3;
 text-decoration: none;
 color: #3084AB;
-width: 64px;
+width: 61px;
 height: 40px;
-margin: 1px;
+margin: 2px 1px 3px 1px;
 text-align: center;
-font-size: 0.6rem;
+font-size: 0.5rem;
 vertical-align:top;
-padding: 5px;
+padding: 5px 0;
 }
 
 /* 製品機能のアイコン無効用 */
@@ -2183,6 +2193,13 @@ position: relative;
 				background-color: #F0F0F0;
 			}
 
+@media (max-width: 1052px) {
+	#gNav .navWrap > ul > li a {
+		padding: 0 10px;
+		letter-spacing: 2px;
+	}
+}
+
 /*  言語切り替え＆ページ内検索
 -------------------------------------------------- */
 #scWrap {
@@ -2403,6 +2420,21 @@ article .wrap:after {
 				background: url("../image/common/icon_tri.png") right 3px bottom 3px no-repeat;
 				background-size: 12px 12px;
 			}
+	
+	.lightBox figure.imgTeam {
+		float:left;
+	}
+
+	.lightBox .imgTeam .title {
+		font-size: 75%;
+	}
+
+	.lightBox .read	{
+		background-color: #003e8d;
+		color: #FFF;
+		padding: 2em;
+		margin-left: 45.2%;
+	}	
 
 	/* お問い合わせ */
 	#sideMenu #bnr li.contact {

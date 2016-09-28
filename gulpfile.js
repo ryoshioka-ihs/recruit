@@ -5,6 +5,7 @@ var htmlhint    = require('gulp-htmlhint');
 var csslint     = require('gulp-csslint');
 		csslint.addFormatter('csslint-stylish');
 var ftp         = require('vinyl-ftp');
+var Crawler     = require('simplecrawler');
 
 gulp.task('html', function(){
 	gulp.src("./dest/**/*.html")
@@ -20,6 +21,17 @@ gulp.task('css', function() {
 
 gulp.task('azure-search', function() {
 	require('./azure-search.js');
+});
+
+gulp.task('link', function(cb) {
+  var crawler = Crawler('http://127.0.0.1:4000/')
+    .on('fetch404', function(queueItem, response) {
+      gutil.log('Status code: ' + response.statusCode + ' (Link from ' + queueItem.referrer + ' to', queueItem.url + ')');
+    })
+    .on('complete', function(queueItem) {
+      cb();
+    });
+		crawler.start();
 });
 
 gulp
