@@ -159,7 +159,8 @@ $(function () {
 		var args = {
 			'element_id': 'gmapAccessOsaka',
 			'longitude': 34.7105001,
-			'latitude': 135.4982108
+			'latitude': 135.4982108,
+			'link_map_url':'https://goo.gl/maps/GP4Uh3ATGFJ2'
 		}
 		showGoogleMap(args);
 	}
