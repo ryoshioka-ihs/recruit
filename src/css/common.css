@@ -2335,9 +2335,16 @@ article .wrap:after {
 
 /*  メイン左側
 -------------------------------------------------- */
-#main {
+/* 	#main {
 	width: 740px;
 	float: left;
+}*/
+
+/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/
+	#main {
+    width: 730px;
+    float: left;
+    margin-left: 10px;
 }
 
 /*  メイン右側（サイドメニュー）
@@ -2506,13 +2513,14 @@ article .wrap:after {
 /* --------------------------------------------------
 	footer
 -------------------------------------------------- */
-footer {
+	footer {
 	width: 100%;
 	font-size: 12px;
 	margin-top: 100px;
 	position: relative;
 	background-color: #CEDDEF;
 }
+
 	/* ページトップへ */
 	footer #pageTop {
 		width: 100%;
