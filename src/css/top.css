@@ -18,16 +18,14 @@ footer {
 	padding: 55px 0;
 	color: #000;
 }
-/*#index .sentBox {
+#index .sentBox {
 	width: 1000px;
 	margin: auto;
-}*/
+}
 
 /*左右に余白10pxずつ追加*/
-#index .sentBox {
-    width: 1000px;
-    margin: auto;
-    padding: 0 10px;
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+   #index .sentBox {padding: 0 10px}
 }
 	#index .sentBox a:hover {
 		text-decoration: none;
@@ -193,13 +191,15 @@ footer {
 	height: 660px;
 	background: #FFF url("../image/top/msg_img.png") right 150px bottom no-repeat;
 }
-	/*#msg .sentBox {
-		padding-top: 40px;
-	}*/
-	/*左右に余白10pxずつ追加*/
 	#msg .sentBox {
-    padding: 40px 10px 0;
-}
+		padding-top: 40px;
+	}
+
+/*左右に余白10pxずつ追加*/
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+   #msg .sentBox {padding: 40px 10px 0;}
+}	
+	
 		#msg .sentBox p {
 			line-height: 2.2;
 			letter-spacing: 0.5px;
