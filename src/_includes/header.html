@@ -11,10 +11,40 @@
 					<li{% if page.global_menu == "services" %} class="act"{% endif %}>
 						<a href="/services/">サービス・製品</a>
 						<ul class="inNav">
-							<li><a href="/services/operation/">インフラ運用</a></li>
-							<li><a href="/services/construction/">インフラ構築</a></li>
-							<li><a href="/services/webSystemOpt/">Webシステム最適化</a></li>
-							<li><a href="/services/security/">セキュリティ</a></li>
+							<li>
+							<a href="/services/operation/">インフラ運用</a>
+							<ul>
+								<li><a href="/services/operation/support/">運用支援サービス</a></li>
+							</ul>
+							</li>							
+							<li>
+							<a href="/services/construction/">インフラ構築</a>
+							<ul>
+								<li><a href="/services/construction/DRaaS-with-Azure/">DRaaS with Azure</a></li>
+							</ul>
+							</li>							
+							<li>
+							<a href="/services/webSystemOpt/">Webシステム最適化</a>
+							<ul>
+								<li>
+								<span>
+								<a href="/services/webSystemOpt/azureMigration/">Azure移行サービス</a>
+								<a href="/services/webSystemOpt/vulnerabilityScan/">脆弱性診断サービス</a>
+								</span>
+								</li>
+							</ul>
+							</li>							
+							<li>
+							<a href="/services/security/">セキュリティ</a>
+							<ul>
+								<li>
+								<span>
+								<a href="/services/security/assetManagement/">IT資産管理サービス</a>
+								<a href="/services/security/#productList">セキュリティ取扱製品一覧</a>
+								</span>
+								</li>
+							</ul>
+							</li>							
 						</ul>
 					</li>
 					<li{% if page.global_menu == "cases" %} class="act"{% endif %}>
