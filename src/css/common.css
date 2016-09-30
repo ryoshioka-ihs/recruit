@@ -239,6 +239,12 @@ article h3:before {
 	padding-bottom: 5px;
 	overflow: hidden;
 }
+
+/* パンくずの左に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#tpcpth {padding-left:20px;}
+}		
+
 	#tpcpth li {
 		display: inline;
 		font-size: 11px;
@@ -282,6 +288,12 @@ article .ttl {
 		letter-spacing: 1.5px;
 		text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 	}
+	
+	/* 見出しの左右に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+		article .ttl p {width: 960px;}
+	}
+
 		article .ttl p span {
 			display: block;
 			font-size: 13px;
@@ -962,6 +974,12 @@ a.rss:hover {
 	background-color: #FFF;
 	margin-bottom: 20px;
 	}
+	
+/* 横並びリストの幅を10px小さくする(幅1024pxのブラウザだと余白がないため）*/
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+		.lineList > li {flex-basis: 350px;}
+	}
+
 
 /* --------------------------------------------------
 	右下三角つきBOX　白ベース
@@ -2633,6 +2651,12 @@ footer > div {
 footer .footTop {
 	padding-top: 25px;
 }
+
+/* フッターメニューの左に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+	footer .footTop {padding-left: 25px;}		
+}
+
 	footer .footTop > p:first-child {
 		margin-bottom: 20px;
 		font-weight: bold;
@@ -2674,6 +2698,12 @@ footer .footBot {
 	padding: 35px 0 20px;
 	overflow: hidden;
 }
+
+/* コピーライトの左に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+	footer .footBot {padding: 35px 0 20px 20px;}
+}
+
 	footer .footBot ul,
 	footer .footBot .cp {
 		float: left;
