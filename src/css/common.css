@@ -2212,44 +2212,58 @@ position: relative;
 				background-color: #F0F0F0;
 			}
 
-		/* サービス・製品のみサブメニュー追加*/
+			#gNav .navWrap ul li.act li a:hover {
+					background-color: #F0F0F0;
+				}
 
+	/* サービス・製品のみサブメニュー追加*/
 	@media (min-width: 960px) {
 			#gNav .navWrap .inNav.services li {
-			height: 50px;
+			height: 60px;
 			display: block;
-			padding: 3px 10px;
+			padding: 3px 10px;	
 			}
 			#gNav .navWrap .inNav.services li a {
-				height: 15px;
-				line-height: 15px;
+				height: 24px;
+				line-height: 24px;
 				padding: 0 7px;
 				letter-spacing: 0.5px;
 				border-bottom: none;
 			}
 
 			/*下階層ナビにサービス・製品サブメニュー追加*/
-			#gNav .navWrap .inNav.services li ul　li{
-				height: 40px;
-				display: block;
-				padding: 2px 6px;
-				margin-bottom: 10px;
-			}
-				#gNav .navWrap .inNav.services li ul li span a {
-					height: 14px;
-					line-height: 14px;
-					padding: 0 2px 0 8px;
+				#gNav .navWrap .inNav.services li ul{
+					margin-top:-5px;					
+				}
+
+				#gNav .navWrap .inNav.services li ul li {
+					height: 15px !important;
+				}
+
+				#gNav .navWrap .inNav.services li ul li span {					
+					line-height: 11px;
+					padding: 0 2px 2px 0;
 					letter-spacing: 0.5px;
 					border-bottom: none;
 					display: block;
-					font-weight: normal;
-					font-size: 11px;		
 				}
-		}
+				#gNav .navWrap .inNav.services li ul li span a {
+					height: 15px !important;					
+					font-size: 11px;
+					background: url(/image/common/link_arrow1.png) left 85% no-repeat; 
+					background-size: 4px auto;
+					padding-left: 6px;
+					font-weight: normal;	
+				}
 
-				#gNav .navWrap ul li.act li a:hover {
-					background-color: #F0F0F0;
+				#gNav .navWrap .inNav.services li ul li span a:hover {					
+					background: url(/image/common/link_arrow1.png) left 85% no-repeat;
+					background-size: 4px auto;
+					padding-left: 6px;
+					background-color: #F0F0F0 !important;
 				}
+	}
+				
 
 @media (max-width: 1052px) {
 	#gNav .navWrap > ul > li a {
