@@ -2194,44 +2194,41 @@ position: relative;
 				background-color: #F0F0F0;
 			}
 
+		/* サービス・製品のみサブメニュー追加*/
 
-
-			#gNav .navWrap .inNav li.act {
+		@media (min-width: 960px) {
+			#gNav .navWrap .inNav.services li {
 			height: 50px;
 			display: block;
 			padding: 3px 10px;
-		}
-			#gNav .navWrap .inNav li.act a {
-				height: 24px;
-				line-height: 24px;
+			}
+			#gNav .navWrap .inNav.services li a {
+				height: 15px;
+				line-height: 15px;
 				padding: 0 7px;
 				letter-spacing: 0.5px;
 				border-bottom: none;
 			}
 
-			#gNav .navWrap .inNav li a:hover {
-				background-color: #F0F0F0;
-			}
-
-			/*下階層ナビにサブメニュー追加*/
-			#gNav .navWrap ul li.act li{
+			/*下階層ナビにサービス・製品サブメニュー追加*/
+			#gNav .navWrap .inNav.services li ul　li{
 				height: 40px;
 				display: block;
 				padding: 2px 6px;
 				margin-bottom: 10px;
 			}
 
-				#gNav .navWrap ul li.act li a{					
-					height: 15px;
-					line-height: 17px;
+				#gNav .navWrap .inNav.services li ul li span a {
+					height: 14px;
+					line-height: 14px;
 					padding: 0 2px 0 8px;
 					letter-spacing: 0.5px;
 					border-bottom: none;
 					display: block;
-				}
-				#gNav .navWrap ul li.act ul.inNav li ul li span a {
 					font-weight: normal;
 					font-size: 11px;		
+				}
+
 				}
 
 				#gNav .navWrap ul li.act li a:hover {
