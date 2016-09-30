@@ -2377,16 +2377,18 @@ article .wrap:after {
 
 /*  メイン左側
 -------------------------------------------------- */
-/* 	#main {
+ 	#main {
 	width: 740px;
 	float: left;
-}*/
+}
 
-/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/
+/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/	
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
 	#main {
     width: 730px;
     float: left;
     margin-left: 10px;
+    }        
 }
 
 /*  メイン右側（サイドメニュー）
