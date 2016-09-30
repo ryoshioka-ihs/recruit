@@ -2196,7 +2196,7 @@ position: relative;
 
 		/* サービス・製品のみサブメニュー追加*/
 
-		@media (min-width: 960px) {
+	@media (min-width: 960px) {
 			#gNav .navWrap .inNav.services li {
 			height: 50px;
 			display: block;
@@ -2217,7 +2217,6 @@ position: relative;
 				padding: 2px 6px;
 				margin-bottom: 10px;
 			}
-
 				#gNav .navWrap .inNav.services li ul li span a {
 					height: 14px;
 					line-height: 14px;
@@ -2228,8 +2227,7 @@ position: relative;
 					font-weight: normal;
 					font-size: 11px;		
 				}
-
-				}
+		}
 
 				#gNav .navWrap ul li.act li a:hover {
 					background-color: #F0F0F0;
@@ -2385,9 +2383,9 @@ article .wrap:after {
 /* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/	
 	@media screen and (min-width: 960px) and (max-width: 1024px) {
 	#main {
-    width: 730px;
+    width: 720px;
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     }        
 }
 
@@ -2398,6 +2396,17 @@ article .wrap:after {
 	float: right;
 	font-weight: bold;
 }
+
+/*1024pxブラウザ用*/
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#sideMenu {
+    width: 220px;
+    float: right;
+    font-weight: bold;
+    margin-right: 20px;
+	}
+}
+
 	#sideMenu a {
 		color: #282828;
 		display: block;
