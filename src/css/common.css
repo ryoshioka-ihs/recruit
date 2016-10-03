@@ -2472,10 +2472,37 @@ article .wrap:after {
 				background-size: 14px auto;
 			}
 
+			#sideMenu nav .act > a,
+			#sideMenu nav a:hover {
+				background-color: #F0F0F0;
+			}
+
+			/*
 			#sideMenu nav .act a,
 			#sideMenu nav a:hover {
 				background-color: #F0F0F0;
 			}
+			*/
+
+		/* サービス・製品にサブメニュー追加 */
+		#sideMenu #sub_services nav li {
+			margin-top: 0px;
+		}	
+
+			#sideMenu #sub_services nav dl dd ul li ul li a {
+				height: 34px !important;
+				line-height: 34px !important;
+				padding-left: 34px;
+				background: url("../image/common/link_arrow1.png") 18px 12px no-repeat;
+				background-size: 4px auto;
+				transition: 0.3s;
+			}
+			
+			#sideMenu #sub_services nav dl dd ul li ul li.act a,
+			#sideMenu div#sub_services nav dl dd ul li ul li.act a:hover{
+				background-color: #F0F0F0;
+			}
+	
 
 	/* バナー部共通設定 */
 	#sideMenu #bnr > ul > li {
