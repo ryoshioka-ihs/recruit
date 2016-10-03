@@ -1004,6 +1004,37 @@ height: 1700px;
 			}
 
 
+	/* サービス・製品のみサブメニュー追加*/
+			#gNav .navWrap .inNav.services li {
+			height: auto;
+			border-bottom: 1px solid #CCD8E8;
+			padding: 0;
+			}
+			#gNav .navWrap .inNav.services li a {
+				height: auto;
+			}
+
+			#gNav .navWrap .inNav.services li ul li {	
+					height: auto;
+					border: none;					
+					padding: 0;
+				}
+
+			#gNav .navWrap .inNav.services li ul li span {	
+					height: 28px !important;
+				}
+				#gNav .navWrap .inNav.services li ul li span a {
+					line-height: 28px !important;
+					font-weight: normal;
+					color: #003E8D;
+					padding-left: 40px;
+					margin-left: 20px;
+					background: url("../image/common/link_arrow1.png") 25px center no-repeat;
+					background-size: 4px auto;
+					letter-spacing: 2px;
+				}
+
+
 /*  言語切り替え＆ページ内検索
 -------------------------------------------------- */
 #scWrap {
