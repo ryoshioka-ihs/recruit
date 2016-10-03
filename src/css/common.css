@@ -2490,6 +2490,8 @@ article .wrap:after {
 		}	
 
 			#sideMenu #sub_services nav dl dd ul li ul li a {
+				font-weight: normal;
+				font-size: 90%;
 				height: 34px !important;
 				line-height: 34px !important;
 				padding-left: 34px;
