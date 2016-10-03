@@ -2196,7 +2196,7 @@ position: relative;
 	}
 
 		#gNav .navWrap .inNav li {
-			height: 30px;
+			/* height: 30px; */
 			display: block;
 			padding: 3px 10px;
 		}
@@ -2219,7 +2219,7 @@ position: relative;
 	/* サービス・製品のみサブメニュー追加*/
 	@media (min-width: 960px) {
 			#gNav .navWrap .inNav.services li {
-			height: 60px;
+			/* height: 60px; */
 			display: block;
 			padding: 3px 10px;	
 			}
@@ -2233,12 +2233,14 @@ position: relative;
 
 			/*下階層ナビにサービス・製品サブメニュー追加*/
 				#gNav .navWrap .inNav.services li ul{
-					margin-top:-5px;					
+					margin-bottom: 5px;
 				}
 
+			/*
 				#gNav .navWrap .inNav.services li ul li {
 					height: 15px !important;
 				}
+				*/
 
 				#gNav .navWrap .inNav.services li ul li span {					
 					line-height: 11px;
@@ -2248,18 +2250,19 @@ position: relative;
 					display: block;
 				}
 				#gNav .navWrap .inNav.services li ul li span a {
-					height: 15px !important;					
+					height: 17px !important;
+					line-height: 17px;
 					font-size: 11px;
-					background: url(/image/common/link_arrow1.png) left 85% no-repeat; 
-					background-size: 4px auto;
-					padding-left: 6px;
 					font-weight: normal;	
+					background: url(/image/common/link_arrow1.png) left center no-repeat;
+					background-size: 4px auto;
+					padding-left: 8px;
 				}
 
 				#gNav .navWrap .inNav.services li ul li span a:hover {					
-					background: url(/image/common/link_arrow1.png) left 85% no-repeat;
+					background: url(/image/common/link_arrow1.png) left center no-repeat;
 					background-size: 4px auto;
-					padding-left: 6px;
+					padding-left: 8px;
 					background-color: #F0F0F0 !important;
 				}
 	}
@@ -2485,17 +2488,27 @@ article .wrap:after {
 			*/
 
 		/* サービス・製品にサブメニュー追加 */
+/*
 		#sideMenu #sub_services nav li {
 			margin-top: 0px;
 		}	
+		*/
 
+			#sideMenu #sub_services nav dl dd ul li ul li {
+				margin-top: 0;
+			}
 			#sideMenu #sub_services nav dl dd ul li ul li a {
-				height: 34px !important;
-				line-height: 34px !important;
+				font-weight: normal;
+				font-size: 85%;
+				height: 30px !important;
+				line-height: 30px !important;
 				padding-left: 34px;
 				background: url("../image/common/link_arrow1.png") 18px 12px no-repeat;
 				background-size: 4px auto;
 				transition: 0.3s;
+			}
+			#sideMenu #sub_services nav dl dd ul li ul li a:hover {
+				background-color: #F0F0F0;
 			}
 			
 			#sideMenu #sub_services nav dl dd ul li ul li.act a,
