@@ -758,14 +758,44 @@ border: 1px solid #ccc;
 /* --------------------------------------------------
     総合お問い合わせ
 -------------------------------------------------- */
-.googleForm {
+@media screen and (max-width: 480px) {
+.googleForm {margin-top: 110px;
 width: 100%;
-height: 1700px;
+/*height: 1700px;*/
+height: 1200px;
+overflow: visible !important;}
 }
+
+@media screen and (max-width: 320px) {
+.googleForm {margin-left:-20px;}
+}
+
+
 .googleForm iframe {
 	width: 100%;
 	margin-top: -100px;
 }
+
+/* --------------------------------------------------
+   メールマガジン登録
+-------------------------------------------------- */
+@media screen and (max-width: 480px) {
+.googleForm-MG{margin-top: 110px;
+width: 100%;
+height: 800px;
+overflow: visible !important;}
+}
+
+@media screen and (max-width: 320px) {
+.googleForm-MG {margin-left:-20px;}
+}
+
+
+.googleForm-MG iframe {
+	width: 100%;
+	margin-top: -100px;
+}
+
 
 /* --------------------------------------------------
     個人情報の取扱いについて

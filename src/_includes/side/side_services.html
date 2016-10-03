@@ -4,7 +4,7 @@
         <dt class="act"><a href="/services/">サービス・製品</a></dt>
         <dd>
             <ul>
-                <li{% if page.title contains "インフラ運用" %} class="act"{% endif %}>
+                <li{% if page.categories contains "インフラ運用" %} class="act"{% endif %}>
                     <a href="/services/operation/">インフラ運用</a>
                     <ul>
                     <li{% if page.title contains "運用支援サービス" %} class="act"{% endif %}><a href="/services/operation/support/">運用支援サービス</a></li>
@@ -16,14 +16,14 @@
                     <li{% if page.title contains "DRaaS with Azure" %} class="act"{% endif %}><a href="/services/construction/DRaaS-with-Azure/">DRaaS with Azure</a></li>
                     </ul>
                 </li>
-                <li{% if page.title contains "Webシステム最適化" %} class="act"{% endif %}>
+                <li{% if page.categories contains "Webシステム最適化" %} class="act"{% endif %}>
                     <a href="/services/webSystemOpt/">Webシステム最適化</a>
                     <ul>
                     <li{% if page.title contains "WebシステムAzure移行サービス" %} class="act"{% endif %}><a href="/services/webSystemOpt/azureMigration/">Azure移行サービス</a></li>
                     <li{% if page.title contains "Webシステム脆弱性診断サービス" %} class="act"{% endif %}><a href="/services/webSystemOpt/vulnerabilityScan/">脆弱性診断サービス</a></li>
                     </ul>
                 </li>
-                <li{% if page.title contains "セキュリティ" %} class="act"{% endif %}>
+                <li{% if page.categories contains "セキュリティ" %} class="act"{% endif %}>
                     <a href="/services/security/">セキュリティ</a>
                     <ul>
                     <li{% if page.title contains "IT資産管理支援サービス" %} class="act"{% endif %}><a href="/services/security/assetManagement/">IT資産管理サービス</a></li>
