@@ -173,7 +173,7 @@ article h1 {
 	overflow: hidden;
 }
 
-	/* 見出しの左右に20pxの余白を追加(幅800pxのブラウザだと余白が少ないため）*/
+	/* 見出しの左に20pxの余白を追加(幅800pxのブラウザだと余白が少ないため）*/
 	@media screen and (min-width: 768px) and (max-width: 980px) {
 		/*　画面サイズが768pxから980pxまではここを読み込む　*/
 		article h1 {padding: 0 0 10px 20px;}
