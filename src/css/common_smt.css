@@ -784,12 +784,11 @@ border: 1px solid #ccc;
 .googleForm-MG{
 	margin: 110px 0 0;
 	width: 100%;
-	height: 820px;
+	height: 1020px;
 	overflow: visible !important;}
 }
 
-@media screen and (max-width: 320px) {	
-.googleForm-MG {margin-left:-20px;}
+@media screen and (max-width: 320px) {
 }
 
 
