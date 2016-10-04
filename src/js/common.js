@@ -27,6 +27,8 @@ $(document).ready(function(){
 	//フォームの送信後に画面上部へスクロール
 	scrollTopAfterSendMail();
 
+	// PCではtelリンクを無効化
+	removeTelLinkOnPC();
 });
 
 //======================================================================================================
@@ -302,6 +304,25 @@ function scrollTopAfterSendMail() {
 	$("#js-googleForm").load(function(){
 		$('html,body').animate({ scrollTop: 0 }, 'fast');
 		$('.loading').fadeOut();
+	});
+}
+
+//======================================================================================================
+//	removeTelLinkOnPC()
+// 機能  ：PCではtelリンクを無効化
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+function removeTelLinkOnPC() {
+	$(function(){
+		var ua = navigator.userAgent.toLowerCase();
+		var isMobile = /iphone/.test(ua)||/android(.+)?mobile/.test(ua);
+
+		if (!isMobile) {
+			$('a[href^="tel:"]').on('click', function(e) {
+				return false;
+			});
+		}
 	});
 }
 
