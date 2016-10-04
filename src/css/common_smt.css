@@ -758,43 +758,52 @@ border: 1px solid #ccc;
 /* --------------------------------------------------
     総合お問い合わせ
 -------------------------------------------------- */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.googleForm {width: 100%;	
+	height: 1100px;
+	/*overflow: visible !important;*/}
+}
+
 @media screen and (max-width: 480px) {
 .googleForm {
-	margin-top: 110px;
 	width: 100%;
-	/*height: 1700px;*/
-	height: 1200px;
-	overflow: visible !important;}
+	height: 1300px;
+	}
 }
 
 @media screen and (max-width: 320px) {
-.googleForm {margin-left:-20px;}
+.googleForm{height: 1350px;}
+/*.googleForm {margin-left:-20px;}*/
 }
 
 
 .googleForm iframe {
 	width: 100%;
-	margin-top: -100px;
-}
+	/*margin-top: -100px;*/}
 
 /* --------------------------------------------------
    メルマガ登録
 -------------------------------------------------- */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+.googleForm-MG{
+	width: 100%;
+	height: 800px;
+}
+
 @media screen and (max-width: 480px) {
 .googleForm-MG{
-	margin: 110px 0 0;
 	width: 100%;
-	height: 1020px;
-	overflow: visible !important;}
+	height: 1020px;}
 }
 
 @media screen and (max-width: 320px) {
+.googleForm-MG{
+	height: 1050px;
 }
-
 
 .googleForm-MG iframe {
 	width: 100%;
-	margin-top: -100px;
+	/*margin-top: -100px;*/
 }
 
 
