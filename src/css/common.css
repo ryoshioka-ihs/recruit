@@ -243,7 +243,7 @@ article h3:before {
 /* パンくずの左に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
 @media screen and (min-width: 960px) and (max-width: 1024px) {
 	#tpcpth {padding-left:20px;}
-}		
+}
 
 	#tpcpth li {
 		display: inline;
@@ -288,7 +288,7 @@ article .ttl {
 		letter-spacing: 1.5px;
 		text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 	}
-	
+
 	/* 見出しの左右に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
 	@media screen and (min-width: 960px) and (max-width: 1024px) {
 		article .ttl p {width: 960px;}
@@ -974,7 +974,7 @@ a.rss:hover {
 	background-color: #FFF;
 	margin-bottom: 20px;
 	}
-	
+
 /* 横並びリストの幅を10px小さくする(幅1024pxのブラウザだと余白がないため）*/
 	@media screen and (min-width: 960px) and (max-width: 1024px) {
 		.lineList > li {flex-basis: 350px;}
@@ -1299,7 +1299,7 @@ width: 61px;
 height: 40px;
 margin: 2px 1px 3px 1px;
 text-align: center;
-font-size: 0.5rem;
+font-size: 10px;
 vertical-align:top;
 padding: 5px 0;
 }
@@ -2221,7 +2221,7 @@ position: relative;
 			#gNav .navWrap .inNav.services li {
 			/* height: 60px; */
 			display: block;
-			padding: 3px 10px;	
+			padding: 3px 10px;
 			}
 			#gNav .navWrap .inNav.services li a {
 				height: 24px;
@@ -2242,7 +2242,7 @@ position: relative;
 				}
 				*/
 
-				#gNav .navWrap .inNav.services li ul li span {					
+				#gNav .navWrap .inNav.services li ul li span {
 					line-height: 11px;
 					padding: 0 2px 2px 0;
 					letter-spacing: 0.5px;
@@ -2253,20 +2253,20 @@ position: relative;
 					height: 17px !important;
 					line-height: 17px;
 					font-size: 11px;
-					font-weight: normal;	
+					font-weight: normal;
 					background: url(/image/common/link_arrow1.png) left center no-repeat;
 					background-size: 4px auto;
 					padding-left: 8px;
 				}
 
-				#gNav .navWrap .inNav.services li ul li span a:hover {					
+				#gNav .navWrap .inNav.services li ul li span a:hover {
 					background: url(/image/common/link_arrow1.png) left center no-repeat;
 					background-size: 4px auto;
 					padding-left: 8px;
 					background-color: #F0F0F0 !important;
 				}
 	}
-				
+
 
 @media (max-width: 1052px) {
 	#gNav .navWrap > ul > li a {
@@ -2415,13 +2415,13 @@ article .wrap:after {
 	float: left;
 }
 
-/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/	
+/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/
 	@media screen and (min-width: 960px) and (max-width: 1024px) {
 	#main {
     width: 720px;
     float: left;
     margin-left: 20px;
-    }        
+    }
 }
 
 /*  メイン右側（サイドメニュー）
@@ -2491,7 +2491,7 @@ article .wrap:after {
 /*
 		#sideMenu #sub_services nav li {
 			margin-top: 0px;
-		}	
+		}
 		*/
 
 			#sideMenu #sub_services nav dl dd ul li ul li {
@@ -2510,12 +2510,12 @@ article .wrap:after {
 			#sideMenu #sub_services nav dl dd ul li ul li a:hover {
 				background-color: #F0F0F0;
 			}
-			
+
 			#sideMenu #sub_services nav dl dd ul li ul li.act a,
 			#sideMenu div#sub_services nav dl dd ul li ul li.act a:hover{
 				background-color: #F0F0F0;
 			}
-	
+
 
 	/* バナー部共通設定 */
 	#sideMenu #bnr > ul > li {
@@ -2552,7 +2552,7 @@ article .wrap:after {
 				background: url("../image/common/icon_tri.png") right 3px bottom 3px no-repeat;
 				background-size: 12px 12px;
 			}
-	
+
 	.lightBox figure.imgTeam {
 		float:left;
 	}
@@ -2566,7 +2566,7 @@ article .wrap:after {
 		color: #FFF;
 		padding: 2em;
 		margin-left: 45.2%;
-	}	
+	}
 
 	/* お問い合わせ */
 	#sideMenu #bnr li.contact {
@@ -2708,7 +2708,7 @@ footer .footTop {
 
 /* フッターメニューの左に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
 @media screen and (min-width: 960px) and (max-width: 1024px) {
-	footer .footTop {padding-left: 25px;}		
+	footer .footTop {padding-left: 25px;}
 }
 
 	footer .footTop > p:first-child {

@@ -537,7 +537,7 @@ width: 64px;
 height: 40px;
 margin: 2px 1px 3px 1px;
 text-align: center;
-font-size: 0.6rem;
+font-size: 10px;
 vertical-align:top;
 padding: 5px 0;
 }
@@ -1047,13 +1047,13 @@ overflow: visible !important;}
 				height: auto;
 			}
 
-			#gNav .navWrap .inNav.services li ul li {	
+			#gNav .navWrap .inNav.services li ul li {
 					height: auto;
-					border: none;					
+					border: none;
 					padding: 0;
 				}
 
-			#gNav .navWrap .inNav.services li ul li span {	
+			#gNav .navWrap .inNav.services li ul li span {
 					height: 28px !important;
 				}
 				#gNav .navWrap .inNav.services li ul li span a {
