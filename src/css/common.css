@@ -172,6 +172,14 @@ article h1 {
 	letter-spacing: 1.5px;
 	overflow: hidden;
 }
+
+	/* 見出しの左右に20pxの余白を追加(幅800pxのブラウザだと余白が少ないため）*/
+	@media screen and (min-width: 768px) and (max-width: 980px) {
+		/*　画面サイズが768pxから980pxまではここを読み込む　*/
+		article h1 {padding: 0 0 10px 20px;}
+	}
+
+
 	article h1 time {
 		font-size: 16px;
 		margin-top: 5px;
@@ -241,7 +249,8 @@ article h3:before {
 }
 
 /* パンくずの左に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
-@media screen and (min-width: 960px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	/*　画面サイズが769pxから1024pxまではここを読み込む　*/
 	#tpcpth {padding-left:20px;}
 }
 
@@ -290,7 +299,8 @@ article .ttl {
 	}
 
 	/* 見出しの左右に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
-	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		/*　画面サイズが768pxから1024pxまではここを読み込む　*/
 		article .ttl p {width: 960px;}
 	}
 
@@ -2217,7 +2227,8 @@ position: relative;
 				}
 
 	/* サービス・製品のみサブメニュー追加*/
-	@media (min-width: 960px) {
+	@media (min-width: 768px) {
+		/*　画面サイズが768px以上はここを読み込む　*/
 			#gNav .navWrap .inNav.services li {
 			/* height: 60px; */
 			display: block;
