@@ -759,11 +759,12 @@ border: 1px solid #ccc;
     総合お問い合わせ
 -------------------------------------------------- */
 @media screen and (max-width: 480px) {
-.googleForm {margin-top: 110px;
-width: 100%;
-/*height: 1700px;*/
-height: 1200px;
-overflow: visible !important;}
+.googleForm {
+	margin-top: 110px;
+	width: 100%;
+	/*height: 1700px;*/
+	height: 1200px;
+	overflow: visible !important;}
 }
 
 @media screen and (max-width: 320px) {
@@ -777,12 +778,13 @@ overflow: visible !important;}
 }
 
 /* --------------------------------------------------
-   メールマガジン登録
+   メルマガ登録
 -------------------------------------------------- */
 @media screen and (max-width: 480px) {
 .googleForm-MG{margin-top: 110px;
-width: 100%;
-height: 800px;
+/*width: 100%;*/
+width: 95%;
+height: 820px;
 overflow: visible !important;}
 }
 
@@ -792,7 +794,8 @@ overflow: visible !important;}
 
 
 .googleForm-MG iframe {
-	width: 100%;
+	width: 95%;
+	/*width: 100%;*/
 	margin-top: -100px;
 }
 
