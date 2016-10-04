@@ -537,7 +537,7 @@ width: 64px;
 height: 40px;
 margin: 2px 1px 3px 1px;
 text-align: center;
-font-size: 0.6rem;
+font-size: 10px;
 vertical-align:top;
 padding: 5px 0;
 }
@@ -758,14 +758,45 @@ border: 1px solid #ccc;
 /* --------------------------------------------------
     総合お問い合わせ
 -------------------------------------------------- */
+@media screen and (max-width: 480px) {
 .googleForm {
-width: 100%;
-height: 1700px;
+	margin-top: 110px;
+	width: 100%;
+	/*height: 1700px;*/
+	height: 1200px;
+	overflow: visible !important;}
 }
+
+@media screen and (max-width: 320px) {
+.googleForm {margin-left:-20px;}
+}
+
+
 .googleForm iframe {
 	width: 100%;
 	margin-top: -100px;
 }
+
+/* --------------------------------------------------
+   メルマガ登録
+-------------------------------------------------- */
+@media screen and (max-width: 480px) {
+.googleForm-MG{
+	margin: 110px 0 0;
+	width: 100%;
+	height: 1020px;
+	overflow: visible !important;}
+}
+
+@media screen and (max-width: 320px) {
+}
+
+
+.googleForm-MG iframe {
+	width: 100%;
+	margin-top: -100px;
+}
+
 
 /* --------------------------------------------------
     個人情報の取扱いについて
@@ -1014,13 +1045,13 @@ height: 1700px;
 				height: auto;
 			}
 
-			#gNav .navWrap .inNav.services li ul li {	
+			#gNav .navWrap .inNav.services li ul li {
 					height: auto;
-					border: none;					
+					border: none;
 					padding: 0;
 				}
 
-			#gNav .navWrap .inNav.services li ul li span {	
+			#gNav .navWrap .inNav.services li ul li span {
 					height: 28px !important;
 				}
 				#gNav .navWrap .inNav.services li ul li span a {

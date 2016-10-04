@@ -211,6 +211,11 @@ footer {
 	height: 660px;
 	background: #FFF url("../image/top/msg_img.png") right 150px bottom no-repeat;
 }
+
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#msg {background: #FFF url("../image/top/msg_img.png") right 30px bottom no-repeat;}	  
+}
+
 	#msg .sentBox {
 		padding-top: 40px;
 	}
