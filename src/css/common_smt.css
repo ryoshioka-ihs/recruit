@@ -772,7 +772,7 @@ border: 1px solid #ccc;
 }
 
 @media screen and (max-width: 320px) {
-.googleForm{height: 1350px;}
+.googleForm{height: 1350px; margin-left:-20px;}
 /*.googleForm {margin-left:-20px;}*/
 }
 
@@ -801,7 +801,7 @@ border: 1px solid #ccc;
 }
 
 @media screen and (max-width: 320px) {
-	.googleForm-MG{height: 1050px;}
+	.googleForm-MG{height: 1050px; margin-left:-20px; width:110%; padding-right:20px;}
 }
 
 .googleForm-MG iframe {
@@ -1218,7 +1218,7 @@ article .wrap {
 
 	.lightBox .read	{
 		margin-left: 0;
-		margin-top: 240px;
+		margin-top: 260px;
 		width: 100%;
 	}
 
