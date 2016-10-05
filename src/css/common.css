@@ -962,6 +962,12 @@ a.rss:hover {
 			font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 		}
 
+		@media (min-width: 769px) {
+			.contact .tel a {pointer-events:none}
+		}
+
+
+
 /* --------------------------------------------------
 	横並びリスト(導入事例にて使用)
 -------------------------------------------------- */
