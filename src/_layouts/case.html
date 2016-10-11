@@ -31,7 +31,8 @@
 													<h2>この事例のPDFをダウンロード</h2>
 													<p>「{{ page.title }}」のPDFはこちらからダウンロードできます。</p>
 													<p class="dlPdf">
-														<a href="/image/cases/{{ page.PDF }}.pdf" target="_blank"><span>この事例をダウンロード</span></a>
+														<a href="https://www.iimhs.co.jp/image/cases/{{ page.PDF }}.pdf" onclick="ga('send','event','pdf','click','{{ page.PDF }}');" target="_blank"><span>この事例をダウンロード</span></a>
+														<!-- アナリティクス　イベントハンドラ設置のため絶対パスに変更 -->
 													</p>
 												</section>
 											</div>

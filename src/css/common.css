@@ -137,6 +137,15 @@ a[href^="tel:"]:hover {
 }
 
 /* --------------------------------------------------
+	外部リンク
+-------------------------------------------------- */
+.outLink a {
+	background: url("../image/common/icon_outlink_b.png") no-repeat scroll right 40% / 10px 10px;
+    padding-right: 15px;
+}
+
+
+/* --------------------------------------------------
 	input＆textarea
 -------------------------------------------------- */
 input, textarea {
