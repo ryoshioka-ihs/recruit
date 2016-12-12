@@ -25,21 +25,38 @@
     z-index: 1;
     height: 250px;      
     background-size: 100% auto;
-    padding-top: 86px;
-    margin-bottom: 50px;
+    padding-top: 86px; 
+    margin-bottom: 50px;  
 }
 
+/*.siteHeader_nb {
+    background: url("../image/newBridge/ttl_bg_newBridge.png") no-repeat center top;
+    z-index: 1;
+    max-width: 1440px;
+    min-width: 1000px;    
+    min-height: 250px;
+    padding: 86px 140px 0 30px;
+    position: relative;
+    margin: auto;
+}*/
+
 #newBridge .siteHeader {
-    max-width: 1000px;   
-    padding: 5px 140px 0 0;
+    max-width: 1440px;
+    min-width: 1000px;
+    width: 1000px;
     background: url("../image/newBridge/cambodia_flag.png") no-repeat right top;
     z-index: 2;
+    position: relative;
+    margin: auto;
+    padding: 0;
+    min-height: 90px;
 }
 
 .siteLogo_nb {
     display: inline-block;
     margin-top: 12px;  
-    width: 1000px 
+    /*width: 1000px*/
+    width: auto;
 }
 
 .siteLogo_nb > img {
@@ -48,6 +65,7 @@
 }
 
 .siteLogo_nb > p {
+    width: 1000px;
     color: #FFF;
     font-weight: bold;
     text-shadow: 0 2px 4px rgba(0,0,0,0.4);
@@ -76,37 +94,58 @@
     padding:10px 10px 10px 0;
 }
 
-@media screen and (min-width: 960px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+ #newBridge{
+}
+ .siteHeader_nb {
+    background: url("../image/newBridge/ttl_bg_newBridge.png") no-repeat center top;
+    z-index: 1;
+    height: 250px;      
+    background-size: 100% auto;
+    padding-top: 86px; 
+    margin-bottom: 50px;  
+}
  #newBridge .siteHeader {
-    max-width: 900px  !important;
-    min-width: 769px !important;
- }
+    max-width: 1024px;
+    min-width: 760px;
+    width: 760px;
+}   
  .siteLogo_nb {
     display: inline-block;
-    margin-top: 12px; 
-    width: 900px;
+    margin-top: 12px;
+ } 
+  .siteLogo_nb > p {
+    width: 100%;
  }
   article .wrap {
-    width: 940px;
+    width: 740px;
     margin: auto;
  }
-} 
+ .siteLogo_nb > p {
+    width: 760px;
+ }
+}
 
 @media (max-width:768px) and (min-width:321px) {
- .siteHeader_nb {
-    height: 90px;      
-    background-size: 100% auto;
+ .siteHeader_nb {    
+    height: 90px;
+    background-size: 100% auto;   
     padding: 10px;
     margin-bottom: 20px;
  }
  #newBridge .siteHeader {
-    background-size: 10% auto; 
+    background-size: 10% auto;
+    max-width: 768px;
+    min-width: 321px;
+    width: auto;
  }
  .siteLogo_nb {
+    width: 100%;
     margin-top:20px;
  }
  .siteLogo_nb > p {
     font-size: 19px;
+    width: 100%;
  }
  .siteLogo_nb > img {
     float: left;
@@ -137,13 +176,17 @@
     margin-bottom: 20px;
  }
  #newBridge .siteHeader {
-    background-size: 10% auto; 
+    background-size: 10% auto;
+    max-width: 300px;
+    min-width: 300px;
  }
  .siteLogo_nb {
+    width: 100%;
     margin-top:20px;
  }
  .siteLogo_nb > p {
-    font-size: 18px;
+    font-size: 16px;
+    width: 100%;
  }
  .siteLogo_nb > img {
     float: left;
@@ -151,7 +194,7 @@
     height: 24px;
  } 
  .services_img > img {
-    width: 90%;
+    width: 80%;
  }
  .iim > a > img,
  .ihs > a > img {
@@ -159,7 +202,8 @@
 } 
  .iim > a,
  .ihs > a {
-    float: none;    
+    float: none;
+    }
 }
 
 </style>
@@ -189,10 +233,10 @@
     </div>
 </header>
 <!--△ヘッダー△-->
+
 <article>
 <section>
 <div class="wrap">
-
     <h1>Corporate Profile</h1>
     <section id="sec1">
         <h2>Profile</h2>
@@ -239,7 +283,7 @@ Sangkat Mettapheap Khan 7Makara，Phnom Penh.
                         <a href="http://www.iim.co.jp/english/tabid/71/language/en-US/Default.aspx" target="_blank"><img alt="IIM Corporation" src="/image/company/iim_log_small.jpg"></a>
                         <div>
                         <em>IIM Corporation</em><br />
-                         <div class="outLink"><a href="http://www.iim.co.jp/english/tabid/71/language/en-US/Default.aspx" target="_blank">http://www.iim.co.jp/english/tabid/71/language/en-US/Default.aspx</a></div>
+                         <div class="outLink"><a href="http://www.iim.co.jp/english/tabid/71/language/en-US/Default.aspx" target="_blank">http://www.iim.co.jp/english/tabid/71/language/en-US/Default.aspx</a></div>                     
                      </div>
                          </div><!--/iim -->
 
@@ -249,12 +293,13 @@ Sangkat Mettapheap Khan 7Makara，Phnom Penh.
                         <em>IIM Human Solution Corp. （Stand for IHS）</em>
                          <div class="outLink"><a href="https://www.iimhs.co.jp/english/" target="_blank">https://www.iimhs.co.jp/english/</a></div>
                      </div>
-                         </div><!--/ihs -->                    
+                         </div><!--/ihs -->
+                     </td>                  
                     </tr>
                 </tbody>
             </table>
         </div>
-    </section>
+        </section>
 
         <section id="sec2">
             <h2>Services</h2>
@@ -262,6 +307,7 @@ Sangkat Mettapheap Khan 7Makara，Phnom Penh.
             <img alt="IT Education,System architecture Virtualization,Web Response,SE Service,Security,Operation Management" src="/image/newBridge/services.png">
             </div>
         </section>
+
 </section>
 </div><!-- /.wrap -->
 </article>
