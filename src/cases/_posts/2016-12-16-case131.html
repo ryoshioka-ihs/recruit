@@ -1,0 +1,152 @@
+---
+layout:       case
+global_menu:  cases
+title:        "仮想基盤バックアップ機能導入"
+description:  ""
+keywords:     ""
+date:         2016-12-15 09:00:00 +0900
+PDF:          "case131"
+categories:
+ - "インフラ構築"
+tags:
+ - "System Center Configuration Manager"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">構成図</a></li>
+    <li><a href="#toc-point">作業のポイント</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-work">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>今回のお客様は、半世紀以上の歴史をもち、家電から宇宙関連までの幅広い分野で優れた技術力を発揮している総合エンジニアリング企業です。グループ企業の各種製品、システムの設計・開発業務等で培った多様な技術に加え、最新の技術と設備を積極的に取り入れ、成長を続けています。</p>
+      <br>
+      <p>多種多様な事業を展開するということは、ビジネスモデルもさまざまであり、社内の業務システムも異なります。お客様は、拡大する業務にあわせて仮想環境に仮想マシンを追加し、社内の業務系サーバーだけでも100を超えています。サーバを停止することはできません。しかし、業務系サーバのデータを保護する仕組みがないため、サーバに障害が発生した際の復旧手段がないというリスクを抱えていました。</p>
+      <br>
+      <p>そこで、既存仮想基盤バックアップ機能の導入を検討されていました。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+  <h2>概要</h2>
+  <div class="smtSent">
+    <table class="baseTb">
+      <tbody>
+        <tr>
+          <th>業種</th>
+          <td>電気機器</td>
+        </tr>
+        <tr>
+          <th>目的</th>
+          <td>仮想基盤バックアップ機能導入
+          </td>
+        </tr>
+        <tr>
+          <th>作業規模</th>
+          <td>
+          <ul class="grayDisc">
+            <li>既存サーバ<br />ESXi5.5 ： 8台<br />vCenter Server ： 1台</li>
+            <li>新規サーバ<br />CA ARCserve Backup r16.5 SP1</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>作業ボリューム</th>
+          <td>2人月</td>
+        </tr>
+        <tr>
+          <th>作業内容</th>
+          <td>要件定義/機能設計/物理サーバー設置/構築/動作検証/ドキュメント作成
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+  <h2>構成図</h2>
+  <div class="smtSent">
+    <div class="lightBox">
+    <figure><img src="/image/cases/case131_01.png" alt="＜図1：システム構成図＞"></figure>
+    </div>
+  </div>
+  </section>
+
+  <section id="toc-point">
+    <h2>作業のポイント</h2>
+    <p>本件では、CA ARCserve Backup r16.5 SP1を導入することで、仮想基盤バックアップの機能を実現することができました。</p>
+    <div class="smtSent">
+      <h3>バックアップ時間のスケジュール設計</h3>
+      <p>お客様の環境では多数の仮想マシンが存在しているため、バックアップに時間を要してしまいます。IHSのノウハウを活かし、仮想基盤サーバー上で稼働している100台以上の業務サーバーに影響が発生しないバックアップスケジュールを設計、ご提案しました。業務影響の考慮、および決められた時間にバックアップタスクを終了させるためのスケジュールを設計しました。</p>
+
+      <h3>障害復旧時の運用コスト削減</h3>
+      <p>CA ARCserve Backup機能を導入することで復旧作業が簡易になるため、わざわざ問題を解決するための時間と手間をかけません。障害発生時による障害復旧のためのコストを大幅に削減することが可能になります。</p>
+
+      <h3>バックアップデータの容量削減</h3>
+      <p>CA ARCserve Backupの、「重複排除機能」（重複するデータをバックアップ対象のストレージに持たない機能）を適用し、バックアップ時の容量が削減され、バックアップ時間の短縮をおこないました。</p>
+<br />
+      <p><em>現場担当者による早急なシステム復旧を支援</em><br />
+      障害発生から復旧までの操作手順書を作成しご提供することにより、現地の担当者が早急にシステム復旧できるようになりました。</p>
+    </div>
+  </section>
+
+  <section id="toc-IHS-result">
+  <h2>弊社利用による効果</h2>
+  <div class="smtSent">
+    <h3>ノウハウの蓄積と提案力</h3>
+    <p>IHSでは、仮想基盤サーバーに関するスキルやノウハウを蓄積しています。その中には、仮想基盤サーバーと連携したバックアップソリューションに関するノウハウもあります。また、仮想基盤だけに限らないインフラシステムに関する総合的なスキルとノウハウもあります。<br /><br />
+お客様の環境では、多くの仮想基盤サーバーを抱えており、どういったバックアップソリューションを導入するべきか迷っていらっしゃいました。そこで、IHSからお客様の環境に最適なバックアップソリューションをご提案し、ご採用いただきました。その結果、既存業務システムへの影響を最低限に抑えるバックアップシステムを導入することができ、お客様からお褒めのお言葉をいただきました。お客様のご要望を汲み取り、システムという形にしてご提供する力をご評価いただきました。
+</p>
+    
+  </div>
+  </section>
+
+  <section id="toc-work">
+  <h2>作業内容の詳細</h2>
+  <div class="smtSent">
+    <h3>設計</h3>
+        <ol class="numList">
+          <li><p>基本設計</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>ハードウェア設計</li>
+            <li>サーバ機器設計</li>
+            <li>共有ディスク設計</li>
+            <li>ソフトウェア設計</li>
+            <li>バックアップ機能設計</li>
+          </ul>
+          </div>
+        </ol>
+
+    <h3>環境構築</h3>
+        <ol class="numList">
+          <li><p>バックアップ機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>CA arcserve Backup r16.5 SP1</li>
+          </ul>
+          </div>
+        </ol>
+
+    <h3>納品ドキュメント</h3>
+        <div class="texyIndent--style3">
+          <ul class="grayDisc">
+            <li>基本設計書</li>
+            <li>詳細設計書</li>
+            <li>動作確認項目表兼結果報告書</li>
+            <li>運用手順書</li>
+          </ul>
+        </div>
+    </div>
+  </section>  
+</section>
+
