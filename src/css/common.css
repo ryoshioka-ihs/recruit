@@ -2777,10 +2777,19 @@ footer .footBot {
 	footer .footBot {padding: 35px 0 20px 20px;}
 }
 
-	footer .footBot ul,
-	footer .footBot .cp {
+	footer .footBot ul {
 		float: left;
 	}
+
+/* コピーライトを画像から文字に置き換え（2017/1/5 坂本）*/
+	footer .footBot .cp {
+		font-family: "Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+		color: #737c87;
+		width: 300px;
+		letter-spacing: 0.1em;
+		font-size: 13px;
+	}
+
 	footer .footBot ul {
 		width: 800px;
 		margin: 10px 0 15px;
