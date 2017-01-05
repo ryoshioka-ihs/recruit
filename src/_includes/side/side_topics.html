@@ -25,6 +25,11 @@
 				<a href="/topics/seminar/">セミナー</a>
 			</li>
 			{% endif %}
+			{% if site.categories["その他"].size > 0 %}
+			<li{% if page.categories contains "その他" %} class="act"{% endif %}>
+				<a href="/topics/other/">その他</a>
+			</li>
+			{% endif %}
 		</ul>
 		</dd>
 	</dl>
