@@ -1033,11 +1033,13 @@ border: 1px solid #ccc;
 		}
 			#gNav .navWrap .inNav li a {
 				height: 38px;
-				line-height: 38px;
+				/*line-height: 38px;*/
+				padding-top: 8px;
+				padding-bottom: 8px;
 				font-weight: normal;
 				color: #003E8D;
 				padding-left: 50px;
-				background: url("../image/common/link_arrow1.png") 35px center no-repeat;
+				background: url("../image/common/link_arrow1.png") 35px 13px no-repeat;
 				background-size: 4px auto;
 				letter-spacing: 2px;
 			}
@@ -1067,12 +1069,12 @@ border: 1px solid #ccc;
 					height: 28px !important;
 				}
 				#gNav .navWrap .inNav.services li ul li span a {
-					line-height: 28px !important;
+					/*line-height: 28px !important;*/
 					font-weight: normal;
 					color: #003E8D;
 					padding-left: 40px;
 					margin-left: 20px;
-					background: url("../image/common/link_arrow1.png") 25px center no-repeat;
+					background: url("../image/common/link_arrow1.png") 25px 15px no-repeat;
 					background-size: 4px auto;
 					letter-spacing: 2px;
 				}
