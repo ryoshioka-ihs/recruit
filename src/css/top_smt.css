@@ -36,7 +36,8 @@ body {
 }
 #index #keyv .kvList .key1,
 #index #keyv .kvList .key2,
-#index #keyv .kvList .key3 {
+#index #keyv .kvList .key3,
+#index #keyv .kvList .key4 {
 	height: 300px;
 	background-size: auto 100%;
 }
@@ -128,7 +129,75 @@ body {
 		margin: 15px auto 0;
 	}
 
-/* 導入事例 */
+
+/* 最新のサービス・製品 */
+#index #keyv .kvList .key4 {
+	padding-top: 30px;
+}
+	#index #keyv .kvList .key4 .textBox {
+		width: 100%;
+		padding: 0 10px;
+	}
+		#index #keyv .kvList .key4 .textBox h2 {
+			padding-bottom: 8px;
+			letter-spacing: 2.5px;
+		}
+		#index #keyv .kvList .key4 .textBox h2 + p {
+			margin: 12px 0 17px;
+			font-size: 12px;
+			letter-spacing: normal;
+		}
+
+		#index #keyv .kvList .key4 .textBox ul {
+			padding: 0 10px;
+			flex-direction: column;
+		}
+			#index #keyv .kvList .key4 .textBox li {
+				width: 100%;
+				height: auto;
+				border-width: 5px;
+				padding: 0;
+			}
+			#index #keyv .kvList .key4 .textBox li:first-child {
+				margin: 0 0 5px 0;
+			}
+				#index #keyv .kvList .key4 .textBox li a {
+					width: 100%;
+					display: table;
+					padding: 5px 0;
+				}
+				#index #keyv .kvList .key4 .textBox li a:hover {
+					background-color: rgba(255,255,255,0.1);
+				}
+				#index #keyv .kvList .key4 .textBox li p {
+					display: table-cell;
+					width: 80%;
+    				font-size: 14px;
+    				margin-bottom: 0;
+    				padding-right: 20px;
+    				vertical-align: bottom;
+				}
+
+				#index #keyv .kvList .key4 .textBox li p.case {
+					width: 20%;
+					font-size: 10px;
+					letter-spacing: 1.5px;
+					padding-left: 10px;
+					vertical-align: middle;
+				}
+					#index #keyv .kvList .key4 .textBox li p.case span {
+						font-size: 16px;
+					}
+		
+				#index #keyv .kvList .key4 .textBox li p.case + p {
+					width: 80%;
+					font-size: 14px;
+					margin-bottom: 0;
+					padding-right: 20px;
+					vertical-align: bottom;
+				}
+
+/* 最新のサービス・製品 */
 #index #keyv .kvList .key3 {
 	padding-top: 30px;
 }
@@ -191,7 +260,9 @@ body {
 
 		/* ボタンとテキストは非表示 */
 		#index #keyv .kvList .key3 .blueBtn,
-		#index #keyv .kvList .key3 .textBox li p.text {
+		#index #keyv .kvList .key3 .textBox li p.text,
+		#index #keyv .kvList .key4 .blueBtn,
+		#index #keyv .kvList .key4 .textBox li p.text {
 			display: none;
 		}
 

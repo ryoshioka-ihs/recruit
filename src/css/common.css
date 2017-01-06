@@ -2287,10 +2287,11 @@ position: relative;
 					background: url(/image/common/link_arrow1.png) 0px 7px no-repeat;
 					background-size: 4px auto;
 					padding-left: 8px;
+					
 				}
 
 				#gNav .navWrap .inNav.services li ul li span a:hover {
-					background: url(/image/common/link_arrow1.png) left center no-repeat;
+					background: url(/image/common/link_arrow1.png) 0px 7px no-repeat;
 					background-size: 4px auto;
 					padding-left: 8px;
 					background-color: #F0F0F0 !important;
@@ -2541,7 +2542,7 @@ article .wrap:after {
 				padding-top: 5px;
 				padding-left: 30px;
 				padding-bottom: 5px;
-				background: url("../image/common/link_arrow1.png") 20px 11px no-repeat;
+				background: url("../image/common/link_arrow1.png") 20px 9px no-repeat;
 				background-size: 4px auto;
 				transition: 0.3s;
 			}
