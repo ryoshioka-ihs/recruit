@@ -24,6 +24,27 @@ title:			"IIMヒューマン・ソリューション"
 					<p class="oraBtn"><a href="/recruit/">採用情報をみる</a></p>
 				</div>
 			</div>
+			<div class="key4">
+				<div class="textBox">
+					<h2>最新のサービス・製品</h2>
+					<p>IIMヒューマン・ソリューションがご提供する最新のサービス・製品をご紹介します。</p>
+					<ul>									
+						<li>
+							<a href="/services/construction/azure-migration/" target="_self" tabindex="-1">
+								<p>Azure構築・移行サービス</p>
+							</a>
+						</li>
+										
+						<li>
+							<a href="/services/construction/win10-sccm/" target="_self" tabindex="-1">
+								<p>Windows10・SCCMによる<br>トータルソリューションサービス</p>
+							</a>
+						</li>
+										
+					</ul>
+					<p class="blueBtn"><a href="/services/" tabindex="-1">製品・サービス一覧を見る</a></p>
+				</div>
+			</div>
 			<div class="key3">
 				<div class="textBox">
 					<h2>最新導入事例</h2>
@@ -178,10 +199,18 @@ title:			"IIMヒューマン・ソリューション"
 		{% endfor %}
 
 		{% comment %} セミナー {% endcomment %}
-		{% assign seminar_posts = "" | split: "" %} 
+		{% assign seminar_posts = "" | split: "" %}
 		{% for post in site.posts %}
 				{% if post.categories contains "topics" and post.categories contains "セミナー" %}
 					{% assign seminar_posts = seminar_posts | push: post %}
+				{% endif %}
+		{% endfor %}
+
+		{% comment %} その他 {% endcomment %}
+		{% assign other_posts = "" | split: "" %}
+		{% for post in site.posts %}
+				{% if post.categories contains "topics" and post.categories contains "その他" %}
+					{% assign other_posts = other_posts | push: post %}
 				{% endif %}
 		{% endfor %}
 
@@ -194,6 +223,7 @@ title:			"IIMヒューマン・ソリューション"
 				{% if case_posts.size    > 0 %}<li>導入事例</li>{% endif %}
 				{% if report_posts.size  > 0 %}<li>技術レポート</li>{% endif %}
 				{% if seminar_posts.size > 0 %}<li>セミナー</li>{% endif %}
+				{% if other_posts.size > 0 %}<li>その他</li>{% endif %}
 			</ul>
 
 			<div id="tabCont">
@@ -242,7 +272,7 @@ title:			"IIMヒューマン・ソリューション"
 				{% endif %}
 				<!--▲サービス・製品▲-->
 
-				<!--▼事例紹介▼-->
+				<!--▼導入事例▼-->
 				{% if case_posts.size > 0 %}
 				<ul class="topicList">
 					{% for post in case_posts limit:max_posts %}
@@ -260,7 +290,7 @@ title:			"IIMヒューマン・ソリューション"
 					{% endfor %}
 				</ul>
 				{% endif %}
-				<!--▲事例紹介▲-->
+				<!--▲導入事例▲-->
 
 				<!--▼技術レポート▼-->
 				{% if report_posts.size > 0 %}
@@ -301,6 +331,26 @@ title:			"IIMヒューマン・ソリューション"
 					</ul>
 				{% endif %}
 				<!--▲セミナー▲-->
+
+				<!--▼その他▼-->
+				{% if other_posts.size > 0 %}
+					<ul class="topicList">
+					{% for post in other_posts limit:max_psots %}
+						<li>
+							{% if post.link %}
+								<a href="{{ post.link }}" target="_self">
+							{% else %}
+								<a href="{{ post.url }}" target="_self">
+							{% endif %}
+								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+								<div><span class="icon">{{ post.categories[1] }}</span></div>
+								<p>{{ post.title }}</p>
+							</a>
+						</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+				<!--▲その他▲-->
 
 			</div><!--/#tabCont-->
 			<p class="link"><a href="/topics/">トピックス一覧へ</a></p>
