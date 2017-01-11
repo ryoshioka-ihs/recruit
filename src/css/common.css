@@ -2043,6 +2043,53 @@ position: relative;
 		}
 
 /* --------------------------------------------------
+	サービスの流れ（幅100%）
+-------------------------------------------------- */
+.flow100 {
+	overflow: hidden;
+	counter-reset: flowCnt;
+	text-align: center;
+}
+	.flow100 ol {
+		width: auto;
+	}
+
+		.flow100 li {
+			width: 100%;
+			min-height: 50px;
+			padding: 15px 15px 15px 27px;
+			margin-bottom: 30px;
+			background-color: #E5EBF3;
+			counter-increment: flowCnt;
+			position: relative;
+		}
+		.flow100 li span {
+			font-weight: bold;
+		}
+
+		.flow100 li:before {
+			content: counter(flowCnt)". ";
+			top: auto;
+			left: 10px;
+			font-weight:bold
+		}
+		.flow100 li:after {
+			content: "";
+			display: block;
+			width: 22px;
+			height: 20px;
+			background: url("../image/common/flow_arrow.png") no-repeat;
+			background-size: 100% auto;
+			position: absolute;
+			left: 50%;
+			bottom: -26px;
+			margin-left: -11px;
+		}
+		.flow100 ol li:last-child:after {
+			display: none;
+		}
+
+/* --------------------------------------------------
 	留意事項
 -------------------------------------------------- */
 .heed {
