@@ -1480,9 +1480,9 @@ height: 100%;
 		.linkInPage li a {
 			display: block;
 			width: 100%;
-			line-height: 30px;
+			height: auto;
 			color: #282828;
-			padding: 0 10px 0 20px;
+			padding: 5px 10px 5px 20px;
 			background: #FFF url("../image/common/linkInPage_arrow.png") 8px center no-repeat;
 			background-size: 7px auto;
 			transition: 0.3s;
