@@ -661,7 +661,22 @@ border: 1px solid #ccc;
 }
 	.rangeTb td li {
 		margin-bottom: 7px;
-	}
+}
+/* --------------------------------------------------
+    表の横スクロール
+-------------------------------------------------- */
+.scroll{
+	overflow: auto;
+}
+.scroll::-webkit-scrollbar{
+	height: 10px;
+}
+.scroll::-webkit-scrollbar-track{
+	background: #F1F1F1;
+}
+.scroll::-webkit-scrollbar-thumb{
+	background: #BCBCBC;
+}
 
 /* --------------------------------------------------
     お客様の声
