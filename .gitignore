@@ -4,7 +4,9 @@ dest/
 .sass-cache/
 .jekyll-metadata
 Gemfile.lock
-
+/.bundle
+/vendor/bundle/
+/vendor/ruby/
 
 ### Node ###
 # Logs
@@ -48,8 +50,6 @@ Icon
 .fseventsd
 .Spotlight-V100
 .TemporaryItems
-
-vendor/bundle
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
