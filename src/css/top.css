@@ -64,7 +64,8 @@ footer {
 	#index #keyv .kvList .key1,
 	#index #keyv .kvList .key2,
 	#index #keyv .kvList .key3, 
-	#index #keyv .kvList .key4 {
+	#index #keyv .kvList .key4,
+	#index #keyv .kvList .key5 {
 		height: 600px;
 		background: center top no-repeat;
 		background-size: cover;
@@ -139,6 +140,26 @@ footer {
 			letter-spacing: 3px;
 			font-size: 20px;
 		}
+
+#index #keyv .kvList .key5 {
+	background-image: url("../image/top/keyv5.png");
+	padding-top: 200px;
+}
+	#index #keyv .kvList .key5 .textBox {
+		/*width: auto;
+		height: 50%;
+		top: 50%;*/
+	}
+		#index #keyv .kvList .key5 .textBox h2 {
+		border-bottom: 1px solid #FFF;
+		letter-spacing: 7px;
+		padding-bottom: 10px;
+		}
+		#index #keyv .kvList .key5 .textBox h2 + p {
+		margin: 28px 0 45px;
+		font-size: 18px;
+		letter-spacing: 2.5px;
+	}		
 
 /* 最新のサービス・製品 */
 #index #keyv .kvList .key4 {
@@ -336,27 +357,6 @@ footer {
 		color: #000;
 		text-align: left;
 		margin-top: 10px;
-	}
-
-/* リモート運用 */
-#sv #remo {
-	width: 690px;
-	height: 230px;
-	margin: 0 0 30px 310px;
-}
-	#sv #remo a {
-		padding: 25px 40px 0 130px;
-	}
-
-	#sv #remo a:before {
-		width: 400px;
-		height: 230px;
-		border: none;
-		margin-bottom: 0;
-		position: absolute;
-		top: -28px;
-		left: -310px;
-		background-image: url("../image/top/sv_img5.png");
 	}
 
 /* インフラ運用 */

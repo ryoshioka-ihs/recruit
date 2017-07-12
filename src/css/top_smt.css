@@ -37,7 +37,8 @@ body {
 #index #keyv .kvList .key1,
 #index #keyv .kvList .key2,
 #index #keyv .kvList .key3,
-#index #keyv .kvList .key4 {
+#index #keyv .kvList .key4,
+#index #keyv .kvList .key5 {
 	height: 300px;
 	background-size: auto 100%;
 }
@@ -129,8 +130,38 @@ body {
 		margin: 15px auto 0;
 	}
 
+	/* リモートサービス */
 
-/* 最新のサービス・製品 */
+#index #keyv .kvList .key5 {
+	top: 46.5%;
+	padding: 30px 0 10px;
+}
+#index #keyv .kvList .key5 .textBox {
+		width: 100%;
+		padding: 0 10px;
+		letter-spacing: 1.5px;
+}
+
+	#index #keyv .kvList .key5 .textBox h2 {
+		letter-spacing: 1.5px;
+	}
+		#index #keyv .kvList .key5 .textBox h2 span {
+			display: block;
+		}
+	
+	#index #keyv .kvList .key5 .textBox h2 + p {
+		letter-spacing: 0.5px;
+		font-size: 12px;
+	}
+	#index #keyv .kvList .key5 .oraBtn {
+		position: static;
+		width: 90%;
+		margin: 15px auto 0;
+	}
+
+
+
+/* 最新のサービス・製品 */*/*/*/
 #index #keyv .kvList .key4 {
 	padding-top: 30px;
 }
