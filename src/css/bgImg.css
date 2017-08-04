@@ -15,9 +15,6 @@
 /*//////////////////////////////////////////////////
     サービス・製品一覧
 ///////////////////////////////////////////////////*/
-.blueTtl .rimo {
-	background-image: url("../image/services/bg_rimo.png");
-}
 .blueTtl .ope {
 	background-image: url("../image/services/bg_ope.png");
 }
@@ -30,13 +27,16 @@
 .blueTtl .secu {
 	background-image: url("../image/services/bg_secu.png");
 }
+.blueTtl .rimo {
+	background-image: url("../image/services/bg_rimo.png");
+}
+.blueTtl .other {
+	background-image: url("../image/services/bg_other.png");
+}
 
 /*//////////////////////////////////////////////////
     導入事例
 ///////////////////////////////////////////////////*/
-.searchCat .remo {
-	background-image: url("../image/cases/bg_remo.png");
-}
 .searchCat .ope {
 	background-image: url("../image/cases/bg_ope.png");
 }
@@ -48,6 +48,12 @@
 }
 .searchCat .secu {
 	background-image: url("../image/cases/bg_secu.png");
+}
+.searchCat .remo {
+	background-image: url("../image/cases/bg_remo.png");
+}
+.searchCat .other {
+	background-image: url("../image/cases/bg_other.png");
 }
 
 

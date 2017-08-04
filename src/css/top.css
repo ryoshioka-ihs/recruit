@@ -185,20 +185,20 @@ footer {
 
 
 	@media screen and (min-width: 960px) and (max-width: 1024px) {
-	#index #keyv .kvList .key4 .textBox ul {margin: 60px;}
+	#index #keyv .kvList .key4 .textBox ul {margin: 0px 60px;}
 	}
 
 
-
+/*2行以上*/
 	#index #keyv .kvList .key4 .textBox li {
 		width: 480px;
 		min-width: 0;
-		text-align: left;
 		border: 10px solid #48B1EE;
+		margin-bottom: 15px;
 	}
 
 	#keyv > div > div > div > div.key4.slick-slide.slick-current.slick-active > div > ul > li:nth-child(1) > a > p{
-		margin-top: 0.5em;
+		margin-top: 0em;
 	}
 
 
@@ -208,7 +208,7 @@ footer {
 		#index #keyv .kvList .key4 .textBox li a {
 			height: 100%;
 			display: block;
-			padding: 25px 25px 15px 19px;
+			padding: 20px 25px 15px 19px;
 			background-color: rgba(255,255,255,0.1);
 			font-size: 22px;
 			letter-spacing: 1.5px;
@@ -359,7 +359,8 @@ footer {
 		margin-top: 10px;
 	}
 
-/* インフラ運用 */
+
+/* （一旦非表示）インフラ運用 
 #sv #ope {
 	width: 690px;
 	height: 230px;
@@ -379,12 +380,50 @@ footer {
 		left: -310px;
 		background-image: url("../image/top/sv_img1.png");
 	}
+*/
 
-/* インフラ導入 */
+/* インフラ運用 New 2017.08.03 */
+
+#sv #ope2 {
+	width: 490px;
+	height: 340px;
+	margin: 0 0 30px 0px;
+}
+
+	#sv #ope2 a:before {
+		content: "";
+		width: 450px;
+		height: 100px;
+		border: none;
+		background: center top no-repeat;
+		display: block;
+		margin:	0 0 25px 0;
+		background-image: url("../image/top/sv_img1.png");
+	}
+
+/* （一旦非表示）インフラ構築
 #sv #intro {
 	margin-left: 0;
 }
 	#sv #intro a:before {
+		background-image: url("../image/top/sv_img2.png");
+	}
+*/
+
+/* インフラ構築 New 2017.08.03 */
+#sv #intro2 {
+	width: 490px;
+	height: 340px;
+	margin: 0 0 30px 0px;
+}
+	#sv #intro2 a:before {
+		content: "";
+		width: 450px;
+		height: 100px;
+		border: none;
+		background: center top no-repeat;
+		display: block;
+		margin:	0 0 25px 0;
 		background-image: url("../image/top/sv_img2.png");
 	}
 
@@ -396,6 +435,11 @@ footer {
 /* セキュリティ */
 #sv #secu a:before {
 	background-image: url("../image/top/sv_img4.png");
+}
+
+/*その他のソリューション */
+#sv #other a:before {
+	background-image: url("../image/top/sv_img5.png");
 }
 
 /* ボタン */
