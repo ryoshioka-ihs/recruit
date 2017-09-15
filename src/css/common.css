@@ -402,6 +402,10 @@ article #Utility.ttl {
 .imgBase.bg7 {
 	background-image: url("../image/common/imgBase_bg7.png");
 }
+/* winactor */
+.imgBase.bg8 {
+	background-image: url("../image/common/imgBase_bg8.png");
+}
 /* --------------------------------------------------------
 	左コンテンツのh1背景装飾用（アイコン表示）
 -------------------------------------------------------- */
