@@ -118,7 +118,7 @@ body {
 	}
 		#index #keyv .kvList .key2 .textBox h2 span {
 			display: block;
-		}
+	}
 	
 	#index #keyv .kvList .key2 .textBox h2 + p {
 		letter-spacing: 0.5px;
@@ -129,105 +129,6 @@ body {
 		width: 90%;
 		margin: 15px auto 0;
 	}
-
-	/* リモートサービス */
-
-#index #keyv .kvList .key5 {
-	top: 46.5%;
-	padding: 30px 0 10px;
-}
-#index #keyv .kvList .key5 .textBox {
-		width: 100%;
-		padding: 0 10px;
-		letter-spacing: 1.5px;
-}
-
-	#index #keyv .kvList .key5 .textBox h2 {
-		letter-spacing: 1.5px;
-	}
-		#index #keyv .kvList .key5 .textBox h2 span {
-			display: block;
-		}
-	
-	#index #keyv .kvList .key5 .textBox h2 + p {
-		letter-spacing: 0.5px;
-		font-size: 12px;
-	}
-	#index #keyv .kvList .key5 .oraBtn {
-		position: static;
-		width: 90%;
-		margin: 15px auto 0;
-	}
-
-
-
-/* 最新のサービス・製品 */*/*/*/
-#index #keyv .kvList .key4 {
-	padding-top: 30px;
-}
-	#index #keyv .kvList .key4 .textBox {
-		width: 100%;
-		padding: 0 10px;
-	}
-		#index #keyv .kvList .key4 .textBox h2 {
-			padding-bottom: 8px;
-			letter-spacing: 2.5px;
-		}
-		#index #keyv .kvList .key4 .textBox h2 + p {
-			margin: 12px 0 17px;
-			font-size: 12px;
-			letter-spacing: normal;
-		}
-
-		#index #keyv .kvList .key4 .textBox ul {
-			padding: 0 10px;
-			flex-direction: column;
-			margin-bottom: -10px;
-		}
-			#index #keyv .kvList .key4 .textBox li {
-				width: 100%;
-				height: auto;
-				border-width: 5px;
-				padding: 0;
-			}
-			#index #keyv .kvList .key4 .textBox li:first-child {
-				margin: 0 0 5px 0;
-			}
-				#index #keyv .kvList .key4 .textBox li a {
-					width: 100%;
-					display: table;
-					padding: 5px 0;
-				}
-				#index #keyv .kvList .key4 .textBox li a:hover {
-					background-color: rgba(255,255,255,0.1);
-				}
-				#index #keyv .kvList .key4 .textBox li p {
-					display: table-cell;
-					width: 80%;
-    				font-size: 11px;
-    				margin-bottom: 0;
-    				padding-right: 20px;
-    				vertical-align: bottom;
-				}
-
-				#index #keyv .kvList .key4 .textBox li p.case {
-					width: 20%;
-					font-size: 10px;
-					letter-spacing: 1.5px;
-					padding-left: 10px;
-					vertical-align: middle;
-				}
-					#index #keyv .kvList .key4 .textBox li p.case span {
-						font-size: 16px;
-					}
-		
-				#index #keyv .kvList .key4 .textBox li p.case + p {
-					width: 80%;
-					font-size: 14px;
-					margin-bottom: 0;
-					padding-right: 20px;
-					vertical-align: bottom;
-				}
 
 /* 最新導入事例 */
 #index #keyv .kvList .key3 {
@@ -297,6 +198,108 @@ body {
 		#index #keyv .kvList .key4 .textBox li p.text {
 			display: none;
 		}
+
+/* 最新のサービス・製品 */*/*/*/
+#index #keyv .kvList .key4 {
+	padding-top: 30px;
+}
+	#index #keyv .kvList .key4 .textBox {
+		width: 100%;
+		padding: 0 10px;
+	}
+		#index #keyv .kvList .key4 .textBox h2 {
+			padding-bottom: 8px;
+			letter-spacing: 2.5px;
+		}
+		#index #keyv .kvList .key4 .textBox h2 + p {
+			margin: 12px 0 5px;
+			font-size: 12px;
+			letter-spacing: normal;
+		}
+
+		#index #keyv .kvList .key4 .textBox ul {
+			padding: 0 10px;
+			flex-direction: column;
+			margin-bottom: -10px;
+		}
+			#index #keyv .kvList .key4 .textBox li {
+				width: 100%;
+				height: auto;
+				border-width: 5px;
+				padding: 0;
+			}
+			#index #keyv .kvList .key4 .textBox li:first-child {
+				margin: 0 0 5px 0;
+			}
+				#index #keyv .kvList .key4 .textBox li a {
+					width: 100%;
+					display: table;
+					padding: 5px 0;
+				}
+				#index #keyv .kvList .key4 .textBox li a:hover {
+					background-color: rgba(255,255,255,0.1);
+				}
+				#index #keyv .kvList .key4 .textBox li p {
+					display: table-cell;
+					width: 80%;
+    				font-size: 11px;
+    				margin-bottom: 0;
+    				padding-right: 20px;
+    				vertical-align: bottom;
+				}
+
+				#index #keyv .kvList .key4 .textBox li p.case {
+					width: 20%;
+					font-size: 10px;
+					letter-spacing: 1.5px;
+					padding-left: 10px;
+					vertical-align: middle;
+				}
+					#index #keyv .kvList .key4 .textBox li p.case span {
+						font-size: 16px;
+					}
+		
+				#index #keyv .kvList .key4 .textBox li p.case + p {
+					width: 80%;
+					font-size: 14px;
+					margin-bottom: 0;
+					padding-right: 20px;
+					vertical-align: bottom;
+				}
+
+/* WinActor */
+#index #keyv .kvList .key5 .textBox {
+	top: 5%;
+	padding: 0 10px;
+}
+	#index #keyv .kvList .key5 .textBox h1 {
+		font-size:30px;
+		padding-left: 70px;
+	}
+	#index #keyv .kvList .key5 .textBox h1 + p{
+		letter-spacing: 1.5px;
+		padding-left: 20px
+		font-size: 16px;
+		margin-top: 50px;
+	}
+	#index #keyv .kvList .key5 .textBox h2 {
+		letter-spacing: 1.5px;
+		padding-top: 50px;
+		margin-left: 35px;
+	}
+		#index #keyv .kvList .key5 .textBox h2 + p {
+			display: block;
+			font-size: 13px;
+			margin-left: 20px;
+	}
+		#index #keyv .kvList .key5 .textBox p {
+			margin-bottom: 0px;
+			padding-left: 50px;
+			font-size: 16px;
+	}
+	#index #keyv .kvList .key5 .blueBtn {
+		display: none;
+	}
 
 /*  メッセージ
 -------------------------------------------------- */
