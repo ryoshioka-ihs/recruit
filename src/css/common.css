@@ -407,6 +407,11 @@ article #Utility.ttl {
 .imgBase.bg8 {
 	background-image: url("../image/common/imgBase_bg8.png");
 }
+
+/* WinActor-seminar */
+.imgBase.bg9 {
+	background-image: url("../image/common/imgBase_bg9.png");
+}
 /* --------------------------------------------------------
 	左コンテンツのh1背景装飾用（アイコン表示）
 -------------------------------------------------------- */
