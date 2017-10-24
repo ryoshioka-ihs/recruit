@@ -837,14 +837,15 @@ a.rss:hover {
 
 	/* ホバー対応 */
 	.blueBtn:hover,
-	.oraBtn:hover {
+	.oraBtn:hover{
 		opacity: 0.7;
 		-ms-filter: "alpha(opacity=70)";
 	}
 	.blueBtn a:hover,
-	.oraBtn a:hover {
+	.oraBtn a:hover{
 		text-decoration: none;
 	}
+
 
 /* 青 */
 .blueBtn {
@@ -855,6 +856,7 @@ a.rss:hover {
 .oraBtn {
 	background-color: #F3951B;
 }
+
 
 /* --------------------------------------------------
 	テーブル(ブランクセル)
@@ -2025,6 +2027,13 @@ position: relative;
 			max-width: 940px;
 		}
 
+/* 画像に半透明のフィルターを乗せる */
+.ImgHov a:hover{
+	display: block;
+	color: #FFF;
+	opacity: 0.7;
+	-ms-filter: "alpha(opacity=70)";
+}
 /* --------------------------------------------------
 	メリットの見出し
 -------------------------------------------------- */
