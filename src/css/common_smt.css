@@ -778,19 +778,25 @@ border: 1px solid #ccc;
 		padding: 9px;
 	}
 
+	.enquformSet textarea {
+		height: 200px;
+		width: 335px;
+		margin-top: 0;
+		padding: 9px;
+	}	
+
 /* --------------------------------------------------
     総合お問い合わせ
 -------------------------------------------------- */
 @media screen and (min-width: 481px) and (max-width: 768px) {
 	.googleForm {width: 100%;	
-	height: 1100px;
+	height: 1700px;
 	/*overflow: visible !important;*/}
 }
 
 @media screen and (max-width: 480px) {
 .googleForm {
 	width: 100%;
-	height: 1300px;
 	/*overflow: visible !important;*/}
 }
 
@@ -802,7 +808,7 @@ border: 1px solid #ccc;
 
 .googleForm iframe {
 	width: 100%;
-	/*margin-top: -100px;*/
+	height: 1700px;
 }
 
 /* --------------------------------------------------
@@ -812,14 +818,14 @@ border: 1px solid #ccc;
 .googleForm-MG{
 	/*margin: 110px 0 0;*/
 	width: 100%;
-	height: 800px;
+    height: 100% !important;
 	/*overflow: visible !important;*/}
 }
 
 @media screen and (max-width: 480px) {
 .googleForm-MG{
 	width: 100%;
-	height: 1020px;
+    height: 100% !important;
 	/*overflow: visible !important;*/}
 }
 
@@ -829,7 +835,7 @@ border: 1px solid #ccc;
 
 .googleForm-MG iframe {
 	width: 100%;
-	/*margin-top: -100px;*/
+    height: 100% !important;	
 }
 
 

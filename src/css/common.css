@@ -157,6 +157,21 @@ input, textarea {
 	-webkit-appearance: none;
 	border: none;
 }
+/* --------------------------------------------------
+	PHPでラジオを表示
+-------------------------------------------------- */
+.radio input{
+	-webkit-appearance: radio;
+	border: none;
+}
+
+/* --------------------------------------------------
+	PHPでチェックボックスを表示
+-------------------------------------------------- */
+.checkbox input{
+	-webkit-appearance: checkbox;
+	border: none;
+}
 
 /* --------------------------------------------------
 	本文の見出し
@@ -341,6 +356,11 @@ article #Company.ttl {
 /* お問い合わせ用 */
 article #Contact.ttl {
 	background-image: url("../image/common/ttl_bg_Contact.png");
+}
+
+/* Compus */
+article #compus.ttl {
+	background-image: url("../image/common/ttl_bg_Utility.png");
 }
 
 /* その他汎用 */
@@ -1812,15 +1832,14 @@ img.req {
 -------------------------------------------------- */
 .googleForm {
 width: 760px;
-height: 1300px;
+height: 1600px;
 overflow: hidden;
 position: relative;
 }
-/*.googleForm iframe {
+.googleForm iframe {
 	width: 760px;
 	height: 9999px;
-	margin-top: -200px;
-}*/
+}
 
 /* --------------------------------------------------
 	メルマガ登録
