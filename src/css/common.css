@@ -2582,6 +2582,22 @@ article .wrap:after {
     }
 }
 
+/*  メイン左側（右のナビゲーションなし）
+-------------------------------------------------- */
+ 	#noside-main {
+	float: left;
+}
+
+/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+	#noside-main {
+    width: 720px;
+    float: left;
+    margin-left: 20px;
+    }
+}
+
+
 /*  メイン右側（サイドメニュー）
 -------------------------------------------------- */
 #sideMenu {
