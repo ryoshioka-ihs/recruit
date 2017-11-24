@@ -123,6 +123,23 @@ article .ttl {
 		margin-top: 6px;
 	}
 
+/* --------------------------------------------------
+    お知らせトップバナー
+-------------------------------------------------- */
+.topimgBase {
+	min-height: 90px;
+	padding: 12px 0 0 10px;
+	background-size: cover;
+}
+
+@media only screen and (orientation:landscape) {
+    /* ランドスケープ用 */
+    .topimgBase {
+        position: relative;
+        width: 100% !important;
+        height: 165px;
+    }
+}
 /* --------------------------------------------------------
     左コンテンツのh1背景装飾用（アイコン表示）
 -------------------------------------------------------- */
@@ -836,6 +853,32 @@ border: 1px solid #ccc;
 .googleForm-MG iframe {
 	width: 100%;
     height: 100% !important;	
+}
+
+/* --------------------------------------------------
+    WinAcotrお申込み
+-------------------------------------------------- */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.googleForm-WA {width: 100%;	
+	height: 1700px;
+	/*overflow: visible !important;*/}
+}
+
+@media screen and (max-width: 480px) {
+.googleForm-WA {
+	width: 100%;
+	/*overflow: visible !important;*/}
+}
+
+@media screen and (max-width: 320px) {
+.googleForm-WA{height: 1350px; margin-left:-20px;}
+/*.googleForm {margin-left:-20px;}*/
+}
+
+
+.googleForm-WA iframe {
+	width: 100%;
+	height: 1700px;
 }
 
 
