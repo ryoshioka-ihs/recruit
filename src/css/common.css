@@ -428,8 +428,17 @@ article #Utility.ttl {
 	background-image: url("../image/common/imgBase_bg8.png");
 }
 
+/* --------------------------------------------------------
+	お知らせトップバナー
+-------------------------------------------------------- */
+.topimgBase {
+	min-height: 180px;
+	padding: 35px 0 0 30px;
+	background: center top no-repeat;
+	background-size: 100% auto;
+}
 /* WinActor-seminar */
-.imgBase.bg9 {
+.topimgBase.bg9 {
 	background-image: url("../image/common/imgBase_bg9.png");
 }
 /* --------------------------------------------------------
@@ -1849,6 +1858,20 @@ width: 760px;
 height: 900px;
 overflow: hidden;
 position: relative;
+}
+
+/* --------------------------------------------------
+	WinActor申し込み
+-------------------------------------------------- */
+.googleForm-WA {
+width: 760px;
+/*height: 1700px;*/
+overflow: hidden;
+position: relative;
+}
+.googleForm iframe {
+	width: 760px;
+	height: 9999px;
 }
 
 /* --------------------------------------------------
