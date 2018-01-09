@@ -502,6 +502,95 @@ article #Utility.ttl {
 	background-image: url("../image/common/tmp_icon6.png");
 }
 
+/* --------------------------------------------------------
+	上段に画像、下段にテキスト（左側）
+-------------------------------------------------------- */
+.pickup1 {
+	min-height: 160px;
+	background-color: #EBEBEB;
+	position: relative;
+    box-shadow:5px 5px;
+    border:1px solid #000;
+    width:350px;
+    height:400px;
+    margin: 15px 15px 30px 0px;
+}
+
+.pickup1:before {
+	content: "";
+	display: block;
+	width: 300px;
+	height: 160px;
+	background: #F5F5F5 center center no-repeat;
+	position: relative;
+	top: 10%;
+	margin: -20px auto;
+}
+
+.pickup1 h1{
+	margin-top: 25%;
+    border-bottom: none;
+    overflow: visible;
+}
+
+.pickup1 p{
+	margin: 5% 10%;
+}
+
+/* 無料セミナー画像 */
+.pickup1.icon:before {
+	background-image: url("../image/common/tmp_icon1.png");
+}
+/* 無料セミナー初心者マーク */
+.pickup1.new:before {
+	background-image: url("../image/common/tmp_icon1.png");
+}
+/* 無料セミナー初心者マーク */
+.pickup1.btn :before {
+	background-image: url("../image/common/free_button.png");
+	position: absolute;
+}
+
+
+/* --------------------------------------------------------
+	上段に画像、下段にテキスト（右側）
+-------------------------------------------------------- */
+.pickup2 {
+	min-height: 160px;
+	background-color: #EBEBEB;
+	position: relative;
+    box-shadow:5px 5px;
+    border:1px solid #000;
+    width:350px;
+    height:400px;
+    margin: 15px 15px 0px 15px;
+}
+
+.pickup2:before {
+	content: "";
+	display: block;
+	width: 300px;
+	height: 160px;
+	background: #F5F5F5 center center no-repeat;
+	position: relative;
+	top: 10%;
+	margin: -20px auto;
+}
+
+.pickup2 h1{
+	margin-top: 25%;
+    border-bottom: none;
+    overflow: visible;
+}
+
+.pickup2 p{
+	margin: 5% 10%;
+}
+
+/* 無料セミナー */
+.pickup2.icon:before {
+	background-image: url("../image/common/tmp_icon1.png");
+}
 /* --------------------------------------------------
 	サービス対象範囲
 -------------------------------------------------- */
