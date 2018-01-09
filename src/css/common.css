@@ -511,8 +511,8 @@ article #Utility.ttl {
 	position: relative;
     box-shadow:5px 5px;
     border:1px solid #000;
-    width:350px;
-    height:400px;
+    width:330px;
+    height:450px;
     margin: 15px 15px 30px 0px;
 }
 
@@ -535,11 +535,12 @@ article #Utility.ttl {
 
 .pickup1 p{
 	margin: 5% 10%;
+	font-size: small;
 }
 
 /* 無料セミナー画像 */
 .pickup1.icon:before {
-	background-image: url("../image/common/tmp_icon1.png");
+	background-image: url("../image/services/constrution/other/winactor/winactor-seminar2_01.png");
 }
 /* 無料セミナー初心者マーク */
 .pickup1.new:before {
@@ -561,8 +562,8 @@ article #Utility.ttl {
 	position: relative;
     box-shadow:5px 5px;
     border:1px solid #000;
-    width:350px;
-    height:400px;
+    width:330px;
+    height:450px;
     margin: 15px 15px 0px 15px;
 }
 
@@ -585,12 +586,23 @@ article #Utility.ttl {
 
 .pickup2 p{
 	margin: 5% 10%;
+	font-size: small;
 }
 
 /* 無料セミナー */
 .pickup2.icon:before {
-	background-image: url("../image/common/tmp_icon1.png");
+	background-image: url("/../image/services/constrution/other/winactor/winactor-seminar2_02.png");
 }
+
+/* --------------------------------------------------
+	pickup1,pickup2 共通
+-------------------------------------------------- */
+.pickup1.icon > p.benefits,
+.pickup2.icon > p.benefits{
+	font-size: medium;
+	color: red;
+}
+
 /* --------------------------------------------------
 	サービス対象範囲
 -------------------------------------------------- */
