@@ -123,10 +123,11 @@ article .ttl {
 		margin-top: 6px;
 	}
 
+
 /* --------------------------------------------------
     お知らせトップバナー
 -------------------------------------------------- */
-.topimgBase {
+.topimgBase{
 	min-height: 90px;
 	padding: 12px 0 0 10px;
 	background-size: cover;

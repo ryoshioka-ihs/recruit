@@ -427,6 +427,20 @@ article #Utility.ttl {
 .imgBase.bg8 {
 	background-image: url("../image/common/imgBase_bg8.png");
 }
+/* WinActor-seminar */
+.imgBase.bg9 {
+	background-image: url("../image/common/imgBase_bg9.png");
+}
+/* NEW WinActor */
+.topimgBase.bg10 {
+	width: 740px;
+	height: 180px;
+	background-color: #EBEBEB;
+	position: relative;
+    box-shadow:5px 5px;
+    border:1px solid #000;
+}
+
 
 /* --------------------------------------------------------
 	お知らせトップバナー
@@ -437,10 +451,7 @@ article #Utility.ttl {
 	background: center top no-repeat;
 	background-size: 100% auto;
 }
-/* WinActor-seminar */
-.topimgBase.bg9 {
-	background-image: url("../image/common/imgBase_bg9.png");
-}
+
 /* --------------------------------------------------------
 	左コンテンツのh1背景装飾用（アイコン表示）
 -------------------------------------------------------- */
