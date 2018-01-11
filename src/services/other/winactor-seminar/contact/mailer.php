@@ -39,6 +39,7 @@ $company_size = $_POST['company_size'];//会社規模
 $emailadd = $_POST['email'];//メールアドレス
 $tel = $_POST['tel'];//	TEL
 $seminar = $_POST['seminar'];//	セミナー日程
+$question = $_POST['question'];// 質問
 
 
 
@@ -50,8 +51,8 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("WinActorセミナーのお申込み")->
        setSubject("WinActorセミナーのお申込みを承りました。")->
-       setText("会社名: $company \r\nお名前: $name \r\n部署名: $despartment \r\nお役職: $position \r\n会社規模: $company_size \r\nご希望の開催日: $seminar \r\nEmailアドレス: $emailadd  \r\nTEL: $tel")->
-       setHtml("<strong>会社名:</strong> $company<br />　<strong>お名前:</strong> $name<br /> <strong>部署名:</strong> $despartment<br />　<strong>お役職:</strong> $position<br />　<strong>会社規模:</strong> $company_size<br /> <strong>ご希望の開催日:</strong> $seminar<br /> <strong>Emailアドレス:</strong> $emailadd<br /> <strong>TEL:</strong> $tel<br />  ご対応のほどよろしくお願いいたします。")->
+       setText("会社名: $company \r\nお名前: $name \r\n部署名: $despartment \r\nお役職: $position \r\n会社規模: $company_size \r\nご希望の開催日: $seminar \r\nEmailアドレス: $emailadd  \r\nTEL: $tel　\r\n質問: $question")->
+       setHtml("<strong>会社名:</strong> $company<br />　<strong>お名前:</strong> $name<br /> <strong>部署名:</strong> $despartment<br />　<strong>お役職:</strong> $position<br />　<strong>会社規模:</strong> $company_size<br /> <strong>ご希望の開催日:</strong> $seminar<br /> <strong>Emailアドレス:</strong> $emailadd<br /> <strong>TEL:</strong> $tel<br /> <strong>質問:</strong> $question<br /> ご対応のほどよろしくお願いいたします。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
