@@ -196,7 +196,15 @@ article .ttl {
 /* --------------------------------------------------------
 	20180110追加　　WinActorセミナー用
 -------------------------------------------------------- */
-.pickup1 {
+.pickup1,
+.pickup2,
+.pickup3,
+.pickup4{
+	width: 100%;
+}
+
+.pickup1,
+.pickup3 {
 	margin-bottom: 20px !important;
 }
 
