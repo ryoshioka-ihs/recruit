@@ -432,7 +432,7 @@ article #Utility.ttl {
 	background-image: url("../image/common/imgBase_bg9.png");
 }
 /* NEW WinActor */
-.topimgBase.bg10 {
+.imgBase.bg10 {
 	width: 740px;
 	height: 180px;
 	background-color: #EBEBEB;
@@ -514,7 +514,7 @@ article #Utility.ttl {
 }
 
 /* --------------------------------------------------------
-	上段に画像、下段にテキスト（左側）
+	pickup1 上段に画像、下段にテキスト（左側）
 -------------------------------------------------------- */
 .pickup1 {
 	min-height: 160px;
@@ -557,7 +557,7 @@ article #Utility.ttl {
 .pickup1.new:before {
 	background-image: url("../image/common/tmp_icon1.png");
 }
-/* 無料セミナー初心者マーク */
+/* 無料セミナー無料マーク */
 .pickup1.btn :before {
 	background-image: url("../image/common/free_button.png");
 	position: absolute;
@@ -565,7 +565,7 @@ article #Utility.ttl {
 
 
 /* --------------------------------------------------------
-	上段に画像、下段にテキスト（右側）
+	pickup2 上段に画像、下段にテキスト（右側）
 -------------------------------------------------------- */
 .pickup2 {
 	min-height: 160px;
@@ -605,11 +605,95 @@ article #Utility.ttl {
 	background-image: url("/../image/services/constrution/other/winactor/winactor-seminar2_02.png");
 }
 
+/* --------------------------------------------------------
+	pickup3 上段に画像、下段にテキスト（左側）
+-------------------------------------------------------- */
+.pickup3 {
+	min-height: 160px;
+	background-color: #EBEBEB;
+	position: relative;
+    box-shadow:5px 5px;
+    border:1px solid #000;
+    width:330px;
+    height:450px;
+    margin: 15px 15px 30px 0px;
+}
+
+.pickup3:before {
+	content: "";
+	display: block;
+	width: 300px;
+	height: 160px;
+	background: #F5F5F5 center center no-repeat;
+	position: relative;
+	top: 10%;
+	margin: -20px auto;
+}
+
+.pickup3 h1{
+	margin-top: 25%;
+    border-bottom: none;
+    overflow: visible;
+}
+
+.pickup3 p{
+	margin: 5% 10%;
+	font-size: small;
+}
+
+/* 準備中画像 */
+.pickup3.icon:before {
+	background-image: url("../image/services/constrution/other/winactor/winactor-seminar2_junbi.png");
+}
+
+/* --------------------------------------------------------
+	pickup4 上段に画像、下段にテキスト（右側）
+-------------------------------------------------------- */
+.pickup4 {
+	min-height: 160px;
+	background-color: #EBEBEB;
+	position: relative;
+    box-shadow:5px 5px;
+    border:1px solid #000;
+    width:330px;
+    height:450px;
+    margin: 15px 15px 0px 15px;
+}
+
+.pickup4:before {
+	content: "";
+	display: block;
+	width: 300px;
+	height: 160px;
+	background: #F5F5F5 center center no-repeat;
+	position: relative;
+	top: 10%;
+	margin: -20px auto;
+}
+
+.pickup4 h1{
+	margin-top: 25%;
+    border-bottom: none;
+    overflow: visible;
+}
+
+.pickup4 p{
+	margin: 5% 10%;
+	font-size: small;
+}
+
+/* 準備中画像 */
+.pickup4.icon:before {
+	background-image: url("../image/services/constrution/other/winactor/winactor-seminar2_junbi.png");
+}
+
 /* --------------------------------------------------
-	pickup1,pickup2 共通
+	pickup1,pickup2,pickup3,pickup4 共通
 -------------------------------------------------- */
 .pickup1.icon > p.benefits,
-.pickup2.icon > p.benefits{
+.pickup2.icon > p.benefits,
+.pickup3.icon > p.benefits,
+.pickup4.icon > p.benefits{
 	font-size: medium;
 	color: red;
 }
