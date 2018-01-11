@@ -549,6 +549,7 @@ article #Utility.ttl {
 	margin-top: 25%;
     border-bottom: none;
     overflow: visible;
+    line-height: 30px;
 }
 
 .pickup1 p{

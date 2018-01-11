@@ -1,0 +1,74 @@
+---
+layout: contact
+global_menu: contact
+description: WinActorセミナーお申込み
+keywords:
+category:
+title: WinActorセミナーお申込み
+---
+<section>  
+
+    <div class="smtSent">
+    <form action="mailer.php" method="post">
+        <h1 class="midashi">お申込み内容</h1>
+        <br>
+            <table class="baseTb">
+            <tbody>
+                <tr>
+                    <th>会社名：</th>
+                    <td><input type="text" name="company" required></td>
+                </tr>
+                <tr>
+                    <th>お名前：</th>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <th>部署名:</th>
+                    <td><input type="text" name="despartment"></td>
+                </tr>
+                <tr>
+                    <th>お役職:</th>
+                    <td><input type="text" name="position"></td>
+                </tr>                                
+                <tr>
+                    <th>会社規模:</th>
+                    <td>
+                    <input type="radio" name="company_size" value="100名以上～500名未満" style="-webkit-appearance:radio;">①100名以上～500名未満<br>
+                    <input type="radio" name="company_size" value="500名以上～1000名未満" style="-webkit-appearance:radio;">②500名以上～1000名未満<br>
+                    <input type="radio" name="company_size" value="1000名以上" style="-webkit-appearance:radio;">③1000名以上<br>                                       
+                    </td>
+                </tr>
+                <tr>
+                    <th>ご希望の開催日:</th>
+                    <td>
+                        <p style="color: blue; font-size: 20px;">【無償】</p>
+                        <input type="radio" name="seminar" value="2018年2月2日（木）無償入門コース" style="-webkit-appearance:radio;">①2018年2月&nbsp;2日（木）　&nbsp;無償入門コース<br>
+                        <input type="radio" name="seminar" value="2018年2月20日（火）　無償入門コース" style="-webkit-appearance:radio;">②2018年2月20日（火）　無償入門コース<br>
+                        <input type="radio" name="seminar" value="2018年3月8日（木）&nbsp;&nbsp;無償入門コース" style="-webkit-appearance:radio;">③2018年3月&nbsp;8日（木）　&nbsp;無償入門コース<br>
+                        <input type="radio" name="seminar" value="2018年3月20日（火）　無償入門コース" style="-webkit-appearance:radio;">④2018年3月20日（火）　無償入門コース<br>
+                        <br>
+                        <p style="color: red; font-size: 20px;">【有償】</p>
+                        <input type="radio" name="seminar" value="2018年2月22日（木）　有償初級コース" style="-webkit-appearance:radio;">①2018年2月22日（木）　有償初級コース<br>
+                        <input type="radio" name="seminar" value="2018年3月22日（木）　有償初級コース" style="-webkit-appearance:radio;">②2018年3月22日（木）　有償初級コース<br>                                                                         
+                    </td>
+                </tr>                 
+                <tr>
+                    <th>emailアドレス：</th>
+                    <td><input type="text" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <th>TEL：</th>
+                    <td><input type="text" name="tel" required ></td>
+                </tr>
+
+
+            </tbody>
+            </table>
+    <br>
+
+    <input type="submit" value="送信する" style="border:solid 1px #848484;">
+    </div>
+    </form>
+
+</section>
