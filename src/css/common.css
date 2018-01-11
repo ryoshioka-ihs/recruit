@@ -531,7 +531,7 @@ article #Utility.ttl {
     border:1px solid #000;
     width:330px;
     height:500px;
-    margin: 15px 15px 30px 0px;
+    margin: 15px 15px 30px;
 }
 
 .pickup1:before {
@@ -583,7 +583,7 @@ article #Utility.ttl {
     border:1px solid #000;
     width:330px;
     height:500px;
-    margin: 15px 15px 0px 15px;
+    margin: 15px 15px 0px;
 }
 
 .pickup2:before {
@@ -623,8 +623,8 @@ article #Utility.ttl {
     box-shadow:5px 5px;
     border:1px solid #000;
     width:330px;
-    height:450px;
-    margin: 15px 20px 0px;
+    height:400px;
+    margin: 15px 15px 20px;
 }
 
 .pickup3:before {
@@ -664,8 +664,8 @@ article #Utility.ttl {
     box-shadow:5px 5px;
     border:1px solid #000;
     width:330px;
-    height:450px;
-    margin: 15px 20px 0px;
+    height:400px;
+    margin: 15px 15px 20px;
 }
 
 .pickup4:before {
@@ -736,8 +736,42 @@ article #Utility.ttl {
 		text-decoration: none;
 	}
 
-/* オレンジ */
-.pic_oraBtn {
+   .pic_oraBtn {
+	background-color: #F3951B;
+}
+
+.pic_oraBnr {    
+	height: 60px;
+	line-height: 60px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	display: block;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 22px;
+	margin: 30px 20px;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 5px 5px #9c3e16;
+}
+	.pic_oraBnr a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #FFF !important;
+	}
+
+	/* ホバー対応 */
+	.pic_oraBnr:hover{
+		opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+	}
+	.pic_oraBnr a:hover{
+		text-decoration: none;
+	}
+
+   .pic_oraBnr {
 	background-color: #F3951B;
 }
 
