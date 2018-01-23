@@ -15,23 +15,24 @@ title: WinActorセミナーお申込み
             <table class="baseTb">
             <tbody>
                 <tr>
-                    <th>会社名：</th>
-                    <td><input type="text" name="company" required></td>
+                    <th>御社名<span style="color: red; font-size: 10px">※必須</span></th>
+                    <td><input type="text" name="company" required placeholder="御社名" style="width: 500px;"></td>
                 </tr>
                 <tr>
-                    <th>お名前：</th>
-                    <td><input type="text" name="name" required></td>
+                    <th>ご担当者名<span style="color: red; font-size: 10px">※必須</span></th>
+                    <td><input type="text" name="name" required placeholder="ご担当者名" style="width: 500px;"></td>
                 </tr>
                 <tr>
-                    <th>部署名:</th>
-                    <td><input type="text" name="despartment"></td>
+                    <th>部署名<span style="color: red; font-size: 10px">※必須</span></th>
+                    <td>
+                    <input type="text" name="despartment" required placeholder="部署名" style="width: 500px;"></td>
                 </tr>
                 <tr>
-                    <th>お役職:</th>
-                    <td><input type="text" name="position"></td>
+                    <th>お役職</th>
+                    <td><input type="text" name="position" placeholder="お役職" style="width: 500px;"></td>
                 </tr>                                
                 <tr>
-                    <th>会社規模:</th>
+                    <th>御社従業員数<span style="color: red; font-size: 10px">※必須</span></th>
                     <td>
                     <input type="radio" name="company_size" value="100名以上～500名未満" style="-webkit-appearance:radio;">①100名以上～500名未満<br>
                     <input type="radio" name="company_size" value="500名以上～1000名未満" style="-webkit-appearance:radio;">②500名以上～1000名未満<br>
@@ -39,7 +40,7 @@ title: WinActorセミナーお申込み
                     </td>
                 </tr>
                 <tr>
-                    <th>ご希望の開催日:</th>
+                    <th>ご希望の開催日</th>
                     <td>
                         <p style="color: blue; font-size: 20px;">【無償】</p>
                         <input type="radio" name="seminar" value="2018年2月8日（木）無償入門コース" style="-webkit-appearance:radio;">①2018年2月&nbsp;8日（木）　&nbsp;無償入門コース<br>
@@ -53,16 +54,16 @@ title: WinActorセミナーお申込み
                     </td>
                 </tr>                 
                 <tr>
-                    <th>emailアドレス：</th>
-                    <td><input type="text" name="email" required></td>
+                    <th>emailアドレス<span style="color: red; font-size: 10px">※必須</span></th>
+                    <td><input type="text" name="email" required placeholder="例) example@example.com" style="width: 500px;"></td>
                 </tr>
 
                 <tr>
-                    <th>TEL：</th>
-                    <td><input type="text" name="tel" required ></td>
+                    <th>TEL<span style="color: red; font-size: 10px">※必須</span></th>
+                    <td><input type="text" name="tel" required placeholder="03-0000-0000" style="width: 500px;"></td>
                 </tr>
                 <tr>
-                    <th>アンケート:</th>
+                    <th>どこで本セミナーを知りましたか。<span style="color: red; font-size: 10px">※必須</span></th>
                     <td>
                         <input type="radio" name="enquete" value="DM" style="-webkit-appearance:radio;">DM<br>
                         <input type="radio" name="enquete" value="インターネットでの検索" style="-webkit-appearance:radio;">インターネットでの検索<br>
@@ -72,8 +73,13 @@ title: WinActorセミナーお申込み
                 </tr>
                 <tr>
                     <th>その他を選択された方</th>
-                    <td><input type="text" name="other"></td>
-                </tr>                 
+                    <td><input type="text" name="other" placeholder="その他：セミナーを知ったきっかけ" style="width: 500px;"></td>
+                </tr>
+                <tr>
+                    <th>個人情報の取扱<span style="color: red; font-size: 10px">※必須</span></th>
+                    <td>本フォームから送信頂きました個人情報については、弊社の「メールマガジン登録における個人情報の取扱いについて」<a href="https://www.iimhs.co.jp/privacy/mailmagazine.html">(https://www.iimhs.co.jp/privacy/mailmagazine.html)</a>に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
+                    <input type="checkbox" name="check" value="同意する" style="-webkit-appearance:checkbox;">同意する<br></td>
+                </tr>                                  
             </tbody>
             </table>
     <br>

@@ -41,7 +41,7 @@ $tel = $_POST['tel'];//	TEL
 $seminar = $_POST['seminar'];//	セミナー日程
 $enquete = $_POST['enquete'];// アンケート
 $other = $_POST['other'];// アンケート-その他入力
-
+$check = $_POST['check'];// 個人情報の取扱
 
 
 
@@ -51,8 +51,8 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("WinActorセミナーのお申込み")->
        setSubject("WinActorセミナーのお申込みを承りました。")->
-       setText("会社名: $company \r\nお名前: $name \r\n部署名: $despartment \r\nお役職: $position \r\n会社規模: $company_size \r\nご希望の開催日: $seminar \r\nEmailアドレス: $emailadd  \r\nTEL: $tel　\r\nアンケート: $enquete　\r\nアンケート-その他入力: $other")->
-       setHtml("<strong>会社名:</strong> $company<br />　<strong>お名前:</strong> $name<br /> <strong>部署名:</strong> $despartment<br />　<strong>お役職:</strong> $position<br />　<strong>会社規模:</strong> $company_size<br /> <strong>ご希望の開催日:</strong> $seminar<br /> <strong>Emailアドレス:</strong> $emailadd<br /> <strong>TEL:</strong> $tel<br /> <strong>アンケート:</strong> $enquete<br /> <strong>アンケート-その他入力:</strong> $other<br />")->
+       setText("会社名: $company \r\nお名前: $name \r\n部署名: $despartment \r\nお役職: $position \r\n会社規模: $company_size \r\nご希望の開催日: $seminar \r\nEmailアドレス: $emailadd  \r\nTEL: $tel　\r\nアンケート: $enquete　\r\nアンケート-その他入力: $other　\r\n個人情報の取扱: $check")->
+       setHtml("<strong>会社名:</strong> $company<br />　<strong>お名前:</strong> $name<br /> <strong>部署名:</strong> $despartment<br />　<strong>お役職:</strong> $position<br />　<strong>会社規模:</strong> $company_size<br /> <strong>ご希望の開催日:</strong> $seminar<br /> <strong>Emailアドレス:</strong> $emailadd<br /> <strong>TEL:</strong> $tel<br /> <strong>アンケート:</strong> $enquete<br /> <strong>アンケート-その他入力:</strong> $other<br /><strong>個人情報の取扱:</strong> $check<br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
