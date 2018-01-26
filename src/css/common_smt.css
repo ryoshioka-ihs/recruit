@@ -320,6 +320,7 @@ a.rss:hover {
     ボタン風リンク
 -------------------------------------------------- */
 .blueBtn,
+.blueBtn-l,
 .oraBtn {
 	width: 100%;
 	height: 40px;
@@ -328,6 +329,7 @@ a.rss:hover {
 }
 /* ホバー対応 */
 .blueBtn:hover,
+.blueBtn-l:hover,
 .oraBtn:hover {
 	opacity: 1;
 }

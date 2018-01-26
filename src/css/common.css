@@ -1131,7 +1131,24 @@ a.rss:hover {
 	text-align: center;
 	cursor: pointer;
 }
+
+.blueBtn-l{
+	width: 360px;
+	height: 80px;
+	line-height: 80px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	display: block;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+	margin: auto;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+}
 	.blueBtn a,
+	.blueBtn-l a,
 	.oraBtn a {
 		display: block;
 		width: 100%;
@@ -1141,18 +1158,20 @@ a.rss:hover {
 
 	/* ホバー対応 */
 	.blueBtn:hover,
+	.blueBtn-l:hover,
 	.oraBtn:hover{
 		opacity: 0.7;
 		-ms-filter: "alpha(opacity=70)";
 	}
 	.blueBtn a:hover,
+	.blueBtn-l a:hover,
 	.oraBtn a:hover{
 		text-decoration: none;
 	}
 
 
 /* 青 */
-.blueBtn {
+.blueBtn,.blueBtn-l {
 	background-color: #003E8D;
 }
 
