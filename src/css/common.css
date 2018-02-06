@@ -1068,7 +1068,8 @@ a.outLink {
 	background-color: #E5EBF3;
 	color: #003E8D;
 	padding: 0 5px;
-	margin-right: 2px;
+	/*margin-right: 2px;*/
+	margin-left: 100px;
 	vertical-align: top;
 }
 
@@ -2890,9 +2891,24 @@ article .wrap:after {
 	float: left;
 }
 
+/*landingページの場合*/
+ 	#landing {
+	width: 1000px;
+	float: left;
+}
+
 /* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/
 	@media screen and (min-width: 768px) and (max-width: 1024px) {
 	#main {
+    width: 720px;
+    float: left;
+    margin-left: 20px;
+    }
+}
+
+/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+	#landing {
     width: 720px;
     float: left;
     margin-left: 20px;

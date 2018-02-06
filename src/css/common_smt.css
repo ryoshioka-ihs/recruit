@@ -1290,7 +1290,7 @@ border: 1px solid #ccc;
 article .wrap {
 	width: auto;
 }
-#main,
+#main,#landing,
 #sideMenu {
 	width: 100%;
 	float: none;
