@@ -559,7 +559,7 @@ article #Utility.ttl {
 
 /* 無料セミナー画像 */
 .pickup1.iconimage:before {
-	background-image: url("../image/services/constrution/other/winactor/winactor-seminar2_01.png");
+	background-image: url("../image/services/constrution/other/winactor-seminar/winactor-seminar2_01.png");
 }
 /* 無料セミナー初心者マーク */
 .pickup1.new:before {
@@ -610,7 +610,7 @@ article #Utility.ttl {
 
 /* 無料セミナー */
 .pickup2.iconimage:before {
-	background-image: url("/../image/services/constrution/other/winactor/winactor-seminar2_02.png");
+	background-image: url("/../image/services/constrution/other/winactor-seminar/winactor-seminar2_02.png");
 }
 
 /* --------------------------------------------------------
@@ -651,7 +651,7 @@ article #Utility.ttl {
 
 /* 準備中画像 */
 .pickup3.iconimage:before {
-	background-image: url("../image/services/constrution/other/winactor/junbi.png");
+	background-image: url("../image/services/constrution/other/winactor-seminar/junbi.png");
 }
 
 /* --------------------------------------------------------
@@ -692,7 +692,7 @@ article #Utility.ttl {
 
 /* 準備中画像 */
 .pickup4.iconimage:before {
-	background-image: url("../image/services/constrution/other/winactor/junbi.png");
+	background-image: url("../image/services/constrution/other/winactor-seminar/junbi.png");
 }
 
 /* --------------------------------------------------
