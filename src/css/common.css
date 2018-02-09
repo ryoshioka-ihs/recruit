@@ -558,7 +558,7 @@ article #Utility.ttl {
 }
 
 /* 無料セミナー画像 */
-.pickup1.icon:before {
+.pickup1.iconimage:before {
 	background-image: url("../image/services/constrution/other/winactor/winactor-seminar2_01.png");
 }
 /* 無料セミナー初心者マーク */
@@ -609,7 +609,7 @@ article #Utility.ttl {
 }
 
 /* 無料セミナー */
-.pickup2.icon:before {
+.pickup2.iconimage:before {
 	background-image: url("/../image/services/constrution/other/winactor/winactor-seminar2_02.png");
 }
 
@@ -650,7 +650,7 @@ article #Utility.ttl {
 }
 
 /* 準備中画像 */
-.pickup3.icon:before {
+.pickup3.iconimage:before {
 	background-image: url("../image/services/constrution/other/winactor/junbi.png");
 }
 
@@ -691,17 +691,17 @@ article #Utility.ttl {
 }
 
 /* 準備中画像 */
-.pickup4.icon:before {
+.pickup4.iconimage:before {
 	background-image: url("../image/services/constrution/other/winactor/junbi.png");
 }
 
 /* --------------------------------------------------
 	pickup1,pickup2,pickup3,pickup4 共通
 -------------------------------------------------- */
-.pickup1.icon > p.benefits,
-.pickup2.icon > p.benefits,
-.pickup3.icon > p.benefits,
-.pickup4.icon > p.benefits{
+.pickup1.iconimage > p.benefits,
+.pickup2.iconimage > p.benefits,
+.pickup3.iconimage > p.benefits,
+.pickup4.iconimage > p.benefits{
 	font-size: medium;
 	color: red;
 }
@@ -1068,7 +1068,22 @@ a.outLink {
 	background-color: #E5EBF3;
 	color: #003E8D;
 	padding: 0 5px;
-	/*margin-right: 2px;*/
+	margin-right: 2px;
+	vertical-align: top;
+}
+
+/* --------------------------------------------------
+	青色アイコン(WinActorのコースの紹介)
+-------------------------------------------------- */
+.iconimage {
+	display: inline-block;
+	font-size: 9px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 20px;
+	background-color: #E5EBF3;
+	color: #003E8D;
+	padding: 0 5px;
 	margin-left: 100px;
 	vertical-align: top;
 }
