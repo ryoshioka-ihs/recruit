@@ -35,9 +35,11 @@ $company = $_POST['company'];//会社名
 $name = $_POST['name'];//担当者名
 $despartment = $_POST['despartment'];//部署名
 $position = $_POST['position'];//役職
-$company_size = $_POST['company_size'];//会社規模
 $emailadd = $_POST['email'];//メールアドレス
 $tel = $_POST['tel'];//	TEL
+$companion = $_POST['companion'];//同行者様名
+$companionemail = $_POST['companionemail'];//同行者様メールアドレス
+$company_size = $_POST['company_size'];//会社規模
 $seminar = $_POST['seminar'];//	セミナー日程
 $enquete = $_POST['enquete'];// アンケート
 $other = $_POST['other'];// アンケート-その他入力
@@ -51,8 +53,8 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("WinActorセミナーのお申込み")->
        setSubject("WinActorセミナーのお申込みを承りました。")->
-       setText("会社名: $company \r\nお名前: $name \r\n部署名: $despartment \r\nお役職: $position \r\n会社規模: $company_size \r\nご希望の開催日: $seminar \r\nEmailアドレス: $emailadd  \r\nTEL: $tel　\r\nアンケート: $enquete　\r\nアンケート-その他入力: $other　\r\n個人情報の取扱: $check")->
-       setHtml("<strong>会社名:</strong> $company<br />　<strong>お名前:</strong> $name<br /> <strong>部署名:</strong> $despartment<br />　<strong>お役職:</strong> $position<br />　<strong>会社規模:</strong> $company_size<br /> <strong>ご希望の開催日:</strong> $seminar<br /> <strong>Emailアドレス:</strong> $emailadd<br /> <strong>TEL:</strong> $tel<br /> <strong>アンケート:</strong> $enquete<br /> <strong>アンケート-その他入力:</strong> $other<br /><strong>個人情報の取扱:</strong> $check<br />")->
+       setText("会社名: $company \r\nお名前: $name \r\n部署名: $despartment \r\nお役職: $position \r\nEmailアドレス: $emailadd  \r\nTEL: $tel　\r\n同行者様名: $companion  \r\n　同行者様e-mailアドレス: $companionemail　\r\n会社規模: $company_size \r\nご希望の開催日: $seminar 　\r\nアンケート: $enquete　\r\nアンケート-その他入力: $other　\r\n個人情報の取扱: $check")->
+       setHtml("<strong>会社名:</strong> $company<br /> <strong>お名前:</strong> $name<br /> <strong>部署名:</strong> $despartment<br /> <strong>お役職:</strong> $position<br /> <strong>Emailアドレス:</strong> $emailadd<br /> <strong>TEL:</strong> $tel<br /> <strong>ご同行者様名:</strong> $companion<br /> <strong>ご同行者様メールe-mailアドレス:</strong> $companionemail<br /> <strong>会社規模:</strong> $company_size<br /> <strong>ご希望の開催日:</strong> $seminar<br />  <strong>アンケート:</strong> $enquete<br /> <strong>アンケート-その他入力:</strong> $other<br /><strong>個人情報の取扱:</strong> $check<br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
