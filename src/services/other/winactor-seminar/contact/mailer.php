@@ -46,6 +46,7 @@ $company_size = $_POST['company_size'];//会社規模
 $seminar = $_POST['seminar'];//	セミナー日程
 $enquete = $_POST['enquete'];// アンケート
 $other = $_POST['other'];// アンケート-その他入力
+$request = $_POST['request'];// 特記事項
 $check = $_POST['check'];// 個人情報の取扱
 
 
@@ -56,10 +57,10 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("WinActorセミナーのお申込み")->
        setSubject("WinActorセミナーのお申込みを承りました。")->
-       setText("会社名: $company \r\n ご希望の開催日: $seminar \r\n 参加者①: $name1 \r\n部署名①: $despartment1 \r\n お役職①: $position1 \r\nEmailアドレス①: $emailadd1  \r\nTEL①: $tel1　\r\n 参加者②: $name2 \r\n 部署名②: $despartment2 \r\nお役職②: $position2 \r\nEmailアドレス②: $emailadd2  \r\n TEL②: $tel2　\r\n 会社規模: $company_size  　\r\nアンケート: $enquete　\r\nアンケート-その他入力: $other　\r\n個人情報の取扱: $check")->
+       setText("会社名: $company \r\n ご希望の開催日: $seminar \r\n 参加者①: $name1 \r\n部署名①: $despartment1 \r\n お役職①: $position1 \r\nEmailアドレス①: $emailadd1  \r\nTEL①: $tel1　\r\n 参加者②: $name2 \r\n 部署名②: $despartment2 \r\nお役職②: $position2 \r\nEmailアドレス②: $emailadd2  \r\n TEL②: $tel2　\r\n 会社規模: $company_size  　\r\nアンケート: $enquete　\r\nアンケート-その他入力: $other　\r\n その他特記事項: $request　\r\n個人情報の取扱: $check")->
 
 
-       setHtml("<strong>会社名:</strong> $company<br /> <strong>ご希望の開催日:</strong> $seminar<br /><br /> <strong>参加者①:</strong> $name1<br /> <strong>部署名①:</strong> $despartment1<br /> <strong>お役職①:</strong> $position1<br /> <strong>Emailアドレス①:</strong> $emailadd1<br /> <strong>TEL①:</strong> $tel1<br /><br /> <strong>参加者②:</strong> $name2<br /> <strong>部署名②:</strong> $despartment2<br /> <strong>お役職②:</strong> $position2<br /> <strong>Emailアドレス②:</strong> $emailadd2<br /> <strong>TEL②:</strong> $tel2<br /><br /> <strong>会社規模:</strong> $company_size<br />   <strong>アンケート:</strong> $enquete<br /> <strong>アンケート-その他入力:</strong> $other<br /><strong>個人情報の取扱:</strong> $check<br />")->
+       setHtml("<strong>会社名:</strong> $company<br /> <strong>ご希望の開催日:</strong> $seminar<br /><br /> <strong>参加者①:</strong> $name1<br /> <strong>部署名①:</strong> $despartment1<br /> <strong>お役職①:</strong> $position1<br /> <strong>Emailアドレス①:</strong> $emailadd1<br /> <strong>TEL①:</strong> $tel1<br /><br /> <strong>参加者②:</strong> $name2<br /> <strong>部署名②:</strong> $despartment2<br /> <strong>お役職②:</strong> $position2<br /> <strong>Emailアドレス②:</strong> $emailadd2<br /> <strong>TEL②:</strong> $tel2<br /><br /> <strong>会社規模:</strong> $company_size<br />   <strong>アンケート:</strong> $enquete<br /> <strong>アンケート-その他入力:</strong> $other<br /> <strong>その他特記事項:</strong> $request<br /> <strong>個人情報の取扱:</strong> $check<br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);

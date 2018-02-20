@@ -520,263 +520,6 @@ article #Utility.ttl {
 	background-image: url("../image/common/tmp_icon6.png");
 }
 
-/* --------------------------------------------------------
-	pickup1 上段に画像、下段にテキスト（左側）
--------------------------------------------------------- */
-.pickup1 {
-	min-height: 160px;
-	background-color: #EBEBEB;
-	position: relative;
-    box-shadow:5px 5px;
-    border:1px solid #000;
-    width:330px;
-    height:500px;
-    margin: 15px 15px 30px;
-}
-
-.pickup1:before {
-	content: "";
-	display: block;
-	width: 300px;
-	height: 160px;
-	background: #F5F5F5 center center no-repeat;
-	position: relative;
-	top: 10%;
-	margin: -20px auto;
-}
-
-.pickup1 h1{
-	margin-top: 25%;
-    border-bottom: none;
-    overflow: visible;
-    line-height: 30px;
-}
-
-.pickup1 p{
-	margin: 5% 10%;
-	font-size: small;
-}
-
-/* 無料セミナー画像 */
-.pickup1.iconimage:before {
-	background-image: url("../image/services/constrution/other/winactor-seminar/winactor-seminar2_01.png");
-}
-/* 無料セミナー初心者マーク */
-.pickup1.new:before {
-	background-image: url("../image/common/tmp_icon1.png");
-}
-/* 無料セミナー無料マーク */
-.pickup1.btn :before {
-	background-image: url("../image/common/free_button.png");
-	position: absolute;
-}
-
-
-/* --------------------------------------------------------
-	pickup2 上段に画像、下段にテキスト（右側）
--------------------------------------------------------- */
-.pickup2 {
-	min-height: 160px;
-	background-color: #EBEBEB;
-	position: relative;
-    box-shadow:5px 5px;
-    border:1px solid #000;
-    width:330px;
-    height:500px;
-    margin: 15px 15px 0px;
-}
-
-.pickup2:before {
-	content: "";
-	display: block;
-	width: 300px;
-	height: 160px;
-	background: #F5F5F5 center center no-repeat;
-	position: relative;
-	top: 10%;
-	margin: -20px auto;
-}
-
-.pickup2 h1{
-	margin-top: 25%;
-    border-bottom: none;
-    overflow: visible;
-}
-
-.pickup2 p{
-	margin: 5% 10%;
-	font-size: small;
-}
-
-/* 無料セミナー */
-.pickup2.iconimage:before {
-	background-image: url("/../image/services/constrution/other/winactor-seminar/winactor-seminar2_02.png");
-}
-
-/* --------------------------------------------------------
-	pickup3 上段に画像、下段にテキスト（左側）
--------------------------------------------------------- */
-.pickup3 {
-	min-height: 160px;
-	background-color: #EBEBEB;
-	position: relative;
-    box-shadow:5px 5px;
-    border:1px solid #000;
-    width:330px;
-    height:400px;
-    margin: 15px 15px 20px;
-}
-
-.pickup3:before {
-	content: "";
-	display: block;
-	width: 300px;
-	height: 160px;
-	background: #F5F5F5 center center no-repeat;
-	position: relative;
-	top: 10%;
-	margin: -20px auto;
-}
-
-.pickup3 h1{
-	margin-top: 25%;
-    border-bottom: none;
-    overflow: visible;
-}
-
-.pickup3 p{
-	margin: 5% 10%;
-	font-size: small;
-}
-
-/* 準備中画像 */
-.pickup3.iconimage:before {
-	background-image: url("../image/services/constrution/other/winactor-seminar/junbi.png");
-}
-
-/* --------------------------------------------------------
-	pickup4 上段に画像、下段にテキスト（右側）
--------------------------------------------------------- */
-.pickup4 {
-	min-height: 160px;
-	background-color: #EBEBEB;
-	position: relative;
-    box-shadow:5px 5px;
-    border:1px solid #000;
-    width:330px;
-    height:400px;
-    margin: 15px 15px 20px;
-}
-
-.pickup4:before {
-	content: "";
-	display: block;
-	width: 300px;
-	height: 160px;
-	background: #F5F5F5 center center no-repeat;
-	position: relative;
-	top: 10%;
-	margin: -20px auto;
-}
-
-.pickup4 h1{
-	margin-top: 25%;
-    border-bottom: none;
-    overflow: visible;
-}
-
-.pickup4 p{
-	margin: 5% 10%;
-	font-size: small;
-}
-
-/* 準備中画像 */
-.pickup4.iconimage:before {
-	background-image: url("../image/services/constrution/other/winactor-seminar/junbi.png");
-}
-
-/* --------------------------------------------------
-	pickup1,pickup2,pickup3,pickup4 共通
--------------------------------------------------- */
-.pickup1.iconimage > p.benefits,
-.pickup2.iconimage > p.benefits,
-.pickup3.iconimage > p.benefits,
-.pickup4.iconimage > p.benefits{
-	font-size: medium;
-	color: red;
-}
-
-.pic_oraBtn {	
-	height: 40px;
-	line-height: 40px;
-	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
-	background-size: 10px auto;
-	display: block;
-	color: #FFF;
-	font-weight: bold;
-	font-size: 14px;
-	margin: auto;
-	transition: 0.3s;
-	text-align: center;
-	cursor: pointer;
-}
-	.pic_oraBtn a {
-		display: block;
-		width: 100%;
-		height: 100%;
-		color: #FFF !important;
-	}
-
-	/* ホバー対応 */
-	.pic_oraBtn:hover{
-		opacity: 0.7;
-		-ms-filter: "alpha(opacity=70)";
-	}
-	.pic_oraBtn a:hover{
-		text-decoration: none;
-	}
-
-   .pic_oraBtn {
-	background-color: #F3951B;
-}
-
-.pic_oraBnr {    
-	height: 60px;
-	line-height: 60px;
-	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
-	background-size: 10px auto;
-	display: block;
-	color: #FFF;
-	font-weight: bold;
-	font-size: 22px;
-	margin: 30px 20px;
-	transition: 0.3s;
-	text-align: center;
-	cursor: pointer;
-	box-shadow: 5px 5px #9c3e16;
-}
-	.pic_oraBnr a {
-		display: block;
-		width: 100%;
-		height: 100%;
-		color: #FFF !important;
-	}
-
-	/* ホバー対応 */
-	.pic_oraBnr:hover{
-		opacity: 0.7;
-		-ms-filter: "alpha(opacity=70)";
-	}
-	.pic_oraBnr a:hover{
-		text-decoration: none;
-	}
-
-   .pic_oraBnr {
-	background-color: #F3951B;
-}
-
-
-
 /* --------------------------------------------------
 	サービス対象範囲
 -------------------------------------------------- */
@@ -1084,7 +827,6 @@ a.outLink {
 	background-color: #E5EBF3;
 	color: #003E8D;
 	padding: 0 5px;
-	margin-left: 100px;
 	vertical-align: top;
 }
 
@@ -3321,3 +3063,246 @@ footer .footBot {
 		footer .footBot #sign .pm {
 			margin-left: 21px;
 		}
+/* --------------------------------------------------------
+	WinActorセミナー
+-------------------------------------------------------- */
+
+/* 無料セミナー画像 */
+.pickup1.iconimage:before,
+.pickup2.iconimage:before {
+	background-image: url("../image/services/constrution/other/winactor-seminar/winactor-seminar2_01.png");
+	height: 200px;
+}
+
+/* 有料セミナー画像 */
+.pickup3.iconimage:before,
+.pickup4.iconimage:before {
+	background-image: url("../image/services/constrution/other/winactor-seminar/winactor-seminar2_02.png");
+	height: 200px;
+}
+
+/* 準備中セミナー画像 */
+.pickup5.iconimage:before {
+	background-image: url("../image/services/constrution/other/winactor-seminar/junbi.png");
+	height: 200px;
+}
+
+/*無料・有料ボタン*/
+.freeBtn,
+.tollBtn{
+	position: absolute;
+	left: 90%;
+	top: -4%;"
+}
+
+.pickup1,
+.pickup2,
+.pickup5{
+	min-height: 160px;
+	background-color: #EBEBEB;
+	position: relative;
+    box-shadow:5px 5px;
+    border:1px solid #000;
+    width:930px;
+    height: 250px;
+    margin: 15px 15px 15px;
+}
+
+.pickup3,
+.pickup4{
+	min-height: 160px;
+	background-color: #EBEBEB;
+	position: relative;
+    box-shadow:5px 5px;
+    border:1px solid #000;
+    width:930px;
+    height: 280px;
+    margin: 15px 15px 15px;
+}
+
+
+.pickup1:before,
+.pickup2:before,
+.pickup3:before,
+.pickup4:before,
+.pickup5:before {
+	content: "";
+	display: block;
+	width: 240px;
+	background: #F5F5F5 center center no-repeat;
+	position: relative;
+	top: 10%;
+	margin: -8px 20px;
+}
+
+.pickup1 h1,
+.pickup2 h1,
+.pickup3 h1,
+.pickup4 h1{
+	margin-top: -18%;
+	margin-left: 30%;
+    border-bottom: none;
+    overflow: visible;
+    line-height: 30px;
+    padding-bottom: 1px;
+}
+
+/*一時的に全スタイル記述*/
+.pickup5 h1{
+	margin-top: -15%;
+	margin-left: 30%;
+    border-bottom: none;
+    overflow: visible;
+    line-height: 30px;
+    padding-bottom: 0px;
+}
+
+.pickup1 p,
+.pickup2 p,
+.pickup5 p{
+	margin: 1% 48%;
+	font-size: small;
+	width: 320px;
+}
+
+
+.pickup3 p,
+.pickup4 p{
+	margin: 1% 40%;
+	font-size: small;
+	width: 450px;
+}
+
+.pickup1.iconimage > p.Cont,
+.pickup2.iconimage > p.Cont,
+.pickup3.iconimage > p.Cont,
+.pickup4.iconimage > p.Cont,
+.pickup5.iconimage > p.Cont{
+	margin-top:0px;
+}
+
+.pickup1.iconimage > p.benefits,
+.pickup2.iconimage > p.benefits,
+.pickup3.iconimage > p.benefits,
+.pickup4.iconimage > p.benefits,
+.pickup5.iconimage > p.benefits{
+	font-size: medium;
+	color: red;
+}
+
+.pic_oraBtn {	
+	height: 40px;
+	line-height: 40px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	display: block;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+	margin: auto;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+}
+	.pic_oraBtn a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #FFF !important;
+	}
+
+	/* ホバー対応 */
+	.pic_oraBtn:hover{
+		opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+	}
+	.pic_oraBtn a:hover{
+		text-decoration: none;
+	}
+
+   .pic_oraBtn {
+	background-color: #F3951B;
+}
+
+.pic_oraBnr {    
+	height: 60px;
+	line-height: 60px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	display: block;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 22px;
+	margin: 30px 20px;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 5px 5px #9c3e16;
+}
+	.pic_oraBnr a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #FFF !important;
+	}
+
+	/* ホバー対応 */
+	.pic_oraBnr:hover{
+		opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+	}
+	.pic_oraBnr a:hover{
+		text-decoration: none;
+	}
+
+   .pic_oraBnr {
+	background-color: #F3951B;
+}
+/* ボックスサイズを小さくする(幅1024pxのブラウザだと余白がないため）*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+	.winseminar{
+		padding-right: 40px;
+	}
+
+	.pickup1,
+	.pickup2,
+	.pickup3,
+	.pickup4,
+	.pickup5{width: 670px;margin-bottom: 15px;
+	}
+
+	.freeBtn,
+	.tollBtn{
+		width: 15%;
+	}
+
+/*pickup1、pickup2、のスタイル*/
+	.pickup1 h1,.pickup2 h1{
+		margin-top: -25%;
+		margin-left: 40%;
+		font-size: 20px;
+	}
+
+/*pickup3、pickup4のスタイル*/
+	.pickup3,.pickup4{
+		height: 300px;
+	}
+
+	.pickup3 h1,.pickup4 h1{
+		margin-top: -25%;
+		margin-left: 40%;
+		font-size: 20px;
+	}
+
+	.pickup3 p,.pickup4 p{
+		width: 320px;
+		margin-left: 46%;
+	}
+
+/*pickup5のスタイル*/
+	.pickup5 h1{
+		margin-top: -20%;
+		margin-left: 40%;
+		font-size: 20px;
+}
