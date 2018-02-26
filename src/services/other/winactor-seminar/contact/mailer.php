@@ -56,7 +56,7 @@ $email    = new SendGrid\Email();
 $email->addTo($to)->
        setFrom($from)->
        setFromName("WinActorセミナーのお申込み")->
-       setSubject("WinActorセミナーのお申込みを承りました。")->
+       setSubject("【WinActorセミナーのお申込みを承りました。】$seminar" )->
        setText("会社名: $company \r\n ご希望の開催日: $seminar \r\n 参加者①: $name1 \r\n部署名①: $despartment1 \r\n お役職①: $position1 \r\nEmailアドレス①: $emailadd1  \r\nTEL①: $tel1　\r\n 参加者②: $name2 \r\n 部署名②: $despartment2 \r\nお役職②: $position2 \r\nEmailアドレス②: $emailadd2  \r\n TEL②: $tel2　\r\n 会社規模: $company_size  　\r\nアンケート: $enquete　\r\nアンケート-その他入力: $other　\r\n その他特記事項: $request　\r\n個人情報の取扱: $check")->
 
 
