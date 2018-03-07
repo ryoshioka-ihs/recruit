@@ -284,7 +284,7 @@ body {
 	}
 	#index #keyv .kvList .key5 .textBox h2 {
 		letter-spacing: 1.5px;
-		padding-top: 50px;
+		/*padding-top: 50px;*/
 		margin-left: 35px;
 	}
 		#index #keyv .kvList .key5 .textBox h2 + p {
@@ -297,6 +297,11 @@ body {
 			padding-left: 50px;
 			font-size: 16px;
 	}
+		#index #keyv .kvList .key5 .textBox span {
+			margin-bottom: 0px;
+			font-size: 16px;
+	}
+
 	#index #keyv .kvList .key5 .blueBtn {
 		display: none;
 	}

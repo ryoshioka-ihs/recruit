@@ -258,6 +258,7 @@ article .ttl {
 .numList li:before {
 	font-size: 14px;
 }
+
 .numList li p:first-child {
 	font-size: 14px;
 	margin-bottom: 10px;
@@ -305,6 +306,20 @@ a.rss:hover {
 .oraBtn:hover {
 	opacity: 1;
 }
+
+.winsupBtn{
+	width: 100%;
+	background-size:3%;
+	font-size: 13px;
+	line-height: 62px;
+}
+
+@media only screen and (orientation:landscape) {
+.winsupBtn{
+	font-size: 22px;
+	}
+}
+
 
 /* --------------------------------------------------
     ベーステーブルレイアウト(見出し太字＆背景色あり)
