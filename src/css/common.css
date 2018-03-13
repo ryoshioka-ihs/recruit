@@ -906,14 +906,13 @@ a.rss:hover {
 	cursor: pointer;
 }
 
-/*WinActor資料請求ボタン*/
-.winsupBtn{
-	width: 900px;
+/*横幅100%のボタン*/
+.w100Btn{
+	width: 1000px;
 	height: 60px;
 	display: block;
 	margin: 30px auto;
 	background: url("../image/common/btn_arrow.png") no-repeat 98%;
-	background-color: #0080FF;
 	color: #FFF;
 	font-size: 28px;
 	text-align: center;
@@ -921,7 +920,7 @@ a.rss:hover {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
-	.winsupBtn{
+	.w100Btn{
 		width: 100%;
 		font-size: 22px;
 	}
@@ -929,7 +928,7 @@ a.rss:hover {
 	.blueBtn a,
 	.blueBtn-l a,
 	.oraBtn a,
-	.winsupBtn a {
+	.w100Btn a {
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -940,14 +939,14 @@ a.rss:hover {
 	.blueBtn:hover,
 	.blueBtn-l:hover,
 	.oraBtn:hover,
-	.winsupBtn:hover{
+	.w100Btn:hover{
 		opacity: 0.7;
 		-ms-filter: "alpha(opacity=70)";
 	}
 	.blueBtn a:hover,
 	.blueBtn-l a:hover,
 	.oraBtn a:hover,
-	.winsupBtn a:hover{
+	.w100Btn a:hover{
 		text-decoration: none;
 	}
 
@@ -3091,6 +3090,29 @@ footer .footBot {
 	WinActorセミナー
 -------------------------------------------------------- */
 
+/*サービス紹介ボタン*/
+.con-services{
+	margin: 10px 0;
+}
+
+.con-services > .box1,
+.con-services > .box2,
+.con-services > .box3{
+	width: 300px;
+	height: 300px;		
+}
+
+.con-services > .box1,
+.con-services > .box2{	
+	margin-right: 10px;
+}
+
+.con-services > .box2,
+.con-services > .box3{
+	margin-left: 10px;
+}
+
+
 /* 無料セミナー画像 */
 .pickup1.iconimage:before,
 .pickup2.iconimage:before {
@@ -3330,3 +3352,4 @@ footer .footBot {
 		margin-left: 40%;
 		font-size: 20px;
 }
+

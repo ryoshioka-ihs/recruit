@@ -307,7 +307,7 @@ a.rss:hover {
 	opacity: 1;
 }
 
-.winsupBtn{
+.w100Btn{
 	width: 100%;
 	background-size:3%;
 	font-size: 13px;
@@ -315,7 +315,7 @@ a.rss:hover {
 }
 
 @media only screen and (orientation:landscape) {
-.winsupBtn{
+.w100Btn{
 	font-size: 22px;
 	}
 }
