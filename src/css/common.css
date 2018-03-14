@@ -3087,31 +3087,27 @@ footer .footBot {
 			margin-left: 21px;
 		}
 /* --------------------------------------------------------
-	WinActorセミナー
+	WinActorー
 -------------------------------------------------------- */
 
 /*サービス紹介ボタン*/
 .con-services{
-	margin: 10px 0;
 }
 
-.con-services > .box1,
-.con-services > .box2,
-.con-services > .box3{
-	width: 300px;
-	height: 300px;		
+.con-services > a .box1,
+.con-services > a .box2{	
+	margin-right: 32px;
+	margin-top: 20px;
 }
 
-.con-services > .box1,
-.con-services > .box2{	
-	margin-right: 10px;
+.con-services > a .box3{
+	margin-right: 0px;
 }
 
-.con-services > .box2,
-.con-services > .box3{
-	margin-left: 10px;
+@media screen and (min-width: 1024px) {
+	.con-services > a .box3{
+	margin-top: 20px;
 }
-
 
 /* 無料セミナー画像 */
 .pickup1.iconimage:before,

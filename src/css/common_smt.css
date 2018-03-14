@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 /* CSS Document */
 /*===================================================
@@ -1439,8 +1440,22 @@ footer .footBot {
 	}
 
 /* --------------------------------------------------------
-	20180110追加　　WinActorセミナー用
+	20180110追加　　WinActor
 -------------------------------------------------------- */
+
+/*サービス紹介ボタン*/
+.con-services{
+	margin: 20px auto;
+}
+
+.con-services > a .box1,
+.con-services > a .box2,
+.con-services > a .box3{	
+	margin: 20px;
+}
+
+
+/*セミナーページのコース紹介*/
 .pickup1,
 .pickup2,
 .pickup3,
