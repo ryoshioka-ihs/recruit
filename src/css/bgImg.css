@@ -15,6 +15,9 @@
 /*//////////////////////////////////////////////////
     サービス・製品一覧
 ///////////////////////////////////////////////////*/
+.blueTtl .win {
+	background-image: url("../image/services/bg_win.png");
+}
 .blueTtl .ope {
 	background-image: url("../image/services/bg_ope.png");
 }

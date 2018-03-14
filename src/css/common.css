@@ -3112,20 +3112,20 @@ footer .footBot {
 /* 無料セミナー画像 */
 .pickup1.iconimage:before,
 .pickup2.iconimage:before {
-	background-image: url("../image/services/constrution/other/winactor/seminar/seminar2_01.png");
+	background-image: url("../image/services/constrution/winactor/seminar/seminar2_01.png");
 	height: 200px;
 }
 
 /* 有料セミナー画像 */
 .pickup3.iconimage:before,
 .pickup4.iconimage:before {
-	background-image: url("../image/services/constrution/other/winactor/seminar/seminar2_02.png");
+	background-image: url("../image/services/constrution/winactor/seminar/seminar2_02.png");
 	height: 200px;
 }
 
 /* 準備中セミナー画像 */
 .pickup5.iconimage:before {
-	background-image: url("../image/services/constrution/other/winactor/seminar/junbi.png");
+	background-image: url("../image/services/constrution/winactor/seminar/junbi.png");
 	height: 200px;
 }
 
