@@ -819,15 +819,16 @@ a.outLink {
 	青色アイコン(WinActorのコースの紹介)
 -------------------------------------------------- */
 .iconimage {
-	display: inline-block;
+	/*display: inline-block;*/
 	font-size: 9px;
 	font-weight: bold;
 	text-align: center;
-	line-height: 20px;
+	line-height: 25px;
 	background-color: #E5EBF3;
 	color: #003E8D;
-	padding: 0 5px;
+	padding: 20px 5px;
 	vertical-align: top;
+	margin: 15px auto;
 }
 
 /* --------------------------------------------------
@@ -908,7 +909,6 @@ a.rss:hover {
 
 /*横幅100%のボタン*/
 .w100Btn{
-	width: 1000px;
 	height: 60px;
 	display: block;
 	margin: 30px auto;
@@ -3104,30 +3104,30 @@ footer .footBot {
 	margin-right: 0px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
 	.con-services > a .box3{
 	margin-top: 20px;
+	}
 }
 
 /* 無料セミナー画像 */
-.pickup1.iconimage:before,
-.pickup2.iconimage:before {
+.pickup_seminar.iconimage:before {
 	background-image: url("../image/services/constrution/winactor/seminar/seminar2_01.png");
 	height: 200px;
 }
 
 /* 有料セミナー画像 */
-.pickup3.iconimage:before,
-.pickup4.iconimage:before {
+.pickup_handson.iconimage:before{
 	background-image: url("../image/services/constrution/winactor/seminar/seminar2_02.png");
 	height: 200px;
 }
 
-/* 準備中セミナー画像 */
-.pickup5.iconimage:before {
+/* 準備中セミナー画像 
+.pickup10.iconimage:before {
 	background-image: url("../image/services/constrution/winactor/seminar/junbi.png");
 	height: 200px;
 }
+*/
 
 /*無料・有料ボタン*/
 .freeBtn,
@@ -3137,37 +3137,22 @@ footer .footBot {
 	top: -4%;"
 }
 
-.pickup1,
-.pickup2,
-.pickup5{
+.pickup_seminar,
+.pickup_handson{
+	position: absolute; 
+	/*left: 1%; */
+	top: -4%;
 	min-height: 160px;
 	background-color: #EBEBEB;
 	position: relative;
     box-shadow:5px 5px;
     border:1px solid #000;
-    width:930px;
-    height: 250px;
-    margin: 15px 15px 15px;
+    /*width:930px;*/
+    /*margin: 15px 15px 15px;*/
 }
 
-.pickup3,
-.pickup4{
-	min-height: 160px;
-	background-color: #EBEBEB;
-	position: relative;
-    box-shadow:5px 5px;
-    border:1px solid #000;
-    width:930px;
-    height: 280px;
-    margin: 15px 15px 15px;
-}
-
-
-.pickup1:before,
-.pickup2:before,
-.pickup3:before,
-.pickup4:before,
-.pickup5:before {
+.pickup_seminar:before,
+.pickup_handson:before{
 	content: "";
 	display: block;
 	width: 240px;
@@ -3177,11 +3162,9 @@ footer .footBot {
 	margin: -8px 20px;
 }
 
-.pickup1 h1,
-.pickup2 h1,
-.pickup3 h1,
-.pickup4 h1{
-	margin-top: -18%;
+.pickup_seminar h1,
+.pickup_handson h1	{
+	margin-top: -21%;
 	margin-left: 30%;
     border-bottom: none;
     overflow: visible;
@@ -3189,47 +3172,24 @@ footer .footBot {
     padding-bottom: 1px;
 }
 
-/*一時的に全スタイル記述*/
-.pickup5 h1{
-	margin-top: -15%;
-	margin-left: 30%;
-    border-bottom: none;
-    overflow: visible;
-    line-height: 30px;
-    padding-bottom: 0px;
-}
-
-.pickup1 p,
-.pickup2 p,
-.pickup5 p{
+.pickup_seminar p,
+.pickup_handson p{
 	margin: 1% 48%;
 	font-size: small;
-	width: 320px;
 }
 
 
-.pickup3 p,
-.pickup4 p{
-	margin: 1% 40%;
-	font-size: small;
-	width: 450px;
-}
-
-.pickup1.iconimage > p.Cont,
-.pickup2.iconimage > p.Cont,
-.pickup3.iconimage > p.Cont,
-.pickup4.iconimage > p.Cont,
-.pickup5.iconimage > p.Cont{
+.pickup_seminar.iconimage > p.Cont,
+.pickup_handson.iconimage > p.Cont{
 	margin-top:0px;
+	width: 360px;
 }
 
-.pickup1.iconimage > p.benefits,
-.pickup2.iconimage > p.benefits,
-.pickup3.iconimage > p.benefits,
-.pickup4.iconimage > p.benefits,
-.pickup5.iconimage > p.benefits{
+.pickup_seminar.iconimage > p.benefits,
+.pickup_handson.iconimage > p.benefits{
 	font-size: medium;
 	color: red;
+	width: 350px;
 }
 
 .pic_oraBtn {	
@@ -3245,6 +3205,7 @@ footer .footBot {
 	transition: 0.3s;
 	text-align: center;
 	cursor: pointer;
+	width: 350px;
 }
 	.pic_oraBtn a {
 		display: block;
@@ -3264,7 +3225,7 @@ footer .footBot {
 
    .pic_oraBtn {
 	background-color: #F3951B;
-}
+	}
 
 .pic_oraBnr {    
 	height: 60px;
@@ -3301,17 +3262,21 @@ footer .footBot {
 	background-color: #F3951B;
 }
 /* ボックスサイズを小さくする(幅1024pxのブラウザだと余白がないため）*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 667px) and (max-width: 800px) {
+
+	.pickup_seminar.iconimage:before,
+	.pickup_handson.iconimage:before{
+		margin:auto;
+	}
 
 	.winseminar{
 		padding-right: 40px;
 	}
 
-	.pickup1,
-	.pickup2,
-	.pickup3,
-	.pickup4,
-	.pickup5{width: 670px;margin-bottom: 15px;
+	.pickup_seminar.iconimage
+	.pickup_handson.iconimage{
+		width: 670px;
+		margin-bottom: 15px;
 	}
 
 	.freeBtn,
@@ -3320,32 +3285,15 @@ footer .footBot {
 	}
 
 /*pickup1、pickup2、のスタイル*/
-	.pickup1 h1,.pickup2 h1{
-		margin-top: -25%;
-		margin-left: 40%;
+	.pickup_seminar.iconimage h1,
+	.pickup_handson.iconimage h1{
 		font-size: 20px;
 	}
 
-/*pickup3、pickup4のスタイル*/
-	.pickup3,.pickup4{
-		height: 300px;
+	.pic_oraBnr{
+		width: 280px;
 	}
 
-	.pickup3 h1,.pickup4 h1{
-		margin-top: -25%;
-		margin-left: 40%;
-		font-size: 20px;
-	}
 
-	.pickup3 p,.pickup4 p{
-		width: 320px;
-		margin-left: 46%;
-	}
-
-/*pickup5のスタイル*/
-	.pickup5 h1{
-		margin-top: -20%;
-		margin-left: 40%;
-		font-size: 20px;
 }
 

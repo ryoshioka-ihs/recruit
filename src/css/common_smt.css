@@ -273,13 +273,6 @@ article .ttl {
 }
 
 /* --------------------------------------------------
-    青色アイコン (WinActorのコースの紹介)
--------------------------------------------------- */
-.iconimage {
-	margin: 0 5px 5px 0;
-}
-
-/* --------------------------------------------------
     RSSアイコン
 -------------------------------------------------- */
 a.rss {
@@ -1456,46 +1449,35 @@ footer .footBot {
 
 
 /*セミナーページのコース紹介*/
-.pickup1,
-.pickup2,
-.pickup3,
-.pickup4,
-.pickup5{
+.pickup_seminar,
+.pickup_handson{
 	width: 100%;
 	height: 100%;
 	margin-bottom: 20px !important;
 }
 
-.pickup1:before,
-.pickup2:before,
-.pickup3:before,
-.pickup4:before,
-.pickup5:before{
-    margin: 20px auto;
+.pickup_seminar.iconimage:before,
+.pickup_handson.iconimage:before{
+	margin:auto;
 }
 
-.pickup1 h1,
-.pickup2 h1,
-.pickup3 h1,
-.pickup4 h1,
-.pickup5 h1{
-    margin: 0 auto;
+.pickup_seminar h1,
+.pickup_handson h1{
+    margin: 10px auto;
 }
 
-.pickup1 p,
-.pickup2 p,
-.pickup5 p{
+.pickup_seminar p,
+.pickup_handson p{
     margin:2% auto;
 }
 
-.pickup3 p,
-.pickup4 p{
-	width: 280px;
-	margin:2% auto;
+.pickup_seminar.iconimage > p.Cont,
+.pickup_handson.iconimage > p.Cont{
+	width:340px; 
 }
 
-.pic_oraBnr {
-  font-size: 16px;
+.pic_oraBtn{
+	width: 200px;
 }
 
 .freeBtn,
@@ -1505,6 +1487,4 @@ footer .footBot {
 	width: 25%;
 	top: -2%;"
 }
-
-
 
