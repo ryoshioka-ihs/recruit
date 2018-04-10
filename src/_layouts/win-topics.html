@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--▽ヘッド▽-->
+{% include win-head.html %}
+<!--△ヘッド△-->
+</head>
+<body>
+	<!--▽ヘッダー▽-->
+	{% include win-header.html %}
+	<!--△ヘッダー△-->
+
+	 <!--▽コンテンツ▽-->
+	<article>
+			<center><h1 style="margin-top: 20px;">{{ page.title }}</h1></center>
+			<section>
+					<div class="topics-box">
+					<table class="topics-list">
+						<tbody>
+						<hr>
+							<ul class="none">								
+									{% for post in paginator.posts %}
+										<li>
+											{% if post.link and post.link != "" %}
+												<a href="{{ post.link }}" target="_self">
+											{% else %}
+												<a href="{{ post.url }}" target="_self">
+											{% endif %}
+												<time class="date">{{ post.date | date: '%Y/%m/%d' }}</time>
+
+												{% if post.categories[0] == "cases" %}
+													<span class="icon">事例紹介</span>
+													<p>『{{ post.categori }}』を追加しました</p>
+												{% else %}
+													<span class="icon">{{ post.categories[2] }}</span>
+													<p>{{ post.title }}</p>
+												{% endif %}
+
+											</a>
+										</li>
+										<hr>
+
+									{% endfor %}
+						</tbody>
+						</table>
+						{% include win-pagination.html %}
+					</div>
+			</section>
+	</article>
+	<!--△コンテンツ△-->
+
+	<!--▽フッター▽-->
+	{% include win-footer.html %}
+	<!--△フッター△-->
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+---
+layout:     "win-top"
+global_menu:  ""
+description:  "IIMヒューマン・ソリューション(IHS)のWebサイトです。IHSのサービス、導入事例、会社情報や最新のトピックスをご覧いただけます。"
+keywords:   "IIMヒューマン・ソリューション,IHS"
+category:   ""
+title:      "IIMヒューマン・ソリューション"
+---
+      <!-- Breadcrumbs
+      <section class="breadcrumbs-custom bg-image">
+        <div class="shell">
+          <p class="heading-1 breadcrumbs-custom-title">Contacts</p>
+          <ul class="breadcrumbs-custom-path">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li class="active">Contacts</li>
+          </ul>
+        </div>
+      </section>
+      -->
+
+      <!-- Contact information-->
+      <section class="section section-lg bg-white">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-center range-lg-justify">
+            <div class="cell-sm-9 cell-md-6">
+              <h3>セミナーお申込み</h3>
+              <!--<hr class="divider divider-left divider-default"/>-->
+              <p class="big">セミナーのお申込みをご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。<br>
+                <span style="color: red">※gmailでのお申込みはお断りさせていただいております。</span><br>
+                <span style="color: red">※参加者様御本人がお申込みいただきますようお願い申し上げます。</span><br>
+                <br>お申込みの受付が完了いたしましたら、担当より折り返しご連絡させていただきます。<br>お申し込み後3営業日以上ご連絡がない場合、恐れ入りますが、下記よりご連絡いただけますでしょうか。</p>
+
+              <!-- RD Mailform-->
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+                <div class="range range-20">
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-company">会社名</label>
+                      <input class="form-input" id="form-1-company" type="text" name="company" data-constraints="@Required"/>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name">参加者名</label>
+                      <input class="form-input" id="form-1-name" type="text" name="name" data-constraints="@Required"/>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-ldespartment">部署</label>
+                      <input class="form-input" id="form-1-despartment" type="text" name="despartment" data-constraints="@Required"/>
+                    </div>
+                  </div>
+                   <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-position">お役職</label>
+                      <input class="form-input" id="form-1-position" type="text" name="position"/>
+                    </div>                   
+                  </div>                  
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-email">メールアドレス</label>
+                      <input class="form-input" id="form-1-email" type="email" name="email" data-constraints="@Email @Required"">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone">電話番号</label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone" data-constraints="@Numeric @Required"/>
+                    </div>            
+                  </div>
+		          <div class="cell-sm-6">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside" for="form-1-people">従業員数</label>
+		                <!--<select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" data-constraints="@Selected" name="people">-->
+		                <select class="form-control select-filter" name="people">
+		                  <option value="1" selected="">①100名以上～500名未満</option>
+		                  <option value="2">②500名以上～1000名未満</option>
+		                  <option value="3">③1000名以上</option>
+		                </select>
+		              </div>
+		            </div>   
+		          <div class="cell-xs-12 offset-custom-1">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside" for="form-1-seminar">ご希望の開催日</label>
+		                <!--<select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" data-constraints="@Selected" name="seminar">-->
+		                <select class="form-control select-filter" name="seminar">
+		                  <option value="1">①2018年4月 3日（火）　 無償入門コース</option>
+		                  <option value="2">②2018年4月12日（木）　自動化ツール導入による業務改善方法紹介セミナー</option>
+		                  <option value="3">③2018年4月19日（木）　無償入門コース</option>
+		                  <option value="4">④2018年4月17日（火）　有償中級コース</option>
+		                  <option value="5">⑤2018年4月24日（火）　有償初級コース</option>		                  
+		                </select>
+		              </div>
+		            </div>
+		          <div class="cell-sm-6">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside" for="form-1-enquete">セミナーを知ったきっかけ</label>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enquete">
+		                  <option value="1">DM</option>
+		                  <option value="2">インターネットでの検索</option>
+		                  <option value="3">インターネットでの検索</option>
+		                  <option value="4">その他</option>		                  
+		                </select>
+		              </div>
+		            </div> 		            
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-other">その他を選択された方</label>
+                      <input class="form-input" id="form-1-other" type="text" name="other" placeholder="その他：セミナーを知ったきっかけ" />
+                    </div>            
+                  </div>		            
+                  <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-message">特記事項</label>
+                      <textarea class="form-input" id="form-1-message" name="message"></textarea>
+                    </div>
+                  </div>
+                  <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="check-1"/>同意する<a href="/privacy/policy/">メールマガジン登録における個人情報の取扱いについて</a>
+                      </label>
+                    </div>
+                  </div> 
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-button">
+                      <button class="button button-primary" type="submit">send message</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="cell-sm-9 cell-md-4 cell-lg-3">
+              <div class="column-aside">
+                <div class="range">
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>会社住所</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-map-marker"></span><span>東京都文京区本郷2丁目27番20号<br>本郷センタービル6F</span></article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>電話番号</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-phone"></span>
+                      <ul class="list-comma">
+                        <li>03-5684-6840</li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>メールアドレス</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-email-open"></span><span><a href="mailto:web@iimhs.co.jp">web@iimhs.co.jp</a></span></article>
+                  </div>
+                  <!--<div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>Opening hours </h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-calendar-clock"></span>
+                      <ul class="list-0">
+                        <li>Mon–Fri: 9:00 am–6:00 pm</li>
+                        <li>Sat–Sun: 11:00 am–4:00 pm</li>
+                      </ul>
+                    </article>
+                  </div>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page Footer-->
+      <!-- Footer Default-->
