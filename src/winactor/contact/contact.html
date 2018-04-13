@@ -24,14 +24,15 @@ title:      "IIMヒューマン・ソリューション"
         <div class="shell shell-bigger">
           <div class="range range-ten range-50 range-sm-center range-lg-justify">
             <div class="cell-sm-9 cell-md-6">
-              <h3>WinActorに関するお問合わせ</h3>
-              <hr class="divider divider-left divider-default"/>
+              <h3>セミナーお申込み</h3>
+              <!--<hr class="divider divider-left divider-default"/>-->
               <p class="big">セミナーのお申込みをご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。<br>
                 <span style="color: red">※gmailでのお申込みはお断りさせていただいております。</span><br>
-                <br>お申込みの受付が完了いたしましたら、担当より折り返しご連絡させていただきます。<br>お申し込み後◯営業日以上ご連絡がない場合、恐れ入りますが、下記よりご連絡いただけますでしょうか。</p>
+                <span style="color: red">※参加者様御本人がお申込みいただきますようお願い申し上げます。</span><br>
+                <br>お申込みの受付が完了いたしましたら、担当より折り返しご連絡させていただきます。<br>お申し込み後3営業日以上ご連絡がない場合、恐れ入りますが、下記よりご連絡いただけますでしょうか。</p>
 
               <!-- RD Mailform-->
-              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
                 <div class="range range-20">
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
@@ -41,7 +42,7 @@ title:      "IIMヒューマン・ソリューション"
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-name">氏名</label>
+                      <label class="form-label-outside" for="form-1-name">参加者名</label>
                       <input class="form-input" id="form-1-name" type="text" name="name" data-constraints="@Required"/>
                     </div>
                   </div>
@@ -54,13 +55,13 @@ title:      "IIMヒューマン・ソリューション"
                    <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-position">お役職</label>
-                      <input class="form-input" id="form-1-position" type="text" name="position" data-constraints="@Required"/>
+                      <input class="form-input" id="form-1-position" type="text" name="position"/>
                     </div>                   
                   </div>                  
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-email">メールアドレス</label>
-                      <input class="form-input" id="form-1-email" type="email" name="email" data-constraints="@Email @Required"">
+                      <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required"">
                     </div>
                   </div>
                   <div class="cell-sm-6">
@@ -72,40 +73,45 @@ title:      "IIMヒューマン・ソリューション"
 		          <div class="cell-sm-6">
 		            <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside" for="form-1-people">従業員数</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" data-constraints="@Selected" name="people">
-		                  <option value="1" selected="">①100名以上～500名未満</option>
-		                  <option value="2">②500名以上～1000名未満</option>
-		                  <option value="3">③1000名以上</option>
+		                <!--<select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" data-constraints="@Selected" name="people">-->
+		                <select class="form-control select-filter" name="people">
+		                  <option value="①100名以上～500名未満" selected="">①100名以上～500名未満</option>
+		                  <option value="②500名以上～1000名未満">②500名以上～1000名未満</option>
+		                  <option value="③1000名以上">③1000名以上</option>
 		                </select>
 		              </div>
 		            </div>   
 		          <div class="cell-xs-12 offset-custom-1">
 		            <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside" for="form-1-seminar">ご希望の開催日</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" data-constraints="@Selected" name="seminar">
-		                  <option value="1" selected="">①2018年4月 3日（火）　 無償入門コース</option>
-		                  <option value="2">②2018年4月12日（木）　自動化ツール導入による業務改善方法紹介セミナー</option>
-		                  <option value="3">③2018年4月19日（木）　無償入門コース</option>
-		                  <option value="4">④2018年4月17日（火）　有償中級コース</option>
-		                  <option value="5">⑤2018年4月24日（火）　有償初級コース</option>		                  
+		                <!--<select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" data-constraints="@Selected" name="seminar">-->
+		                <select class="form-control select-filter" name="seminar">
+		                  <option value="①2018年4月26日(木)　自動化ツール導入による業務改善方法紹介セミナー 有償実践版">①2018年4月26日(木)　自動化ツール導入による業務改善方法紹介セミナー 有償実践版</option>	
+		                  <option value="②2018年5月1日(火)　無償入門コース">②2018年5月1日(火)　無償入門コース</option>
+		                  <option value="③2018年5月11日(金)　無償入門コース">③2018年5月11日(金)　無償入門コース</option>
+		                  <option value="④2018年5月15日(火)　有償中級コース">④2018年5月15日(火)　有償中級コース</option>
+		                  <option value="⑤2018年5月17日(木)　有償初級コース">⑤2018年5月17日(木)　有償初級コース</option>
+		                  <option value="⑥2018年5月22日(火)　無償入門コース">⑥2018年5月22日(火)　無償入門コース</option>
+		                  <option value="⑦2018年5月29日(火)　自動化ツール導入による業務改善方法紹介セミナー 無償版">⑦2018年5月29日(火)　自動化ツール導入による業務改善方法紹介セミナー 無償版</option>
+		                  <option value="⑧2018年5月31日(木)　自動化ツール導入による業務改善方法紹介セミナー 有償実践版">⑧2018年5月31日(木)　自動化ツール導入による業務改善方法紹介セミナー 有償実践版</option>
 		                </select>
 		              </div>
 		            </div>
 		          <div class="cell-sm-6">
 		            <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside" for="form-1-enquete">セミナーを知ったきっかけ</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" data-constraints="@Selected" name="enquete">
-		                  <option value="1" selected="">DM</option>
-		                  <option value="2">インターネットでの検索</option>
-		                  <option value="3">インターネットでの検索</option>
-		                  <option value="4">その他</option>		                  
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enquete">
+		                  <option value="DM">DM</option>
+		                  <option value="インターネットでの検索">インターネットでの検索</option>
+		                  <option value="インターネットでの検索">インターネットでの検索</option>
+		                  <option value="その他">その他</option>		                  
 		                </select>
 		              </div>
 		            </div> 		            
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-other">その他を選択された方</label>
-                      <input class="form-input" id="form-1-other" type="text" name="phone" data-constraints="@Numeric" placeholder="その他：セミナーを知ったきっかけ" />
+                      <input class="form-input" id="form-1-other" type="text" name="other" placeholder="その他：セミナーを知ったきっかけ" />
                     </div>            
                   </div>		            
                   <div class="cell-xs-12">
@@ -117,7 +123,7 @@ title:      "IIMヒューマン・ソリューション"
                   <div class="cell-xs-12">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
-                        <input type="checkbox" name="check-1"/>同意する<a href="/privacy/policy/">メールマガジン登録における個人情報の取扱いについて</a>
+                        <input type="checkbox" name="check-1" value="同意する" />同意する<a href="/privacy/policy/">メールマガジン登録における個人情報の取扱いについて</a>
                       </label>
                     </div>
                   </div> 

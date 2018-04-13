@@ -1288,7 +1288,7 @@ $document.ready(function () {
         'MF003': 'Please, define email field in your form!',
         'MF004': 'Please, define type of your form!',
         'MF254': 'Something went wrong with PHPMailer!',
-        'MF255': 'Aw, snap! Something went wrong.'
+        'MF255': 'お申込みいただきましてありがとうございます。'
       };
 
     for (i = 0; i < plugins.rdMailForm.length; i++) {
@@ -1356,7 +1356,7 @@ $document.ready(function () {
             form.addClass('form-in-process');
 
             if (output.hasClass("snackbars")) {
-              output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');
+              output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>送信中</span></p>');
               output.addClass("active");
             }
           } else {
@@ -1409,6 +1409,7 @@ $document.ready(function () {
               output.addClass("active error");
             }
           }
+          
 
           form.clearForm();
 
