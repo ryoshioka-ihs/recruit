@@ -8,7 +8,7 @@ $contact_data = isset($_SESSION["contact_data"]) ? $_SESSION["contact_data"] : a
 
 // セッションデータの有無をチェック
 if (count($contact_data) == 0) {
-    header("Location: /services/other/winactor/contact/"); // データ取得できない場合はエラー画面へ遷移
+    header("Location: /services/winactor/contact/"); // データ取得できない場合はエラー画面へ遷移
     exit;
 }
 //操作アクションを取得
@@ -22,11 +22,11 @@ if ($act == 3) {
 
     if ($result_to_admin && $result_to_customer) { // 送信成功
         $_SESSION = array();  // セッションに格納された情報をカラにします。
-        header("Location: /services/other/winactor/contact/done.php");
+        header("Location: /services/winactor/contact/done.php");
         exit;
     } else { // 送信失敗
         $_SESSION = array();  // セッションに格納された情報をカラにします。
-        header("Location: /services/other/winactor/contact/error.php");
+        header("Location: /services/winactor/contact/error.php");
         exit;
     }
 }
@@ -162,6 +162,14 @@ if ($act == 3) {
 							</li>
 							-->
 							<li>
+							<a href="/services/winactor/">WinActor</a>
+							<ul>
+								<li><span><a href="/services/winactor/">製品紹介</a></span></li>
+								<li><span><a href="/services/winactor/seminar/">セミナー</a></span></li>
+								<li><span><a href="/services/winactor/service/">サービス・資料請求</a></span></li>
+							</ul>
+							</li>
+							<li>
 							<a href="/services/operation/">インフラ運用</a>
 							<ul>
 								<li><span><a href="/services/operation/support/">運用支援サービス</a></span></li>
@@ -194,7 +202,6 @@ if ($act == 3) {
 							<ul>
 								<li><span><a href="/services/other/remote">リモート型<br>サポートサービス</a></span></li>
 								<li><span><a href="/services/other/cloud">クラウド型<br>バックアップサービス</a></span></li>
-								<li><span><a href="/services/other/winactor">WinActor</a></span></li>
 							</ul>
 							</li>
 						</ul>

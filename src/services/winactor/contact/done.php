@@ -80,6 +80,14 @@ require_once( __DIR__ . '/lib/init.php');
 							</li>
 							-->
 							<li>
+							<a href="/services/winactor/">WinActor</a>
+							<ul>
+								<li><span><a href="/services/winactor/">製品紹介</a></span></li>
+								<li><span><a href="/services/winactor/seminar/">セミナー</a></span></li>
+								<li><span><a href="/services/winactor/service/">サービス・資料請求</a></span></li>
+							</ul>
+							</li>	
+							<li>
 							<a href="/services/operation/">インフラ運用</a>
 							<ul>
 								<li><span><a href="/services/operation/support/">運用支援サービス</a></span></li>
@@ -112,7 +120,6 @@ require_once( __DIR__ . '/lib/init.php');
 							<ul>
 								<li><span><a href="/services/other/remote">リモート型<br>サポートサービス</a></span></li>
 								<li><span><a href="/services/other/cloud">クラウド型<br>バックアップサービス</a></span></li>
-								<li><span><a href="/services/other/winactor">WinActor</a></span></li>
 							</ul>
 							</li>
 						</ul>
@@ -250,7 +257,7 @@ require_once( __DIR__ . '/lib/init.php');
       <meta property="position" content="2" />
     </li>
     <li property="itemListElement" typeof="ListItem">
-      <a property="item" typeof="WebPage" href="/services/other/winactor/">
+      <a property="item" typeof="WebPage" href="/services/winactor/">
         <span property="name">業務向けRPAツールWinActor</span>
       </a>
       <meta property="position" content="3" />

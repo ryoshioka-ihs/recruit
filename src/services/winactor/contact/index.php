@@ -30,7 +30,7 @@ if (empty($_POST) && $_SERVER["REQUEST_METHOD"] === "POST") {
     // 入力チェック
     $err_msg = checkInputData($contact_data);
     if(!$err_msg){
-        header("Location: /services/other/winactor/contact/confirm.php");
+        header("Location: /services/winactor/contact/confirm.php");
         exit();
     }
   } else {
@@ -201,7 +201,15 @@ if (empty($_POST) && $_SERVER["REQUEST_METHOD"] === "POST") {
 							<a href="/services/remote/">リモート運用</a>
 							</li>
 							-->
-							<li>
+              <li>
+              <a href="/services/winactor/">WinActor</a>
+              <ul>
+                <li><span><a href="/services/winactor/">製品紹介</a></span></li>
+                <li><span><a href="/services/winactor/seminar/">セミナー</a></span></li>
+                <li><span><a href="/services/winactor/service/">サービス・資料請求</a></span></li>
+              </ul>
+              </li>
+              <li>
 							<a href="/services/operation/">インフラ運用</a>
 							<ul>
 								<li><span><a href="/services/operation/support/">運用支援サービス</a></span></li>
@@ -234,7 +242,6 @@ if (empty($_POST) && $_SERVER["REQUEST_METHOD"] === "POST") {
 							<ul>
 								<li><span><a href="/services/other/remote">リモート型<br>サポートサービス</a></span></li>
 								<li><span><a href="/services/other/cloud">クラウド型<br>バックアップサービス</a></span></li>
-								<li><span><a href="/services/other/winactor">WinActor</a></span></li>
 							</ul>
 							</li>
 						</ul>
