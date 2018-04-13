@@ -365,6 +365,31 @@ body {
 	#sv .triBox li {
 		margin-top: 7px;
 	}
+/* WinActor */
+#sv #win {
+	width: 100%;
+	height: auto;
+	margin: 0 0 20px;
+}
+	#sv #win h3 {
+		text-align: center;
+		margin-left: 0;
+	}
+	#sv #win a {
+		padding: 15px 12px 15px 7px;
+	}
+
+	#sv #win a:before {
+		width: 170px;
+		height: 98px;
+		margin: 0 auto 15px;
+		float: none;
+		position: static;
+	}
+	#sv #win ul {
+		padding-top: 0;
+	}
+
 
 /* インフラ運用 */
 #sv #ope2 {

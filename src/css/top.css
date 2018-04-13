@@ -336,7 +336,7 @@ footer {
 }
 #sv .triBox {
 	width: 320px;
-	height: 300px;
+	height: 420px;
 	text-align: center;
 	vertical-align: top;
 	position: relative;
@@ -389,7 +389,7 @@ footer {
 	}
 */
 
-/* インフラ運用 New 2017.08.03 */
+/* インフラ運用 New 2017.08.03 
 
 #sv #ope2 {
 	width: 490px;
@@ -407,6 +407,7 @@ footer {
 		margin:	0 0 25px 0;
 		background-image: url("../image/top/sv_img1.png");
 	}
+*/
 
 /* （一旦非表示）インフラ構築
 #sv #intro {
@@ -417,7 +418,8 @@ footer {
 	}
 */
 
-/* インフラ構築 New 2017.08.03 */
+
+/* インフラ構築 New 2017.08.03 
 #sv #intro2 {
 	width: 490px;
 	height: 340px;
@@ -433,9 +435,24 @@ footer {
 		margin:	0 0 25px 0;
 		background-image: url("../image/top/sv_img2.png");
 	}
+*/
+/* WinActor */
+#sv #win a:before {
+	background-image: url("../image/top/sv_img6.png");
+}
+
+/* インフラ運用 */
+#sv #ope2 a:before {
+	background-image: url("..//image/top/sv_img1.png");
+}
+
+/* インフラ構築 */
+#sv #opti a:before {
+	background-image: url("..//image/top/sv_img2.png");
+}
 
 /* Webシステム最適化 */
-#sv #opti a:before {
+#sv #intro2 a:before {
 	background-image: url("../image/top/sv_img3.png");
 }
 
