@@ -28,7 +28,7 @@ $email->addTo($to)->
        setText("会社名: $company \r\n ご担当者名: $name \r\n　メールアドレス: $emailAdress  \r\n電話番号: $phone　\r\n 詳しく聞きたいこと: $message　\r\n個人情報の取扱: $check")->
 
 
-       setHtml("<strong>会社名:</strong> $company<br /> <strong>ご担当者名:</strong> $name<br /> <strong>メールアドレス:</strong> $emailAdress<br /> <strong>電話番号:</strong> $phone<br /><strong>詳しく聞きたいこと:</strong> $message<br /> <strong>個人情報の取扱:</strong> $check<br />")->
+       setHtml("<strong>会社名:</strong> $company<br /> <strong>ご担当者名:</strong> $name<br /> <strong>メールアドレス:</strong> $emailAdress<br /> <strong>電話番号:</strong> $phone<br /> <strong>詳しく聞きたいこと:</strong> $message<br /> <strong>個人情報の取扱:</strong> $check<br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);

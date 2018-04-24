@@ -1327,6 +1327,7 @@ $document.ready(function () {
               $.ajax({
                 method: "POST",
                 url: "bat/reCaptcha.php",
+                
                 data: {'g-recaptcha-response': captchaToken},
                 async: false
               })
@@ -1356,7 +1357,7 @@ $document.ready(function () {
             form.addClass('form-in-process');
 
             if (output.hasClass("snackbars")) {
-              output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>送信中</span></p>');
+              output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');
               output.addClass("active");
             }
           } else {
@@ -1398,18 +1399,19 @@ $document.ready(function () {
 
           if (result === "MF000") {
             if (output.hasClass("snackbars")) {
-              output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + msg[result] + '</span></p>');
+              //output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + msg[result] + '</span></p>');
+              output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + 送信中 + '</span></p>');
             } else {
               output.addClass("active success");
             }
           } else {
             if (output.hasClass("snackbars")) {
-              output.html(' <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>' + msg[result] + '</span></p>');
+              //output.html(' <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>' + msg[result] + '</span></p>');
+              output.html(' <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>' + 送信中 + '</span></p>');
             } else {
               output.addClass("active error");
             }
           }
-          
 
           form.clearForm();
 

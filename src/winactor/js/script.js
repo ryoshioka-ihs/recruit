@@ -50,6 +50,7 @@ var userAgent = navigator.userAgent.toLowerCase(),
       rdGoogleMaps: $(".rd-google-map"),
       rdInputLabel: $(".form-label"),
       rdMailForm: $(".rd-mailform"),
+      mailer: $(".mailer"),
       rdNavbar: $(".rd-navbar"),
       regula: $("[data-constraints]"),
       search: $(".rd-search"),
@@ -377,9 +378,12 @@ $document.ready(function () {
           }
         }
 
-        if ($this.parents('.rd-mailform').hasClass('success')) {
+        /*if ($this.parents('.rd-mailform').hasClass('success')) {
           return;
-        }
+        }*/
+        if ($this.parents('.mailer').hasClass('success')) {
+          return;
+        }        
 
         if ((results = $this.regula('validate')).length) {
           for (i = 0; i < results.length; i++) {
@@ -1279,7 +1283,8 @@ $document.ready(function () {
    * RD Mailform
    * @version      3.2.0
    */
-  if (plugins.rdMailForm.length) {
+  //if (plugins.rdMailForm.length) {
+  if (plugins.mailer.length) {
     var i, j, k,
       msg = {
         'MF000': 'Successfully sent!',
@@ -1291,8 +1296,10 @@ $document.ready(function () {
         'MF255': 'Aw, snap! Something went wrong.'
       };
 
-    for (i = 0; i < plugins.rdMailForm.length; i++) {
-      var $form = $(plugins.rdMailForm[i]),
+    /*for (i = 0; i < plugins.rdMailForm.length; i++) {
+      var $form = $(plugins.rdMailForm[i]),*/
+    for (i = 0; i < plugins.mailer.length; i++) {
+      var $form = $(plugins.mailer[i]),      
         formHasCaptcha = false;
 
       $form.attr('novalidate', 'novalidate').ajaxForm({
@@ -1304,7 +1311,8 @@ $document.ready(function () {
           if (isNoviBuilder)
             return;
 
-          var form = $(plugins.rdMailForm[this.extraData.counter]),
+          //var form = $(plugins.rdMailForm[this.extraData.counter]),
+          var form = $(plugins.mailer[this.extraData.counter]),
             inputs = form.find("[data-constraints]"),
             output = $("#" + form.attr("data-form-output")),
             captcha = form.find('.recaptcha'),
@@ -1367,8 +1375,10 @@ $document.ready(function () {
           if (isNoviBuilder)
             return;
 
-          var output = $("#" + $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output")),
-            form = $(plugins.rdMailForm[this.extraData.counter]);
+          //var output = $("#" + $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output")),
+          //form = $(plugins.rdMailForm[this.extraData.counter]);
+            var output = $("#" + $(plugins.mailer[this.extraData.counter]).attr("data-form-output")),
+            form = $(plugins.mailer[this.extraData.counter]);
 
           output.text(msg[result]);
           form.removeClass('form-in-process');
@@ -1381,7 +1391,8 @@ $document.ready(function () {
           if (isNoviBuilder)
             return;
 
-          var form = $(plugins.rdMailForm[this.extraData.counter]),
+          //var form = $(plugins.rdMailForm[this.extraData.counter]),
+          var form = $(plugins.mailer[this.extraData.counter]),
             output = $("#" + form.attr("data-form-output")),
             select = form.find('select');
 

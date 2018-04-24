@@ -4,119 +4,223 @@ global_menu:  ""
 description:  "IIMヒューマン・ソリューション(IHS)のWebサイトです。IHSのサービス、導入事例、会社情報や最新のトピックスをご覧いただけます。"
 keywords:   "IIMヒューマン・ソリューション,IHS"
 category:   ""
-title:      "WinActorに関するお問合わせ"
+title:      "IIMヒューマン・ソリューション"
 ---
-      <!-- Breadcrumbs
+      <!-- Breadcrumbs-->
       <section class="breadcrumbs-custom bg-image">
         <div class="shell">
-          <p class="heading-1 breadcrumbs-custom-title">Contacts</p>
+          <p class="heading-1 breadcrumbs-custom-title">資料請求・お問合わせ</p>
+          <!--
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Pages</a></li>
-            <li class="active">Contacts</li>
+            <li><a href="#">資料請求・お問合わせ・セミナー申し込み</a></li>
           </ul>
+      		-->
         </div>
       </section>
-      -->
 
-      <!-- Contact information-->
-      <section class="section section-lg bg-white">
-        <div class="shell shell-bigger">
-          <div class="range range-ten range-50 range-sm-center range-lg-justify">
-            <div class="cell-sm-9 cell-md-6">
-              <h3>WinActorに関するお問合わせ</h3>
-              <!--<hr class="divider divider-left divider-default"/>-->
-              <p class="big">Winactorに関するお問い合わせについては、下記フォームよりお送り下さい。</p>
-              <p>お送りいただいた内容を基に、追って担当者よりご連絡いたします。</p>
-
-              <!-- RD Mailform-->
-              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
-                <div class="range range-20">
-                  <div class="cell-xs-12 offset-custom-1">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-company">会社名</label>
-                      <input class="form-input" id="form-1-company" type="text" name="company" data-constraints="@Required"/>
-                    </div>
-                  </div>
-                  <div class="cell-sm-6">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-name">ご担当者名</label>
-                      <input class="form-input" id="form-1-name" type="text" name="name" data-constraints="@Required"/>
-                    </div>
-                  </div>              
-                  <div class="cell-sm-6">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-email">メールアドレス</label>
-                      <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required"">
-                    </div>
-                  </div>
-                  <div class="cell-sm-6">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-phone">電話番号</label>
-                      <input class="form-input" id="form-1-phone" type="text" name="phone" data-constraints="@Numeric @Required"/>
-                    </div>            
-                  </div>
-                  <div class="cell-xs-12">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-message">詳しく聞きたいこと</label>
-                      <textarea class="form-input" id="form-1-message" name="message"></textarea>
-                    </div>
-                  </div>
-                  <div class="cell-xs-12">
-                    <div class="form-wrap">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" name="check-1" value="同意する" />同意する<a href="/privacy/policy/">メールマガジン登録における個人情報の取扱いについて</a>
-                      </label>
-                    </div>
-                  </div> 
-                  <div class="cell-xs-12 offset-custom-1">
-                    <div class="form-button">
-                      <button class="button button-primary" type="submit">send message</button>
-                    </div>
-                  </div>
+      <section class="section section-lg bg-white text-center">
+        <div class="shell shell-wide">
+          <h3>WinActorに関する概要資料</h3>
+          <div class="divider divider-default"></div>
+          <div class="range range-md range-50 range-xs-center">
+            <!-- Pricing Box XL-->
+            <div class="cell-sm-6 cell-lg-3">
+              <div class="pricing-box pricing-box-xl pricing-box-novi">
+                <div class="pricing-box-header">
+                  <h4>WinActor製品概要資料</h4>
                 </div>
-              </form>
-            </div>
-            <div class="cell-sm-9 cell-md-4 cell-lg-3">
-              <div class="column-aside">
-                <div class="range">
-                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
-                    <h6>会社住所</h6>
-                    <hr class="divider-thin"/>
-                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-map-marker"></span><span>東京都文京区本郷2丁目27番20号<br>本郷センタービル6F</span></article>
-                  </div>
-                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
-                    <h6>電話番号</h6>
-                    <hr class="divider-thin"/>
-                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-phone"></span>
-                      <ul class="list-comma">
-                        <li>03-5684-6840</li>
-                      </ul>
-                    </article>
-                  </div>
-                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
-                    <h6>メールアドレス</h6>
-                    <hr class="divider-thin"/>
-                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-email-open"></span><span><a href="mailto:web@iimhs.co.jp">web@iimhs.co.jp</a></span></article>
-                  </div>
-                  <!--<div class="cell-xs-10 cell-sm-6 cell-md-12">
-                    <h6>Opening hours </h6>
-                    <hr class="divider-thin"/>
-                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-calendar-clock"></span>
-                      <ul class="list-0">
-                        <li>Mon–Fri: 9:00 am–6:00 pm</li>
-                        <li>Sat–Sun: 11:00 am–4:00 pm</li>
-                      </ul>
-                    </article>
-                  </div>
-                  -->
+                <div class="pricing-box-body">
+                  <ul class="pricing-box-list">
+                    <li>
+                      <div class="unit unit-spacing-sm unit-horizontal unit-middle">
+                        <div class="unit-left"><span class="icon icon-md-big icon-primary mdi mdi-account-multiple"></span></div>
+                        <div class="unit-body"><span>WinActorの製品概要、動作の仕組み、機能一覧、画面イメージ、できること・できないことをまとめた資料です。</span></div>
+                      </div>
+                    </li>
+                    <a class="button button-sm button-primary" href="#">目次を見る</a>
+                    <a class="button button-sm button-primary" href="#">申し込みをする</a>
+                  </ul>
                 </div>
               </div>
             </div>
+
+            <!-- Pricing Box XL-->
+            <div class="cell-sm-6 cell-lg-3">
+              <div class="pricing-box pricing-box-xl pricing-box-novi">
+                <div class="pricing-box-header">
+                  <h4>WinActorが活用できる業務アイディア集</h4>
+                </div>
+                <div class="pricing-box-body">
+                  <ul class="pricing-box-list">
+                    <li>
+                      <div class="unit unit-spacing-sm unit-horizontal unit-middle">
+                        <div class="unit-left"><span class="icon icon-md-big icon-primary mdi mdi-account-multiple"></span></div>
+                        <div class="unit-body"><span>WinActorが活用できる様々な業務のアイディアをご紹介している資料。経理業務、人事業務など**の業務アイディアをご紹介しています。</span></div>
+                      </div>
+                    </li>
+                    <a class="button button-sm button-primary" href="#">目次を見る</a>
+                    <a class="button button-sm button-primary" href="#">申し込みする</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="cell-sm-6 cell-lg-3">
+              <div class="pricing-box pricing-box-xl pricing-box-novi">
+                <div class="pricing-box-header">
+                  <h4>RPAツールの比較検討資料</h4>
+                </div>
+                <div class="pricing-box-body">
+                  <ul class="pricing-box-list">
+                    <li>
+                      <div class="unit unit-spacing-sm unit-horizontal unit-middle">
+                        <div class="unit-left"><span class="icon icon-md-big icon-primary mdi mdi-account-multiple"></span></div>
+                        <div class="unit-body"><span>RPAツールを導入する際に比較すべき検討項目を一覧にした比較検討資料。●×は記入されていませんがどのような項目で検討すべきかがわかります。</span></div>
+                      </div>
+                    </li>
+                    <a class="button button-sm button-primary" href="#">目次を見る</a>
+                    <a class="button button-sm button-primary" href="#">申し込みする</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+
+		<div class="range range-md range-50 range-xs-center">
+            <!-- Pricing Box XL-->
+            <div class="cell-sm-6 cell-lg-3">
+              <div class="pricing-box pricing-box-xl pricing-box-novi">
+                <div class="pricing-box-header">
+                  <h4>WinActor導入支援サービス資料</h4>
+                </div>
+                <div class="pricing-box-body">
+                  <ul class="pricing-box-list">
+                    <li>
+                      <div class="unit unit-spacing-sm unit-horizontal unit-middle">
+                        <div class="unit-left"><span class="icon icon-md-big icon-primary mdi mdi-account-multiple"></span></div>
+                        <div class="unit-body"><span>WinActorを導入する際の弊社独自の導入支援サービスをご紹介している資料です。</span></div>
+                      </div>
+                    </li>
+                    <a class="button button-sm button-primary" href="#">目次を見る</a>
+                    <a class="button button-sm button-primary" href="#">申し込みをする</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing Box XL-->
+            <div class="cell-sm-6 cell-lg-3">
+              <div class="pricing-box pricing-box-xl pricing-box-novi">
+                <div class="pricing-box-header">
+                  <h4>WinActor運用支援・保守サービス概要資料</h4>
+                </div>
+                <div class="pricing-box-body">
+                  <ul class="pricing-box-list">
+                    <li>
+                      <div class="unit unit-spacing-sm unit-horizontal unit-middle">
+                        <div class="unit-left"><span class="icon icon-md-big icon-primary mdi mdi-account-multiple"></span></div>
+                        <div class="unit-body"><span>WinActor導入後の弊社独自の運用支援・保守サービスをご紹介している資料です。</span></div>
+                      </div>
+                    </li>
+                    <a class="button button-sm button-primary" href="#">目次を見る</a>
+                    <a class="button button-sm button-primary" href="#">申し込みをする</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing Box XL-->
+            <div class="cell-sm-6 cell-lg-3">
+              <div class="pricing-box pricing-box-xl pricing-box-novi">
+                <div class="pricing-box-header">
+                  <h4>WinActorの使い方マニュアル</h4>
+                </div>
+                <div class="pricing-box-body">
+                  <ul class="pricing-box-list">
+                    <li>
+                      <div class="unit unit-spacing-sm unit-horizontal unit-middle">
+                        <div class="unit-left"><span class="icon icon-md-big icon-primary mdi mdi-account-multiple"></span></div>
+                        <div class="unit-body"><span>****業務を例に、WinActorの使い方を画面スクショを交えながらご説明している資料です。</span></div>
+                      </div>
+                    </li>
+                    <a class="button button-sm button-primary" href="#">目次を見る</a>
+                    <a class="button button-sm button-primary" href="#">申し込みをする</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </section>
+
+      <section class="section section-lg bg-white text-center">
+        <div class="shell shell-wide">
+          <h3>WinActorに関する各種お問合わせ・お見積り・ご相談</h3>
+          <div class="divider divider-default"></div>
+          <div class="range range-md range-50 range-xs-center">
+            <!-- Pricing Box XL-->
+            <div class="cell-sm-6 cell-lg-3">
+              <div class="pricing-box pricing-box-xl pricing-box-novi">
+                <div class="pricing-box-header">
+                  <h4>導入相談・お見積り</h4>
+                </div>
+                <div class="pricing-box-body">
+                  <ul class="pricing-box-list">
+                    <li>
+                      <div class="unit unit-spacing-sm unit-horizontal unit-middle">
+                        <div class="unit-left"><span class="icon icon-md-big icon-primary mdi mdi-account-multiple"></span></div>
+                        <div class="unit-body"><span>WinActorの導入相談、お見積りに関するお問い合わせです。導入に踏み切れない時などなどお気軽にご相談ください。</span></div>
+                      </div>
+                    </li>
+                    <a class="button button-sm button-primary" href="#">相談する</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing Box XL-->
+            <div class="cell-sm-6 cell-lg-3">
+              <div class="pricing-box pricing-box-xl pricing-box-novi">
+                <div class="pricing-box-header">
+                  <h4>デモがみたい</h4>
+                </div>
+                <div class="pricing-box-body">
+                  <ul class="pricing-box-list">
+                    <li>
+                      <div class="unit unit-spacing-sm unit-horizontal unit-middle">
+                        <div class="unit-left"><span class="icon icon-md-big icon-primary mdi mdi-account-multiple"></span></div>
+                        <div class="unit-body"><span>WinActoのデモをお見せしながら、その詳細な機能や仕組みをお話します。</span></div>
+                      </div>
+                    </li>
+                    <a class="button button-sm button-primary" href="#">デモに申し込む</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing Box XL-->
+            <div class="cell-sm-6 cell-lg-3">
+              <div class="pricing-box pricing-box-xl pricing-box-novi">
+                <div class="pricing-box-header">
+                  <h4>その他お問合わせ</h4>
+                </div>
+                <div class="pricing-box-body">
+                  <ul class="pricing-box-list">
+                    <li>
+                      <div class="unit unit-spacing-sm unit-horizontal unit-middle">
+                        <div class="unit-left"><span class="icon icon-md-big icon-primary mdi mdi-account-multiple"></span></div>
+                        <div class="unit-body"><span>WinActorやRPAに関するその他のお問合わせはこちらからお願いします。</span></div>
+                      </div>
+                    </li>
+                    <a class="button button-sm button-primary" href="contact.html">問い合わせする</a>
+                  </ul>
+                </div>
+              </div>
+            </div>            
           </div>
         </div>
       </section>
 
-
       <!-- Page Footer-->
-      <!-- Footer Default-->
+

@@ -176,7 +176,8 @@ body {
 * Body
 */
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family: "メイリオ";
   font-weight: 300;
   font-size: 15px;
   line-height: 1.6;
@@ -248,7 +249,8 @@ hr {
 h1, h2, h3, h4, h5, h6, [class^='heading-'] {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family: "メイリオ";
   font-weight: 700;
   color: #29293a;
 }
@@ -295,7 +297,8 @@ h1,
 
 h2,
 .heading-2 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family: "メイリオ";
   font-size: 28px;
   line-height: 1.2;
   text-transform: none;
@@ -402,7 +405,8 @@ h4,
 
 h5,
 .heading-5 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family: "メイリオ";
   font-weight: 400;
   font-size: 19px;
   line-height: 1.5;
@@ -484,7 +488,8 @@ h6,
 }
 
 .text-large {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family: "メイリオ";
   font-weight: 700;
   font-size: 60px;
   line-height: 1.1;
@@ -814,7 +819,8 @@ section {
 }
 
 .page-loader__brand {
-  font-family: "Montserrat", sans-serif;
+  /*font-family: "Montserrat", sans-serif;*/
+  font-family: "メイリオ";
   font-size: 24px;
   line-height: 1;
   font-weight: 900;
@@ -3365,7 +3371,8 @@ h6.box-info-title,
   max-width: 100%;
   padding: 9px 30px;
   min-width: 210px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -3866,7 +3873,8 @@ h6.box-info-title,
 .btn {
   padding: 10px 20px;
   border-radius: 35px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -5153,7 +5161,8 @@ textarea.form-input.form-input-lg {
   line-height: 1.25;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 700;
 }
 
@@ -5197,7 +5206,8 @@ textarea.form-input.form-input-lg {
   font-size: 24px;
   line-height: 1.25;
   letter-spacing: 0.04em;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 700;
   color: #fff;
 }
@@ -5987,7 +5997,8 @@ textarea.form-input.form-input-lg {
   position: absolute;
   top: 0;
   left: 0;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family:"メイリオ";
   font-size: 170px;
   line-height: 130px;
   font-weight: 900;
@@ -6438,7 +6449,8 @@ textarea.form-input.form-input-lg {
 }
 
 .pagination-custom > li {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-size: 16px;
   letter-spacing: 0.12em;
   min-width: 50px;
@@ -9860,7 +9872,8 @@ textarea.form-input.form-input-lg {
 
 .team-inline-title {
   text-transform: uppercase;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   letter-spacing: .12em;
 }
 
@@ -9979,7 +9992,8 @@ textarea.form-input.form-input-lg {
   margin-right: auto;
   transition: 450ms ease-in-out;
   color: #10aea1;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 400;
 }
 
@@ -10613,7 +10627,8 @@ textarea.form-input.form-input-lg {
 }
 
 .tooltip-custom + .tooltip .tooltip-inner {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   max-width: 253px;
   padding: 5px 12px;
   font-size: 18px;
@@ -12857,7 +12872,8 @@ h3 + .divider + h5 + p {
 }
 
 .heading-decor {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 200;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -18377,7 +18393,8 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .dtp-actual-month, .dtp-actual-num, .dtp-actual-year {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -18643,7 +18660,8 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 }
 
 .countdown {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-size: 20px;
   letter-spacing: .06em;
   font-weight: 700;
@@ -19026,7 +19044,8 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
     display: inline-block;
     max-width: 100%;
     padding: 11px 25px;
-    font-family: "Lato", Helvetica, Arial, sans-serif;
+    /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+    font-family:"メイリオ";
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.12em;
@@ -19864,7 +19883,8 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 }
 
 .rd-navbar-nav > li > a {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -21674,7 +21694,8 @@ ol ol {
     height: 30px;
     line-height: 30px;
     content: '\f440';
-    font-family: 'Material Design Icons', sans-serif;
+    /*font-family: 'Material Design Icons', sans-serif;*/
+    font-family:"メイリオ";
     font-size: 36px;
     letter-spacing: 768px;
     color: #10aea1;
@@ -21872,7 +21893,8 @@ ol ol {
   padding: 7px 4px;
   text-align: center;
   border: 2px solid #ededed;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -22183,7 +22205,8 @@ html.tablet .ui-to-top {
 .tabs-buttons .nav-tabs li a {
   padding: 7px 10px;
   border-radius: 35px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -22518,7 +22541,8 @@ html.tablet .ui-to-top {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 400;
   font-size: 28px;
   line-height: 28px;
@@ -22654,7 +22678,8 @@ html.tablet .ui-to-top {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 300;
   font-size: 16px !important;
   letter-spacing: 0;
@@ -22685,7 +22710,8 @@ html.tablet .ui-to-top {
 .time_circles > div > span {
   display: block;
   text-align: center;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  /*font-family: "Raleway", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-size: 24px !important;
   font-weight: 400;
   line-height: 1 !important;
@@ -24388,7 +24414,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: block;
   white-space: pre;
   padding: 4px 12px;
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+  font-family:"メイリオ";
   font-size: 12px;
 }
 
@@ -26065,7 +26092,8 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 }
 
 .jp-video {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   position: relative;
   background: #000000;
 }
@@ -26202,7 +26230,8 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 .jp-video .jp-current-time,
 .jp-video .jp-duration {
   font-size: 11px;
-  font-family: Arial;
+  /*font-family: Arial;*/
+  font-family:"メイリオ";
   color: #444444;
   margin-top: 12px;
   float: left;
@@ -26231,7 +26260,8 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
   float: left;
   margin: 13px 3px 0 3px;
   font-size: 11px;
-  font-family: Arial;
+  /*font-family: Arial;*/
+  font-family:"メイリオ";
   color: #444444;
 }
 
@@ -26891,7 +26921,8 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 
 .twitter-feed-block .twitter-feed-name h5 {
   font-size: 18px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  font-family:"メイリオ";
   font-weight: 700;
   color: #1f2323;
 }
