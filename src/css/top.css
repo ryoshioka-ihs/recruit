@@ -266,33 +266,67 @@ footer {
 			background-color: rgba(255,255,255,0.4);
 		}
 
+
+
 /*WinActor*/
 #index #keyv .kvList .key5 {
 	background-image: url("../image/top/keyv5.png");
-	position: relative;
+	padding-top: 50px;
 }
-#index #keyv .kvList a{
-	text-decoration: none
-}
-	#index #keyv .kvList .key5 .textBox {
-		width: auto;
-		padding-top: 140px;
+	#index #keyv .kvList .key5 .textBox h2 {
+		border-bottom: 1px solid #FFF;
+		letter-spacing: 7px;
+		padding-bottom: 10px;
 	}
-		#index #keyv .kvList .key5 .textBox h1 {
-			letter-spacing: 10px;
-			font-size: 50px
+	#index #keyv .kvList .key5 .textBox h2 + p {
+		margin: 28px 0 45px;
+		font-size: 18px;
+		letter-spacing: 2.5px;
+	}
+
+	#index #keyv .kvList .key5 .textBox ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key5 .textBox ul {margin: 0 60px;}
+}
+
+
+	#index #keyv .kvList .key5 .textBox li {
+		width: 480px;
+		min-width: 0;
+		text-align: left;
+		border: 10px solid #FFF;
+	}
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key5 .textBox li {width: 430px;}
+}
+		#index #keyv .kvList .key5 .textBox li a {
+			height: 100%;
+			display: block;
+			padding: 5px 25px 15px 19px;
+			background-color: rgba(255,255,255,0.1);
+			font-size: 13px;
+			letter-spacing: 1.5px;
+			transition: 0.3s;
 		}
-		#index #keyv .kvList .key5 .textBox h2 {
-			letter-spacing: 10px;
+		#index #keyv .kvList .key5 .textBox li a:hover {
+			text-decoration: none;
+			background-color: rgba(255,255,255,0.4);
 		}
-		#index #keyv .kvList .key5 .textBox h2 + p {
-			letter-spacing: 3px;
-			font-size: 20px;
+
+		#index #keyv .kvList .key5 .textBox li p.title {
+			font-family:"Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+			font-size: 28px;
+			letter-spacing: 2.5px;
+			text-align: center;
 		}
-		#index #keyv .kvList .key5 .textBox p {
-			letter-spacing: 3px;
-			font-size: 25px;
-		}
+
+
 
 /*  メッセージ
 -------------------------------------------------- */
