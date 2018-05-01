@@ -9530,7 +9530,8 @@ textarea.form-input.form-input-lg {
 
 .table-custom th,
 .table-custom td {
-  padding: 15px 20px 15px 15px;
+  /*padding: 15px 20px 15px 15px;*/
+  
   font-weight: 300;
   letter-spacing: 0.02em;
   color: #1f2323;
@@ -9546,7 +9547,8 @@ textarea.form-input.form-input-lg {
 @media (min-width: 992px) {
   .table-custom th,
   .table-custom td {
-    padding: 15px 45px 15px 35px;
+    padding: 15px;
+    /*padding: 15px 45px 15px 35px;*/
   }
   .table-custom th:first-child,
   .table-custom td:first-child {
