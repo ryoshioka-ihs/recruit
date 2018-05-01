@@ -35,5 +35,5 @@ var_dump($response);
 
 
 // 正常終了時にthanks.htmlへリダイレクト
-header('Location: thanks.html');
+header('Location: https://www.iimhs.co.jp/winactor/form/documentrequest_form/thanks.html');
 exit();
