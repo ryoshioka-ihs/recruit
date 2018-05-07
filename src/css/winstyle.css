@@ -8926,6 +8926,7 @@ textarea.form-input.form-input-lg {
 @media (min-width: 480px) {
   .pricing-box-xl {
     max-width: 620px;
+    height: 500px;
   }
   .pricing-box-xl .pricing-box-body {
     /*padding: 50px 67px;*/
