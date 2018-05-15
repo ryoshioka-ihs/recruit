@@ -8582,6 +8582,7 @@ textarea.form-input.form-input-lg {
   letter-spacing: 0.02em;
   color: #1f2323;
   list-style-type: none;
+  padding-left: 6px;
 }
 
 .pricing-box-list > li + li {
@@ -27115,12 +27116,7 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 }
 
 ul.grayDisc{
-  display: block;
-  margin-left: 20px;
-  list-style-type: disc;
-  color: #838386;
-  display: list-item;
- }
+  }
 
  ul.grayDisc > li{
   margin-bottom: 5px;
