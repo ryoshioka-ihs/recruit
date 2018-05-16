@@ -1,0 +1,51 @@
+---
+layout: contact
+global_menu: contact
+description: IHSの総合お問い合わせフォームです。サービスや製品の導入をご検討中の方はこちらからお問い合わせください
+keywords: お問い合わせ
+title: 総合お問い合わせ
+---
+
+<h1>総合お問合わせ</h1>
+<br>
+<section>
+	<div class="smtSent">
+	<form action="mailer.php" method="post">
+		<table class="baseTb">
+			<tbody>
+				<tr>
+				<th>貴社名</th>
+				<td><input type="text" name="company" required></td>
+				</tr>
+				<tr>
+				<th>部署名</th>
+				<td><input type="text" name="department" required></td>
+				</tr>
+				<tr>
+				<th>お名前(全角文字)</th>
+				<td><input type="text" name="name" required></td>
+				</tr>
+				<tr>
+				<th>メールアドレス(半角文字)</th>
+				<td><input type="email" name="emailAdd" required></td>
+				</tr>
+				<tr>
+				<th>お電話番号(半角文字)</th>
+				<td><input type="tel" name="phone" required></td>
+				</tr>
+				<tr>
+				<th>お問合わせ内容</th>
+				<td><textarea name="message" required></textarea></td>
+				</tr>
+                <tr>
+                <th>個人情報の取扱いについて</th>
+                <td>本フォームから送信頂きました個人情報については、弊社の「個人情報保護に対する基本方針」( <a href="https://www.iimhs.co.jp/privacy/contact.html">https://www.iimhs.co.jp/privacy/contact.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
+                <input class="check" type="checkbox" name="checkbox" value="同意する" required　>同意する</td>
+                </tr>
+			</tbody>
+		</table>
+		<br>
+		<input type="submit" value="送信する" style="width: 200px;">
+	</form>
+	</div>
+</section>
