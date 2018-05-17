@@ -1,0 +1,40 @@
+---
+layout: contact
+global_menu: contact
+description: I「IHSお役立ちメール」は、情報システム部門で役に立つ情報をまとめたメールマガジンです。ご登録はこちらのページからお願いいたします。
+keywords: IHS,メルマガ
+title: メールマガジン登録
+---
+
+<h1>メールマガジン登録</h1>
+<h3>IHSでは提案可能な技術者や最新の導入事例、サービスや製品のご紹介など、情報システム部門でお役に立つ情報発信を目的として、「IHSお役立ちメール」を配信しています。ぜひご登録ください。</h3>
+<br>
+<section>
+	<div class="smtSent">
+	<form action="mailer.php" method="post">
+		<table class="baseTb">
+			<tbody>
+				<tr>
+				<th>貴社名</th>
+				<td><input type="text" name="company" required></td>
+				</tr>
+				<tr>
+				<th>お名前(全角文字)</th>
+				<td><input type="text" name="name" required></td>
+				</tr>
+				<tr>
+				<th>メールアドレス(半角文字)</th>
+				<td><input type="email" name="emailAdd" required></td>
+				</tr>
+                <tr>
+                <th>個人情報の取扱いについて</th>
+                <td>本フォームから送信頂きました個人情報については、弊社の「メールマガジン登録における個人情報の取扱いについて」( <a href="https://www.iimhs.co.jp/privacy/mailmagazine.html">https://www.iimhs.co.jp/privacy/mailmagazine.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
+                <input class="check" type="checkbox" name="checkbox" value="同意する" required　>同意する</td>
+                </tr>
+			</tbody>
+		</table>
+		<br>
+		<input type="submit" value="送信する" style="width: 200px;">
+	</form>
+	</div>
+</section>

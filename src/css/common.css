@@ -156,7 +156,15 @@ a[href^="tel:"]:hover {
 input, textarea {
 	-webkit-appearance: none;
 	border: none;
+	width: 480px;
 }
+
+input.check{
+	border: none;
+	width: auto;
+	-webkit-appearance: checkbox;
+}
+
 /* --------------------------------------------------
 	PHPでラジオを表示
 -------------------------------------------------- */
