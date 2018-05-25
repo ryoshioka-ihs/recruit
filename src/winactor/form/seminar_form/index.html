@@ -31,8 +31,14 @@ title:      "WinActorセミナーお申込み"
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-name">参加者名</label>
-                      <input class="form-input" id="form-1-name" type="text" name="name" data-constraints="@Required"/ required>
+                      <label class="form-label-outside" for="form-1-name1">姓</label>
+                      <input class="form-input" id="form-1-name1" type="text" name="name1" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name2">名</label>
+                      <input class="form-input" id="form-1-name2" type="text" name="name2" data-constraints="@Required"/ required>
                     </div>
                   </div>
                   <div class="cell-sm-6">
@@ -81,10 +87,10 @@ title:      "WinActorセミナーお申込み"
 		                  <!--<option value="2018年5月29日(火)　自動化ツール導入による業務改善方法紹介セミナー 無償版">2018年5月29日(火)　自動化ツール導入による業務改善方法紹介セミナー 無償版</option>-->
 		                  <!--<option value="2018年5月31日(木)　自動化ツール導入による業務改善方法紹介セミナー 有償実践版">2018年5月31日(木)　自動化ツール導入による業務改善方法紹介セミナー 有償実践版</option>-->
 		                  <!--<option value="2018年6月5日(火)　無償入門コース">2018年6月5日(火)　無償入門コース</option>-->
-		                  <option value="2018年6月14日(木)　WinActorセミナー「導入による業務改善方法紹介のセミナー」">2018年6月14日(木)　WinActorセミナー「導入による業務改善方法紹介のセミナー」</option>
+		                  <option value="2018年6月14日(木)　WinActorセミナー「導入による業務改善方法紹介のセミナー」(有料版)">2018年6月14日(木)　WinActorセミナー「導入による業務改善方法紹介のセミナー」(有料版)</option>
 		                  <!--<option value="2018年6月19日(火)　初めてのWinActor無料入門セミナー">2018年6月19日(火)　初めてのWinActor無料入門セミナー</option>-->
 		                  <option value="2018年6月21日(木)　WinActorハンズオンセミナー「有料初級コース」">2018年6月21日(木)　WinActorハンズオンセミナー「有料初級コース」</option>
-		                  <option value="2018年6月26日(火)　WinActor「業務改善セミナー」">2018年6月26日(火)　WinActor「業務改善セミナー」</option>
+		                  <option value="2018年6月26日(火)　WinActor「業務改善セミナー」(無料版)">2018年6月26日(火)　WinActor「業務改善セミナー」(無料版)</option>
 		                  <option value="2018年6月28日(木)　初めてのWinActor無料入門セミナー">2018年6月28日(木)　初めてのWinActor無料入門セミナー</option>
 		                </select>
 		              </div>
@@ -106,7 +112,16 @@ title:      "WinActorセミナーお申込み"
                       <label class="form-label-outside" for="form-1-other">その他を選択された方</label>
                       <input class="form-input" id="form-1-other" type="text" name="other" placeholder="その他：セミナーを知ったきっかけ" />
                     </div>            
-                  </div>		            
+                  </div>
+		          <div class="cell-sm-6">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside" for="form-1-pc">PCの貸出</label>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="pc" required>
+		                  <option value="希望しない">希望しない</option>
+		                  <option value="希望する">希望する</option>	                  
+		                </select>
+		              </div>
+		            </div> 	
                   <div class="cell-xs-12">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-message">特記事項</label>
