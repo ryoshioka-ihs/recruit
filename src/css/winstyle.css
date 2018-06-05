@@ -27094,23 +27094,35 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 
 
 /*テキスト入力可能なバナー*/
-.banner{
+.banner_g,
+.banner_b{
 	height: 60px;
-	background-color: #1cd8c9;
 	line-height: 2;
 }
-.banner > p {
+
+.banner_g{
+  background-color: #1cd8c9;
+}
+
+.banner_b{
+  background-color: #58ACFA;
+}
+
+.banner_g > p,
+.banner_b > p{
 	text-align: center;
 }
 
-.banner > p > a {
+.banner_g > p > a,
+.banner_b > p > a {
 	color: #FFF;
 	font-size: 30px;
   line-height:60px;
 }
 
 @media(max-width: 736px){
-  .banner > p > a {
+  .banner_g> p > a,
+  .banner_b> p > a {
 	font-size: 15px;
   }
 }
