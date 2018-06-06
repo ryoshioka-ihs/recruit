@@ -27105,7 +27105,7 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 }
 
 .banner_b{
-  background-color: #58ACFA;
+  background: url("/winactor/images/tri.png") #58ACFA left no-repeat;
 }
 
 .banner_g > p,
