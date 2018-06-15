@@ -8928,8 +8928,9 @@ textarea.form-input.form-input-lg {
 @media (min-width: 480px) {
   .pricing-box-xl {
     max-width: 620px;
-    height: 500px;
+    /*height: 500px;*/
   }
+
   .pricing-box-xl .pricing-box-body {
     /*padding: 50px 67px;*/
   }
@@ -27127,9 +27128,14 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 }
 
 @media(max-width: 736px){
-  .banner_g> p > a,
-  .banner_b> p > a {
+  .banner_g> p > a{
 	font-size: 15px;
+  }
+}
+
+@media(max-width: 736px){
+  .banner_b> p > a {
+  font-size: 11px;
   }
 }
 
