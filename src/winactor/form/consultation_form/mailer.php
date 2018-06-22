@@ -14,7 +14,7 @@ $company = $_POST['company'];//会社名
 $name = $_POST['name'];//ご担当者名
 $emailAdress = $_POST['emailAdress'];//メールアドレス
 $phone = $_POST['phone'];//電話番号
-$categoriy =$_POST['categoriy'];//ご相談のカテゴリー
+//$categoriy =$_POST['categoriy'];//ご相談のカテゴリー
 $message = $_POST['message'];//詳しく聞きたいこと
 $check = $_POST['check'];// 個人情報の取扱
 
@@ -29,10 +29,10 @@ $email->addTo($emailAdress)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社")->
        setSubject("【WinActor総合お問合わせ】お問合わせを受け付けました" )->
-       setText("$company \r\n$name 様\r\n\r\nこの度はWinActorに関するお問合わせをいただきまして、誠にありがとうございます。\r\n下記内容にてお問合わせを受け付けました。\r\n内容を確認し次第、担当より折り返しご連絡させていただきます。\r\n\r\n　ご相談のカテゴリー: $categoriy \r\n 詳しく聞きたいこと: $message\r\n 個人情報の取扱: $check")->
+       setText("$company \r\n$name 様\r\n\r\nこの度はWinActorに関するお問合わせをいただきまして、誠にありがとうございます。\r\n下記内容にてお問合わせを受け付けました。\r\n内容を確認し次第、担当より折り返しご連絡させていただきます。\r\n\r\n　詳しく聞きたいこと: $message\r\n 個人情報の取扱: $check")->
 
 
-       setHtml("$company <br>$name 様<br><br>この度はWinActorに関するお問合わせをいただきまして、誠にありがとうございます。<br>下記内容にてお問合わせを受け付けました。<br>内容を確認し次第、担当より折り返しご連絡させていただきます。<br><br><strong>ご相談のカテゴリー:</strong> $categoriy <br /><strong>詳しく聞きたいこと:</strong> $message<br /> <strong>個人情報の取扱:</strong> $check<br />")->
+       setHtml("$company <br>$name 様<br><br>この度はWinActorに関するお問合わせをいただきまして、誠にありがとうございます。<br>下記内容にてお問合わせを受け付けました。<br>内容を確認し次第、担当より折り返しご連絡させていただきます。<br><br><strong>詳しく聞きたいこと:</strong> $message<br /> <strong>個人情報の取扱:</strong> $check<br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
