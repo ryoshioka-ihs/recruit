@@ -15,7 +15,8 @@ $department = $_POST['department'];//部署名
 $name = $_POST['name'];//お名前
 $emailAdd = $_POST['emailAdd'];//メールアドレス
 $phone = $_POST['phone'];//電話番号
-$message = $_POST['message'];//応募きっかけ
+$enquete = $_POST['enquete'];// 何をみてお問い合わせいただきましたか？
+$message = $_POST['message'];//お問い合わせ内容
 $check = $_POST['check'];// 個人情報の取扱
 
 
@@ -46,10 +47,10 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社")->
        setSubject("【WEB問い合わせ】IHSコーポレートサイト" )->
-       setText("総合お問合わせを受信しました。\r\nご確認の上、ご対応をお願いいたします。\r\n\r\n 会社名: $company \r\n お名前: $name \r\n 部署名: $department \r\n メールアドレス: $emailAdd \r\n 電話番号: $phone \r\n お問合わせ内容: $message \r\n ")->
+       setText("総合お問合わせを受信しました。\r\nご確認の上、ご対応をお願いいたします。\r\n\r\n 会社名: $company \r\n お名前: $name \r\n 部署名: $department \r\n メールアドレス: $emailAdd \r\n 電話番号: $phone \r\n 何をみてお問い合わせいただきましたか？: $message \r\n　お問合わせ内容: $message \r\n ")->
 
 
-       setHtml("総合お問合わせを受信しました。<br />ご確認の上、ご対応をお願いいたします。<br /><br />会社名: $company <br /> お名前: $name <br />  部署名: $department <br /> メールアドレス: $emailAdd <br /> 電話番号: $phone <br /> お問合わせ内容: $message <br />")->
+       setHtml("総合お問合わせを受信しました。<br />ご確認の上、ご対応をお願いいたします。<br /><br />会社名: $company <br /> お名前: $name <br />  部署名: $department <br /> メールアドレス: $emailAdd <br /> 電話番号: $phone <br /> 何をみてお問い合わせいただきましたか？: $enquete <br />　お問合わせ内容: $message <br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
