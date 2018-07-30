@@ -1,10 +1,10 @@
 ---
 layout:     "win-form"
 global_menu:  ""
-description:  "IIMヒューマン・ソリューション(IHS)のWebサイトです。IHSのサービス、導入事例、会社情報や最新のトピックスをご覧いただけます。"
-keywords:   "IIMヒューマン・ソリューション,IHS"
+description:  "RPA「WinActor」に関する総合お問い合わせフォームです。導入、お見積り、セミナー、サービス内容、協業等のお問い合わせはこちらからお願いします。"
+keywords:   "WinActor,RPA,総合お問い合わせ,導入,お見積り,サービス内容,協業,セミナー"
 category:   ""
-title:      "WinActorの導入相談、お見積り"
+title:      "RPA「WinActor」に関する総合お問い合わせフォーム"
 ---
 
 
@@ -13,7 +13,7 @@ title:      "WinActorの導入相談、お見積り"
         <div class="shell shell-bigger">
           <div class="range range-ten range-50 range-sm-center range-lg-justify">
             <div class="cell-sm-9 cell-md-6">
-              <h3>WinActorの導入相談、お見積り</h3>
+              <h3>RPA「WinActor」に関する総合お問い合わせフォーム</h3>
               <!--<hr class="divider divider-left divider-default"/>
               <p class="big">WinActorに関するお問合わせについては、下記フォームよりお送りください。</p>
               <p>お送りいただいた内容を基に、追って担当者よりご連絡いたします。</p>-->
@@ -27,6 +27,12 @@ title:      "WinActorの導入相談、お見積り"
                       <input class="form-input" id="form-1-company" type="text" name="company" data-constraints="@Required"/ required>
                     </div>
                   </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name">部署名</label>
+                      <input class="form-input" id="form-1-name" type="text" name="department" data-constraints="@Required"/ required>
+                    </div>
+                  </div>    
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-name">ご担当者名</label>
@@ -45,24 +51,28 @@ title:      "WinActorの導入相談、お見積り"
                       <input class="form-input" id="form-1-phone" type="text" name="phone" data-constraints="@Numeric @Required" required/>
                     </div>            
                   </div>
-                  <!--<div class="cell-sm-6">
+                  <div class="cell-sm-6">
                 	<div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-seminar">ご相談のカテゴリ</label>
-                    <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="categoriy" required>
-                    <select class="form-control select-filter" name="seminar"　data-placeholder="All">
-                      <option value="導入について">導入について</option>  
+                    <label class="form-label-outside" for="form-1-seminar">ご相談のカテゴリー</label>
+                    <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="category" required>
+                      <option value="導入について">導入について</option>
+                      <option value="お見積りについて">お見積りについて</option>
+                      <option value="協業について">協業について</option>
                       <option value="セミナーについて">セミナーについて</option>
+                      <option value="サービス内容について">サービス内容について</option>
                       <option value="その他">その他</option>
                     </select>
                   </div>
-                </div>-->
+                </div>
 		          <div class="cell-sm-6">
 		            <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside" for="form-1-enquete">何をみてお問い合わせいただきましたか？</label>
 		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enquete" required>
-		                  <option value="インターネットでの検索">インターネットでの検索</option>
-		                  <option value="DM">DM</option>
-		                  <option value="その他媒体">その他媒体</option>		                  
+		                  <option value="Googleなどの検索サイト">Googleなどの検索サイト</option>
+		                  <option value="弊社からのメール案内（DM）">弊社からのメール案内（DM）</option>
+		                  <option value="NTT-AT様のHP">NTT-AT様のHP</option>
+		                  <option value="弊社営業からの紹介">弊社営業からの紹介</option>
+		                  <option value="その他">その他</option>
 		                </select>
 		              </div>
 		            </div> 	
@@ -81,7 +91,7 @@ title:      "WinActorの導入相談、お見積り"
                   </div> 
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-button">
-                      <button class="button button-primary" type="submit">send message</button>
+                      <button class="button button-primary" type="submit">お問い合わせ</button>
                     </div>
                   </div>
                 </div>
