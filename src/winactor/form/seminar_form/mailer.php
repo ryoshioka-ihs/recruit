@@ -36,10 +36,10 @@ $email->addTo($emailAdress)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社")->
        setSubject("【WinActorセミナーへお申込みいただきましてありがとうございます】" )->
-       setText("$company \r\n$name1 $name2 様\r\n\r\nこの度は弊社『WinActorセミナー』へお申込みいただきまして、誠にありがとうございます。\r\n受付が完了し次第、担当より折り返しご連絡させていただきます。\r\n\r\n　会社名: $company \r\n ご希望の開催日: $seminar \r\n 部署名: $despartment \r\n　お役職: $position \r\n　メールアドレス: $emailAdress \r\n　電話番号: $phone \r\n　特記事項: $message \r\n　個人情報の取扱: $check ")->
+       setText("$company \r\n$name1 $name2 様\r\n\r\nこの度は弊社『WinActorセミナー』へお申込みいただきまして、誠にありがとうございます。\r\n下記内容でお申し込みを承りました。\r\n\r\n　会社名: $company \r\n ご希望の開催日: $seminar \r\n 部署名: $despartment \r\n　お役職: $position \r\n　メールアドレス: $emailAdress \r\n　電話番号: $phone \r\n　特記事項: $message \r\n　個人情報の取扱: $check \r\n\r\n　セミナー開催日3日前までに、別途メールにて、当日のご案内等をさせて頂きます。\r\n\r\n当日お待ちしております。")->
 
 
-       setHtml("$company <br> $name1 $name2 様<br><br>この度は弊社『WinActorセミナー』へお申込みいただきまして、誠にありがとうございます。<br>受付が完了し次第、担当より折り返しご連絡させていただきます。<br><br>会社名: $company <br />ご希望の開催日： $seminar <br />部署名: $despartment <br />お役職: $position <br />メールアドレス: $emailAdress <br />電話番号: $phone <br />特記事項: $message <br />個人情報の取扱: $check <br />")->
+       setHtml("$company <br> $name1 $name2 様<br><br>この度は弊社『WinActorセミナー』へお申込みいただきまして、誠にありがとうございます。<br>下記内容でお申し込みを承りました。<br><br>会社名: $company <br />ご希望の開催日： $seminar <br />部署名: $despartment <br />お役職: $position <br />メールアドレス: $emailAdress <br />電話番号: $phone <br />特記事項: $message <br />個人情報の取扱: $check <br /><br>セミナー開催日3日前までに、別途メールにて、当日のご案内等をさせて頂きます。<br>当日お待ちしております。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
