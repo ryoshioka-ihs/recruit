@@ -28,46 +28,65 @@
 }
 
 /*=================================
-　　20180323 吉岡追加
+　　20180323 吉岡追加(WinActor)
 =================================*/
+/*WinActorとは*/
 .mdi-winactor:before {
   content: "\f130";
   /*その他候補：f217,f471,f415,f417*/
 }
 
+/*セミナー*/
 .mdi-seminar:before {
   content: "\f563";
   /*その他候補：f10b,f10d*/
 }
 
-.mdi-jirei:before {
-  content: "\f270";
-  /*その他候補：f271,f272,f277*/
-}
-
+/*活用事例*/
 .mdi-shiryo:before {
   content: "\f309";
   /*その他候補：f317,f319*/
 }
 
-.mdi-workex:before {
-  content: "\f607";
-  /*その他候補：*/
-}
-
+/*サービス内容*/
 .mdi-service:before {
   content: "\f5f1";
   /*その他候補：f57a*/
 }
 
+/*WinActorの導入FAQ*/
 .mdi-support:before {
   content: "\f3c1";
   /*その他候補：f381*/
 }
 
+/*お問合わせ*/
 .mdi-contact:before {
   content: "\f284";
   /*その他候補：f2e3*/
+}
+
+/*=================================
+　　20180730 吉岡追加(xoBlos)※WinActorと差異がある箇所のみ  
+=================================*/
+/*xoBlosとは*/
+.mdi-xoBlos:before {
+  content: "\f310";
+}
+
+/*使い方・活用アイディア*/
+.mdi-idea:before {
+  content: "\f428";
+}
+
+/*解決できる課題*/
+.mdi-task:before {
+  content: "\f228";
+}
+
+/*RPA「WinActor」とxoBlos*/
+.mdi-connect:before {
+  content: "\f40a";
 }
 
 /*=================================
