@@ -14,11 +14,12 @@ title:      "RPA「WinActor」セミナーお申込みフォーム"
             <div class="cell-sm-9 cell-md-6">
               <h3>WinActorセミナーお申込みフォーム</h3>
               <!--<hr class="divider divider-left divider-default"/>-->
-              <p class="big">セミナーのお申込みをご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。<br>
-                <span style="color: red">※gmailでのお申込みはお断りさせていただいております。</span><br>
-                <span style="color: red">※参加者様御本人がお申込みいただきますようお願い申し上げます。</span><br>
-                <!--<span style="color: red">※セミナー当日はセミナーの様子を撮影させていただきます。予めご了承ください。</span><br>-->
-                <br>お申込みの受付が完了いたしましたら、担当より折り返しご連絡させていただきます。<br>お申し込み後、3営業日以内に受付完了の折返し連絡がない場合、恐れ入りますが、右記メールアドレス宛にご連絡いただけますでしょうか。</p>
+              <p class="big">セミナーのお申込みをご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。</p>
+                <div style="color: red">
+                  ※gmail等企業ドメイン以外のメールアドレスでのお申込みはお断りさせていただいております。<br>
+                  ※参加者様御本人がお申込みいただきますようお願い申し上げます。<br>　2名様以上でお申し込みをされる際は、個別にお申し込みいただきますようお願いいたします。
+                </div>
+                
 
               <!-- RD Mailform-->
               <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
@@ -61,21 +62,36 @@ title:      "RPA「WinActor」セミナーお申込みフォーム"
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
+                        <label class="form-label-outside" for="form-1-people">従業員数</label>
+                        <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="people" required>
+                        <!--<select class="form-control select-filter" name="people">-->
+                          <option value="①100名以上～500名未満" selected="">①100名以上～500名未満</option>
+                          <option value="②500名以上～1000名未満">②500名以上～1000名未満</option>
+                          <option value="③1000名以上">③1000名以上</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-phone">電話番号</label>
-                      <input class="form-input" id="form-1-phone" type="text" name="phone" data-constraints="@Numeric @Required"/ required>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone1" data-constraints="@Numeric @Required"/ required  placeholder="(例)03">
                     </div>            
                   </div>
-		          <div class="cell-sm-6">
-		            <div class="form-wrap form-wrap-validation">
-		                <label class="form-label-outside" for="form-1-people">従業員数</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="people" required>
-		                <!--<select class="form-control select-filter" name="people">-->
-		                  <option value="①100名以上～500名未満" selected="">①100名以上～500名未満</option>
-		                  <option value="②500名以上～1000名未満">②500名以上～1000名未満</option>
-		                  <option value="③1000名以上">③1000名以上</option>
-		                </select>
-		              </div>
-		            </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone"></label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone2" data-constraints="@Numeric @Required"/ required  placeholder="1234">
+                    </div>            
+                  </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone"></label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone3" data-constraints="@Numeric @Required"/ required  placeholder="5678">
+                    </div>            
+                  </div>
+
 		              
 		          <div class="cell-xs-12 offset-custom-1">
 		            <div class="form-wrap form-wrap-validation">
