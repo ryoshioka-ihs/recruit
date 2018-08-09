@@ -7,15 +7,12 @@ category:   ""
 title:      "WinActorセミナーお申込み"
 ---
 <head>
-  <script>
-  	var motone = "27,000円/税込"
-  	var waribiki = "25,000円/税込"
-     
-    function ninsho(){
-    var PASS = prompt('パスワードを入力してください。');
-    location.href = PASS+'.html';
-  }
-  </script>
+    <script language="javascript" type="text/javascript">
+        function OnButtonClick() {
+            target = document.getElementById("output");
+            target.innerHTML = "20,000円";
+        }
+    </script>
 </head>
 
 
@@ -32,19 +29,25 @@ title:      "WinActorセミナーお申込み"
                 <div class="cell-sm-4">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-ldespartment">クーポンコード</label>
-                      <input class="form-input" id="form-1-despartment" type="pass" name="CONTACTCF36">
+                      <!--<input class="form-input" id="form-1-despartment" type="pass" name="CONTACTCF36">-->
                     </div>
-                  <button type="pass" style="height: 30px; margin-top: 10px; margin-left: 10px;" onclick="ninsho">認証</button>
-
+                  <!--<button type="pass" style="height: 30px; margin-top: 10px; margin-left: 10px;">認証</button>-->
+                      <input type="passsword"name="CONTACTCF36" id="pass" class="form-input"><br />
+                      <input type="button" value="認証" onclick="OnButtonClick();" style="height: 30px; margin-top: 10px; margin-left: 10px;" >
                 </div>
 
 
                 <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-ldespartment">料金</label>
+                      <label class="form-label-outside" for="form-1-ldespartment"></label>
                       <table>
                       	<tbody>
                       		<td>料金</td>
+                      		<td style="padding-left: 20px">
+                      			25,000円
+
+                      			<div id="output"></div>
+                      		</td>
                       	</tbody>
                       </table>
 
