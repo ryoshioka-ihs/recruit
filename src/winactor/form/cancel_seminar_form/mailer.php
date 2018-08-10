@@ -33,10 +33,10 @@ $email->addTo($emailAdress)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社")->
        setSubject("【WinActorセミナーのキャンセルを承りました】" )->
-       setText("$company \r\n$name1 $name2 様\r\n\r\nご連絡いただきまして、ありがとうございます。\r\n下記内容でお申し込みのキャンセルを承りました。\r\n\r\n　会社名: $company \r\n ご希望の開催日: $seminar \r\n メールアドレス: $emailAdress \r\n　電話番号: $phone1-$phone2-$phone3 \r\n　特記事項: $message \r\n　個人情報の取扱: $check \r\n\r\n　別日程でのご参加をご希望の方は、\r\n https://www.iimhs.co.jp/winactor/form/seminar_form/ よりお申し込みください。")->
+       setText("$company \r\n$name1 $name2 様\r\n\r\nご連絡いただきまして、ありがとうございます。\r\n下記内容でお申し込みのキャンセルを承りました。\r\n\r\n　会社名: $company \r\n ご希望の開催日: $seminar \r\n メールアドレス: $emailAdress \r\n　電話番号: $phone1-$phone2-$phone3 \r\n　特記事項: $message \r\n　個人情報の取扱: $check \r\n\r\n　別日程でのご参加をご希望の方は、\r\n https://www.iimhs.co.jp/winactor/form/seminar_form/ よりお申し込みください。\r\n\r\n 有償セミナーの場合は、担当より、別途確認のご連絡をさせていただきます。")->
 
 
-       setHtml("$company <br> $name1 $name2 様<br><br>ご連絡いただきまして、ありがとうございます。<br>下記内容でお申し込みのキャンセルを承りました。<br><br>会社名: $company <br />ご希望の開催日： $seminar <br />メールアドレス: $emailAdress <br />電話番号: $phone1-$phone2-$phone3 <br />特記事項: $message <br />個人情報の取扱: $check <br /><br>別日程でのご参加をご希望の方は<br> https://www.iimhs.co.jp/winactor/form/seminar_form/ よりお申し込みください。")->
+       setHtml("$company <br> $name1 $name2 様<br><br>ご連絡いただきまして、ありがとうございます。<br>下記内容でお申し込みのキャンセルを承りました。<br><br>会社名: $company <br />ご希望の開催日： $seminar <br />メールアドレス: $emailAdress <br />電話番号: $phone1-$phone2-$phone3 <br />特記事項: $message <br />個人情報の取扱: $check <br /><br>別日程でのご参加をご希望の方は<br> https://www.iimhs.co.jp/winactor/form/seminar_form/ よりお申し込みください。<br><br>有償セミナーの場合は、担当より、別途確認のご連絡をさせていただきます。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
