@@ -103,3 +103,6 @@
 .contactBox.adoption {
 	background-image: url("../image/contact/bg_adoption.png");
 }
+.contactBox.test {
+	background-image: url("../image/contact/bg_test.png");
+}
