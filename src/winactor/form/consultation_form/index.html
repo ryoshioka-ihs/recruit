@@ -32,23 +32,48 @@ title:      "RPA「WinActor」に関する総合お問い合わせフォーム"
                       <label class="form-label-outside" for="form-1-name">部署名</label>
                       <input class="form-input" id="form-1-name" type="text" name="department" data-constraints="@Required"/ required>
                     </div>
-                  </div>    
+                  </div>
+                   <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-position">お役職</label>
+                      <input class="form-input" id="form-1-position" type="text" name="position"/>
+                    </div>                   
+                  </div>                    <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name1">姓</label>
+                      <input class="form-input" id="form-1-name1" type="text" name="name1" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-name">ご担当者名</label>
-                      <input class="form-input" id="form-1-name" type="text" name="name" data-constraints="@Required"/ required>
+                      <label class="form-label-outside" for="form-1-name2">名</label>
+                      <input class="form-input" id="form-1-name2" type="text" name="name2" data-constraints="@Required"/ required>
                     </div>
-                  </div>           
-                  <div class="cell-sm-6">
+                  </div>         
+                  <div class="cell-sm-12">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-email">メールアドレス</label>
                       <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required" required >
                     </div>
                   </div>
-                  <div class="cell-sm-6">
+                  <div class="cell-sm-4">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-phone">電話番号</label>
-                      <input class="form-input" id="form-1-phone" type="text" name="phone" data-constraints="@Numeric @Required" required/>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone1" data-constraints="@Numeric @Required"/ required  placeholder="(例)03">
+                    </div>            
+                  </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone"></label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone2" data-constraints="@Numeric @Required"/ required  placeholder="1234">
+                    </div>            
+                  </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone"></label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone3" data-constraints="@Numeric @Required"/ required  placeholder="5678">
                     </div>            
                   </div>
                   <div class="cell-sm-6">

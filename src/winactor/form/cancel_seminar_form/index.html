@@ -1,0 +1,168 @@
+---
+layout:     "win-form"
+global_menu:  ""
+description:  "RPA「WinActor」のセミナーキャンセルフォームです。"
+keywords:   "RPA,WinActor,セミナー"
+category:   ""
+title:      "RPA「WinActor」セミナーキャンセルお申込みフォーム"
+---
+
+      <!-- Contact information-->
+      <section class="section section-lg bg-white">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-center range-lg-justify">
+            <div class="cell-sm-9 cell-md-6">
+              <h3>WinActorセミナーキャンセル受付フォーム</h3>
+              <!--<hr class="divider divider-left divider-default"/>-->
+              <p class="big">セミナーのキャンセルをご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。</p>
+              ※キャンセルは開催日の前日までメールで承ります。<br>
+              当日のキャンセルは申し訳ございませんが、お電話にて承ります。右記電話番号にご連絡ください。
+                
+
+              <!-- RD Mailform-->
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+                <div class="range range-20">
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-company">会社名</label>
+                      <input class="form-input" id="form-1-company" type="text" name="company" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name1">姓</label>
+                      <input class="form-input" id="form-1-name1" type="text" name="name1" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name2">名</label>
+                      <input class="form-input" id="form-1-name2" type="text" name="name2" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <!--<div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-ldespartment">部署</label>
+                      <input class="form-input" id="form-1-despartment" type="text" name="despartment" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                   <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-position">お役職</label>
+                      <input class="form-input" id="form-1-position" type="text" name="position"/>
+                    </div>                   
+                  </div>
+              	  -->
+                  <div class="cell-sm-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-email">メールアドレス</label>
+                      <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required" required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone">電話番号</label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone1" data-constraints="@Numeric @Required"/ required  placeholder="(例)03">
+                    </div>            
+                  </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone"></label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone2" data-constraints="@Numeric @Required"/ required  placeholder="1234">
+                    </div>            
+                  </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone"></label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone3" data-constraints="@Numeric @Required"/ required  placeholder="5678">
+                    </div>            
+                  </div>
+
+		              
+		          <div class="cell-xs-12 offset-custom-1">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside" for="form-1-seminar">キャンセルされる開催日</label>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="seminar" required>
+		                  <!--<option value="2018年8月21日(火)　「WinActor」ハンズオンセミナー有償中級コース">2018年8月21日(火)　「WinActor」ハンズオンセミナー有償中級コース</option>-->
+		                  <option value="2018年8月23日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版)">2018年8月23日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版)</option>
+		                  <option value="2018年8月28日(火)　初めての「WinActor」無償入門セミナー">2018年8月28日(火)　初めての「WinActor」無償入門セミナー</option>
+		                  <option value="2018年8月30日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」">2018年8月30日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」</option>
+		                  <option value="2018年9月4日(火)　初めての「WinActor」無償入門セミナー">2018年9月4日(火)　初めての「WinActor」無償入門セミナー</option>
+		                  <option value="2018年9月6日(木)　「WinActor」ハンズオンセミナー有償初級コース">2018年9月6日(木)　「WinActor」ハンズオンセミナー有償初級コース</option>
+		                  <option value="2018年9月13日(木)　「WinActor」ハンズオンセミナー有償中級コース">2018年9月13日(木)　「WinActor」ハンズオンセミナー有償中級コース</option>
+		                  <option value="2018年9月20日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」">2018年9月20日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」</option>
+		                  <option value="2018年9月25日(火)　「WinActor」ハンズオンセミナー有償初級コース">2018年9月25日(火)　「WinActor」ハンズオンセミナー有償初級コース</option>
+		                  <option value="2018年9月27日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」">2018年9月27日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」</option>
+
+		                </select>
+		              </div>
+		            </div>
+		       	 
+                  <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-message">特記事項</label>
+                      <textarea class="form-input" id="form-1-message" name="message" type="text"></textarea>
+                    </div>
+                  </div>
+                  <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="check" value="同意する" required/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                      </label>
+                    </div>
+                  </div> 
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-button">
+                      <button class="button button-primary" type="submit">送信</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="cell-sm-9 cell-md-4 cell-lg-3">
+              <div class="column-aside">
+                <div class="range">
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>会社住所</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-map-marker"></span><span>東京都文京区本郷2丁目27番20号<br>本郷センタービル6F<br>IIMヒューマン・ソリューション株式会社</span></article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>電話番号</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-phone"></span>
+                      <ul class="list-comma">
+                        <li>03-5684-6840</li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>メールアドレス</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-email-open"></span>
+                    	<!--<span><a href="mailto:web@iimhs.co.jp?subject=【お問合わせ】WinActorセミナー受付状況について&amp;body=IIMヒューマン・ソリューション株式会社%0d%0a	WinActorセミナー担当者">web@iimhs.co.jp</a></span></article>-->
+                    	<span><a href="mailto:web@iimhs.co.jp">web@iimhs.co.jp</a></span></article>
+                  </div>
+                  <!--<div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>Opening hours </h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-calendar-clock"></span>
+                      <ul class="list-0">
+                        <li>Mon–Fri: 9:00 am–6:00 pm</li>
+                        <li>Sat–Sun: 11:00 am–4:00 pm</li>
+                      </ul>
+                    </article>
+                  </div>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page Footer-->
+      <!-- Footer Default-->
