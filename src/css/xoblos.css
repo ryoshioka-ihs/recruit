@@ -9563,6 +9563,8 @@ textarea.form-input.form-input-lg {
 .table-custom th {
   color: #838386;
   border-color: #1f2323;
+  font-weight: bold;
+  text-align: center;
 }
 
 .table-checkout {
