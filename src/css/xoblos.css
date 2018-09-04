@@ -14527,7 +14527,7 @@ html.lt-ie-10 .range-narrow-md > * + [class*='cell'],
   .range-ten > .cell-sm-6 {
     -webkit-flex-basis: 60%;
     flex-basis: 60%;
-    max-width: 60%;
+    /*max-width: 60%;*/
   }
   .range-ten > .cell-sm-7 {
     -webkit-flex-basis: 70%;
@@ -27054,12 +27054,15 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 以下吉岡追加;
 //////////////////////////////*/
 
-/*width:980px;のバナー*/
+/* --------------------------------------------------
+    980px;のバナー
+-------------------------------------------------- */
 .bg_banner{
 	max-width: 120%;
 	height: 150px;
 }
 
+/*スマートフォン用:*/
 @media(max-width: 375px){
 .bg_banner{
   max-width: 100% !important;
@@ -27130,6 +27133,7 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
   line-height:60px;
 }
 
+/*スマートフォン用:*/
 @media(max-width: 736px){
   .banner_g> p > a{
 	font-size: 15px;
@@ -27149,13 +27153,16 @@ ul.grayDisc{
   margin-bottom: 5px;
  }
 
-/*Topics*/
+/* --------------------------------------------------
+    Topics
+-------------------------------------------------- */
 .topics-box{
   margin:50px auto;
   height: auto;
   padding-right: 20px;
 }
 
+/*スマートフォン用:*/;
 @media (max-width: 414px){
 	.topics-box{
 		width: 320px;
@@ -27201,4 +27208,50 @@ ul.grayDisc{
 .list-center li{
    position:relative;
    left:-50%;
+}
+
+/* --------------------------------------------------
+    ページ内リンク
+-------------------------------------------------- */
+  .linkInPage li {
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    border: 1px solid #DDD;
+    margin: 0 10px 5px 0;
+    padding-left: 0px;
+  }
+  .linkInPage li:last-child {
+    margin-right: 0;
+  }
+    .linkInPage li a {
+      display: block;
+      width: 100%;
+      height: auto;
+      color: #282828;
+      padding: 5px 10px 5px 20px;
+      background: #FFF url("../image/common/linkInPage_arrow.png") 8px center no-repeat;
+      background-size: 7px auto;
+      transition: 0.3s;
+    }
+    .linkInPage li a:hover {
+      text-decoration: none;
+      background-color: #E5EBF3;
+    }
+    /*スマートフォン用*/
+      .linkInPage {
+        margin: 20px 10px 0;
+    }
+
+    .linkInPage li {
+      font-size: 11px;
+      margin-right: 5px;
+    } 
+
+/* --------------------------------------------------
+    その他
+-------------------------------------------------- */
+/*WinActor✕xoBlosのページの<p>開始位置*/
+.m15{
+  margin-left: 15px;
 }
