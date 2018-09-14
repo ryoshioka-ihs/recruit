@@ -1293,7 +1293,7 @@ section {
 * 2.2  Backgrounds
 */
 .context-dark, .bg-gray-dark, .bg-gray-darker, .bg-additional-gray-darker .bg-additional-item,
-.bg-image, .bg-additional-image .bg-additional-item, .bg-primary, .breadcrumbs-custom-light {
+ .bg-additional-image .bg-additional-item, .bg-primary, .breadcrumbs-custom-light {
   color: #fff;
 }
 
@@ -3163,7 +3163,20 @@ h6.box-info-title,
   background-position: center top;
 }
 
-.breadcrumbs-custom > .shell {
+.breadcrumbs-custom_collaboration {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0 40px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #1f2323;
+  background-image: url(/xoblos/images/collaboration/img_01.png);
+  background-size: cover;
+  background-position: center top;
+}
+
+.breadcrumbs-custom > .shell,
+.breadcrumbs-custom_collaboration > .shell  {
   position: relative;
   z-index: 2;
 }
@@ -3299,8 +3312,9 @@ h6.box-info-title,
 }
 
 @media (min-width: 768px) {
-  .breadcrumbs-custom {
-    padding: 60px 0 30px;
+  .breadcrumbs-custom,
+  .breadcrumbs-custom_collaboration {
+    padding: 200px 0 30px;
   }
   .breadcrumbs-custom-subtitle {
     font-size: 22px;
@@ -3314,8 +3328,9 @@ h6.box-info-title,
 }
 
 @media (min-width: 1200px) {
-  .breadcrumbs-custom {
-    padding: 120px 0 50px;
+  .breadcrumbs-custom,
+  .breadcrumbs-custom_collaboration {
+    padding: 300px 0 50px;
   }
   .breadcrumbs-custom-subtitle {
     font-size: 28px;
@@ -3343,8 +3358,9 @@ h6.box-info-title,
   .breadcrumbs-blog-post * + .box-inline {
     margin-top: 5vh;
   }
-  .breadcrumbs-custom {
-    padding: 210px 0 130px;
+  .breadcrumbs-custom,
+  .breadcrumbs-custom_collaboration {
+    padding: 300px 0 130px;
   }
   .breadcrumbs-blog-post {
     padding-top: 50px;
@@ -10733,7 +10749,7 @@ textarea.form-input.form-input-lg {
 }
 
 .bg-gray-darker.page-footer, .bg-additional-gray-darker .page-footer.bg-additional-item,
-.bg-image.page-footer, .bg-additional-image .page-footer.bg-additional-item {
+.bg-image, .bg-image_collaboration, .page-footer, .bg-additional-image .page-footer.bg-additional-item {
   color: #fff;
 }
 
