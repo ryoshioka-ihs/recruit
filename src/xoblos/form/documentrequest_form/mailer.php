@@ -23,11 +23,11 @@ $email    = new SendGrid\Email();
 $email->addTo($to)->
        setFrom($from)->
        //setFromName("IHSWinActor")->
-       setSubject("【WinActor資料がダウンロードされました】" )->
-       setText("営業各位\r\n\r\nWinActorオファーページの資料がダウンロードされました。\r\n必要に応じてアクションをお願いいたします。\r\n\r\n会社名: $company \r\n ご担当者名: $name \r\n　メールアドレス: $emailAdress  \r\n電話番号: $phone　\r\n 個人情報の取扱: $check")->
+       setSubject("【xoBlos資料がダウンロードされました】" )->
+       setText("営業各位\r\n\r\nxoBlosオファーページの資料がダウンロードされました。\r\n必要に応じてアクションをお願いいたします。\r\n\r\n会社名: $company \r\n ご担当者名: $name \r\n　メールアドレス: $emailAdress  \r\n電話番号: $phone　\r\n 個人情報の取扱: $check")->
 
 
-       setHtml("営業各位<br><br>WinActorオファーページの資料がダウンロードされました。<br />必要に応じてアクションをお願いいたします。<br /><br /><strong>会社名:</strong> $company<br /> <strong>ご担当者名:</strong> $name<br /> <strong>メールアドレス:</strong> $emailAdress<br /> <strong>電話番号:</strong> $phone<br /> <strong>個人情報の取扱:</strong> $check<br />")->
+       setHtml("営業各位<br><br>xoBlosオファーページの資料がダウンロードされました。<br />必要に応じてアクションをお願いいたします。<br /><br /><strong>会社名:</strong> $company<br /> <strong>ご担当者名:</strong> $name<br /> <strong>メールアドレス:</strong> $emailAdress<br /> <strong>電話番号:</strong> $phone<br /> <strong>個人情報の取扱:</strong> $check<br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
@@ -35,5 +35,5 @@ var_dump($response);
 
 
 // 正常終了時にthanks.htmlへリダイレクト
-header('Location: https://www.iimhs.co.jp/winactor/form/documentrequest_form/thanks.html');
+header('Location: /xoblos/form/documentrequest_form/thanks.html');
 exit();
