@@ -3377,7 +3377,7 @@ h6.box-info-title,
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   border: 2px solid;
   border-radius: 35px;
   text-align: center;
