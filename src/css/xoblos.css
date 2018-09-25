@@ -3417,7 +3417,7 @@ h6.box-info-title,
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   border: 2px solid;
   border-radius: 35px;
   text-align: center;
@@ -27295,3 +27295,30 @@ ul.grayDisc{
 .m15{
   margin-left: 15px;
 }
+/* --------------------------------------------------
+  ライトボックス表示用
+-------------------------------------------------- */
+.lightBox {
+  /*margin-top: 25px;*/
+  width: 400px;
+  overflow: hidden;
+}
+  .lightBox figure img {
+    max-width: 100%;
+  }
+  .lightBox p {
+    height: 20px;
+    padding: 2px 0 0 25px;
+    margin-top: 10px;
+    float: right;
+    background: url("../image/common/icon_loope.png") left center no-repeat;
+    font-weight: bold;
+    font-size: 12px;
+    color: #003E8D;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .lightBox p:hover {
+    opacity: 0.7;
+    -ms-filter: "alpha(opacity=70)";
+  }
