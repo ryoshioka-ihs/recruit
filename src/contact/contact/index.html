@@ -6,48 +6,96 @@ keywords: お問い合わせ
 title: 総合お問い合わせ
 ---
 
+<div id='crmWebToEntityForm'>
+   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=SHIFT-JIS'>
+   <form action='https://crmsandbox.zoho.com/crm/WebToLeadForm' name=WebToLeads2033041000000206001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2033041000000206001()' accept-charset='UTF-8'>
+
+	 <!-- Do not remove this code. -->
+	<input type='hidden' style='display:none;' name='xnQsjsdp' value='5b07d521b46845ce27cb2e86d4f463b4813f606ac76f87e50de266fe2d08fe35'/>
+	<input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+	<input type='hidden' style='display:none;' name='xmIwtLD' value='e85736963f89e2a7592c4a40c401063a7103143952d7b91d6eab35eb3da40c49'/>
+	<input type='hidden' style='display:none;'  name='actionType' value='TGVhZHM='/>
+
+	<input type='hidden' style='display:none;' name='returnURL' value='https://www.iimhs.co.jp/contact/contact/thanks.html' /> 
+	 <!-- Do not remove this code. -->
+
+
 <h1>総合お問合わせ</h1>
 <br>
 <section>
 	<div class="smtSent">
-	<form action="mailer.php" method="post">
+	<form>
 		<table class="baseTb">
 			<tbody>
-				<tr>
-				<th>貴社名</th>
-				<td><input type="text" name="company" required></td>
-				</tr>
-				<tr>
-				<th>部署名</th>
-				<td><input type="text" name="department" required></td>
-				</tr>
-				<tr>
-				<th>お名前(全角文字)</th>
-				<td><input type="text" name="name" required></td>
-				</tr>
-				<tr>
-				<th>メールアドレス(半角文字)</th>
-				<td><input type="email" name="emailAdd" required></td>
-				</tr>
-				<tr>
-				<th>お電話番号(半角文字)</th>
-				<td><input type="tel" name="phone" required></td>
-				</tr>
-				<tr>
-				<th>何をみてお問い合わせいただきましたか？</th>
-				<td><input class="check" type="checkbox" name="enquete" value="インターネットからの検索">インターネットからの検索
-					<input class="check"type="checkbox" name="enquete" value="DM">DM
-					<input class="check"type="checkbox" name="enquete" value="その他媒体">その他媒体</td>
-				</tr>				
-				<tr>
-				<th>お問合わせ内容</th>
-				<td><textarea name="message" required></textarea></td>
-				</tr>
-                <tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>会社名</th>
+				<td><input type='text' name="Company" required/></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>部署名</th>
+				<td><input type="text" name="LEADCF9" required></td>
+			</tr>
+			<tr>
+				<th>お役職</th>
+				<td><input type="text" name="Designation"></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>姓</th>
+				<td><input type="text" name="Last Name" required></td>
+			</tr>	
+			<tr>
+				<th><span style="color: red">【必須】</span>名</th>
+				<td><input type="text" name="First Name" required></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>電話番号</th>
+				<td><input type="Phone" name="Phone" required></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>メールアドレス</th>
+				<td><input type="Email" name="Email" required></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>お問い合わせカテゴリー</th>
+				<td>
+					<select style='width:250px;' name='LEADCF7' required="">
+					<option value='IHS01 人材'>人材</option>
+					<option value='IHS02 構築'>構築</option>
+					<option value='IHS03 WinActor'>WinActor</option>
+					<option value='IHS04 xoBlos'>xoBlos</option>
+					<option value='IHS05 Druva'>Druva</option>
+					<option value='IHS06 その他ソリューション'>その他ソリューション</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>お問い合わせ内容</th>
+				<td><textarea name='LEADCF8' maxlength='2000' required=""></textarea></td>
+			</tr>
+			<tr>
+				<th>何を見てお問い合わせいただきましたか？</th>
+				<td>
+				<select name='Lead Source' required="">
+				<option value='インターネットからの検索'>インターネットからの検索</option>
+				<option value='弊社からのDM'>弊社からのDM</option>
+				<option value='弊社営業からのご案内'>弊社営業からのご案内</option>
+				<option value='御社社員様からのご紹介'>御社社員様からのご紹介</option>
+				<option value='他企業様からのご紹介'>他企業様からのご紹介</option>
+				<option value='パートナー企業様'>パートナー企業様</option>
+				<option value='弊社開催セミナーに参加'>弊社開催セミナーに参加</option>
+				<option value='JUAS展示会'>JUAS展示会</option>
+				<option value='その他'>その他</option>
+				</select></td></tr>
+            </tr>
+			<tr>
+                <th>弊社からのDM配信を希望しますか？</th>
+                <td><input type='checkbox'  name='LEADCF102' class="check"/>希望する</td>
+            </tr>
+			<tr>
                 <th>個人情報の取扱いについて</th>
                 <td>本フォームから送信頂きました個人情報については、弊社の「個人情報保護に対する基本方針」( <a href="https://www.iimhs.co.jp/privacy/contact.html">https://www.iimhs.co.jp/privacy/contact.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
-                <input class="check" type="checkbox" name="checkbox" value="同意する" required　>同意する</td>
-                </tr>
+                <input type="checkbox" name="LEADCF109" required class="check">同意する</td>
+            </tr>
 			</tbody>
 		</table>
 		<br>
@@ -55,3 +103,6 @@ title: 総合お問い合わせ
 	</form>
 	</div>
 </section>
+
+</form>
+</div>
