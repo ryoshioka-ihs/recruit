@@ -6,7 +6,18 @@ keywords:   "IIMヒューマン・ソリューション,IHS"
 category:   ""
 title:      "WinActorセミナーお申込み"
 ---
+<div id='crmWebToEntityForm'>
+   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=SHIFT-JIS'>
+   <form action='https://crmsandbox.zoho.com/crm/WebToLeadForm' name=WebToLeads2033041000000212107 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2033041000000212107()' accept-charset='UTF-8'>
 
+	 <!-- Do not remove this code. -->
+	<input type='text' style='display:none;' name='xnQsjsdp' value='5b07d521b46845ce27cb2e86d4f463b4813f606ac76f87e50de266fe2d08fe35'/>
+	<input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+	<input type='text' style='display:none;' name='xmIwtLD' value='e85736963f89e2a7592c4a40c401063a67fddd625381aff7c4215e91e0dc62e6'/>
+	<input type='text' style='display:none;'  name='actionType' value='TGVhZHM='/>
+
+	<input type='text' style='display:none;' name='returnURL' value='https://ihs-corporate-site-stage.azurewebsites.net/winactor/form/seminar_form/thanks.html' /> 
+	 <!-- Do not remove this code. -->
       <!-- Contact information-->
       <section class="section section-lg bg-white">
         <div class="shell shell-bigger">
@@ -21,58 +32,58 @@ title:      "WinActorセミナーお申込み"
                 <br>お申込みの受付が完了いたしましたら、担当より折り返しご連絡させていただきます。<br>お申し込み後、3営業日以内に受付完了の折返し連絡がない場合、恐れ入りますが、右記メールアドレス宛にご連絡いただけますでしょうか。</p>
 
               <!-- RD Mailform-->
-              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact">
                 <div class="range range-20">
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-company">会社名</label>
-                      <input class="form-input" id="form-1-company" type="text" name="company" data-constraints="@Required"/ required>
+                      <label class="form-label-outside">会社名</label>
+                      <input class="form-input" type="text" name="Company" data-constraints="@Required"/ required>
+                    </div>
+                	</div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">部署</label>
+                      <input class="form-input"type="text" name="LEADCF9" data-constraints="@Required"/ required>
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-name1">姓</label>
-                      <input class="form-input" id="form-1-name1" type="text" name="name1" data-constraints="@Required"/ required>
+                      <label class="form-label-outside">お役職</label>
+                      <input class="form-input"type="text" name="Designation">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-name2">名</label>
-                      <input class="form-input" id="form-1-name2" type="text" name="name2" data-constraints="@Required"/ required>
+                      <label class="form-label-outside">姓</label>
+                      <input class="form-input"type="text" name="Last Name" data-constraints="@Required"/ required>
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-ldespartment">部署</label>
-                      <input class="form-input" id="form-1-despartment" type="text" name="despartment" data-constraints="@Required"/ required>
+                      <label class="form-label-outside">名</label>
+                      <input class="form-input"type="text" name="First Name" data-constraints="@Required"/ required>
                     </div>
                   </div>
-                   <div class="cell-sm-6">
+                  <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-position">お役職</label>
-                      <input class="form-input" id="form-1-position" type="text" name="position"/>
-                    </div>                   
-                  </div>                  
+                      <label class="form-label-outside">電話番号</label>
+                      <input class="form-input" type="text" name="Phone" required placeholder="03-1234-5678">
+                    </div>            
+                  </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-email">メールアドレス</label>
-                      <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required" required>
+                      <input class="form-input" id="form-1-email" type="email" name="Email" data-constraints="@Email @Required" required>
                     </div>
-                  </div>
-                  <div class="cell-sm-6">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-phone">電話番号</label>
-                      <input class="form-input" id="form-1-phone" type="text" name="phone" required>
-                    </div>            
                   </div>
 		          <div class="cell-sm-6">
 		            <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside" for="form-1-people">従業員数</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="people" required>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="LEADCF10" required>
 		                <!--<select class="form-control select-filter" name="people">-->
-		                  <option value="①100名以上～500名未満" selected="">①100名以上～500名未満</option>
-		                  <option value="②500名以上～1000名未満">②500名以上～1000名未満</option>
-		                  <option value="③1000名以上">③1000名以上</option>
+		                  <option value="100名以上～500名未満" selected="">①100名以上～500名未満</option>
+		                  <option value="500名以上～1000名未満">②500名以上～1000名未満</option>
+		                  <option value="1000名以上">③1000名以上</option>
 		                </select>
 		              </div>
 		            </div>
@@ -80,11 +91,7 @@ title:      "WinActorセミナーお申込み"
 		          <div class="cell-xs-12 offset-custom-1">
 		            <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside" for="form-1-seminar">ご希望の開催日</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="seminar" required>
-		                  <!--<option value="2018年7月17日(火)　初めての「WinActor」無償入門セミナー">2018年7月17日(火)　初めての「WinActor」無償入門セミナー</option>-->
-		                  <!--<option value="2018年7月19日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」">2018年7月19日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」</option>-->
-		                  <!--<option value="2018年7月26日(木)　初めての「WinActor」無償入門セミナー">2018年7月26日(木)　初めての「WinActor」無償入門セミナー</option>-->
-		                  <!--<option value="2018年7月31日(火)　初めての「WinActor」無償入門セミナー">2018年7月31日(火)　初めての「WinActor」無償入門セミナー</option>-->
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="sLEADCF11" required>
 		                  <option value="2018年8月2日(木)　「WinActor」ハンズオンセミナー有償初級コース">2018年8月2日(木)　「WinActor」ハンズオンセミナー有償初級コース</option>
 		                  <option value="2018年8月7日(火)　初めての「WinActor」無償入門セミナー">2018年8月7日(火)　初めての「WinActor」無償入門セミナー</option>
 		                  <option value="2018年8月9日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」">2018年8月9日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」</option>
@@ -97,46 +104,23 @@ title:      "WinActorセミナーお申込み"
 		                </select>
 		              </div>
 		            </div>
-		       	 
-		          <div class="cell-sm-6">
-		            <div class="form-wrap form-wrap-validation">
-		                <label class="form-label-outside" for="form-1-enquete">セミナーを知ったきっかけ</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enquete" required>
-		                  <option value="DM">DM</option>
-		                  <option value="インターネットでの検索">インターネットでの検索</option>
-		                  <option value="弊社営業からの紹介">弊社営業からの紹介</option>
-		                  <option value="その他">その他</option>		                  
-		                </select>
-		              </div>
-		            </div> 		            
-                  <div class="cell-sm-6">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-other">その他を選択された方</label>
-                      <input class="form-input" id="form-1-other" type="text" name="other" placeholder="その他：セミナーを知ったきっかけ" />
-                    </div>            
-                  </div>
-                  <!--
-		          <div class="cell-sm-6">
-		            <div class="form-wrap form-wrap-validation">
-		                <label class="form-label-outside" for="form-1-pc">PCの貸出</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="pc" required>
-		                  <option value="希望しない">希望しない</option>
-		                  <option value="希望する">希望する</option>	                  
-		                </select>
-						<p style="font-size: 10px;">貸出可能なPCには限りがございますので、お受けできない可能性がございます。予めご了承ください。</p>
-		              </div>
-		            </div>
-		        -->
                   <div class="cell-xs-12">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-message">特記事項</label>
-                      <textarea class="form-input" id="form-1-message" name="message" type="text"></textarea>
+                      <label class="form-label-outside" for="form-1-message">本セミナーに参加され、どのようなことが知りたいですか？</label>
+                      <textarea class="form-input" name="LEADCF12" type="text"></textarea>
                     </div>
                   </div>
                   <div class="cell-xs-12">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
-                        <input type="checkbox" name="check" value="同意する" required/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                        <input type='checkbox' name='LEADCF102' class="check"/>弊社からのDM配信を希望する
+                      </label>
+                    </div>
+                  </div> 
+                  <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="LEADCF104" required　class="check"/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
                       </label>
                     </div>
                   </div> 
