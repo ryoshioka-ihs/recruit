@@ -6,7 +6,17 @@ keywords:   "IIMヒューマン・ソリューション,IHS"
 category:   ""
 title:      "WinActorの導入相談、お見積り"
 ---
+<div id='crmWebToEntityForm'>
+   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=SHIFT-JIS'>
+   <form action='https://crmsandbox.zoho.com/crm/WebToLeadForm' name=WebToLeads2033041000000212341 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2033041000000212341()' accept-charset='UTF-8'>
 
+	 <!-- Do not remove this code. -->
+	<input type='text' style='display:none;' name='xnQsjsdp' value='5b07d521b46845ce27cb2e86d4f463b4813f606ac76f87e50de266fe2d08fe35'/>
+	<input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+	<input type='text' style='display:none;' name='xmIwtLD' value='e85736963f89e2a7592c4a40c401063a3261d22043353e563b8106c604275981'/>
+	<input type='text' style='display:none;'  name='actionType' value='TGVhZHM='/>
+
+	<input type='text' style='display:none;' name='returnURL' value='https://ihs-corporate-site-stage.azurewebsites.net/winactor/form/consultation_form/thanks.html' /> 
 
       <!-- Contact information-->
       <section class="section section-lg bg-white">
@@ -19,69 +29,102 @@ title:      "WinActorの導入相談、お見積り"
               <p>お送りいただいた内容を基に、追って担当者よりご連絡いたします。</p>-->
 
               <!-- RD Mailform-->
-              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+              <form>
                 <div class="range range-20">
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-company">会社名</label>
-                      <input class="form-input" id="form-1-company" type="text" name="company" data-constraints="@Required"/ required>
+                      <label class="form-label-outside">会社名</label>
+                      <input class="form-input" type="text" name="Company" data-constraints="@Required"/ required>
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-name">ご担当者名</label>
-                      <input class="form-input" id="form-1-name" type="text" name="name" data-constraints="@Required"/ required>
-                    </div>
-                  </div>           
-                  <div class="cell-sm-6">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-email">メールアドレス</label>
-                      <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required" required >
+                      <label class="form-label-outside">部署名</label>
+                      <input class="form-input" type="text" name="name" data-constraints="@Required"/ required>
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-phone">電話番号</label>
-                      <input class="form-input" id="form-1-phone" type="text" name="phone" data-constraints="@Numeric @Required" required/>
+                      <label class="form-label-outside">お役職</label>
+                      <input class="form-input" type="text" name="Designation">
+                    </div>
+                  </div> 
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">姓</label>
+                      <input class="form-input" type="text" name="Last Name" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">名</label>
+                      <input class="form-input" type="text" name="First Name" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">電話番号</label>
+                      <input class="form-input" type="text" name="Phone" required placeholder="03-1234-5678">
                     </div>            
                   </div>
-                  <!--<div class="cell-sm-6">
-                	<div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-seminar">ご相談のカテゴリ</label>
-                    <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="categoriy" required>
-                    <select class="form-control select-filter" name="seminar"　data-placeholder="All">
-                      <option value="導入について">導入について</option>  
-                      <option value="セミナーについて">セミナーについて</option>
-                      <option value="その他">その他</option>
-                    </select>
-                  </div>
-                </div>-->
-		          <div class="cell-sm-6">
-		            <div class="form-wrap form-wrap-validation">
-		                <label class="form-label-outside" for="form-1-enquete">何をみてお問い合わせいただきましたか？</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enquete" required>
-		                  <option value="インターネットでの検索">インターネットでの検索</option>
-		                  <option value="DM">DM</option>
-		                  <option value="その他媒体">その他媒体</option>		                  
-		                </select>
-		              </div>
-		            </div> 	
-                  <div class="cell-xs-12">
+                  <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside" for="form-1-message">お問合わせ内容</label>
-                      <textarea class="form-input" id="form-1-message" name="message" required type="text"></textarea>
+                      <label class="form-label-outside">メールアドレス</label>
+                      <input class="form-input" type="email" name="Email" data-constraints="@Email @Required" required >
                     </div>
                   </div>
+                  <div class="cell-sm-12">
+                	<div class="form-wrap form-wrap-validation">
+                    <label class="form-label-outside">ご相談のカテゴリ</label>
+                    <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="LEADCF7" required>
+                      <option value="IHS03-1 導入について">導入について</option>  
+                      <option value="IHS03-2 お見積りについて">お見積りについて</option>
+                      <option value="IHS03-3 協業について">協業について</option>
+                      <option value="IHS03-4 セミナーについて">セミナーについて</option>
+                      <option value="IHS03-5 サービス内容について">サービス内容について</option>
+                      <option value="IHS03-6 その他">その他</option>
+                    </select>
+                  </div>
+                </div>
+                  <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">お問合わせ内容</label>
+                      <textarea class="form-input" name="LEADCF8" required type="text"></textarea>
+                    </div>
+                  </div>
+		          <div class="cell-sm-12">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside">何をみてお問い合わせいただきましたか？</label>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="Lead Source" required>
+		                  <option value="インターネットからの検索">インターネットからの検索</option>
+		                  <option value="弊社からのDM">弊社からのDM</option>
+		                  <option value="弊社営業からのご案内">弊社営業からのご案内</option>
+		                  <option value="御社社員様からのご紹介">御社社員様からのご紹介</option>
+		                  <option value="他企業様からのご紹介">他企業様からのご紹介</option>
+		                  <option value="パートナー企業様">パートナー企業様</option>
+		                  <option value="弊社開催セミナーに参加">弊社開催セミナーに参加</option>
+		                  <option value="JUAS展示会">JUAS展示会</option>
+		                  <option value="その他">その他</option>
+		                </select>
+		              </div>
+		            </div>
+		            <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type='checkbox' name='LEADCF102' class="check"/>弊社からのDM配信を希望する
+                      </label>
+                    </div>
+                  </div> 
                   <div class="cell-xs-12">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
-                        <input type="checkbox" name="check" value="同意する" / required>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                        <input type="checkbox" name="LEADCF109" required　class="check"/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
                       </label>
                     </div>
                   </div> 
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-button">
-                      <button class="button button-primary" type="submit">send message</button>
+                      <button class="button button-primary" type="submit">お問い合わせ</button>
                     </div>
                   </div>
                 </div>
