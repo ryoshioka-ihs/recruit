@@ -333,7 +333,7 @@ h2,
   font-weight: 300;
 }
 
-h3,
+/*h3,
 .heading-3 {
   font-size: 24px;
   line-height: 1.45;
@@ -378,7 +378,7 @@ h3,
   .h3-alternate {
     font-size: 42px;
   }
-}
+}*/
 
 h4,
 .heading-4 {
@@ -431,7 +431,7 @@ h5,
   font-weight: 300;
 }
 
-h6,
+h6,h3
 .heading-6 {
   font-size: 17px;
   line-height: 1.5;
@@ -439,7 +439,7 @@ h6,
 }
 
 @media (min-width: 768px) {
-  h6,
+  h6,h3
   .heading-6 {
     font-size: 19px;
     line-height: 1.5;
@@ -447,7 +447,7 @@ h6,
 }
 
 @media (min-width: 1600px) {
-  h6,
+  h6,h3
   .heading-6 {
     font-size: 24px;
   }
