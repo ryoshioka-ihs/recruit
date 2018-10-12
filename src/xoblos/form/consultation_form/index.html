@@ -1,0 +1,142 @@
+---
+layout:     "win-form"
+global_menu:  ""
+description:  "RPA「WinActor」に関する総合お問い合わせフォームです。導入、お見積り、セミナー、サービス内容、協業等のお問い合わせはこちらからお願いします。"
+keywords:   "WinActor,RPA,総合お問い合わせ,導入,お見積り,サービス内容,協業,セミナー"
+category:   ""
+title:      "RPA「WinActor」に関する総合お問い合わせフォーム"
+---
+
+
+      <!-- Contact information-->
+      <section class="section section-lg bg-white">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-center range-lg-justify">
+            <div class="cell-sm-9 cell-md-6">
+              <h3>RPA「WinActor」に関する総合お問い合わせフォーム</h3>
+              <!--<hr class="divider divider-left divider-default"/>
+              <p class="big">WinActorに関するお問合わせについては、下記フォームよりお送りください。</p>
+              <p>お送りいただいた内容を基に、追って担当者よりご連絡いたします。</p>-->
+
+              <!-- RD Mailform-->
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+                <div class="range range-20">
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-company">会社名</label>
+                      <input class="form-input" id="form-1-company" type="text" name="company" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name">部署名</label>
+                      <input class="form-input" id="form-1-name" type="text" name="department" data-constraints="@Required"/ required>
+                    </div>
+                  </div>    
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name">ご担当者名</label>
+                      <input class="form-input" id="form-1-name" type="text" name="name" data-constraints="@Required"/ required>
+                    </div>
+                  </div>           
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-email">メールアドレス</label>
+                      <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required" required >
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone">電話番号</label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone" data-constraints="@Numeric @Required" required/>
+                    </div>            
+                  </div>
+                  <div class="cell-sm-6">
+                	<div class="form-wrap form-wrap-validation">
+                    <label class="form-label-outside" for="form-1-seminar">ご相談のカテゴリー</label>
+                    <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="category" required>
+                      <option value="導入について">導入について</option>
+                      <option value="お見積りについて">お見積りについて</option>
+                      <option value="協業について">協業について</option>
+                      <option value="セミナーについて">セミナーについて</option>
+                      <option value="サービス内容について">サービス内容について</option>
+                      <option value="その他">その他</option>
+                    </select>
+                  </div>
+                </div>
+		          <div class="cell-sm-6">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside" for="form-1-enquete">何をみてお問い合わせいただきましたか？</label>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enquete" required>
+		                  <option value="Googleなどの検索サイト">Googleなどの検索サイト</option>
+		                  <option value="弊社からのメール案内（DM）">弊社からのメール案内（DM）</option>
+		                  <option value="NTT-AT様のHP">NTT-AT様のHP</option>
+		                  <option value="弊社営業からの紹介">弊社営業からの紹介</option>
+		                  <option value="その他">その他</option>
+		                </select>
+		              </div>
+		            </div> 	
+                  <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-message">お問合わせ内容</label>
+                      <textarea class="form-input" id="form-1-message" name="message" required type="text"></textarea>
+                    </div>
+                  </div>
+                  <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="check" value="同意する" / required>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                      </label>
+                    </div>
+                  </div> 
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-button">
+                      <button class="button button-primary" type="submit">お問い合わせ</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="cell-sm-9 cell-md-4 cell-lg-3">
+              <div class="column-aside">
+                <div class="range">
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>会社住所</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-map-marker"></span><span>東京都文京区本郷2丁目27番20号<br>本郷センタービル6F<br>IIMヒューマン・ソリューション株式会社</span></article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>電話番号</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-phone"></span>
+                      <ul class="list-comma">
+                        <li>03-5684-6840</li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>メールアドレス</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-email-open"></span><span><a href="mailto:web@iimhs.co.jp">web@iimhs.co.jp</a></span></article>
+                  </div>
+                  <!--<div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>Opening hours </h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-calendar-clock"></span>
+                      <ul class="list-0">
+                        <li>Mon–Fri: 9:00 am–6:00 pm</li>
+                        <li>Sat–Sun: 11:00 am–4:00 pm</li>
+                      </ul>
+                    </article>
+                  </div>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page Footer-->
+      <!-- Footer Default-->
