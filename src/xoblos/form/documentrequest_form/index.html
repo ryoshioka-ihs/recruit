@@ -1,30 +1,19 @@
 ---
 layout:     "xoblos-form"
 global_menu:  ""
-description:  ""
+description:  "「xoBlos」に関する資料のダウンロードができます。"
 keywords:   "xoBlos,資料請求"
 category:   ""
-title:      "資料請求フォーム"
+title:      "「xoBlos」に関する資料請求"
 ---
 
-<div id='crmWebToEntityForm'>
-   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=SHIFT-JIS'>
-   <form action='https://crmsandbox.zoho.com/crm/WebToContactForm'  name=WebToContacts2033041000000212434 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2033041000000212434()' accept-charset='UTF-8'>
 
-	 <!-- Do not remove this code. -->
-	<input type='text' style='display:none;' name='xnQsjsdp' value='5b07d521b46845ce27cb2e86d4f463b4813f606ac76f87e50de266fe2d08fe35'/>
-	<input type='hidden' name='zc_gad' id='zc_gad' value=''/>
-	<input type='text' style='display:none;' name='xmIwtLD' value='e85736963f89e2a7592c4a40c401063ac927b43b005d71753e68c754ad091fbc'/>
-	<input type='text' style='display:none;'  name='actionType' value='Q29udGFjdHM='/>
-
-	<input type='text' style='display:none;' name='returnURL' value='https	://ihs-corporate-site-stage.azurewebsites.net/xoblos/form/documentrequest_form/thanks.html' /> 
-	 <!-- Do not remove this code. -->
       <!-- Contact information-->
       <section class="section section-lg bg-white">
         <div class="shell shell-bigger">
           <div class="range range-ten range-50 range-sm-center range-lg-justify">
             <div class="cell-sm-9 cell-md-6">
-              <h3>xoBlosの導入・運用サービスの資料請求</h3>
+              <h3>xoBlosに関する資料請求</h3>
               <!--<hr class="divider divider-left divider-default"/>-->
 
               <!-- RD Mailform-->
@@ -32,57 +21,64 @@ title:      "資料請求フォーム"
                 <div class="range range-20">
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】会社名</label>
-                      <input class="form-input" type="text" name="company" data-constraints="@Required" required/>
+                      <label class="form-label-outside" for="form-1-company">【<span style="color: red">必須</span>】会社名</label>
+                      <input class="form-input" id="form-1-company" type="text" name="company" data-constraints="@Required" required/>
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】部署</label>
-                      <input class="form-input" type="text" name="Department" data-constraints="@Required" required/>
+                      <label class="form-label-outside" for="form-1-ldespartment">【<span style="color: red">必須</span>】部署</label>
+                      <input class="form-input" id="form-1-despartment" type="text" name="despartment" data-constraints="@Required"/ required>
                     </div>
                   </div>
-                  <div class="cell-sm-6">
+                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">お役職</label>
-                      <input class="form-input" type="text" name="Title" >
-                    </div>
-                  </div>
-                  <div class="cell-sm-6">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】姓</label>
-                      <input class="form-input" type="text" name="Last Name" >
-                    </div>
-                  </div>
-                  <div class="cell-sm-6">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】名</label>
-                      <input class="form-input" type="text" name="Fisrt Name" >
-                    </div>
+                      <label class="form-label-outside" for="form-1-position">お役職</label>
+                      <input class="form-input" id="form-1-position" type="text" name="position"/>
+                    </div>                   
                   </div> 
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号</label>
-                      <input class="form-input" type="text" name="Phone" required/>
+                      <label class="form-label-outside" for="form-1-name1">【<span style="color: red">必須</span>】姓</label>
+                      <input class="form-input" id="form-1-name1" type="text" name="name1" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name2">【<span style="color: red">必須</span>】名</label>
+                      <input class="form-input" id="form-1-name2" type="text" name="name2" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-email">【<span style="color: red">必須</span>】メールアドレス</label>
+                      <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required" required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone">【<span style="color: red">必須</span>】電話番号</label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone1" data-constraints="@Numeric @Required"/ required  placeholder="(例)03">
                     </div>            
                   </div>
-                  <div class="cell-sm-6">
+                  
+                  <div class="cell-sm-4">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">メールアドレス</label>
-                      <input class="form-input" type="email" name="Email" data-constraints="@Email @Required" required>
-                    </div>
+                      <label class="form-label-outside" for="form-1-phone"></label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone2" data-constraints="@Numeric @Required"/ required  placeholder="1234">
+                    </div>            
+                  </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone"></label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone3" data-constraints="@Numeric @Required"/ required  placeholder="5678">
+                    </div>            
                   </div>
                   <div class="cell-xs-12">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
-                        <input type='checkbox' name='CONTACTCF101' class="check"/>弊社からのDM配信を希望する
-                      </label>
-                    </div>
-                  </div> 
-                  <div class="cell-xs-12">
-                    <div class="form-wrap">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" name="CONTACTCF135" required/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                        <input type="checkbox" name="check" value="同意する" required/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
                       </label>
                     </div>
                   </div> 
