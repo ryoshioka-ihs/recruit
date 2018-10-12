@@ -3377,7 +3377,7 @@ h6.box-info-title,
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   border: 2px solid;
   border-radius: 35px;
   text-align: center;
@@ -19892,7 +19892,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
   font-family:"メイリオ";
   font-size: 16px;
   font-weight: 700;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: .05em;
 }
 
@@ -21526,7 +21526,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-centered .rd-navbar-fullwidth .rd-navbar-inner {
-  display: flex;
+  /*display: flex;*/
   align-items: center;
   flex-direction: row-reverse;
   justify-content: flex-end;
