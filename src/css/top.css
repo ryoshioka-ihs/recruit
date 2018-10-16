@@ -400,8 +400,11 @@ footer {
 		margin-top: 10px;
 	}
 
+/*====================================
+大きい2枠
+====================================/*
 
-/* （一旦非表示）インフラ運用 
+/*インフラ運用 */
 #sv #ope {
 	width: 690px;
 	height: 230px;
@@ -421,36 +424,28 @@ footer {
 		left: -310px;
 		background-image: url("../image/top/sv_img1.png");
 	}
-*/
 
-/* インフラ運用 New 2017.08.03 
-
-#sv #ope2 {
-	width: 490px;
-	height: 340px;
-	margin: 0 0 30px 0px;
+/*WinActor */
+#sv #win {
+	width: 690px;
+	height: 230px;
+	margin: 0 0 30px 310px;
 }
+	#sv #win a {
+		padding: 25px 40px 0 130px;
+	}
 
-	#sv #ope2 a:before {
-		content: "";
-		width: 450px;
-		height: 100px;
+	#sv #win a:before {
+		width: 400px;
+		height: 230px;
 		border: none;
-		background: center top no-repeat;
-		display: block;
-		margin:	0 0 25px 0;
-		background-image: url("../image/top/sv_img1.png");
+		margin-bottom: 0;
+		position: absolute;
+		top: -28px;
+		left: -310px;
+		background-image: url("../image/top/sv_img6.png");
 	}
-*/
 
-/* （一旦非表示）インフラ構築
-#sv #intro {
-	margin-left: 0;
-}
-	#sv #intro a:before {
-		background-image: url("../image/top/sv_img2.png");
-	}
-*/
 
 
 /* インフラ構築 New 2017.08.03 
@@ -470,25 +465,18 @@ footer {
 		background-image: url("../image/top/sv_img2.png");
 	}
 */
-/* WinActor */
-#sv #win a:before {
-	background-image: url("../image/top/sv_img6.png");
-}
 
-/* インフラ運用 */
-#sv #ope2 a:before {
-	background-image: url("..//image/top/sv_img1.png");
-}
 
 /* インフラ構築 */
-#sv #opti a:before {
+#sv #intro a:before {
 	background-image: url("..//image/top/sv_img2.png");
 }
 
-/* Webシステム最適化 */
-#sv #intro2 a:before {
+/* Webシステム最適化 
+#sv #opti a:before {
 	background-image: url("../image/top/sv_img3.png");
 }
+*/
 
 /* セキュリティ */
 #sv #secu a:before {
