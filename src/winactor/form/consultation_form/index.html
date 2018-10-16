@@ -1,7 +1,8 @@
+---
 layout:     "win-form"
 global_menu:  ""
 description:  "RPA「WinActor」に関する導入相談、お見積りはこちらから"
-keywords:   "RPA,WinActor,導入相談,お見積り"
+keywords:   "WinActor,導入相談,お見積り"
 category:   ""
 title:      "RPA「WinActor」の導入相談、お見積り"
 ---
@@ -12,8 +13,9 @@ title:      "RPA「WinActor」の導入相談、お見積り"
           <div class="range range-ten range-50 range-sm-center range-lg-justify">
             <div class="cell-sm-9 cell-md-6">
               <h3>WinActorの導入相談、お見積り</h3>
+              <!--<hr class="divider divider-left divider-default"/>
               <p class="big">WinActorに関するお問合わせについては、下記フォームよりお送りください。</p>
-              <p>お送りいただいた内容を基に、追って担当者よりご連絡いたします。</p>
+              <p>お送りいただいた内容を基に、追って担当者よりご連絡いたします。</p>-->
 
               <!-- RD Mailform-->
               <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
@@ -88,11 +90,11 @@ title:      "RPA「WinActor」の導入相談、お見積り"
                   <div class="cell-xs-12">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】お問合わせ内容</label>
-                      <textarea class="form-input" name="message" required type="text"></textarea>
+                      <textarea class="form-input"  name="message" required type="text"></textarea>
                     </div>
-                  </div>
-		          <div class="cell-sm-12">
-		            <div class="form-wrap form-wrap-validation">
+                  </div> 
+                  <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside">【<span style="color: red">必須</span>】何をみてお問い合わせいただきましたか？</label>
 		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enquete" required>
 		                  <option value="インターネットからの検索">インターネットからの検索</option>
@@ -107,6 +109,7 @@ title:      "RPA「WinActor」の導入相談、お見積り"
 		                </select>
 		              </div>
 		            </div>
+
                   <div class="cell-xs-12">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
