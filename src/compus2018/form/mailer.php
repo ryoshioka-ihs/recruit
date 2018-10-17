@@ -94,18 +94,50 @@ $sendgrid = new SendGrid($sendgrid_username,$sendgrid_password, array("turn_off_
 $email    = new SendGrid\Email();
 $email->addTo($to)->
        setFrom($from)->
-       setFromName("IIMヒューマン・ソリューション株式会社")->
-       setSubject("【WEB問い合わせ】IHSコーポレートサイト" )->
-       setText("総合お問合わせを受信しました。\r\nご確認の上、ご対応をお願いいたします。\r\n\r\n 会社名: $company \r\n お名前: $name \r\n 部署名: $department \r\n メールアドレス: $emailAdd \r\n 電話番号: $phone \r\n 何をみてお問い合わせいただきましたか？: $message \r\n　お問い合わせのカテゴリー: $category \r\n お問合わせ内容: $message \r\n ")->
+       setFromName("")->
+       setSubject("【COMPUS2018】プレゼントお申込み" )->
+       setText("
+       		COMPUS2018のプレゼントフォームへお申込みがありました。\r\n
+       	      ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\r\n
+              貴社名: $company \r\n 
+              部署名: $department \r\n 
+              お役職: $position \r\n 
+              お名前: $name1 $name2 様 \r\n 
+              電話番号: $phone \r\n 
+              メールアドレス: $emailAdd \r\n 
+              〒: $zip \r\n 
+              都道府県： $prefectures \r\n 
+              市区町村： $address $build \r\n 
+              ご希望のプレゼント:\r\n
+               $book ：（本）RPAの威力 \r\n
+               $seminar ：（セミナー）「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) \r\n 
+               $tool ：（ツール）xoBlos \r\n 
+              ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\r\n")->
 
 
-       setHtml("総合お問合わせを受信しました。<br />ご確認の上、ご対応をお願いいたします。<br /><br />会社名: $company <br /> お名前: $name <br />  部署名: $department <br /> メールアドレス: $emailAdd <br /> 電話番号: $phone <br /> 何をみてお問い合わせいただきましたか？: $enquete <br />　お問い合わせのカテゴリー: $category <br /> お問合わせ内容: $message <br />")->
+       setHtml("
+       	COMPUS2018のプレゼントフォームへお申込みがありました。<br />
+       	      ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br />
+              貴社名: $company <br /> 
+              部署名: $department <br /> 
+              お役職: $position <br /> 
+              お名前: $name1 $name2 様 <br /> 
+              電話番号: $phone <br /> 
+              メールアドレス: $emailAdd <br /> 
+              〒: $zip <br /> 
+              都道府県： $prefectures <br /> 
+              市区町村： $address $build <br /> 
+              ご希望のプレゼント:<br />
+               $book ：（本）RPAの威力 <br />
+               $seminar ：（セミナー）「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) <br /> 
+               $tool ：（ツール）xoBlos <br /> 
+              ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
 var_dump($response);
 
 // 正常終了時にthanks.htmlへリダイレクト
-header('Location: /contact/contact/thanks.html');
+header('Location: /compus2018/form/thanks.html');
 exit();
 

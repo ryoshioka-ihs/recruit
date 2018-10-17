@@ -43,8 +43,8 @@ title: プレゼントお申込みフォーム
 				<td><input type="Email" name="emailAdd" required placeholder="企業ドメインでの入力をお願いいたします。"></td>
 			</tr>
 			<tr>
-				<th><span style="color: red">【必須】</span>〒</th>
-				<td><input type="text" name="zip" required placeholder="000-0000"></td>
+				<th><span style="color: red">【必須】</span>郵便番号</th>
+				<td>〒<input type="text" name="zip" required placeholder="000-0000" maxlength="8"></td>
 			</tr>
 			<tr>
 				<th><span style="color: red">【必須】</span>都道府県</th>
@@ -111,9 +111,9 @@ title: プレゼントお申込みフォーム
 			<tr>
 				<th>ご希望のプレゼント</th>
 				<td>
-					<input type="checkbox" name="book" value="◯">（本）RPAの威力
-					<input type="checkbox" name="seminar" value="◯">（セミナー）「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版)
-					<input type="checkbox" name="tool" value="◯">（ツール）xoBlos
+					<input type="checkbox" name="book" value="◯" class="check">（本）RPAの威力<br>
+					<input type="checkbox" name="seminar" value="◯" class="check">（セミナー）「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版)<br>
+					<input type="checkbox" name="tool" value="◯" class="check">（ツール）xoBlos<br>
 				</td>
 				</select></td></tr>
             </tr>
