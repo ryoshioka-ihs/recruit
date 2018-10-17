@@ -39,19 +39,19 @@ title:      "資料請求フォーム"
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】部署名</label>
-                      <input class="form-input" type="text" name="Title"　placeholder="(例)システム部">
+                      <input class="form-input" type="text" name="Title" placeholder="(例)システム部">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">お役職</label>
-                      <input class="form-input" type="text" name="Department" >
+                      <input class="form-input" type="text" name="Department">
                     </div>                   
                   </div> 
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】姓</label>
-                      <input class="form-input" type="text" name="First Name" data-constraints="@Required"/ required　placeholder="(例)本郷">
+                      <input class="form-input" type="text" name="First Name" data-constraints="@Required"/ required placeholder="(例)本郷">
                     </div>
                   </div> 
                   <div class="cell-sm-6">
@@ -72,6 +72,15 @@ title:      "資料請求フォーム"
                       <input class="form-input" type="email" name="Email" data-constraints="@Email @Required" required placeholder="企業ドメインでの入力をお願いいたします。">
                     </div>
                   </div>
+
+                  <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="CONTACTCF101" required/>弊社からのDMを希望する
+                      </label>
+                    </div>
+                  </div> 
+
                   <div class="cell-xs-12">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
