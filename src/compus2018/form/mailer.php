@@ -53,9 +53,9 @@ $email->addTo($emailAdd)->
               都道府県： $prefectures \r\n 
               市区町村： $address $build \r\n 
               ご希望のプレゼント:\r\n
-               $book ：（本）RPAの威力 \r\n
-               $seminar ：（セミナー）「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) \r\n 
-               $tool ：（ツール）xoBlos \r\n 
+               $book ：［本］RPAの威力 \r\n
+               $seminar ：［セミナー］「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) \r\n 
+               $tool ：［RPA業務効率化ツール］xoBlos/xoBot セミナー&試用版 \r\n 
               ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\r\n
               ※このメールは自動送信です。\r\n 
               何かございましたらweb@iimhs.co.jpまでお問い合わせください。")->
@@ -77,9 +77,9 @@ $email->addTo($emailAdd)->
               都道府県： $prefectures <br /> 
               市区町村： $address $build <br /> 
               ご希望のプレゼント:<br />
-               $book ：（本）RPAの威力 <br />
-               $seminar ：（セミナー）「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) <br /> 
-               $tool ：（ツール）xoBlos <br /> 
+               $book ：［本］RPAの威力 <br />
+               $seminar ：［セミナー］「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) <br /> 
+               $tool ：［［RPA業務効率化ツール］xoBlos/xoBot セミナー&試用版 <br /> 
               ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br />
               ※このメールは自動送信です。<br /> 
               何かございましたらweb@iimhs.co.jpまでお問い合わせください。")->
@@ -109,9 +109,9 @@ $email->addTo($to)->
               都道府県： $prefectures \r\n 
               市区町村： $address $build \r\n 
               ご希望のプレゼント:\r\n
-               $book ：（本）RPAの威力 \r\n
-               $seminar ：（セミナー）「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) \r\n 
-               $tool ：（ツール）xoBlos \r\n 
+               $book ：［本］RPAの威力 \r\n
+               $seminar ：［セミナー］「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) \r\n 
+               $tool ：［RPA業務効率化ツール］xoBlos/xoBot セミナー&試用版 \r\n 
               ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\r\n")->
 
 
@@ -128,9 +128,9 @@ $email->addTo($to)->
               都道府県： $prefectures <br /> 
               市区町村： $address $build <br /> 
               ご希望のプレゼント:<br />
-               $book ：（本）RPAの威力 <br />
-               $seminar ：（セミナー）「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) <br /> 
-               $tool ：（ツール）xoBlos <br /> 
+               $book ：［本］RPAの威力 <br />
+               $seminar ：［セミナー］「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版) <br /> 
+               $tool ：［RPA業務効率化ツール］xoBlos/xoBot セミナー&試用版 <br /> 
               ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br />")->
        addCategory('contact');
 
