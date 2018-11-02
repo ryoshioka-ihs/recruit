@@ -11,6 +11,8 @@ $to                = $_ENV['TO'];
 
 //お客様情報
 $company = $_POST['company'];//貴社名
+$department = $_POST['department'];//部署名
+$title = $_POST['title'];//役職
 $name = $_POST['name'];//お名前
 $emailAdd = $_POST['emailAdd'];//メールアドレス
 $check = $_POST['check'];// 個人情報の取扱
@@ -43,10 +45,10 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社")->
        setSubject("【メールマガジン登録】IHSコーポレートサイト" )->
-       setText("下記のお客様より、DM登録の依頼がありました。\r\nZOHO CRMへの反映をお願いいたします。\r\n\r\n 会社名: $company \r\n お名前: $name \r\n メールアドレス: $emailAdd \r\n ")->
+       setText("下記のお客様より、DM登録の依頼がありました。\r\nZOHO CRMへの反映をお願いいたします。\r\n\r\n 会社名: $company \r\n 部署名: $department \r\n 職位: $title \r\n　お名前: $name \r\n メールアドレス: $emailAdd \r\n ")->
 
 
-       setHtml("下記のお客様より、DM登録の依頼がありました。<br />ZOHO CRMへの反映をお願いいたします。<br /><br />会社名: $company <br /> お名前: $name <br /> メールアドレス: $emailAdd <br /> ")->
+       setHtml("下記のお客様より、DM登録の依頼がありました。<br />ZOHO CRMへの反映をお願いいたします。<br /><br />会社名: $company <br /> 部署名: $department <br /> 職位: $title <br /> お名前: $name <br /> メールアドレス: $emailAdd <br /> ")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
