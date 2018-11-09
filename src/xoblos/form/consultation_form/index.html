@@ -6,7 +6,17 @@ keywords:   "xoBlos,総合お問い合わせ,導入,お見積り,サービス内
 category:   ""
 title:      "xoBlosに関する総合お問い合わせフォーム"
 ---
+<div id='crmWebToEntityForm'>
+   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=SHIFT-JIS'>
+   <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2591799000005790289 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2591799000005790289()' accept-charset='UTF-8'>
 
+	 <!-- Do not remove this code. -->
+	<input type='text' style='display:none;' name='xnQsjsdp' value='316e26c9b0a075a403259d161e079bc597c321456c0f197bcbf531ae844af7c7'/>
+	<input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+	<input type='text' style='display:none;' name='xmIwtLD' value='3274827e535aa235eb0e4d31761d06ef54b031bd2f9ac9578a92193bf7762610'/>
+	<input type='text' style='display:none;'  name='actionType' value='TGVhZHM='/>
+
+	<input type='text' style='display:none;' name='returnURL' value='https://www.iimhs.co.jp/xoblos/form/consultation_form/thanks.html' /> 
 
       <!-- Contact information-->
       <section class="section section-lg bg-white">
@@ -14,109 +24,103 @@ title:      "xoBlosに関する総合お問い合わせフォーム"
           <div class="range range-ten range-50 range-sm-center range-lg-justify">
             <div class="cell-sm-9 cell-md-6">
               <h3>xoBlosに関する総合お問い合わせフォーム</h3>
-              
-              <p class="big">WinActorに関するお問合わせについては、下記フォームよりお送りください。</p>
+              <p class="big">xoBlosに関するお問合わせについては、下記フォームよりお送りください。</p>
               <p>お送りいただいた内容を基に、追って担当者よりご連絡いたします。</p>
 
               <!-- RD Mailform-->
-              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+              <form>
                 <div class="range range-20">
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】会社名</label>
-                      <input class="form-input" type="text" name="company" data-constraints="@Required"/ required placeholder="(例)IIMヒューマン・ソリューション株式会社">
+                      <input class="form-input" type="text" name="Company" data-constraints="@Required"/ required placeholder="(例)IIMヒューマン・ソリューション株式会社">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】部署名</label>
-                      <input class="form-input" type="text" name="department" data-constraints="@Required"/ required placeholder="(例)システム部">
+                      <input class="form-input" type="text" name="LEADCF18" data-constraints="@Required"/ required placeholder="(例)システム部">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">お役職</label>
-                      <input class="form-input" type="text" name="position">
+                      <input class="form-input" type="text" name="Designation">
                     </div>
                   </div>   
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】姓</label>
-                      <input class="form-input" type="text" name="name1" data-constraints="@Required"/ required placeholder="(例)本郷">
+                      <input class="form-input" type="text" name="Last Name" data-constraints="@Required"/ required placeholder="(例)本郷">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】名</label>
-                      <input class="form-input" type="text" name="name2" data-constraints="@Required"/ required placeholder="太郎">
+                      <input class="form-input" type="text" name="First Name" data-constraints="@Required"/ required placeholder="太郎">
                     </div>
                   </div>
-                  <div class="cell-sm-4">
+                  <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号</label>
-                      <input class="form-input" type="text" name="phone1" required placeholder="(例)03">
+                      <input class="form-input" type="text" name="Phone"required placeholder="(例)03-1234-5678">
                     </div>            
                   </div>
-                  <div class="cell-sm-4">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside"></label>
-                      <input class="form-input" type="text" name="phone2" data-constraints="@Numeric @Required"/ required  placeholder="1234">
-                    </div>            
-                  </div>
-
-                  <div class="cell-sm-4">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside"></label>
-                      <input class="form-input" type="text" name="phone3" data-constraints="@Numeric @Required"/ required  placeholder="5678">
-                    </div>            
-                  </div>
-                  
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】メールアドレス</label>
-                      <input class="form-input" type="email" name="emailAdress" data-constraints="@Email @Required" required placeholder="企業ドメインでの入力をお願いいたします。">
+                      <input class="form-input" type="email" name="Email" data-constraints="@Email @Required" required placeholder="企業ドメインでの入力をお願いいたします。">
                     </div>
                   </div>
 
                   <div class="cell-sm-6">
                 	<div class="form-wrap form-wrap-validation">
                     <label class="form-label-outside">【<span style="color: red">必須</span>】ご相談のカテゴリー</label>
-                    <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="category" required>
-                      <option value="導入について">導入について</option>
-                      <option value="お見積りについて">お見積りについて</option>
-                      <option value="協業について">協業について</option>
-                      <option value="サービス内容について">サービス内容について</option>
-                      <option value="その他">その他</option>
+                    <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="LEADCF17" required>
+                      <option value="IHS04-1 導入について">導入について</option>
+                      <option value="IHS04-2 お見積りについて">お見積りについて</option>
+                      <option value="IHS04-3 協業について">協業について</option>
+                      <option value="IHS04-4 サービス内容について">サービス内容について</option>
+                      <option value="IHS04-5 その他">その他</option>
                     </select>
                   </div>
                 </div>
-                  <div class="cell-xs-12">
-                    <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】お問合わせ内容</label>
-                      <textarea class="form-input" name="message" required type="text"></textarea>
-                    </div>
-                  </div>
 		          <div class="cell-sm-6">
 		            <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside">【<span style="color: red">必須</span>】何をみてお問い合わせいただきましたか？</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enquete" required>
-	                      <option value="インターネットからの検索">インターネットからの検索</option>
-	                      <option value="弊社からのDM">弊社からのDM</option>
-	                      <option value="弊社営業からのご案内">弊社営業からのご案内</option>
-	                      <option value="御社社員様からのご紹介">御社社員様からのご紹介</option>
-	                      <option value="他企業様からのご紹介">他企業様からのご紹介</option>
-	                      <option value="パートナー企業様">パートナー企業様</option>
-	                      <option value="弊社開催セミナーに参加">弊社開催セミナーに参加</option>
-	                      <option value="JUAS展示会">JUAS展示会</option>
-	                      <option value="その他">その他</option>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="Lead Source" required>
+                      <option value="インターネットからの検索">インターネットからの検索</option>
+                      <option value="弊社からのDM">弊社からのDM</option>
+                      <option value="弊社営業からのご案内">弊社営業からのご案内</option>
+                      <option value="御社社員様からのご紹介">御社社員様からのご紹介</option>
+                      <option value="他企業様からのご紹介">他企業様からのご紹介</option>
+                      <option value="パートナー企業様">パートナー企業様</option>
+                      <option value="弊社開催セミナーに参加">弊社開催セミナーに参加</option>
+                      <option value="JUAS展示会">JUAS展示会</option>
+                      <option value="その他">その他</option>
 		                </select>
 		              </div>
 		            </div> 	
+                
+                  <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】お問合わせ内容</label>
+                      <textarea class="form-input" name="LEADCF23" required type="text"></textarea>
+                    </div>
+                  </div>
 
+
+                <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type='checkbox' name='LEADCF103' class="check"/>弊社からのDM配信を希望する
+                      </label>
+                    </div>
+                  </div> 
                   <div class="cell-xs-12">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
-                        <input type="checkbox" name="check" required　class="check" value="同意する">同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                        <input type="checkbox" name="LEADCF106" required class="check"/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
                       </label>
                     </div>
                   </div> 

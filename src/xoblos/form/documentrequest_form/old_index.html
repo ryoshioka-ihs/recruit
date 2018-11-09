@@ -1,23 +1,11 @@
 ---
-layout:     "win-form"
+layout:     "xoblos-form"
 global_menu:  ""
-description:  "IIMヒューマン・ソリューション(IHS)のWebサイトです。IHSのサービス、導入事例、会社情報や最新のトピックスをご覧いただけます。"
-keywords:   "IIMヒューマン・ソリューション,IHS"
+description:  "xoBlosに関する資料をダウンロードいただけます。"
+keywords:   "xoBlos,資料請求"
 category:   ""
-title:      "資料請求フォーム"
+title:      "xoBlos資料請求フォーム"
 ---
-<div id='crmWebToEntityForm'>
-   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=SHIFT-JIS'>
-   <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2591799000005790285 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2591799000005790285()' accept-charset='UTF-8'>
-
-   <!-- Do not remove this code. -->
-  <input type='text' style='display:none;' name='xnQsjsdp' value='316e26c9b0a075a403259d161e079bc597c321456c0f197bcbf531ae844af7c7'/>
-  <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
-  <input type='text' style='display:none;' name='xmIwtLD' value='3274827e535aa235eb0e4d31761d06ef0f705e5af31f7ac8e7643246088684d2'/>
-  <input type='text' style='display:none;'  name='actionType' value='TGVhZHM='/>
-
-  <input type='text' style='display:none;' name='returnURL' value=https://ihs-corporate-site-stage.azurewebsites.net/xoblos/form/documentrequest_form/thanks.html' /> 
-   <!-- Do not remove this code. -->
 
       <!-- Contact information-->
       <section class="section section-lg bg-white">
@@ -28,63 +16,69 @@ title:      "資料請求フォーム"
               <!--<hr class="divider divider-left divider-default"/>-->
 
               <!-- RD Mailform-->
-              <form>
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
                 <div class="range range-20">
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】会社名</label>
-                      <input class="form-input" type="text" name="Company" data-constraints="@Required" required placeholder="(例)IIMヒューマン・ソリューション株式会社">
+                      <input class="form-input" type="text" name="company" data-constraints="@Required" required placeholder="(例)IIMヒューマン・ソリューション株式会社">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】部署名</label>
-                      <input class="form-input" type="text" name="LEADCF18" placeholder="(例)システム部">
-                    </div>
-                  </div>
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】部署</label>
+                      <input class="form-input" type="text" name="despartment" data-constraints="@Required"/ required placeholder="(例)システム部">
+                 	</div>
+                 </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">お役職</label>
-                      <input class="form-input" type="text" name="Designation">
+                      <input class="form-input" type="text" name="position"/>
                     </div>                   
                   </div> 
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】姓</label>
-                      <input class="form-input" type="text" name="Last Name" data-constraints="@Required"/ required placeholder="(例)本郷">
+                      <input class="form-input" type="text" name="name1" data-constraints="@Required"/ required placeholder="(例)本郷">
                     </div>
                   </div> 
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】名</label>
-                      <input class="form-input" type="text" name="First Name" data-constraints="@Required" required placeholder="太郎">
+                      <input class="form-input" type="text" name="name2" data-constraints="@Required"/ required placeholder="太郎">
                     </div>
                   </div>
-                  <div class="cell-sm-6">
+                  <div class="cell-sm-12">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">電話番号</label>
-                      <input class="form-input" type="text" name="Phone" required placeholder="(例)03-1234-5678">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】メールアドレス</label>
+                      <input class="form-input" type="email" name="emailAdress" data-constraints="@Email @Required" required placeholder="企業ドメインでの入力をお願いいたします。">
+                    </div>
+                  </div>
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号</label>
+                      <input class="form-input" type="text" name="phone1" data-constraints="@Numeric @Required"/ required  placeholder="(例)03">
                     </div>            
                   </div>
-                  <div class="cell-sm-6">
+                  
+                  <div class="cell-sm-4">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">メールアドレス</label>
-                      <input class="form-input" type="email" name="Email" data-constraints="@Email @Required" required placeholder="企業ドメインでの入力をお願いいたします。">
-                    </div>
+                      <label class="form-label-outside"></label>
+                      <input class="form-input" type="text" name="phone2" data-constraints="@Numeric @Required"/ required  placeholder="1234">
+                    </div>            
+                  </div>
+
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside"></label>
+                      <input class="form-input" type="text" name="phone3" data-constraints="@Numeric @Required"/ required  placeholder="5678">
+                    </div>            
                   </div>
 
                   <div class="cell-xs-12">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
-                        <input type="checkbox" name="LEADCF103">弊社からのDMを希望する
-                      </label>
-                    </div>
-                  </div> 
-
-                  <div class="cell-xs-12">
-                    <div class="form-wrap">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" name="LEADCF109" required/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                        <input type="checkbox" name="check" required value="同意する" />同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
                       </label>
                     </div>
                   </div> 
