@@ -35,38 +35,38 @@ title:      "WinActorセミナー『「WinActor」ハンズオンセミナー有
                 <div class="range range-20">
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】会社名</label>
-                      <input class="form-input" type="text" name="Company" data-constraints="@Required"/ required placeholder="(例)IIMヒューマン・ソリューション株式会社">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】会社名（全角）</label>
+                      <input class="form-input" type="text" name="Company" data-constraints="@Required"/ required placeholder="（例）ＩＩＭヒューマン・ソリューション株式会社">
                     </div>
                 	</div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】部署</label>
-                      <input class="form-input"type="text" name="LEADCF18" data-constraints="@Required"/ required placeholder="(例)システム部">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】部署（全角）</label>
+                      <input class="form-input"type="text" name="LEADCF18" data-constraints="@Required"/ required placeholder="（例）情報システム部">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">お役職</label>
+                      <label class="form-label-outside">お役職（全角）</label>
                       <input class="form-input"type="text" name="Designation">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】姓</label>
-                      <input class="form-input"type="text" name="Last Name" data-constraints="@Required"/ required placeholder="(例)本郷">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】姓（全角）</label>
+                      <input class="form-input"type="text" name="Last Name" data-constraints="@Required"/ required placeholder="（例）本郷">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】名</label>
-                      <input class="form-input"type="text" name="First Name" data-constraints="@Required"/ required placeholder="太郎">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】名（全角）</label>
+                      <input class="form-input"type="text" name="First Name" data-constraints="@Required"/ required placeholder="（例）太郎">
                     </div>
                   </div>
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号</label>
-                      <input class="form-input" type="text" name="Phone" required placeholder="03-1234-5678">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号（半角）</label>
+                      <input class="form-input" type="text" name="Phone" required placeholder="（例）03-1234-5678">
                     </div>            
                   </div>
 
@@ -83,7 +83,7 @@ title:      "WinActorセミナー『「WinActor」ハンズオンセミナー有
 
                   <div class="cell-sm-12">
                     <div class="form-wrap form-wrap-validation">
-                      <label class="form-label-outside">【<span style="color: red">必須</span>】メールアドレス</label>
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】メールアドレス（半角）</label>
                       <input class="form-input" type="email" name="Email" data-constraints="@Email @Required" required placeholder="企業ドメインでの入力をお願いいたします。">
                     </div>
                   </div>
@@ -93,9 +93,7 @@ title:      "WinActorセミナー『「WinActor」ハンズオンセミナー有
 		            <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside" >【<span style="color: red">必須</span>】ご希望の開催日</label>
 		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="LEADCF11" required>
-			                <option value="2018年11月20日(火)">2018年11月20日(火)　　「WinActor」ハンズオンセミナー有償初級コース</option>
-			                <option value="2018年11月29日(木)">2018年11月29日(木)　「WinActor」ハンズオンセミナー有償初級コース</option>
-                      <option value="2019年1月10日(木)">2019年1月10日(木)　「WinActor」ハンズオンセミナー有償初級コース</option>
+                      		<option value="2019年1月10日">2019年1月10日(木)　「WinActor」ハンズオンセミナー有償初級コース</option>
 		                </select>
 		              </div>
 		            </div>
@@ -108,22 +106,27 @@ title:      "WinActorセミナー『「WinActor」ハンズオンセミナー有
                     </div>
                   </div>
 
-              <div class="cell-xs-12 offset-custom-1">
+              <div class="cell-xs-6">
                 <div class="form-wrap form-wrap-validation">
                     <label class="form-label-outside" >【<span style="color: red">必須</span>】本セミナーを知ったきっかけ</label>
                     <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="Lead Source" required>
                       <option value="インターネットからの検索">インターネットからの検索</option>
-                  <option value="弊社からのDM">弊社からのDM</option>
-                  <option value="御社社員様からのご紹介">御社社員様からのご紹介</option>
-                  <option value="他企業様からのご紹介">他企業様からのご紹介</option>
-                  <option value="パートナー企業様">パートナー企業様</option>
-                  <option value="弊社開催セミナー">弊社開催セミナー</option>
-                  <option value="JUAS">JUAS</option>
-                  <option value="その他">その他</option>
+	                  <option value="弊社からのDM">弊社からのDM</option>
+	                  <option value="御社社員様からのご紹介">御社社員様からのご紹介</option>
+	                  <option value="他企業様からのご紹介">他企業様からのご紹介</option>
+	                  <option value="パートナー企業様">パートナー企業様</option>
+	                  <option value="弊社開催セミナー">弊社開催セミナー</option>
+	                  <option value="JUAS">JUAS</option>
+	                  <option value="その他">その他</option>
                     </select>
                   </div>
                 </div>
-                  
+		          <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">その他を選択された方</label>
+                      <input class="form-input" type="text" name="LEADCF26">
+                    </div>
+                  </div>
                   <div class="cell-xs-12">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
