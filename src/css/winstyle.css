@@ -115,6 +115,7 @@ p {
 
 ul,
 ol {
+  display: inline-block;
   /*吉岡list-style: none;*/
   /*padding: 0;
   margin: 0;*/
@@ -281,6 +282,8 @@ h1,
   }
 }
 
+
+
 @media (min-width: 1200px) {
   h1,
   .heading-1 {
@@ -288,10 +291,11 @@ h1,
   }
 }
 
+
+
 @media (min-width: 1600px) {
   h1,
   .heading-1 {
-    /*吉岡font-size: 80px;*/
     font-size: 70px;
   }
 }
@@ -300,7 +304,7 @@ h2,
 .heading-2 {
   /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
   font-family: "メイリオ";
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.2;
   text-transform: none;
 }
@@ -308,7 +312,7 @@ h2,
 @media (min-width: 768px) {
   h2,
   .heading-2 {
-    font-size: 34px;
+    font-size: 20px;
     line-height: 1.26923;
   }
 }
@@ -316,16 +320,14 @@ h2,
 @media (min-width: 1200px) {
   h2,
   .heading-2 {
-    /*吉岡font-size: 36px;*/
-    font-size: 27px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1600px) {
   h2,
   .heading-2 {
-    /*吉岡font-size: 52px;*/
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
@@ -345,6 +347,7 @@ h3,
   .heading-3 {
     font-size: 28px;
   }
+
 }
 
 @media (min-width: 1200px) {
@@ -5775,17 +5778,19 @@ textarea.form-input.form-input-lg {
 .list-marked {
   padding-left: 25px;
   text-align: left;
+  list-style-type: none;
 }
 
 .list-marked > li {
   position: relative;
   padding-left: 25px;
+  font-size: 23px;
 }
 
 .list-marked > li:before {
   position: absolute;
   top: .21em;
-  left: 0;
+  left: -10px;
   content: '\f238';
   font-family: 'Material Design Icons';
   font-size: 1.22em;
@@ -8582,7 +8587,8 @@ textarea.form-input.form-input-lg {
   letter-spacing: 0.02em;
   color: #1f2323;
   list-style-type: none;
-  padding-left: 6px;
+  padding-left: 0px;
+  font-size: 15px;
 }
 
 .pricing-box-list > li + li {
@@ -8918,7 +8924,7 @@ textarea.form-input.form-input-lg {
 }
 
 .pricing-box-xl .pricing-box-body {
-  padding: 40px 27px;
+  padding: 40px 10px;
 }
 
 .pricing-box-xl .pricing-box-list > li + li {
@@ -13173,10 +13179,13 @@ h3 + .divider + h5 + p {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   .shell,
   .shell-wide {
     max-width: 970px;
+  }
+  .center-shell{
+    max-width: 800px;
   }
 }
 
@@ -13185,19 +13194,20 @@ h3 + .divider + h5 + p {
   .shell-wide {
     max-width: 1200px;
   }
+  .center-shell{
+    max-width: 1000px;
+  }
 }
 
 @media (min-width: 1600px) {
   .shell-bigger {
     max-width: 1500px;
   }
-}
-
-@media (min-width: 1600px) {
   .shell-wide {
     max-width: 1600px;
   }
 }
+
 
 @media (min-width: 1800px) {
   .shell-wide {
@@ -27057,6 +27067,31 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 	height: 150px;
 }
 
+/*テキスト入力可能なバナー*/
+.banner_g{
+  background-color: #1cd8c9;
+}
+.banner_b{
+  background:#58ACFA ;
+}
+
+.banner_g,
+.banner_b{
+  height: 60px;
+  line-height: 2;
+}
+
+.banner_g > p,
+.banner_b > p{
+  text-align: center;
+}
+
+.banner_g > p > a,
+.banner_b > p > a {
+  color: #FFF;
+  line-height:60px;
+}
+
 @media(max-width: 375px){
 .bg_banner{
   max-width: 100% !important;
@@ -27064,12 +27099,20 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
   height: 90px;
   margin: 0 10px; 
   }
+  .banner_g> p > a,
+  .banner_b > p > a{
+    font-size: 11px;
+  
 }
 
 @media(min-width: 414px){
 .bg_banner{
   height: 100px;
   margin: 0 10px; 
+  }
+  .banner_g> p > a,
+  .banner_b > p > a{
+    font-size: 15px;
   }
 }
 
@@ -27078,6 +27121,11 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 	width: auto;
 	height: 150px;
 	}
+.banner_g > p > a,
+.banner_b > p > a {
+  color: #FFF;
+  line-height:60px;
+}
 }
 
 @media (min-width: 1024px){
@@ -27093,51 +27141,10 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 	}
 }
 
-
-/*テキスト入力可能なバナー*/
-.banner_g,
-.banner_b{
-	height: 60px;
-	line-height: 2;
-}
-
-.banner_g{
-  background-color: #1cd8c9;
-}
-
-
-.banner_b{
-  background:#58ACFA ;
-}
-
 /*
 .banner_b{
   background: url("/winactor/images/tri.png") #58ACFA left no-repeat;
 }*/
-
-.banner_g > p,
-.banner_b > p{
-	text-align: center;
-}
-
-.banner_g > p > a,
-.banner_b > p > a {
-	color: #FFF;
-	font-size: 30px;
-  line-height:60px;
-}
-
-@media(max-width: 736px){
-  .banner_g> p > a{
-	font-size: 15px;
-  }
-}
-
-@media(max-width: 736px){
-  .banner_b> p > a {
-  font-size: 11px;
-  }
-}
 
 ul.grayDisc{
   }
@@ -27189,6 +27196,7 @@ ul.grayDisc{
   margin: 10px 0;
 }
 
+/*
 .list-center ul{
    position:relative;
    float:left;
@@ -27198,4 +27206,4 @@ ul.grayDisc{
 .list-center li{
    position:relative;
    left:-50%;
-}
+}*/
