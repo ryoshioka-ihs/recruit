@@ -115,6 +115,7 @@ p {
 
 ul,
 ol {
+  display: inline-block;
   /*吉岡list-style: none;*/
   /*padding: 0;
   margin: 0;*/
@@ -295,7 +296,6 @@ h1,
 @media (min-width: 1600px) {
   h1,
   .heading-1 {
-    /*吉岡font-size: 80px;*/
     font-size: 70px;
   }
 }
@@ -304,7 +304,7 @@ h2,
 .heading-2 {
   /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
   font-family: "メイリオ";
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.2;
   text-transform: none;
 }
@@ -312,7 +312,7 @@ h2,
 @media (min-width: 768px) {
   h2,
   .heading-2 {
-    font-size: 34px;
+    font-size: 20px;
     line-height: 1.26923;
   }
 }
@@ -320,16 +320,14 @@ h2,
 @media (min-width: 1200px) {
   h2,
   .heading-2 {
-    /*吉岡font-size: 36px;*/
-    font-size: 27px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1600px) {
   h2,
   .heading-2 {
-    /*吉岡font-size: 52px;*/
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
@@ -5780,17 +5778,19 @@ textarea.form-input.form-input-lg {
 .list-marked {
   padding-left: 25px;
   text-align: left;
+  list-style-type: none;
 }
 
 .list-marked > li {
   position: relative;
   padding-left: 25px;
+  font-size: 23px;
 }
 
 .list-marked > li:before {
   position: absolute;
   top: .21em;
-  left: 0;
+  left: -10px;
   content: '\f238';
   font-family: 'Material Design Icons';
   font-size: 1.22em;
@@ -8587,7 +8587,8 @@ textarea.form-input.form-input-lg {
   letter-spacing: 0.02em;
   color: #1f2323;
   list-style-type: none;
-  padding-left: 6px;
+  padding-left: 0px;
+  font-size: 15px;
 }
 
 .pricing-box-list > li + li {
@@ -8923,7 +8924,7 @@ textarea.form-input.form-input-lg {
 }
 
 .pricing-box-xl .pricing-box-body {
-  padding: 40px 27px;
+  padding: 40px 10px;
 }
 
 .pricing-box-xl .pricing-box-list > li + li {
@@ -27195,6 +27196,7 @@ ul.grayDisc{
   margin: 10px 0;
 }
 
+/*
 .list-center ul{
    position:relative;
    float:left;
@@ -27204,5 +27206,4 @@ ul.grayDisc{
 .list-center li{
    position:relative;
    left:-50%;
-}
-
+}*/
