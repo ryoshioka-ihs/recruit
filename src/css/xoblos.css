@@ -27090,19 +27090,43 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
   position: relative;
   z-index: 1;
 }
+
 /*//////////////////////////////
 以下吉岡追加;
 //////////////////////////////*/
 
-/* --------------------------------------------------
-    980px;のバナー
--------------------------------------------------- */
+/*width:980px;のバナー*/
 .bg_banner{
 	max-width: 120%;
 	height: 150px;
 }
 
-/*スマートフォン用:*/
+/*テキスト入力可能なバナー*/
+.banner_g{
+  background-color: #1cd8c9;
+}
+
+.banner_b{
+  background:#58ACFA ;
+}
+
+.banner_g,
+.banner_b{
+  height: 60px;
+  line-height: 2;
+}
+
+.banner_g > p,
+.banner_b > p{
+  text-align: center;
+}
+
+.banner_g > p > a,
+.banner_b > p > a {
+  color: #FFF;
+  line-height:60px;
+}
+
 @media(max-width: 375px){
 .bg_banner{
   max-width: 100% !important;
@@ -27110,12 +27134,20 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
   height: 90px;
   margin: 0 10px; 
   }
+  .banner_g> p > a,
+  .banner_b > p > a{
+    font-size: 11px;
+	}
 }
 
 @media(min-width: 414px){
 .bg_banner{
   height: 100px;
   margin: 0 10px; 
+  }
+  .banner_g> p > a,
+  .banner_b > p > a{
+    font-size: 15px;
   }
 }
 
@@ -27124,6 +27156,11 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 	width: auto;
 	height: 150px;
 	}
+.banner_g > p > a,
+.banner_b > p > a {
+  color: #FFF;
+  line-height:60px;
+  }
 }
 
 @media (min-width: 1024px){
@@ -27139,52 +27176,10 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 	}
 }
 
-
-/*テキスト入力可能なバナー*/
-.banner_g,
-.banner_b{
-	height: 60px;
-	line-height: 2;
-}
-
-.banner_g{
-  background-color: #0404B4;
-}
-
-
-.banner_b{
-  background:#58ACFA ;
-}
-
 /*
 .banner_b{
   background: url("/winactor/images/tri.png") #58ACFA left no-repeat;
 }*/
-
-.banner_g > p,
-.banner_b > p{
-	text-align: center;
-}
-
-.banner_g > p > a,
-.banner_b > p > a {
-	color: #FFF;
-	font-size: 30px;
-  line-height:60px;
-}
-
-/*スマートフォン用:*/
-@media(max-width: 736px){
-  .banner_g> p > a{
-	font-size: 15px;
-  }
-}
-
-@media(max-width: 736px){
-  .banner_b> p > a {
-  font-size: 11px;
-  }
-}
 
 ul.grayDisc{
   }
@@ -27304,8 +27299,9 @@ ul.grayDisc{
   overflow: hidden;
 }
   .lightBox figure img {
-    max-width: 100%;
+    max-width: 90%;
   }
+
   .lightBox p {
     height: 20px;
     padding: 2px 0 0 25px;
