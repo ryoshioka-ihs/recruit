@@ -97,7 +97,8 @@ footer {
 			}	
 
 			#index #keyv .kvList .oraBtn,
-			#index #keyv .kvList .blueBtn {
+			#index #keyv .kvList .blueBtn,
+			#index #keyv .kvList .blueBtn_btn {
 				position: absolute;
 				left: 50%;
 				bottom: 45px;

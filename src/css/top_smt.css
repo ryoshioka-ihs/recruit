@@ -202,6 +202,13 @@ body {
 			display: none;
 		}
 
+		/*ボタンとテキストを表示*/
+		#index #keyv .kvList .key5 .blueBtn_btn {
+			position: static;
+			width: 90%;
+			margin: 15px auto 0;
+		}
+
 /* 最新のサービス・製品 *//*/*/
 #index #keyv .kvList .key4 {
 	padding-top: 30px;
