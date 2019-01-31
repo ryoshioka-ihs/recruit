@@ -27061,11 +27061,15 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 以下吉岡追加;
 //////////////////////////////*/
 
-/*width:980px;のバナー*/
+/*photoshopで作成のバナー*/
 .bg_banner{
-	max-width: 120%;
-	height: 150px;
+  margin-bottom: 20px;
 }
+
+.bg_banner:hover{
+  opacity: 0.7;
+}
+
 
 /*テキスト入力可能なバナー*/
 .banner_g{
