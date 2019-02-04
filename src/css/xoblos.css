@@ -276,7 +276,7 @@ h1,
 @media (min-width: 768px) {
   h1,
   .heading-1 {
-    font-size: 42px;
+    font-size: 30px;
     line-height: 1.45;
   }
 }
@@ -284,15 +284,14 @@ h1,
 @media (min-width: 1200px) {
   h1,
   .heading-1 {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 1600px) {
   h1,
   .heading-1 {
-    /*吉岡font-size: 80px;*/
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 
@@ -333,9 +332,9 @@ h2,
   font-weight: 300;
 }
 
-/*h3,
+h3,
 .heading-3 {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.45;
   letter-spacing: .04em;
 }
@@ -343,14 +342,14 @@ h2,
 @media (min-width: 768px) {
   h3,
   .heading-3 {
-    font-size: 28px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1200px) {
   h3,
   .heading-3 {
-    font-size: 34px;
+    font-size: 18px;
     line-height: 1.375;
   }
 }
@@ -358,7 +357,7 @@ h2,
 @media (min-width: 1600px) {
   h3,
   .heading-3 {
-    font-size: 48px;
+    font-size: 20px;
   }
 }
 
@@ -378,7 +377,7 @@ h2,
   .h3-alternate {
     font-size: 42px;
   }
-}*/
+}
 
 h4,
 .heading-4 {
@@ -455,20 +454,20 @@ h6,h3
 
 .big,
 .custom-subtitle {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
   .big,
   .custom-subtitle {
-    font-size: 19px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1600px) {
   .big,
   .custom-subtitle {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
@@ -8623,6 +8622,7 @@ textarea.form-input.form-input-lg {
   color: #1f2323;
   list-style-type: none;
   padding-left: 6px;
+  font-size: 15px;
 }
 
 .pricing-box-list > li + li {
@@ -9575,7 +9575,8 @@ textarea.form-input.form-input-lg {
 
 .table-custom th,
 .table-custom td {
-  padding: 15px 20px 15px 15px;
+  /*padding: 15px 20px 15px 15px;*/
+  padding: 15px 20px;
   font-weight: 300;
   letter-spacing: 0.02em;
   color: #1f2323;
@@ -19910,6 +19911,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 
 .rd-navbar-dropdown {
   display: none;
+  list-style-type: none;
 }
 
 .rd-navbar-dropdown li + li,
