@@ -9561,12 +9561,12 @@ textarea.form-input.form-input-lg {
 @media (min-width: 992px) {
   .table-custom th,
   .table-custom td {
-    /*padding: 15px;*/
-    padding: 15px 45px 15px 35px;
+    padding: 15px;
+    /*padding: 15px 45px 15px 35px;*/
   }
   .table-custom th:first-child,
   .table-custom td:first-child {
-   padding: 15px 60px 15px 30px;
+   padding: 15px 20px;
   }
 }
 
@@ -19882,6 +19882,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 
 .rd-navbar-dropdown {
   display: none;
+  list-style-type: none;
 }
 
 .rd-navbar-dropdown li + li,
