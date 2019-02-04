@@ -121,6 +121,11 @@ ol {
   margin: 0;*/
 }
 
+/*WinActorセミナー一覧ページでレイアウトが崩れるため追加*/
+.ie{
+	display: block;
+}
+
 
 .none{
   list-style: none;
@@ -277,7 +282,7 @@ h1,
 @media (min-width: 768px) {
   h1,
   .heading-1 {
-    font-size: 42px;
+    font-size: 30px;
     line-height: 1.45;
   }
 }
@@ -287,7 +292,7 @@ h1,
 @media (min-width: 1200px) {
   h1,
   .heading-1 {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 
@@ -296,7 +301,7 @@ h1,
 @media (min-width: 1600px) {
   h1,
   .heading-1 {
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 
@@ -337,7 +342,7 @@ h2,
 
 h3,
 .heading-3 {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.45;
   letter-spacing: .04em;
 }
@@ -345,7 +350,7 @@ h3,
 @media (min-width: 768px) {
   h3,
   .heading-3 {
-    font-size: 28px;
+    font-size: 20px;
   }
 
 }
@@ -353,7 +358,7 @@ h3,
 @media (min-width: 1200px) {
   h3,
   .heading-3 {
-    font-size: 34px;
+    font-size: 25px;
     line-height: 1.375;
   }
 }
@@ -361,7 +366,7 @@ h3,
 @media (min-width: 1600px) {
   h3,
   .heading-3 {
-    font-size: 48px;
+    font-size: 30px;
   }
 }
 
@@ -458,20 +463,20 @@ h6,
 
 .big,
 .custom-subtitle {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
   .big,
   .custom-subtitle {
-    font-size: 19px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1600px) {
   .big,
   .custom-subtitle {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
@@ -20615,7 +20620,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 .rd-navbar-static .rd-navbar-megamenu li > a,
 .rd-navbar-fullwidth .rd-navbar-dropdown li > a,
 .rd-navbar-fullwidth .rd-navbar-megamenu li > a {
-  font-size: 16px;
+  font-size: 12px;
   transition: .15s ease-in-out;
 }
 
