@@ -20941,7 +20941,8 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 
 @media (min-width: 1600px) {
   .rd-navbar-static .rd-navbar-nav > li > a {
-    padding: 55px 0;
+    /*padding: 55px 0;*/
+    padding: 30px 0;
   }
   .rd-navbar-static .rd-navbar-dropdown,
   .rd-navbar-static .rd-navbar-megamenu {
@@ -21539,6 +21540,8 @@ html.rd-navbar-fixed-linked .page {
 
 .rd-navbar-centered .rd-navbar-nav {
   text-align: left;
+  list-style-type: none;
+  padding-left: 10px;
 }
 
 .rd-navbar-centered .rd-navbar-fullwidth .rd-navbar-inner {
