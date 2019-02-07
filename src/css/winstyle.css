@@ -113,9 +113,10 @@ p {
   margin: 0;
 }
 
+
 ul,
 ol {
-  display: inline-block;
+  display: block;
   /*吉岡list-style: none;*/
   /*padding: 0;
   margin: 0;*/
@@ -126,16 +127,15 @@ ol {
 	display: block;
 }
 
+/*リスト左揃え、中央配置*/
+.text_l-Position_c{
+  display: inline-block;
+}
 
 .none{
   list-style: none;
 }
 
-/*ul li,
-ol li {
-  display: block;
-  margin-left: 20px;
-}*/
 
 dl {
   margin: 0;
