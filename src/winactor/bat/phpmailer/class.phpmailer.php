@@ -41,8 +41,8 @@ class PHPMailer
     public $Priority = 3;
 
     /**
-	     * The character set of the message.
-	     * @type string
+     * The character set of the message.
+     * @type string
      */
     public $CharSet = 'iso-8859-1';
 
@@ -69,13 +69,13 @@ class PHPMailer
      * The From email address for the message.
      * @type string
      */
-    public $From = 'web@iimhs.co.jp';
+    public $From = 'root@localhost';
 
     /**
      * The From name of the message.
      * @type string
      */
-    public $FromName = 'IIMヒューマン・ソリューション株式会社';
+    public $FromName = 'Root User';
 
     /**
      * The Sender email (Return-Path) of the message.
@@ -98,14 +98,14 @@ class PHPMailer
      * The Subject of the message.
      * @type string
      */
-    public $Subject = '【WinActorセミナーのお申込みを承りました。】$seminar';
+    public $Subject = '';
 
     /**
      * An HTML or plain text message body.
      * If HTML then call isHTML(true).
      * @type string
      */
-    public $Body = '会社名：$company \n';
+    public $Body = '';
 
     /**
      * The plain-text message body.
