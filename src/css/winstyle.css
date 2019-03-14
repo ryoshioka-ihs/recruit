@@ -5789,7 +5789,7 @@ textarea.form-input.form-input-lg {
 .list-marked > li {
   position: relative;
   padding-left: 25px;
-  font-size: 23px;
+  font-size: 18px;
 }
 
 .list-marked > li:before {
@@ -6957,7 +6957,7 @@ textarea.form-input.form-input-lg {
 }
 
 .post-blog-caption-body {
-  padding-top: 20px;
+  /*padding-top: 20px;*/
   padding-bottom: 20px;
 }
 
@@ -7001,10 +7001,10 @@ textarea.form-input.form-input-lg {
 
 @media (min-width: 1800px) {
   .post-blog {
-    min-height: 640px;
+    /*min-height: 640px;*/
   }
   .post-blog-caption-body {
-    min-height: 200px;
+    /*min-height: 200px;*/
   }
 }
 
