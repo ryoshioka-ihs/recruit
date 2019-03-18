@@ -34,28 +34,28 @@ title:      "RPA「WinActor」サポートフォーム"
               <p style="font-size: 20px; font-weight: bold;">【ご契約お客様情報】</p>
               <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method>
                 <div class="range range-20">
-		          <div class="cell-xs-6 offset-custom-1">
-		            <div class="form-wrap form-wrap-validation">
-		                <label class="form-label-outside" >【<span style="color: red">必須</span>】</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="CASECF2" required>
-	        				<option value="契約中">契約中</option>
-	        				<option value="トライアル">トライアル</option>
-	    				</select>
-		              </div>
-		            </div>
-                  <div class="cell-xs-6 offset-custom-1">
+    		          <div class="cell-xs-6">
+    		            <div class="form-wrap form-wrap-validation">
+    		                <label class="form-label-outside" >【<span style="color: red">必須</span>】現在のご契約状況</label>
+    		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="CASECF2" required>
+      	        				   <option value="契約中">契約中</option>
+      	        				   <option value="トライアル">トライアル</option>
+    	    				      </select>
+    		            </div>
+    		          </div>
+                  <div class="cell-xs-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">保守契約ID（サービス契約時に登録いただいた保守契約ID）</label>
-                      <input class="form-input" type="text" name="CASECF3" required placeholder="トライアルの方は入力不要です。" style="font-size: 15px;">
+                      <input class="form-input" type="text" name="CASECF3" required placeholder="トライアルの方は入力不要です。" style="font-size: 10px;">
                     </div>
                   </div>
-                  <div class="cell-xs-12 offset-custom-1">
+                  <div class="cell-xs-12">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】会社名（全角）</label>
                       <input class="form-input" type="text" name="CASECF8" data-constraints="@Required"/ required>
                     </div>
                   </div>
-                  <div class="cell-xs-6 offset-custom-1">
+                  <div class="cell-xs-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】部署名（全角）</label>
                       <input class="form-input" type="text" name="CASECF4" data-constraints="@Required"/ required>
@@ -92,7 +92,7 @@ title:      "RPA「WinActor」サポートフォーム"
                   <div class="cell-sm-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号（半角）</label>
-                      <input class="form-input" type="text" name="Phone" data-constraints="@Required"/ required  placeholder="（例）03-5684-640">
+                      <input class="form-input" type="text" name="Phone" data-constraints="@Required"/ required  placeholder="（例）03-5684-6840">
                     </div>            
                   </div>
                   <div class="cell-sm-6">
@@ -128,13 +128,22 @@ title:      "RPA「WinActor」サポートフォーム"
                     </div>
                   </div>
                   <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】添付ファイルの有無</label>
+                        <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="CASECF13" required>
+                          <option value="―">―</option>
+                          <option value="有">有</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="cell-xs-6">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
                         <input type="file" name="theFile" value="ファイルの上限サイズは20MBです" required/>
                       </label>
                     </div>
                   </div> 
-                  <div class="cell-xs-12">
+                  <div class="cell-xs-6">
                     <div class="form-wrap">
                       <label class="checkbox-inline">
                         <input type="checkbox" name="check" value="同意する" required/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
