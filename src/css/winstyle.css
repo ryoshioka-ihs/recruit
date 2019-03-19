@@ -7186,6 +7186,10 @@ textarea.form-input.form-input-lg {
   margin-right: -7px;
 }
 
+ul > .post-blog-tags {
+  padding-left: 0px;
+}
+
 .post-blog-tags > li {
   display: inline-block;
   padding: 5px 7px;

@@ -12,41 +12,68 @@
 
 	 <!--▽コンテンツ▽-->
 	<article>
-			<center><h1 style="margin-top: 20px;">{{ page.title }}</h1></center>
-			<section>
-					<div class="topics-box">
-					<table class="topics-list">
-						<tbody>
+      <section class="breadcrumbs-custom bg-image">
+        <div class="shell">
+          <h1 class="heading-1 breadcrumbs-custom-title">{{ page.title }}</h1>
+        </div>
+      </section>
 
-							<ul class="none">								
-									{% for post in paginator.posts %}
-										<li>
-											{% if post.link and post.link != "" %}
-												<a href="{{ post.link }}" target="_self">
-											{% else %}
-												<a href="{{ post.url }}" target="_self">
-											{% endif %}
-												<time class="date">{{ post.date | date: '%Y/%m/%d' }}</time>
 
-												{% if post.categories[0] == "cases" %}
-													<span class="icon">事例紹介</span>
-													<p>『{{ post.categori }}』を追加しました</p>
-												{% else %}
-													<span class="icon">{{ post.categories[2] }}</span>
-													<p>{{ post.title }}</p>
-												{% endif %}
+	<div class="wrap">
+	<div id="main">
+      <section class="section section-xl bg-gray-lighter">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-90 range-sm-center range-lg-justify">
+            <div class="cell-sm-9 cell-md-7 cell-lg-6 text-center">
+              <div class="range range-30">
+                {% for post in paginator.posts %}
+                {% if post.link and post.link != "" %}
+                <a href="{{ post.link }}" target="_self">
+                {% else %}
+                <a href="{{ post.url }}" target="_self">
+                {% endif %}                
+                <div class="cell-sm-6 blog-masonry-column">
 
-											</a>
-										</li>
-										<hr>
+                  <article class="post-blog"><a class="post-blog-image" href="/winactor/seminar/result/{{ post.day }}.html"><img src="/winactor/images/seminar/results/{{ post.day }}/{{ post.day }}_top.png" alt="" width="420" height="305"/></a>
+                    <div class="post-blog-caption">
+                      <div class="post-blog-caption-header">
+                        <ul class="post-blog-tags" style="padding-left: 0px;">
+                          <li><a class="button-tags" href="/winactor/seminar/result/{{ post.day }}.html">
+                          	{% if post.categories[1] == "開催実績" %}
+							              <div><span class="icon">開催実績</span></div></a></li>
+                        </ul>
+                      </div>
+                      <div class="post-blog-caption-body">
+                        <h5><a class="post-blog-title" href="/winactor/seminar/result/{{ post.day }}.html">
+                        	『{{ post.categories[2] }}』の開催実績を追加しました</p>
+                        	{% else %}
+							            <div><span class="icon">{{ post.categories[1] }}</span></div>
+							            <p>{{ post.title }}</p>
+						             {% endif %}</a>
+                        </h5>
+                      </div>
 
-									{% endfor %}
-						</tbody>
-						</table>
-						{% include win-pagination.html %}
-					</div>
-			</section>
-	</article>
+                      <div class="post-blog-caption-footer">
+                        <time>開催日：{{ post.date | date: '%Y/%m/%d' }}</time><a class="post-comment"><span class="icon icon-md-middle icon-gray-1 mdi mdi-comment"></span></a>
+                      </div>
+                    </div>
+
+                  </article>
+
+              </div>
+              {% endfor %}
+            </div>
+
+            {% include win-pagination.html %}
+          </div>
+            <div id="sideMenu">
+            {% include side/side_win-topics.html %}
+            </div><!--/#sideMenu-->
+        </div><!--/#shell shell-bigger-->
+      </section>
+  	</div>
+
+  	</div>
 	<!--△コンテンツ△-->
 
 	<!--▽フッター▽-->
