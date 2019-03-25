@@ -8122,9 +8122,17 @@ ul > .post-blog-tags {
     flex-wrap: wrap;
   }
   .blog-aside-item {
-    width: 50%;
+    /*width: 50%;*/
     padding: 0 15px;
   }
+  .blog-aside-item li{
+    display: inline-block;
+  }
+
+  .blog-aside-item .list-marked > li:before {
+  position: static;
+  }
+
 }
 
 @media (min-width: 1600px) {
