@@ -39,13 +39,13 @@
                       <div class="post-blog-caption-header">
                         <ul class="post-blog-tags" style="padding-left: 0px;">
                           <li><a class="button-tags" href="/winactor/seminar/result/{{ post.day }}.html">
-                          	{% if post.categories[1] == "開催実績" %}
+                          	{% if post.categories[1] == "セミナー" %}
 							              <div><span class="icon">開催実績</span></div></a></li>
                         </ul>
                       </div>
                       <div class="post-blog-caption-body">
                         <h5><a class="post-blog-title" href="/winactor/seminar/result/{{ post.day }}.html">
-                        	『{{ post.categories[2] }}』の開催実績を追加しました</p>
+                        	『{{ post.categories[3] }}』の開催実績を追加しました</p>
                         	{% else %}
 							            <div><span class="icon">{{ post.categories[1] }}</span></div>
 							            <p>{{ post.title }}</p>
