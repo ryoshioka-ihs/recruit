@@ -58,6 +58,30 @@ defaults:
       global_menu: "topics"
       permalink: /topics/:year/:month/:title.html
 
+  -
+    scope:
+      path: "other"
+      type: "posts"
+    values:
+      layout: "topic"
+      global_menu: "topics"
+      permalink: /topics/:year/:month/:title.html
+  -
+    scope:
+      path: "faq"
+      type: "posts"
+    values:
+      layout: "win-faq"
+      permalink: /topics/:year/:month/:title.html
+
+  -
+    scope:
+      path: "seminar"
+      type: "posts"
+    values:
+      layout: "win-topics"
+      permalink: /topics/:year/:month/:title.html
+      
 # Gemfileで追加した拡張機能
 gems:
   - octopress-debugger
@@ -66,4 +90,5 @@ gems:
 
 # Build settings
 markdown: kramdown
+
 

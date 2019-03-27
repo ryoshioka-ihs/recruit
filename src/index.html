@@ -280,10 +280,24 @@ title:			"IIMヒューマン・ソリューション"
 				{% endif %}
 		{% endfor %}
 
+		{% comment %} FAQ {% endcomment %}
+		{% assign faq_posts = "" | split: "" %}
+		{% for post in site.posts %}
+				{% if faq_posts.size >= max_posts %}
+					{% break %}
+				{% endif %}
+				{% if post.categories contains "FAQ"  %}
+					{% assign faq_posts = faq_posts | push: post %}
+				{% endif %}
+		{% endfor %}
+
 		{% comment %} セミナー {% endcomment %}
 		{% assign seminar_posts = "" | split: "" %}
 		{% for post in site.posts %}
-				{% if post.categories contains "topics" and post.categories contains "セミナー" %}
+				{% if seminar_posts.size >= max_posts %}
+					{% break %}
+				{% endif %}
+				{% if post.categories contains "seminar"  %}
 					{% assign seminar_posts = seminar_posts | push: post %}
 				{% endif %}
 		{% endfor %}
@@ -305,6 +319,7 @@ title:			"IIMヒューマン・ソリューション"
 				{% if case_posts.size    > 0 %}<li>導入事例</li>{% endif %}
 				{% if report_posts.size  > 0 %}<li>技術レポート</li>{% endif %}
 				{% if seminar_posts.size > 0 %}<li>セミナー</li>{% endif %}
+				{% if faq_posts.size     > 0 %}<li>FAQ</li>{% endif %}
 				{% if other_posts.size > 0 %}<li>その他</li>{% endif %}
 			</ul>
 
@@ -396,8 +411,8 @@ title:			"IIMヒューマン・ソリューション"
 
 				<!--▼セミナー▼-->
 				{% if seminar_posts.size > 0 %}
-					<ul class="topicList">
-					{% for post in seminar_posts limit:max_psots %}
+				<ul class="topicList">
+					{% for post in seminar_posts limit:max_posts %}
 						<li>
 							{% if post.link %}
 								<a href="{{ post.link }}" target="_self">
@@ -405,14 +420,34 @@ title:			"IIMヒューマン・ソリューション"
 								<a href="{{ post.url }}" target="_self">
 							{% endif %}
 								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
-								<div><span class="icon">{{ post.categories[1] }}</span></div>
+								<div><span class="icon">セミナー</span></div>
 								<p>{{ post.title }}</p>
 							</a>
 						</li>
 					{% endfor %}
-					</ul>
+				</ul>
 				{% endif %}
-				<!--▲セミナー▲-->
+				<!--▲セミナー-->
+
+				<!--▼WinActorFAQ▼-->
+				{% if faq_posts.size > 0 %}
+				<ul class="topicList">
+					{% for post in faq_posts limit:max_posts %}
+						<li>
+							{% if post.link %}
+								<a href="{{ post.link }}" target="_self">
+							{% else %}
+								<a href="{{ post.url }}" target="_self">
+							{% endif %}
+								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+								<div><span class="icon">FAQ</span></div>
+								<p>『{{ post.title }}』を追加しました</p>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+				<!--▲WinActorFAQ▲-->
 
 				<!--▼その他▼-->
 				{% if other_posts.size > 0 %}
@@ -433,6 +468,9 @@ title:			"IIMヒューマン・ソリューション"
 					</ul>
 				{% endif %}
 				<!--▲その他▲-->
+
+
+
 
 			</div><!--/#tabCont-->
 			<p class="link"><a href="/topics/">トピックス一覧へ</a></p>
