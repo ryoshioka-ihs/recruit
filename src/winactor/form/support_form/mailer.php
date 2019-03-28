@@ -44,6 +44,7 @@ $email->addTo($emailAdress)->
 
                $status\r\n
                保守契約ID：$id\r\n
+               会社名：$company\r\n
                ご契約者様部署名：$despartment\r\n
                ご契約者様名：$lastname1 $firstname1 様\r\n
                電話番号: $phone\r\n
@@ -62,6 +63,7 @@ $email->addTo($emailAdress)->
 
                $status<br>
                保守契約ID：$id<br>
+               会社名：$company<br>
                ご契約者様部署名：$despartment<br>
                ご契約者様名：$lastname1 $firstname1 様<br>
                電話番号: $phone<br>
@@ -90,6 +92,7 @@ $email->addTo($to)->
 
                $status\r\n
                保守契約ID：$id\r\n
+               会社名：$company\r\n
                ご契約者様部署名：$despartment\r\n
                ご契約者様名：$lastname1 $firstname1 様\r\n
                ご担当者様名：$lastname2 $firstname2 様\r\n
@@ -110,6 +113,7 @@ $email->addTo($to)->
 
                $status<br>
                保守契約ID：$id<br>
+               会社名：$company<br>
                ご契約者様部署名：$despartment<br>
                ご契約者様名：$lastname1 $firstname1 様<br>
                ご担当者様名：$lastname2 $firstname2 様<br>
