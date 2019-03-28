@@ -9535,7 +9535,7 @@ ul > .post-blog-tags {
   text-align: left;
   font-size: 15px;
   color: #1f2323;
-  background: #f6f6f6;
+  /*background: #f6f6f6;*/
   border: 2px dashed rgba(131, 131, 134, 0.1);
 }
 
