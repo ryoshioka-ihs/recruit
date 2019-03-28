@@ -338,9 +338,18 @@ title:			"IIMヒューマン・ソリューション"
 								{% if post.categories[0] == "cases" %}
 									<div><span class="icon">事例紹介</span></div>
 									<p>『{{ post.title }}』を追加しました</p>
+
+								<!--	
+								{% else if post.categories[0] == "FAQ" %}
+									<div><span class="icon">FAQ</span></div>
+									<p>『{{ post.title }}』を追加しました</p>
+
+								-->
+
 								{% else %}
 									<div><span class="icon">{{ post.categories[1] }}</span></div>
 									<p>{{ post.title }}</p>
+
 								{% endif %}
 
 							</a>
@@ -421,7 +430,7 @@ title:			"IIMヒューマン・ソリューション"
 							{% endif %}
 								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 								<div><span class="icon">セミナー</span></div>
-								<p>{{ post.title }}</p>
+								<p>『{{ post.title }}』の開催実績を追加しました</p>
 							</a>
 						</li>
 					{% endfor %}
