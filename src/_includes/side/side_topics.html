@@ -20,9 +20,14 @@
 				<a href="/topics/reports/">技術レポート</a>
 			</li>
 			{% endif %}-->
-			{% if site.categories["セミナー"].size > 0 %}
+			{% if site.categories["seminar"].size > 0 %}
 			<li{% if page.categories contains "セミナー" %} class="act"{% endif %}>
 				<a href="/topics/seminar/">セミナー</a>
+			</li>
+			{% endif %}
+			{% if site.categories["FAQ"].size > 0 %}
+			<li{% if page.categories contains "FAQ" %} class="act"{% endif %}>
+				<a href="/topics/faq/">FAQ</a>
 			</li>
 			{% endif %}
 			{% if site.categories["その他"].size > 0 %}
