@@ -280,25 +280,25 @@ title:			"IIMヒューマン・ソリューション"
 				{% endif %}
 		{% endfor %}
 
-		{% comment %} FAQ {% endcomment %}
-		{% assign faq_posts = "" | split: "" %}
-		{% for post in site.posts %}
-				{% if faq_posts.size >= max_posts %}
-					{% break %}
-				{% endif %}
-				{% if post.categories contains "FAQ"  %}
-					{% assign faq_posts = faq_posts | push: post %}
-				{% endif %}
-		{% endfor %}
-
 		{% comment %} セミナー {% endcomment %}
 		{% assign seminar_posts = "" | split: "" %}
 		{% for post in site.posts %}
 				{% if seminar_posts.size >= max_posts %}
 					{% break %}
 				{% endif %}
-				{% if post.categories contains "seminar"  %}
+				{% if post.categories contains "topics" and post.categories contains "seminar" %}
 					{% assign seminar_posts = seminar_posts | push: post %}
+				{% endif %}
+		{% endfor %}
+
+		{% comment %} FAQ {% endcomment %}
+		{% assign faq_posts = "" | split: "" %}
+		{% for post in site.posts %}
+				{% if faq_posts.size >= max_posts %}
+					{% break %}
+				{% endif %}
+				{% if post.categories contains "topics" and post.categories contains "FAQ" %}
+					{% assign faq_posts = faq_posts | push: post %}
 				{% endif %}
 		{% endfor %}
 
@@ -339,12 +339,9 @@ title:			"IIMヒューマン・ソリューション"
 									<div><span class="icon">事例紹介</span></div>
 									<p>『{{ post.title }}』を追加しました</p>
 
-								<!--	
-								{% else if post.categories[0] == "FAQ" %}
+								{% else if post.categories[0] == "faq" %}
 									<div><span class="icon">FAQ</span></div>
 									<p>『{{ post.title }}』を追加しました</p>
-
-								-->
 
 								{% else %}
 									<div><span class="icon">{{ post.categories[1] }}</span></div>
