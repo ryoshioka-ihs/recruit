@@ -8139,7 +8139,7 @@ ul > .post-blog-tags {
   .blog-aside {
     transform: translateY(-120px);
     margin-bottom: -120px;
-    margin-left: -500px;
+    /*margin-left: -500px;*/
   }
   .blog-aside h6 + * {
     margin-top: 28px;

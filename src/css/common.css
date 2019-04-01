@@ -1544,6 +1544,7 @@ height: 100%;
 		color: #003E8D;
 		text-align: center;
 		/*margin-left: 10px;*/
+		margin-bottom: 10px;
 		background-color: #F0F0F0;
 	}
 	.pagenation li:first-child {
