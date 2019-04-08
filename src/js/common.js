@@ -29,6 +29,18 @@ $(document).ready(function(){
 
 	// PCではtelリンクを無効化
 	removeTelLinkOnPC();
+
+	// セミナー受付終了日の翌日になったら、受付状況を「受付終了」に変更（セミナー一覧ページ、セミナー詳細ページ共通）
+  	FinishedDateSeminarStop();
+
+ 	// セミナー受付終了日の翌日になったら（セミナー一覧ページ、セミナー詳細ページ共通）
+  	hideFinishedDateSeminar(); 
+
+	// セミナー受付終了日の翌日になったらプルダウンを非表示（セミナーお申込みフォーム）
+  	hideFinishedDateSeminarForm();
+
+	// セミナー開催日の当日になったらプルダウンを非表示（セミナーキャンセルお申込みフォーム）
+  	hideFinishedDateSeminarCancelForm();
 });
 
 //======================================================================================================
@@ -326,3 +338,40 @@ function removeTelLinkOnPC() {
 	});
 }
 
+//======================================================================================================
+// FinishedDateSeminarStop()
+// 機能  ：セミナー受付終了日の翌日になったら、受付状況を「受付終了」に変更（セミナー一覧ページ、セミナー詳細ページ共通）
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+function FinishedDateSeminarStop() {
+	$sessions = jQuery('sessions.apply');
+	if ( $sessions.length <= 0 ) {
+		return;
+	}
+
+	var today = new Date();
+
+	$sessions.each( function() {
+		var apply  = $(this).text();
+		var match = date.match(/([0-9]{4})年([0-9]{1,2})?月([0-9]{1,2})?日/);
+		var year  = match[1];
+		var month = Number(match[2]) - 1; /* JSのDateは月を0-11で扱うため調整 */
+		var day   = Number(match[3]) + 1; /* 当日の日付まで表示するため調整 */
+		var session_date = new Date(year, month, day);
+
+		if (today.getTime() > session_apply.getTime()) {
+			.replace('受付終了');
+		}
+	});
+}	// セミナー受付終了日の翌日になったら、受付状況を「受付終了」に変更（セミナー一覧ページ、セミナー詳細ページ共通）
+  	FinishedDateSeminarStop();
+
+ 	// セミナー受付終了日の翌日になったら（セミナー一覧ページ、セミナー詳細ページ共通）
+  	hideFinishedDateSeminar(); 
+
+	// セミナー受付終了日の翌日になったらプルダウンを非表示（セミナーお申込みフォーム）
+  	hideFinishedDateSeminarForm();
+
+	// セミナー開催日の当日になったらプルダウンを非表示（セミナーキャンセルお申込みフォーム）
+  	hideFinishedDateSeminarCancelForm();
