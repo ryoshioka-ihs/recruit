@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 
  	// セミナー締切日の翌日になったら受付状況「受付終了」に変更（セミナー一覧ページ、セミナー詳細ページ共通）
-  	//hideFinishedDateSeminarStop(); 
+  	hideFinishedDateSeminarStop(); 
 
 	// セミナー受付終了日の翌日になったらプルダウンを非表示（セミナーお申込みフォーム）
   	//hideFinishedDateSeminarForm();
@@ -20,11 +20,10 @@ $(document).ready(function(){
 
 });
 
-
-
 //======================================================================================================
 // hideFinishedDateSeminar()
 // 機能  ：セミナー受付終了日の翌日になったら日程非表示（セミナー一覧ページ、セミナー詳細ページ共通）
+
 // 引数  ：
 // 戻り値：
 //======================================================================================================
@@ -50,6 +49,38 @@ function hideFinishedDateSeminar() {
 	});
 }
 
+//======================================================================================================
+// hideFinishedDateSeminarStop()
+// 機能  ：セミナー締切日の翌日になったら受付状況「受付終了」に変更（セミナー一覧ページ、セミナー詳細ページ共通）
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+function hideFinishedDateSeminarStop() {
+	$sessions = jQuery('.session .apply');
+	if ( $sessions.length <= 0 ) {
+		return;
+	}
+
+
+	var today = new Date();
+	var status = ('.status');
+
+	$sessions.each( function() {
+		var apply  = $(this).text();
+		var match = apply.match(/([0-9]{4})年([0-9]{1,2})?月([0-9]{1,2})?日/);
+		var year  = match[1];
+		var month = Number(match[2]) - 1; /* JSのDateは月を0-11で扱うため調整 */
+		var day   = Number(match[3]) + 1; /* 当日の日付まで表示するため調整 */
+		var session_apply = new Date(year, month, day);
+
+		if (today.getTime() > session_apply.getTime()) {
+			$('.status').closest('td').text('受付終了');//これを有効にすると、全部のstatusが受付終了にされてしまう
+			//$(this).closest('td').text('受付終了');//これを有効にすると、終了した締切日に受付状況「受付終了」が表示される
+
+		}
+
+	});
+}
 
 
 
