@@ -57,7 +57,7 @@ function hideFinishedDateSeminar() {
 //======================================================================================================
 function hideFinishedDateSeminarStop() {
 	$sessions = jQuery('.session .apply');
-	$sessions_status = ('.session .status')
+	$sessions_status = jQuery('.session .status')
 	if ( $sessions.length <= 0 ) {
 		return;
 	}
