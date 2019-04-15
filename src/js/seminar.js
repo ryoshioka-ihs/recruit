@@ -9,7 +9,7 @@ $(document).ready(function(){
   	hideFinishedDateSeminarStop(); 
 
 	// セミナー受付終了日の翌日になったらプルダウンを非表示（セミナーお申込みフォーム）
-  	//hideFinishedDateSeminarForm();
+  	hideFinishedDateSeminarForm();
 
 	// セミナー開催日の当日になったらプルダウンを非表示（セミナーキャンセルお申込みフォーム）
   	//hideFinishedDateSeminarCancelForm();
@@ -19,6 +19,50 @@ $(document).ready(function(){
 
 
 });
+//======================================================================================================
+// hideFinishedDateSeminarForm()
+// 機能  ：セミナー受付終了日の翌日になったらプルダウンを非表示（セミナーお申込みフォーム）
+
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+function hideFinishedDateSeminarForm() {
+	$closeDay = jQuery('.close_day');
+	$seminarDay = jQuery('.seminar_day');
+	//$sessions = jQuery('.title');
+	if ( $closeDay.length <= 0 ) {
+		return;
+	}
+
+	var today = new Date();
+
+	$closeDay.each( function() {
+		var close  = $(this).text();//クローズ日の値を取得
+		var close_match = close.match(/([0-9]{4})年([0-9]{1,2})?月([0-9]{1,2})?日/);
+		var close_year  = close_match[1];
+		var close_month = Number(close_match[2]) - 1; /* JSのDateは月を0-11で扱うため調整 */
+		var close_day   = Number(close_match[3]) + 1; /* 当日の日付まで表示するため調整 */
+		var session_cdate = new Date(close_year, close_month, close_day);
+	});
+
+	$seminarDay.each( function() {
+		var open  = $(this).val();//セミナー日の値を取得
+		var open_match = open.match(/([0-9]{4})年([0-9]{1,2})?月([0-9]{1,2})?日/);
+		var open_year  = open_match[1];
+		var open_month = Number(open_match[2]) - 1; /* JSのDateは月を0-11で扱うため調整 */
+		var open_day   = Number(open_match[3]) + 1; /* 当日の日付まで表示するため調整 */
+		var session_odate = new Date(open_year, open_month, open_day);
+	});
+
+
+		if (today.getTime() > session_cdate.getTime()) {
+			if ('.seminar_day').val(); == ('close_day').text(); {
+			jQuery('seminar_day').closest('option').hide();
+			}
+		}
+
+}
+
 
 //======================================================================================================
 // hideFinishedDateSeminar()
@@ -76,6 +120,4 @@ function hideFinishedDateSeminarStop() {
 		}
 	});
 }
-
-
 
