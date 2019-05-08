@@ -6646,12 +6646,14 @@ textarea.form-input.form-input-lg {
 }
 
 .panel-corporate .panel-arrow::before {
-  content: '\f504';
+  /*content: '\f504';*/
+  content: '\f27c';
   opacity: 0;
 }
 
 .panel-corporate .panel-arrow::after {
-  content: '\f465';
+  /*content: '\f465';*/
+  content: '\f27c';
   opacity: 1;
 }
 
@@ -27221,16 +27223,3 @@ ul.grayDisc{
   text-align: center;
   margin: 10px 0;
 }
-
-/*
-.list-center ul{
-   position:relative;
-   float:left;
-   left:50%;
-}
-
-.list-center li{
-   position:relative;
-   left:-50%;
-}*/
-
