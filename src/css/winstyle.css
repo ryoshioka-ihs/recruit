@@ -6681,11 +6681,13 @@ textarea.form-input.form-input-lg {
 
 @media (min-width: 768px) {
   .panel-corporate .panel-title a {
-    font-size: 24px;
+    /*font-size: 24px;*/
+    font-size: 20px;
     line-height: 1.41667;
   }
   .panel-corporate .panel-body {
-    padding-right: 150px;
+    /*padding-right: 150px;*/
+    padding-right: 80px;
   }
 }
 
