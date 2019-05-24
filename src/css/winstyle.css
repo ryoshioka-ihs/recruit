@@ -13187,7 +13187,7 @@ h3 + .divider + h5 + p {
   padding-right: 15px;
 }
 
-.shell,
+/*.shell,*/
 .shell-wide,
 .center-shell {
   min-width: 300px;
