@@ -4420,15 +4420,15 @@ input:-webkit-autofill ~ .form-validation {
 .form-input {
   display: block;
   width: 100%;
-  min-height: 60px;
-  padding: 18px 25px;
+  /*min-height: 60px;*/
+  padding: 3px 15px;
   font-weight: 300;
   line-height: 24px;
-  color: #1f2323;
-  background-color: #f6f6f6;
+  color: #555555;
+  background-color: #FFF;
   background-image: none;
-  border: 0px solid #f6f6f6;
-  border-radius: 35px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   -webkit-appearance: none;
 }
 
