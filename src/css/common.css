@@ -900,6 +900,36 @@ a.rss:hover {
 	cursor: pointer;
 }
 
+
+/*渡辺追加ここから*/
+.redBtn,
+.pinkBtn{
+width: 360px;
+	height: 60px;
+	line-height: 60px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	display: inline-block;
+	color: pink;
+	font-weight: bold;
+	font-size: 14px;
+	margin: auto;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+
+}
+
+.redBtn{background-color: red;}
+.pinkBtn{background-color: pink;}
+
+.redBtn a,
+.pinkBtn a{
+color: #FFF !important; 
+}
+/*渡辺ここまで*/
+
+
 	.blueBtn a,
 	.blueBtn_btn a,
 	.oraBtn a{
