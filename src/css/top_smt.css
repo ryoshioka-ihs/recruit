@@ -127,7 +127,8 @@ body {
 	}
 	#index #keyv .kvList .key2 .oraBtn {
 		position: static;
-		width: 90%;
+		/*width: 90%;*/
+		width: 80%;
 		margin: 15px auto 0;
 	}
 
@@ -150,8 +151,16 @@ body {
 		}
 
 		#index #keyv .kvList .key3 .textBox ul {
-			padding: 0 10px;
+			/*padding: 0 10px;*/
+			padding: 0px 60px;
 		}
+
+		@media(max-width: 768px){
+			#index #keyv .kvList .key3 .textBox ul {
+			padding: 0px 30px;
+			}
+		}
+		
 			#index #keyv .kvList .key3 .textBox li {
 				width: 100%;
 				height: auto;
@@ -205,7 +214,8 @@ body {
 		/*ボタンとテキストを表示*/
 		#index #keyv .kvList .key5 .blueBtn_btn {
 			position: static;
-			width: 90%;
+			/*width: 90%;*/
+			width: 80%;
 			margin: 15px auto 0;
 		}
 
@@ -228,10 +238,18 @@ body {
 		}
 
 		#index #keyv .kvList .key4 .textBox ul {
-			padding: 0 10px;
+			/*padding: 0 10px;*/
+			padding: 0px 60px;
 			flex-direction: column;
 			margin-bottom: -10px;
 		}
+
+		@media(max-width: 768px){
+			#index #keyv .kvList .key4 .textBox ul {
+			padding: 0px 30px;
+			}
+		}
+
 			#index #keyv .kvList .key4 .textBox li {
 				width: 100%;
 				height: auto;
@@ -290,9 +308,16 @@ body {
 			letter-spacing: 2.5px;
 		}
 		#index #keyv .kvList .key5 .textBox h2 + p {
-			margin: 12px 0 17px;
+			/*margin: 12px 0 17px;*/
+			margin: 12px 60px 17px;
 			font-size: 12px;
 			letter-spacing: normal;
+		}
+
+		@media(max-width: 768px){
+			#index #keyv .kvList .key5 .textBox h2 + p {
+			margin: 12px 20px 17px;
+			}
 		}
 
 		#index #keyv .kvList .key5 .textBox ul {

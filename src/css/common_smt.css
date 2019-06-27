@@ -1118,8 +1118,8 @@ input,textarea{
 				padding-bottom: 8px;
 				font-weight: normal;
 				color: #003E8D;
-				padding-left: 50px;
-				background: url("../image/common/link_arrow1.png") 35px 13px no-repeat;
+				padding-left: 20px;
+				background: url("../image/common/link_arrow1.png") 10px 13px no-repeat;
 				background-size: 4px auto;
 				letter-spacing: 2px;
 			}
@@ -1154,11 +1154,22 @@ input,textarea{
 					color: #003E8D;
 					padding-left: 40px;
 					margin-left: 20px;
-					background: url("../image/common/link_arrow1.png") 25px 15px no-repeat;
+					background: url("../image/common/link_arrow1.png") 25px 6px no-repeat;
 					background-size: 4px auto;
 					letter-spacing: 2px;
 				}
 
+				@media(max-width: 768px){
+					#gNav .navWrap .inNav.services li ul li span a {
+						background: url("../image/common/link_arrow1.png") 25px 13px no-repeat;
+						font-weight: normal;
+						color: #003E8D;
+						padding-left: 40px;
+						margin-left: 20px;
+                        background-size: 4px auto;
+						letter-spacing: 2px;
+					}
+				}
 
 /*  言語切り替え＆ページ内検索
 -------------------------------------------------- */
