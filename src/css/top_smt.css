@@ -40,7 +40,9 @@ body {
 #index #keyv .kvList .key4,
 #index #keyv .kvList .key5 {
 	height: 300px;
-	background-size: auto 100%;
+	background-size: cover;
+	/*渡辺修正前
+	background-size: auto 100%;*/
 }
 	#index #keyv .kvList .key3 .textBox ul,
 	#index #keyv .kvList .key5 .textBox ul {
