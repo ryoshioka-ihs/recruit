@@ -9622,6 +9622,7 @@ textarea.form-input.form-input-lg {
   border-color: #1f2323;
   font-weight: bold;
   text-align: center;
+  
 }
 
 .table-checkout {
@@ -9739,6 +9740,8 @@ textarea.form-input.form-input-lg {
   border: none;
   color: #fff;
   background-color: #0404B4;
+  text-align: left;
+
 }
 
 .table-color-header tr:nth-child(even) td {
@@ -27125,7 +27128,8 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 
 /*テキスト入力可能なバナー*/
 .banner_g{
-  background-color: #1cd8c9;
+  /*background-color: #1cd8c9;*/
+  background-color: #0404B4;
 }
 
 .banner_b{
@@ -27340,3 +27344,9 @@ ul.grayDisc{
     opacity: 0.7;
     -ms-filter: "alpha(opacity=70)";
   }
+
+  /* --------------------------------------------------
+  table-novi
+-------------------------------------------------- */
+
+.table-novi{text-align: left;}
