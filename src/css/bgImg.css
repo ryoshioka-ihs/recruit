@@ -18,6 +18,9 @@
 .blueTtl .win {
 	background-image: url("../image/services/bg_win.png");
 }
+.blueTtl .uipath {
+	background-image: url("../image/services/bg_uipath.png");
+}
 .blueTtl .xoblos {
 	background-image: url("../image/services/bg_xoblos.png");
 }
