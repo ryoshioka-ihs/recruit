@@ -346,7 +346,7 @@ footer {
 	}
 	#index #keyv .kvList .key6 .textBox h2 + p {
 		margin: 28px 0 45px;
-		font-size: 18px;
+		font-size: 20px;
 		letter-spacing: 2.5px;
 
 		color:#00008b;
@@ -378,7 +378,7 @@ footer {
 			display: block;
 			padding: 5px 25px 15px 19px;
 			background-color: rgba(255,255,255,0.1);
-			font-size: 13px;
+			font-size: 18px;
 			letter-spacing: 1.5px;
 			transition: 0.3s;
 		}
