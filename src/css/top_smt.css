@@ -38,7 +38,8 @@ body {
 #index #keyv .kvList .key2,
 #index #keyv .kvList .key3,
 #index #keyv .kvList .key4,
-#index #keyv .kvList .key5 {
+#index #keyv .kvList .key5,
+#index #keyv .kvList .key6 {
 	height: 300px;
 	background-size: cover;
 	/*渡辺修正前
@@ -209,12 +210,22 @@ body {
 		#index #keyv .kvList .key4 .blueBtn,
 		#index #keyv .kvList .key4 .textBox li p.text,
 		#index #keyv .kvList .key5 .blueBtn,
-		#index #keyv .kvList .key5 .textBox li p.text {
+		#index #keyv .kvList .key5 .textBox li p.text,
+		#index #keyv .kvList .key6 .blueBtn,
+		#index #keyv .kvList .key6 .textBox li p.text {
 			display: none;
 		}
 
 		/*ボタンとテキストを表示*/
 		#index #keyv .kvList .key5 .blueBtn_btn {
+			position: static;
+			/*width: 90%;*/
+			width: 80%;
+			margin: 15px auto 0;
+		}
+
+
+		#index #keyv .kvList .key6 .blueBtn_btn {
 			position: static;
 			/*width: 90%;*/
 			width: 80%;
@@ -355,6 +366,70 @@ body {
 					font-size: 14px;
 					/*vertical-align: middle;*/
 				}
+
+
+
+
+/* UiPath */
+#index #keyv .kvList .key6 {
+	padding-top: 30px;
+}
+	#index #keyv .kvList .key6 .textBox {
+		width: 100%;
+		padding: 0 10px;
+	}
+		#index #keyv .kvList .key6 .textBox h2 {
+			padding-bottom: 8px;
+			letter-spacing: 2.5px;
+		}
+		#index #keyv .kvList .key6 .textBox h2 + p {
+			/*margin: 12px 0 17px;*/
+			margin: 12px 60px 17px;
+			font-size: 12px;
+			letter-spacing: normal;
+		}
+
+		@media(max-width: 768px){
+			#index #keyv .kvList .key6 .textBox h2 + p {
+			margin: 12px 20px 17px;
+			}
+		}
+
+		#index #keyv .kvList .key6 .textBox ul {
+			padding: 0 10px;
+			margin-top: 0px;
+		}
+			#index #keyv .kvList .key6 .textBox li {
+				width: 100%;
+				height: auto;
+				border-width: 5px;
+				padding: 0;
+			}
+			#index #keyv .kvList .key6 .textBox li:first-child {
+				margin: 15px auto;
+			}
+				#index #keyv .kvList .key6 .textBox li a {
+					width: 100%;
+					display: table;
+					padding: 5px 0;
+				}
+				#index #keyv .kvList .key6 .textBox li a:hover {
+					background-color: rgba(255,255,255,0.1);
+				}
+				#index #keyv .kvList .key6 .textBox li p {
+					display: table-cell;
+				}
+
+				#index #keyv .kvList .key6 .textBox li p.title {
+					width: 100%;
+					font-size: 10px;
+					letter-spacing: 1.5px;
+					padding-left: 10px;
+					font-size: 14px;
+					/*vertical-align: middle;*/
+				}
+
+
 
 
 /* WinActor 
