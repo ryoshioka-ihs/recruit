@@ -57,31 +57,27 @@ tagsは1語ずつ区切る! -->
         <tbody>
           <tr>
             <th>業種</th>
-            <td>航空・運輸業界</td>
+            <td>製造業</td>
           </tr>
           <tr>
             <th>目的</th>
-            <td>NetAppOS のバージョンアップ</td>
+            <td>ログ管理システムの更改</td>
           </tr>
           <tr>
             <th>目的</th>
             <td>
              <ul class="grayDisc">
-							<li>利用ユーザー数： 約 20,000 名</li>
-							<li>NetApp 構成<br>
-								NetApp FAS 3220：2 台（1、2 号機）<br>
-								NetApp FAS 8200：1 台（3 号機）</li>
-							<li>vSphere 6.0 構成<br>
-								vCenter Server 1 台<br>
-								ESXi：約 100 台<br>
-								仮想マシン：約 1,000 台</li>
-						  </ul>
+							<li>利用ユーザー数： 約 4,000 名以上</li>
+							<li>管理サーバー台数<br>
+								ログ収集サーバー：5 台<br>
+								ログ統合管理サーバー：1 台</li>
+							</ul>
             </td>
           </tr>
           <tr>
             <th>作業ボリューム</th>
             <td>
-             作業期間 6 か月間（工数約 4 人月）
+             作業期間 10 月間（工数約 12 人月）
             </td>
           </tr>
           
@@ -89,14 +85,15 @@ tagsは1語ずつ区切る! -->
             <th>作業内容</th>
             <td>
               <ul class="grayDisc">
-                <li>ベンダー調整支援</li>
-                <li>仮想マシン調整支援</li>
-                <li>NetApp バージョンアップ作業支援</li>
-                <li>NetApp 動作試験（単体、結合）</li>
-                <li>既存ドキュメントの修正<br>
+                <li>既存システムのパラメーター/運用可視化</li>
+                <li>各種設計</li>
+                <li>ログ管理システム構築</li>
+                <li>ドキュメントの作成<br>
+                	基本設計書<br>
                 	詳細設計書<br>
-                	環境定義書<br>
-                	運用手順書</li>
+                	運用手順書<br>
+                  各種試験仕様書
+                </li>
                 </ul>
             </td>
           </tr>
@@ -111,7 +108,7 @@ tagsは1語ずつ区切る! -->
     <div class="smtSent">
       <div class="lightBox">
          <figure>
-<img src="/image/cases/case171_01.png">
+<img src="/image/cases/case172_01.png">
 </figure>
       </div>
     </div>
@@ -180,54 +177,65 @@ tagsは1語ずつ区切る! -->
  <section id="toc-6">
     <h2>作業内容の詳細</h2>
     <div class="smtSent">
-      <h3>ドキュメント修正</h3>
+      <h3>ドキュメント作成</h3>
        <ul class="numList">
-      	<li><p>既存ドキュメントの修正</p>
+      	<li><p>ドキュメント作成</p>
       		<ul class="grayDisc">
+      			<li>基本設計書</li>
       			<li>詳細設計書</li>
-      			<li>運用設計書</li>
       			<li>運用手順書</li>
+            <li>各種試験仕様書<br>
+                -単体試験仕様書<br>
+                -結合試験仕様書<br>
+                -総合試験仕様書<br>
+                </li>
       		</ul>
       	</li>
       </ul>
 
-      <h3>バージョンアップ作業</h3>
+      <h3>構築作業</h3>
        <ul class="numList">
-      	<li><p>ベンダー調整支援</p>
+      	<li><p>既存システムのパラメーター/運用可視化</p>
       		<ul class="grayDisc">
-      			<li>ベンダー作業手順書のレビュー</li>
-      			<li>作業スケジュールの作成</li>
-      			<li>バージョンアップ計画スケジュールの提案</li>
+      			<li>各拠点へのヒアリング</li>
+      			<li>パラメーター比較シートの作成</li>
+      			<li>運用比較シートの作成</li>
       		</ul>
       	</li>
       
-      	<li><p>仮想マシン調整支援</p>
+      	<li><p>各種設計</p>
             <ul class="grayDisc">
-        		<li>バージョンアップ計画スケジュールの作成と説明</li>
+        		<li>基本設計</li>
+            <li>詳細設計</li>
+            <li>移行設計</li>
+            <li>運用設計</li>
       		</ul>
       	</li>
 
-      	<li><p>NetAppストレージのバージョンアップ支援</p>
+      	<li><p>ログ管理システム構築</p>
             <ul class="grayDisc">
-        		<li>バージョンアップ前の仮想マシン退避</li>
-        		<li>NetApp ストレージのバージョンアップ</li>
+        		<li>ログ管理システムの構築</li>
+        		<li>ログ統合管理システムの構築</li>
+            <li>既存システムからの一部データ移行</li>
+            <li>単体試験/結合試験/総合試験</li>
       		</ul>
       	</li>
 
-      	<li><p>NetApp動作試験</p>
+      	<!-- <li><p>NetApp動作試験</p>
             <ul class="grayDisc">
         		<li>単体試験</li>
         		<li>結合試験</li>
       		</ul>
-      	</li>
+      	</li> -->
       </ul>
 
       <h3>納品ドキュメント</h3>
       <ul class="grayDisc">
+        <li>基本設計書</li>
         <li>詳細設計書</li>
-        <li>運用設計書</li>
+        <li>移行設計書</li>
         <li>運用手順書</li>
-        <li>動作確認項目表兼結果報告書</li>         
+        <li>各種試験結果報告書</li>         
       </ul>
      
     </div>
