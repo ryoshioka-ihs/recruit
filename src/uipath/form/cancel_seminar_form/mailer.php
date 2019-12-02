@@ -30,7 +30,7 @@ $email    = new SendGrid\Email();
 $email->addTo($emailAdress)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社")->
-       setSubject("【UIPathセミナーのキャンセルを承りました】" )->
+       setSubject("【UiPathセミナーのキャンセルを承りました】" )->
        setText("$company \r\n$lastname $firstname 様\r\n\r\nご連絡いただきまして、ありがとうございます。\r\n下記内容でお申し込みのキャンセルを承りました。\r\n\r\n　会社名: $company \r\n ご希望の開催日: $seminar \r\n メールアドレス: $emailAdress \r\n　電話番号: $phone \r\n　特記事項: $message \r\n　個人情報の取扱: $check \r\n\r\n　別日程でのご参加をご希望の方は、\r\n https://www.iimhs.co.jp/uipath/form/seminar_form/ よりお申し込みください。\r\n\r\n")->
 
 
@@ -46,7 +46,7 @@ $email    = new SendGrid\Email();
 $email->addTo($to)->
        setFrom($from)->
        //setFromName("")->
-       setSubject("【UIPathセミナーのキャンセルを承りました】" )->
+       setSubject("【UiPathセミナーのキャンセルを承りました】" )->
        setText("下記内容にてセミナーのキャンセルを承りました。\r\nご担当者はご対応のほどよろしくお願いいたします。\r\n\r\n会社名: $company \r\n ご希望の開催日: $seminar\r\n 参加者名: $lastname $firstname 様\r\n メールアドレス: $emailAdress\r\n　電話番号: $phone \r\n　特記事項: $message\r\n　個人情報の取扱: $check")->
 
 
