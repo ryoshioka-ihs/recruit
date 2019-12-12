@@ -8609,6 +8609,8 @@ textarea.form-input.form-input-lg {
   transition: .3s ease-out all;
 }
 
+
+
 .pricing-box-header > * {
   color: inherit;
 }
@@ -27356,12 +27358,36 @@ ul.grayDisc{
 
 
 /*-------------------------------------------------------
-768px以下ではh1,h2の改行を生かさない
+セミナーページセミナー名：768px以下ではh1,h2の改行を生かさない
 ----------------------------------------*/
 
 @media (max-width: 768px){
   h1 br{display: none;}
   h2 br{display:none;}
+}
+
+/*question(Q＆A)ページ 追加*/
+
+.pricing-box-header-qa {
+  /*padding: 25px 10px;
+  color: #fff;
+  background-color: #0404B4;*/
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+  transition: .3s ease-out all;
+
+
+}
+
+.pricing-box-header-qa h4 a:hover{
+  color: white;
+}
+
+.qacell{margin-top: 0;}
+
+#features {
+padding-top: 90px;
+margin-top: -90px;
 }
 
 /*渡辺追加ここまで*/
