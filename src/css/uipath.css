@@ -13229,12 +13229,14 @@ h3 + .divider + h5 + p {
 .center-shell {
   min-width: 300px;
   max-width: 480px;
+
 }
 
 /*吉岡追加*/
 @media (min-width: 768px) {
   .center-shell {
     max-width: 1000px;
+
   }
 }
 
@@ -27390,4 +27392,41 @@ padding-top: 90px;
 margin-top: -90px;
 }
 
+/*.qalong{
+  padding-top: 0;
+  padding-bottom: 0;}
+
+.qalong h4{
+  margin-top:0;
+  margin-bottom: 0;}*/
+
+@media (min-width: 1200px){
+.qalong{
+  padding-top: 0;
+  padding-bottom: 0;}
+
+.qalong h4{
+  margin-top:0;
+  margin-bottom: 0;}
+}
+
+@media (max-width: 768px) {
+  .pricing-box-header-qa h4 {font-size: 17px;}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+.qalong{
+  padding-top: 0;
+  padding-bottom: 0;}
+
+.qalong h4{
+  margin-top:0;
+  margin-bottom: 0;}
+}
+
+.corner{
+  border-radius: 5px;
+}
+
 /*渡辺追加ここまで*/
+
