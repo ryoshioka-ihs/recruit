@@ -27387,18 +27387,12 @@ ul.grayDisc{
 
 .qacell{margin-top: 0;}
 
-#features, #function {
+#features, #function, #studio, #robot, #orchestrator, #poc, #licence, #words {
 padding-top: 90px;
 margin-top: -90px;
 }
 
-/*.qalong{
-  padding-top: 0;
-  padding-bottom: 0;}
 
-.qalong h4{
-  margin-top:0;
-  margin-bottom: 0;}*/
 
 @media (min-width: 1200px){
 .qalong{
