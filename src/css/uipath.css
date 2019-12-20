@@ -27347,7 +27347,7 @@ ul.grayDisc{
 
 
   /*以下渡辺追加*/
-
+/*セミナーページ*/
   /* --------------------------------------------------
   table-novi
 -------------------------------------------------- */
@@ -27363,5 +27363,27 @@ ul.grayDisc{
   h1 br{display: none;}
   h2 br{display:none;}
 }
+
+/*セミナー風景写真*/
+.seminarimage img{
+  height: 250px;
+  margin-left: 50px;
+}
+
+.seminarlist{
+  float: left;
+}
+
+
+@media (max-width: 375px){
+  .seminarimage img{
+    width: 68%;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+/*セミナー風景写真ここまで*/
+
+
 
 /*渡辺追加ここまで*/
