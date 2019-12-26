@@ -1,10 +1,10 @@
 ---
 layout:     "uipath-form"
 global_menu:  ""
-description:  "『WinActor&UiPathの取り組みとハンズオンセミナー』のお申込みフォームです。"
+description:  "『WinActorとUiPathの機能比較と​UiPath VS WinActorハンズオンセミナー​』のお申込みフォームです。"
 keywords:   "UiPath,RPA,WinActor,IIMヒューマンソリューション,ihs,iimhs,ソリューション,無料セミナー"
 category:   ""
-title:      "『WinActor&UiPathの取り組みとハンズオン』セミナー　お申込み"
+title:      "『WinActorとUiPathの機能比較と​UiPath VS WinActorハンズオンセミナー​』　お申込み"
 ---
 <script type="text/javascript" src="/js/seminar.js"></script>
 <div id='crmWebToEntityForm'>
@@ -21,7 +21,7 @@ title:      "『WinActor&UiPathの取り組みとハンズオン』セミナー�
         <div class="shell shell-bigger">
           <div class="range range-ten range-50 range-sm-center range-lg-justify">
             <div class="cell-sm-9 cell-md-6">
-              <h3>『WinActor&UiPathの取り組みとハンズオンセミナー』お申込み</h3>
+              <h3>『WinActorとUiPathの機能比較と​UiPath VS WinActorハンズオンセミナー​』お申込み</h3>
               <!--<hr class="divider divider-left divider-default"/>-->
               <p class="big">セミナーへのご参加をご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。<br>
                 <span style="color: red">※gmail等フリーメールアドレスからのお申込みはお断りさせていただいております。</span><br>
@@ -105,18 +105,32 @@ title:      "『WinActor&UiPathの取り組みとハンズオン』セミナー�
 		              </div>
 		            </div>
 
-		          <div class="cell-xs-12 offset-custom-1">
-		            <div class="form-wrap form-wrap-validation">
-		                <label class="form-label-outside" >【<span style="color: red">必須</span>】ご希望のコース</label>
-		                <select class="form-control" data-placeholder="All" data-minimum-results-for-search="Infinity" name="LEADCF45" required>
-                      <option>ご希望のセミナーを選択してください</option>
-                      <!--<option class="view_timer" data-end-date="2019/12/7 0:00" value="2019年12月13日">2019年12月13日(金)　WinActorとUiPathの機能比較とハンズオンセミナー</option>-->
+
+
+              <div class="cell-xs-12 offset-custom-1">
+                <div class="form-wrap form-wrap-validation">
+                    <label class="form-label-outside" >【<span style="color: red">必須</span>】ご希望のコース(複数回答可)※Ctrlキーを押下しながらクリックすると複数選択が可能です。</label>
+                    <select class="form-control" data-placeholder="All" data-minimum-results-for-search="Infinity" name="LEADCF45" required multiple>
+                    <div class="form-wrap">
+                      <option value="①WinActorとUiPathのどちらが最適か？">①WinActorとUiPathのどちらが最適か？</option>
+                      <option value="②UiPathのシナリオ作成（共通フロー）">②UiPathのシナリオ作成（共通フロー）</option>
+                      <option value="③WinActorのシナリオ作成（共通フロー）">③WinActorのシナリオ作成（共通フロー）</option>
+                    </select>
+
+                  </div>
+              </div>
+
+              <!--<div class="cell-xs-12 offset-custom-1">
+                <div class="form-wrap form-wrap-validation">
+                    <label class="form-label-outside" >【<span style="color: red">必須</span>】ご希望のコース</label>
+                    <select class="form-control" data-placeholder="All" data-minimum-results-for-search="Infinity" name="LEADCF45" required>
+                      <option multiple>ご希望のセミナーを選択してください(複数回答可)<br>※Ctrlキーを押下しながらクリックすると複数選択が可能です。</option>
                       <option class="view_timer" value="①WinActorとUiPathのどちらが最適か？">①WinActorとUiPathのどちらが最適か？</option>
                       <option class="view_timer" value="②UiPathのシナリオ作成（共通フロー）">②UiPathのシナリオ作成（共通フロー）</option>
                       <option class="view_timer" value="③WinActorのシナリオ作成（共通フロー）">③WinActorのシナリオ作成（共通フロー）</option>                          
-		                </select>
-		              </div>
-		            </div>
+                    </select>
+                  </div>
+                </div>-->
 		              
                   <div class="cell-xs-12">
                     <div class="form-wrap form-wrap-validation">
