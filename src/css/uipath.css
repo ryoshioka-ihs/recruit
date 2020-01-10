@@ -27368,7 +27368,7 @@ ul.grayDisc{
   h2 br{display:none;}
 }
 
-<<<<<<< HEAD
+
 /*question(Q＆A)ページ 追加*/
 
 .pricing-box-header-qa {
@@ -27388,7 +27388,7 @@ ul.grayDisc{
 
 .qacell{margin-top: 0;}
 
-#features, #function, #studio, #robot, #orchestrator, #poc, #licence, #words {
+#features, #function, #studio, #robot, #orchestrator, #poc, #licence, #development, #words {
 padding-top: 90px;
 margin-top: -90px;
 }
@@ -27419,9 +27419,130 @@ margin-top: -90px;
   margin-bottom: 0;}
 }
 
-.corner{
-  border-radius: 5px;
+@media (max-width: 768px) {
+  .pricing-box-header-qa h4 {font-size: 17px;}
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+.qalong{
+  padding-top: 0;
+  padding-bottom: 0;}
+
+.qalong h4{
+  margin-top:0;
+  margin-bottom: 0;
+}
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .qalong h4 br{display: none;}
+}
+
+@media (max-width: 768px){
+  .qalong h4 br{display: none;}
+}
+
+@media (max-width: 992px){
+  .qalong h4 br{display: none;}
+}
+
+/*.corner{
+  border-radius: 5px;
+}*/
+
+
+
+@media (max-width: 992px){
+  .panel-corporate .panel-title a{font-size: 12pt;}
+}
+
+
+@media (max-width: 375px){
+  .panel-corporate .panel-title a{
+    padding: 10px 82px 10px 25px;
+
+  }
+  
+}
+
+
+
+.spindex{margin-top: 30px;}
+
+.listsmh{
+  font-size: 13pt;
+  color: #1C1C1C;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+
+  }
+
+ .listsmh li{  
+  text-indent: -1em;
+  margin-top:7px;
+  margin-bottom:7px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  background-color: lavender;
+  background-image: radial-gradient(#eee 10%, transparent 20%), radial-gradient(#eee 10%, transparent 20%);
+  background-position: 0 0, 10px 10px;
+  background-size: 5px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+ } 
+
+ .listsmh li a {
+  display:block;
+  color: #1C1C1C;
+ }
+
+ .listsmh li a:hover {
+  font-weight: bold;
+  color:#170B3B;
+ }
+
+ .listsmh li span{
+  /*color:#29088A;*/
+  color:#170B3B;
+ }
+
+
+ .classab{
+  max-width: 1000px;
+  margin: 0 auto;
+ }
+
+.wordslist ul li{
+  padding-top:5px;
+  padding-bottom: 10px;
+  list-style-type: square;
+ 
+}
+
+
+
+@media (max-width: 540px) {
+ 
+ .index{display: none;} 
+
+ .pricing-box-x1 .pricing-box-header{
+  padding-top: 0;
+  padding-bottom: 0;
+ }
+
+}
+
+@media (min-width: 541px){
+  .spindex{display: none;}
+}
+
+/*Q&Aページここまで*/
+
+
 
 
 
