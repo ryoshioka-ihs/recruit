@@ -153,6 +153,17 @@ $(function () {
 		showGoogleMap(args);
 	}
 
+	// 会社概要東京（日比谷）
+	var $gmapAccessHibiya = $('#gmapAccessHibiya');
+	if ($gmapAccessHibiya.size() > 0) {
+		var args = {
+			'element_id': 'gmapAccessHibiya',
+			'longitude': 35.671200,
+			'latitude': 139.757739,
+			'link_map_url':'https://goo.gl/maps/GP4Uh3ATGFJ2'
+		}
+		showGoogleMap(args);
+	}
 	// 会社概要大阪
 	var $gmapAccessOsaka = $('#gmapAccessOsaka');
 	if ($gmapAccessOsaka.size() > 0) {
