@@ -27469,9 +27469,9 @@ margin-top: -90px;
 
 
 
-.spindex{margin-top: 30px;}
+/*.spindex{margin-top: 30px;}*/
 
-.listsmh{
+/*.listsmh{
   font-size: 13pt;
   color: #1C1C1C;
   padding: 0;
@@ -27479,9 +27479,10 @@ margin-top: -90px;
   text-align: center;
   list-style: none;
 
-  }
+  }*/
 
- .listsmh li{  
+
+/* .listsmh li{  
   text-indent: -1em;
   margin-top:7px;
   margin-bottom:7px;
@@ -27494,27 +27495,27 @@ margin-top: -90px;
   border-radius: 5px;
   font-weight: bold;
  } 
-
- .listsmh li a {
+*/
+ /*.listsmh li a {
   display:block;
   color: #1C1C1C;
- }
+ }*/
 
- .listsmh li a:hover {
+ /*.listsmh li a:hover {
   font-weight: bold;
   color:#170B3B;
- }
+ }*/
 
- .listsmh li span{
-  /*color:#29088A;*/
+ /*.listsmh li span{
+  color:#29088A;
   color:#170B3B;
- }
+ }*/
 
 
- .classab{
+ /*.classab{
   max-width: 1000px;
   margin: 0 auto;
- }
+ }*/
 
 .wordslist ul li{
   padding-top:5px;
@@ -27527,18 +27528,25 @@ margin-top: -90px;
 
 @media (max-width: 540px) {
  
- .index{display: none;} 
+ /*.index{display: none;} */
 
- .pricing-box-x1 .pricing-box-header{
+ /*.pricing-box-x1 .pricing-box-header{
   padding-top: 0;
   padding-bottom: 0;
- }
+ }*/
+
+ .pricing-box-xl .pricing-box-header-qa {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  /*margin-top:0;
+  margin-bottom:0;*/
+}
 
 }
 
 @media (min-width: 541px){
-  .spindex{display: none;}
-}
+  /*.spindex{display: none;}
+}*/
 
 /*Q&Aページここまで*/
 
