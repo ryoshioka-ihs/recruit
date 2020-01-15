@@ -27542,6 +27542,17 @@ margin-top: -90px;
   margin-bottom:0;*/
 }
 
+html .range-qa {
+  position: relative;
+  transform: translateY(-60px);
+  margin-bottom: -60px;
+  pointer-events: none;
+}
+
+/*.range-qa{
+  margin-bottom:-60px;
+}*/
+
 }
 
 @media (min-width: 541px){
