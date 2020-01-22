@@ -27368,13 +27368,11 @@ ul.grayDisc{
   h2 br{display:none;}
 }
 
-<<<<<<< HEAD
+
 /*question(Q＆A)ページ 追加*/
 
 .pricing-box-header-qa {
-  /*padding: 25px 10px;
-  color: #fff;
-  background-color: #0404B4;*/
+  
   border-bottom-right-radius: inherit;
   border-bottom-left-radius: inherit;
   transition: .3s ease-out all;
@@ -27388,14 +27386,40 @@ ul.grayDisc{
 
 .qacell{margin-top: 0;}
 
-#features, #function, #studio, #robot, #orchestrator, #poc, #licence, #words {
+#features, #function, #studio, #robot, #orchestrator, #poc, #licence, #development, #words {
 padding-top: 90px;
 margin-top: -90px;
 }
 
+.wordslist ul li{
+  padding-top:5px;
+  padding-bottom: 10px;
+  list-style-type: square; 
+}
+
+
 
 
 @media (min-width: 1200px){
+.qalong{
+  padding-top: 0;
+  padding-bottom: 0;}
+
+.qalong h4{
+  margin-top:0;
+  margin-bottom: 0;}
+
+  .pricing-box-xl .qalong {
+  padding-top: 12px;
+  padding-bottom: 11px;
+}
+}
+
+@media (max-width: 768px) {
+  .pricing-box-header-qa h4 {font-size: 17px;}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
 .qalong{
   padding-top: 0;
   padding-bottom: 0;}
@@ -27416,12 +27440,134 @@ margin-top: -90px;
 
 .qalong h4{
   margin-top:0;
-  margin-bottom: 0;}
+  margin-bottom: 0;
+}
 }
 
-.corner{
-  border-radius: 5px;
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .qalong h4 br{display: none;}
 }
+
+@media (max-width: 768px){
+  .qalong h4 br{display: none;}
+}
+
+@media (max-width: 992px){
+  .qalong h4 br{display: none;}
+}
+
+
+
+
+@media (max-width: 992px){
+  .panel-corporate .panel-title a{font-size: 12pt;}
+}
+
+
+@media (max-width: 375px){
+  .panel-corporate .panel-title a{
+    padding: 10px 82px 10px 25px;
+
+  }  
+}
+
+
+/*スマホ用目次ここから*/
+/*.spindex{margin-top: 30px;}*/
+
+/*.listsmh{
+  font-size: 13pt;
+  color: #1C1C1C;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+
+  }*/
+
+
+/* .listsmh li{  
+  text-indent: -1em;
+  margin-top:7px;
+  margin-bottom:7px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  background-color: lavender;
+  background-image: radial-gradient(#eee 10%, transparent 20%), radial-gradient(#eee 10%, transparent 20%);
+  background-position: 0 0, 10px 10px;
+  background-size: 5px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+ } 
+*/
+ /*.listsmh li a {
+  display:block;
+  color: #1C1C1C;
+ }*/
+
+ /*.listsmh li a:hover {
+  font-weight: bold;
+  color:#170B3B;
+ }*/
+
+ /*.listsmh li span{
+  color:#29088A;
+  color:#170B3B;
+ }*/
+/*スマホ用目次ここまで*/
+
+ 
+
+
+
+
+@media (max-width: 540px) {
+
+  /*スマホ用目次リストを使用する際は以下を使用するーここから*/ 
+ /*.index{display: none;} */
+
+ /*.pricing-box-x1 .pricing-box-header{
+  padding-top: 0;
+  padding-bottom: 0;
+ }*/
+ /*ここ↑まで*/
+
+ .pricing-box-xl .pricing-box-header-qa {
+  padding-top: 2px;
+  padding-bottom: 2px;  
+}
+
+html .range-qa {
+  position: relative;
+  transform: translateY(-60px);
+  margin-bottom: -60px;
+  pointer-events: none;
+}
+
+.ui-to-top, .ui-to-top:active, .ui-to-top:focus {
+  color: #fff;
+  background-color: #f08d24;
+}
+
+.ui-to-top:hover {
+  color: #fff;
+  background-color: #eba16c;
+  text-decoration: none;
+}
+
+}
+
+
+/*スマホ用目次を使用する際は以下を表示するーここからー*/
+/*@media (min-width: 541px){
+  .spindex{display: none;}
+}*/
+/*ここまで↑*/
+
+/*Q&Aページここまで*/
+
+
 
 
 
