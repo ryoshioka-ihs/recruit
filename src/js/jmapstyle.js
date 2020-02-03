@@ -72,6 +72,7 @@ function showGoogleMap(args) {
 
 	args = typeof args !== 'undefined' ? args : [];
 
+	/*本郷地図*/
 	/*var opt = {
 		map_title:    typeof args.map_title    !== 'undefined' ? args.map_title    : 'IIMヒューマン・ソリューション',
 		element_id:   typeof args.element_id   !== 'undefined' ? args.element_id   : 'gmapTopFooter',
@@ -82,7 +83,10 @@ function showGoogleMap(args) {
 		icon_height:  typeof args.icon_height  !== 'undefined' ? args.icon_height  : 53,
 		link_map_url: typeof args.link_map_url !== 'undefined' ? args.link_map_url : 'https://goo.gl/maps/cozq3bBUvW42',
 	}*/
+	/*本郷地図ここまで*/
 
+
+	/*日比谷地図*/
 	var opt = {
 		map_title:    typeof args.map_title    !== 'undefined' ? args.map_title    : 'IIMヒューマン・ソリューション',
 		element_id:   typeof args.element_id   !== 'undefined' ? args.element_id   : 'gmapTopFooter',
@@ -93,6 +97,7 @@ function showGoogleMap(args) {
 		icon_height:  typeof args.icon_height  !== 'undefined' ? args.icon_height  : 53,
 		link_map_url: typeof args.link_map_url !== 'undefined' ? args.link_map_url : 'https://goo.gl/maps/cozq3bBUvW42',
 	}
+	
 
 	/*アイコンの設置座標を設定*/
 	var latlng = new google.maps.LatLng(opt.longitude, opt.latitude);
