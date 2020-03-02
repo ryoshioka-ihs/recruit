@@ -95,7 +95,7 @@ function showGoogleMap(args) {
 		icon_url:     typeof args.icon_url     !== 'undefined' ? args.icon_url     : '/image/common/icon_pin.png',
 		icon_width:   typeof args.icon_width   !== 'undefined' ? args.icon_width   : 92,
 		icon_height:  typeof args.icon_height  !== 'undefined' ? args.icon_height  : 53,
-		link_map_url: typeof args.link_map_url !== 'undefined' ? args.link_map_url : 'https://goo.gl/maps/cozq3bBUvW42',
+		link_map_url: typeof args.link_map_url !== 'undefined' ? args.link_map_url : 'https://goo.gl/maps/Wobx6kgaMM6c64cn6',
 	}
 	
 
@@ -176,7 +176,8 @@ $(function () {
 			'element_id': 'gmapAccessHibiya',
 			'longitude': 35.671200,
 			'latitude': 139.757739,
-			'link_map_url':'https://goo.gl/maps/GP4Uh3ATGFJ2'
+			'link_map_url':'https://goo.gl/maps/Wobx6kgaMM6c64cn6'
+			
 		}
 		showGoogleMap(args);
 	}
