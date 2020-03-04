@@ -1457,7 +1457,7 @@ color: #FFF !important;
 		}
 
 
-/*2020年3月事例のピックアップ（２つ並び）用*/
+/*2020年3月事例トピックス（２つ並び）用*/
 
 
 .pickUp2 {
@@ -1496,9 +1496,9 @@ color: #FFF !important;
 		/*float: right;*/
 	}
 
-	.pickUp2 .inremote{
+	/*.pickUp2 .inremote{
 		width: 46%;
-	}
+	}*/
 
 		.pickUp2 h3 {
 			padding-left: 0;
@@ -1517,10 +1517,15 @@ color: #FFF !important;
 			margin: 5px 0;
 		}
 
+		.inremote {
+			padding-right: 3%;
+			margin-bottom: 15px;
+		}
+
 		.remotepick{
 			display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	/*justify-content:flex-end;*/
+	/*flex-wrap: wrap;*/
 	
 		}
 /*2020年3月事例のピックアップ（２つ並び）用ここまで*/
