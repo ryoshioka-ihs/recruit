@@ -1456,6 +1456,76 @@ color: #FFF !important;
 			margin: 5px 0;
 		}
 
+
+/*2020年3月事例のピックアップ（２つ並び）用*/
+
+
+.pickUp2 {
+	background-color: #FFF;
+	margin-top: 70px;
+	padding: 20px;
+	overflow: hidden;
+
+}
+	.pickUp2 h2 {
+		font-size: 20px;
+		padding-left: 63px;
+		margin: 0 0 25px;
+		background: url("../image/common/pickup_bg.png") 13px top no-repeat;
+		background-size: 30px auto;
+		border-bottom: 2px solid #003E8D;
+	}
+	.pickUp2 h2:before {
+		display: none;
+	}
+
+	/*.pickUp2 figure {
+		width: 240px;
+		float: left;
+		margin: 5px 0 0 10px;
+		border: 1px solid #DFDFDF;
+	}
+		.pickUp2 figure img {
+			width: 100%;
+			height: auto;
+		}*/
+
+	.pickUp2 div {
+		/*width: 420px;*/
+		/*width: 45%;*/
+		/*float: right;*/
+	}
+
+	.pickUp2 .inremote{
+		width: 46%;
+	}
+
+		.pickUp2 h3 {
+			padding-left: 0;
+			margin: 0;
+			font-size: 18px;
+		}
+		.pickUp2 h3:before {
+			display: none;
+		}
+		.pickUp2 p {
+			margin-top: 15px;
+		}
+		.pickUp2 .name {
+			font-size: 12px;
+			font-weight: bold;
+			margin: 5px 0;
+		}
+
+		.remotepick{
+			display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+		}
+/*2020年3月事例のピックアップ（２つ並び）用ここまで*/
+
+
 /* --------------------------------------------------
    取り扱い製品一覧
 -------------------------------------------------- */
